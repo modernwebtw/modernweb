@@ -64,6 +64,7 @@ var modernweb2017 = new Vue({
             // modernweb2017.Sponsor = sponsor;
 
             modernweb2017.$nextTick(function () {
+                $('body').addClass('is-active');
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
