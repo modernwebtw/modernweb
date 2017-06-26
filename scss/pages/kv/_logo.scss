@@ -6,13 +6,7 @@
     text-align: center;
     color: #fff;
     opacity: 0;
-    animation: logoShow .5s 5s linear forwards;
     z-index: 1;
-    @keyframes logoShow {
-        100% {
-            opacity: 1;
-        }
-    }
     h1 {
         margin: 0;
     }
@@ -40,6 +34,18 @@
         font-size: 18px;
         @include media(">768px") {
             font-size: 24px;
+        }
+    }
+}
+
+// 動畫啟動！！
+.is-active {
+    .logo {
+        animation: logo-show .5s 5s linear forwards;
+        @keyframes logo-show {
+            100% {
+                opacity: 1;
+            }
         }
     }
 }

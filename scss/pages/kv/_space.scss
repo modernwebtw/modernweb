@@ -17,7 +17,7 @@
         background-size: 110%;
     }
     &:before {
-        content:'';
+        content: '';
         position: absolute;
         left: 0;
         top: 0;
@@ -41,14 +41,116 @@
         width: 80%;
         left: 10%;
     }
-    .space-left {
-        @extend %position-a;
-        left: 14%;
-        bottom: -9px;
-        width: 26%;
-        @include media(">768px") {
-            bottom: -10px;
+}
+
+.space-left {
+    @extend %position-a;
+    left: 14%;
+    bottom: -9px;
+    width: 26%;
+    @include media(">768px") {
+        bottom: -10px;
+    }
+}
+
+.radar {
+    @extend %position-a;
+    left: 64%;
+    bottom: -11px;
+    width: 12%;
+    @include media(">768px") {
+        bottom: -12px;
+    }
+    &__rotate {
+        transform-origin: 101px 191px;
+    }
+    &__wave {
+        path {
+            opacity: 0;
         }
+    }
+}
+
+.space-right {
+    @extend %position-a;
+    left: 70%;
+    bottom: -9px;
+    width: 20%;
+    @include media(">768px") {
+        bottom: -10px;
+    }
+    &__light path {
+        fill: #57A6FF;
+    }
+}
+
+.rocket {
+    @extend %position-a;
+    left: 50%;
+    width: 20%;
+    bottom: -5%;
+    transform: translateX(-50%) translateY(-250%);
+    z-index: 2;
+    opacity: 0;
+    @include media(">768px") {
+        width: 15%;
+    }
+}
+
+.astronaut {
+    @extend %position-a;
+    left: 51%;
+    width: 7%;
+    bottom: -5%;
+    z-index: 1;
+    opacity: 0;
+    @include media(">768px") {
+        width: 5%;
+    }
+}
+
+.planet {
+    position: absolute;
+    left: 2%;
+    top: 26%;
+    width: 12%;
+    &__light {
+        opacity: 0.1;
+    }
+    @include media(">768px") {
+        left: 10%;
+        top: 24%;
+        width: 8%;
+    }
+}
+
+.satellite {
+    position: absolute;
+    width: 5%;
+    right: 16%;
+    top: 63%;
+    @include media(">768px") {
+        right: 20%;
+        top: 50%;
+        width: 4%;
+    }
+}
+
+.saturn {
+    position: absolute;
+    width: 10%;
+    right: 3%;
+    top: 55%;
+    @include media(">768px") {
+        right: 14%;
+        top: 35%;
+        width: 6%;
+    }
+}
+
+// 動畫啟動！！
+.is-active {
+    .space-left {
         &__reflection {
             g rect {
                 animation: reflection 2s linear infinite;
@@ -79,20 +181,9 @@
         }
     }
     .radar {
-        @extend %position-a;
-        left: 64%;
-        bottom: -11px;
-        width: 12%;
-        @include media(">768px") {
-            bottom: -12px;
-        }
         &__rotate {
-            transform-origin: 101px 191px;
             animation: radar-rotate 3s infinite alternate linear;
             @keyframes radar-rotate {
-                from {
-                    // transform:rotate(0deg);
-                }
                 to {
                     transform: rotate(20deg);
                 }
@@ -100,7 +191,6 @@
         }
         &__wave {
             path {
-                opacity: 0;
                 &:nth-child(1) {
                     animation: radar-wave 1s 1s infinite linear forwards;
                 }
@@ -130,15 +220,7 @@
         }
     }
     .space-right {
-        @extend %position-a;
-        left: 70%;
-        bottom: -9px;
-        width: 20%;
-        @include media(">768px") {
-            bottom: -10px;
-        }
         &__light path {
-            fill: #57A6FF;
             animation: light 2s linear infinite;
             @keyframes light {
                 0% {
@@ -165,116 +247,62 @@
             }
         }
     }
-}
-
-.rocket {
-    @extend %position-a;
-    left: 50%;
-    width: 20%;
-    bottom: -5%;
-    transform: translateX(-50%) translateY(-250%);
-    z-index: 2;
-    opacity: 0;
-    animation: down 4s .8s cubic-bezier(0,.27,0,1) forwards;
-    @keyframes down {
-        0% {
-            transform: translateX(-50%) translateY(-250%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
+    .rocket {
+        animation: down 4s .8s cubic-bezier(0, .27, 0, 1) forwards;
+        @keyframes down {
+            0% {
+                transform: translateX(-50%) translateY(-250%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
         }
     }
-    @include media(">768px") {
-        width: 15%;
-    }
-}
-
-.astronaut {
-    @extend %position-a;
-    left: 51%;
-    width: 7%;
-    bottom: -5%;
-    z-index: 1;
-    opacity: 0;
-    animation: rot 1s 5.5s linear forwards;
-    @keyframes rot {
-        0% {
-            transform: rotate(0deg) translate(-100%) rotate(-0deg);
-        }
-        99% {
-            transform: rotate(180deg) translate(-130%) rotate(-180deg);
-        }
-        100% {
-            z-index: 2;
-            opacity: 1;
-            transform: rotate(180deg) translate(-130%) rotate(-180deg);
+    .astronaut {
+        animation: rot 1s 5.5s linear forwards;
+        @keyframes rot {
+            0% {
+                transform: rotate(0deg) translate(-100%) rotate(-0deg);
+            }
+            99% {
+                transform: rotate(180deg) translate(-130%) rotate(-180deg);
+            }
+            100% {
+                z-index: 2;
+                opacity: 1;
+                transform: rotate(180deg) translate(-130%) rotate(-180deg);
+            }
         }
     }
-    @include media(">768px") {
-        width: 5%;
-    }
-}
-
-
-
-.planet {
-    position: absolute;
-    left: 2%;
-    top: 26%;
-    width: 12%;
-    animation: planet-move 3s 1.5s linear infinite alternate;
-    &__light {
-    	opacity: 0.1;
-    	animation: planet-light 1.5s linear infinite alternate;
-	    @keyframes planet-light {
-	        to {
-	            opacity: .15;
-	        }
-	    }
-	    &:last-child {
-	    	animation-delay: 2s;
-	    }
-    }
-    @include media(">768px") {
-       left: 10%;
-       top: 24%;
-       width: 8%;
-    }
-}
-
-.satellite {
-    position: absolute;
-    width: 5%;
-    right:16%;
-    top: 63%;
-    animation: satellite-move 2s linear infinite alternate;
-    @keyframes satellite-move {
-        to {
-            transform: translateY(8px) rotate(0.02deg);
+    .planet {
+        animation: planet-move 3s 1.5s linear infinite alternate;
+        &__light {
+            animation: planet-light 1.5s linear infinite alternate;
+            @keyframes planet-light {
+                to {
+                    opacity: .15;
+                }
+            }
+            &:last-child {
+                animation-delay: 2s;
+            }
         }
     }
-    @include media(">768px") {
-        right: 20%;
-        top: 50%;
-        width: 4%;
-    }
-}
-
-.saturn {
-    position: absolute;
-    width: 10%;
-    right:3%;
-    top: 55%;
-    animation: planet-move 3s 1.5s linear infinite alternate;
-    @keyframes planet-move {
-        to {
-            transform: translateY(4px) rotate(2deg);
+    .satellite {
+        animation: satellite-move 2s linear infinite alternate;
+        @keyframes satellite-move {
+            to {
+                transform: translateY(8px) rotate(0.02deg);
+            }
         }
     }
-    @include media(">768px") {
-        right: 14%;
-        top: 35%;
-        width: 6%;
+    .saturn {
+        animation: planet-move 3s 1.5s linear infinite alternate;
+        @keyframes planet-move {
+            to {
+                transform: translateY(4px) rotate(2deg);
+            }
+        }
     }
 }
