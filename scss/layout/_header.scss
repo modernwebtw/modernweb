@@ -11,13 +11,19 @@ body {
     @include media(">768px") {
         font-size: 18px;
     }
-    overflow: hidden;
+    // overflow: hidden;
     &.is-active {
-    	overflow: auto;
     	.loading {
 			opacity: 0;
 		}
+		#modernweb2017 {
+			display: block;
+		}
     }
+}
+
+#modernweb2017 {
+	display: none;
 }
 
 h1,
@@ -60,6 +66,7 @@ a {
         text-decoration: none;
     }
 }
+
 
 .wrapper {
     width: 98%;
