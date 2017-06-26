@@ -12,7 +12,7 @@
     <meta property="og:description" content="Modern Web 2017將在8/10-11兩日，邀集來自 Google、Slack、易寶支付、螞蟻金服、騰訊...等世界級的 Web 公司的開發者，分享他們的技術觀點，還有台灣優秀的開發者帶來最新、最深入的技術分享。2天4軌最豐盛而精彩的技術與交流盛會，就在Modern Web 2017"
     />
     <meta property="og:image" content="http://modernweb.tw/img/fb.jpg" />
-
+    <meta property="fb:app_id" content="681372298729949" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -21,7 +21,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
 </head>
 
 <body>
@@ -671,28 +670,7 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div id="map" style="height: 343px;">
-                            <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-                            <script>
-                                google.maps.event.addDomListener(window, 'load', init);
-
-                                function init() {
-                                    var mapOptions = {
-                                        zoom: 17,
-                                        scrollwheel: false,
-                                        center: new google.maps.LatLng(25.020585, 121.542329)
-                                    };
-
-                                    var mapElement = document.getElementById('map');
-                                    var map = new google.maps.Map(mapElement, mapOptions);
-                                    var marker = new google.maps.Marker({
-                                        position: new google.maps.LatLng(25.020585, 121.542329),
-                                        map: map,
-                                        title: '臺灣大學社會科學院'
-                                    });
-                                }
-                            </script>
-                        </div>
+                        <div id="map" style="height: 343px;"></div>
                     </div>
                 </div>
             </div>
