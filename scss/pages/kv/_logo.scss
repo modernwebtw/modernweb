@@ -41,7 +41,7 @@
 // 動畫啟動！！
 .is-active {
     .logo {
-        animation: logo-show .5s 5s linear forwards;
+        animation: logo-show .5s 6.5s linear forwards;
         @keyframes logo-show {
             100% {
                 opacity: 1;

@@ -248,8 +248,8 @@
         }
     }
     .rocket {
-        animation: down 4s .8s cubic-bezier(0, .27, 0, 1) forwards;
-        @keyframes down {
+        animation: rocket-down 4s 1s cubic-bezier(0, .27, 0, 1) forwards;
+        @keyframes rocket-down {
             0% {
                 transform: translateX(-50%) translateY(-250%);
             }
@@ -260,7 +260,7 @@
         }
     }
     .astronaut {
-        animation: rot 1s 5.5s linear forwards;
+        animation: rot 1s 6s linear forwards;
         @keyframes rot {
             0% {
                 transform: rotate(0deg) translate(-100%) rotate(-0deg);
