@@ -143,3 +143,49 @@ function goScroll(target) {
         scrollTop: sTop
     }, 1000);
 }
+
+// =================
+
+var peer = new Peer({
+    key: 'lwjd5qra8257b9'
+});
+
+peer.on('error', function (err) {
+    console.log('peer error', err);
+})
+
+peer.on('open', function (id) {
+    console.log('My peer ID is: ' + id);
+
+    var show_QRcode = function (url) {
+        console.log("%c", "padding:50px 300px;line-height:100px;background:url('http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=" + url + "&chld=H|0') no-repeat;");
+    }
+    show_QRcode(location.origin + '/game_handle.html#' + id);
+});
+
+peer.on('connection', function (c) {
+    console.log('連上了', c);
+
+    c.on('data', function (data) {
+
+        if (data.type == 'up') {
+            Game.buttonDown({
+                'keyCode': 32
+            });
+            Game.buttonUp({
+                'keyCode': data.code
+            });
+        } else if (data.type == 'down') {
+            Game.buttonDown({
+                'keyCode': 32
+            });
+            Game.buttonDown({
+                'keyCode': data.code
+            });
+        }
+    });
+
+    c.on('close', function () {
+        console.log('對方離開');
+    });
+});

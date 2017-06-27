@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #02a096;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .extend_bg {
+            float: left;
+            height: 100px;
+            width: 100%;
+            background-color: #02a096
+        }
+
+        .extend_bg.stars {
+            background-color: #193a5f
+        }
+
+        .extend_bg.grassland {
+            background-color: #02a096
+        }
+
+        .game_handle {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 30vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: #000 6px solid;
+        }
+
+        .game_handle div {
+            padding: 0;
+        }
+
+        .game_handle .btn-warp {
+            float: left;
+            width: 40%;
+        }
+
+        .game_handle .btn {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="extend_bg stars"></div>
+        <div class="col-xs-12">
+            <img src="http://modernweb.tw/img/fb.jpg" alt="modernweb2017">
+        </div>
+        <div class="extend_bg grassland"></div>
+    </div>
+    <div class="game_handle">
+        <div class="btns">
+            <div class="btn-warp">
+                <button id="left" type="button" class="btn btn-primary btn-block btn-danger">Left</button>
+            </div>
+            <div class="btn-warp" style="width: 20%;">
+                <button id="reload" type="button" class="btn btn-default btn-block btn-success">Reload</button>
+            </div>
+            <div class="btn-warp">
+                <button id="right" type="button" class="btn btn-default btn-block btn-danger">Right</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var peer = new Peer({
+                key: 'lwjd5qra8257b9'
+            });
+            var peerid = location.hash.replace(/#/igm, '');
+            var conn = peer.connect(peerid);
+
+            peer.on('error', function (err) {
+                console.log('peer error', err);
+            });
+
+            conn.on('open', function () {
+                console.log('連線成功');
+                conn.on('data', function (data) {
+                    console.log('收到訊息', data);
+                });
+            });
+
+            $('#left').on('mousedown touchstart', function () {
+                conn.send({
+                    code: 37,
+                    type: 'down'
+                });
+            }).on('mouseup touchend', function () {
+                conn.send({
+                    code: 37,
+                    type: 'up'
+                });
+            });
+
+            $('#right').on('mousedown touchstart', function () {
+                conn.send({
+                    code: 39,
+                    type: 'down'
+                });
+            }).on('mouseup touchend', function () {
+                conn.send({
+                    code: 39,
+                    type: 'up'
+                });
+            });
+
+            $('#reload').on('click touch', function () {
+                conn.send('reload');
+            });
+        })
+    </script>
+
+</body>
+
+</html>
