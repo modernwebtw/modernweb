@@ -160,7 +160,7 @@ peer.on('open', function (id) {
     var show_QRcode = function (url) {
         console.log("%c", "padding:50px 300px;line-height:100px;background:url('http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=" + url + "&chld=H|0') no-repeat;");
     }
-    show_QRcode('http://it-dev.ithome.com.tw/modernweb/game_handle.html#' + id);
+    show_QRcode('http://it-dev.ithome.com.tw/modernweb/game_handle.html%23' + id);
 });
 
 peer.on('connection', function (c) {
