@@ -28,19 +28,33 @@ function init() {
 // game
 $('#alien').click(function () {
     $('#modal_game_start').on('shown.bs.modal', function () {
+        ga('send', 'event', 'CTA', 'click', "Enter MW17 Game");
         $('.modal-backdrop').addClass('game-bg-waring');
     }).modal('show');
 });
 
-$('#btn_game_start, #btn_continue').click(function () {
+$('#btn_game_start').click(function () {
+    ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
     gameStart();
 });
 
-$('#btn_back, #btn_exit').click(function () {
+$('#btn_continue').click(function () {
+    ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
+    gameStart();
+});
+
+$('#btn_back').click(function () {
+    ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");
+    gamePause();
+});
+
+$('#btn_exit').click(function () {
+    ga('send', 'event', 'CTA', 'click', "Exit MW17 Game");
     gamePause();
 });
 
 $('#btn_share_fb').click(function () {
+    ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#score').text();
     FB.ui({
         method: 'feed',
