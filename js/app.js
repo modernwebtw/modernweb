@@ -1,10 +1,3 @@
-// fb
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: '1615126938703368'
-    });
-};
-
 // google map
 
 google.maps.event.addDomListener(window, 'load', init);
@@ -64,6 +57,9 @@ $('#btn_exit').click(function () {
 $('#btn_share_fb').click(function () {
     ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#score').text();
+    FB.init({
+        appId: '1615126938703368'
+    });
     FB.ui({
         method: 'feed',
         link: location.href,
