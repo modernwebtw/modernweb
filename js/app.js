@@ -102,7 +102,9 @@ $window.scroll(function () {
 
 // mobile
 $(".menu__burger, .menu__mask").on('click', function () {
-    $(this, '.menu__content', '.menu').toggleClass('on');
+    $(this).toggleClass('on');
+    $('.menu__content').toggleClass('on');
+    $('.menu').toggleClass('on');
     $('body').toggleClass('is-hidden');
 });
 
