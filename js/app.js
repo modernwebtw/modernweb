@@ -26,11 +26,13 @@ function init() {
 }
 
 // game
+$('#modal_game_start').on('shown.bs.modal', function () {
+    ga('send', 'event', 'CTA', 'click', "Enter MW17 Game");
+    $('.modal-backdrop').addClass('game-bg-waring');
+});
+
 $('#alien').click(function () {
-    $('#modal_game_start').on('shown.bs.modal', function () {
-        ga('send', 'event', 'CTA', 'click', "Enter MW17 Game");
-        $('.modal-backdrop').addClass('game-bg-waring');
-    }).modal('show');
+    $('#modal_game_start').modal('show');
 });
 
 $('#btn_game_start').click(function () {
@@ -43,7 +45,13 @@ $('#btn_continue').click(function () {
     gameStart();
 });
 
+// 返回基地
 $('#btn_back').click(function () {
+    gamePause();
+});
+
+// 先閃避
+$('#btn_game_back').click(function () {
     ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");
     gamePause();
 });
