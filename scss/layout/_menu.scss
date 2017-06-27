@@ -20,6 +20,7 @@
         	top: 0;
         	bottom: 0;
         	right: 0;
+            display: block;
         	width: 100%;
         	height: 100%;
         	background-color: rgba(#000, .5);
@@ -27,6 +28,9 @@
 
         }
     }
+    &__mask {
+        display: none;
+    } 
     @include media(">767px") {
         &--scroll {
             background-color: rgba($space-color, .8);
