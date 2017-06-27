@@ -1,7 +1,9 @@
 // fb
-FB.init({
-    appId: '681372298729949'
-});
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '681372298729949'
+    });
+};
 
 // google map
 

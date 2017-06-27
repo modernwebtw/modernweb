@@ -65,14 +65,19 @@ var modernweb2017 = new Vue({
 
             modernweb2017.$nextTick(function () {
                 $('body').addClass('is-active');
-                setTimeout(function(){
+                setTimeout(function () {
                     $('#loading').remove();
                 }, 500);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
                 ]).done(function (script, textStatus) {
-                    $.getScript('js/app.js');
+                    $.getScript('js/app.js').done(function () {
+                        console.log('done');
+                    }).fail(function (jqxhr, settings, exception) {
+                        console.log(window.FB);
+                        console.log('fail', jqxhr, settings, exception)
+                    });
                 });
             });
         });
