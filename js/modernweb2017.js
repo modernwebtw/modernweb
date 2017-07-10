@@ -146,6 +146,9 @@ var modernweb2017 = new Vue({
                 // mobile
                 $(".menu__burger, .menu__mask").on('click', function () {
                     $(this).toggleClass("on");
+                    if (this.className.indexOf('menu__mask') !== -1) {
+                        $('.menu__burger').toggleClass("on");
+                    }
                     $('.menu__content').toggleClass("on");
                     $(".menu").toggleClass('on');
                     $('body').toggleClass('is-hidden');
