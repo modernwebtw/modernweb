@@ -104,9 +104,29 @@ var toggleScroll = function (boolean) {
 
 // scroll menu
 var $window = $(window);
-var $about = $('#about');
 var $menu = $('#menu');
-var $speaker = $('#speaker');
+var checkHasElm = function(arrID){
+    var $detect;
+    for (var i = arrID.length - 1; i >= 0; i--) {
+        if($(arrID[i]).length > 0){
+            $detect = $(arrID[i]);
+            break;
+        }
+    }
+    return $detect;
+};
+var $menu_target = (function(){
+    return checkHasElm([
+        '#about',
+        '#agenda'
+    ]);
+}());
+var $buy_target = (function(){
+    return checkHasElm([
+        '#speaker',
+        '#agenda'
+    ]);
+}());
 var $buy_ticket_btn = $('#buy_ticket');
 var timer;
 $window.scroll(function () {
@@ -114,8 +134,8 @@ $window.scroll(function () {
         window.clearTimeout(timer);
     }
     timer = window.setTimeout(function () {
-        $menu.toggleClass('menu--scroll', $window.scrollTop() >= $about.offset().top);
-        $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $speaker.offset().top);
+        $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
+        $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $buy_target.offset().top);
     }, 200);
 });
 
