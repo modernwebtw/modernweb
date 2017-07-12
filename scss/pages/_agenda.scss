@@ -1,16 +1,16 @@
 .agenda-head {
-    height: 540px;
-    color: #fff;
-    text-align: center;
-    background-image: url(../img/agenda-head.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    h1 {
-        margin-top: 0;
-        padding-top: 10%;
-        letter-spacing: 2px;
-    }
+	height: 540px;
+	color: #fff;
+	text-align: center;
+	background-image: url(../img/agenda-head.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	h1 {
+		margin-top: 0;
+		padding-top: 10%;
+		letter-spacing: 2px;
+	}
     @include media("<=1400px") {
         height: 400px;
     }
@@ -59,6 +59,7 @@
 }
 
 .agenda__t {
+<<<<<<< HEAD
     &-head {
         padding: 12px 16px;
         font-size: 18px;
@@ -168,3 +169,118 @@
         }
     }
 }
+=======
+	&-head {
+		padding:12px 16px;
+		font-size: 18px;
+		color: $space-color;
+		font-weight: 700;
+	}
+	&-time {
+		padding:12px 16px;
+		font-size: 18px;
+		color: #666;
+		background-color: #fff;
+		@include media("<768px") {
+			padding: 8px 16px;
+			background-color: #C9CACA;
+		}
+	}
+	&-rest {
+		td {
+			padding: 12px 16px;
+			font-size: 18px;
+			color: #666;
+			text-align: center;
+			background-color: #C9CACA;
+			@include media("<768px") {
+				padding: 8px 16px;
+				&:last-child {
+					background-color: #fff;
+				}
+			}
+		}
+		
+	}
+	&-keynote {
+		display: inline-block;
+		padding: 30px 16px;
+		text-align: center;
+		cursor: pointer;
+		&-topic {
+			margin-bottom: 12px;
+			font-size: 24px;
+			color: $main-green;
+			@include media("<768px") {
+				font-size: 18px;
+			}
+		}
+		&-name {
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			span {
+				display: inline-block;
+				margin-left: 8px;
+				color: #666;
+			}
+		}
+	}
+	&-track {
+		padding: 12px 16px;
+		color: $space-color;
+		font-weight: 700;
+		span {
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+	&-stripe {
+		td {
+			width: 22%;
+			@include media("<768px") {
+				width: 100%;
+			}
+		}
+		td:nth-child(2n) {
+			background-color: #EFEFEF;
+		}
+	}
+	&-class {
+		display: inline-block;
+		padding: 20px 16px;
+		text-align: center;
+		cursor: pointer;
+		&-topic {
+			margin-bottom: 6px;
+			font-size: 18px;
+			line-height: 1.5;
+			color: $main-green;
+		}
+		&-name {
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			span {
+				display: inline-block;
+				margin-left: 8px;
+				color: #666;
+				font-size: 15px;
+			}
+		}
+		&-track {
+			display: none;
+			@include media("<768px") {
+				display: inline-block;
+				font-size: 14px;
+				color: #888;
+			}
+			
+		}
+	}
+}
+>>>>>>> agenda
