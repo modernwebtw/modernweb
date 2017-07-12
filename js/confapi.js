@@ -10,9 +10,8 @@ var confapi = confapi || (function () {
     var getJSONP = function (type) {
         var deferred = $.Deferred();
         var api = Domain + '/api/v1.3/' + type + '.jsonp?nid=' + NID + '&callback=?';
-
         if (!!CACHE[type]) {
-            return deferred.resolve(CACHE[type]);
+            return CACHE[type];
         } else {
             $.getJSON(api).then(function (response) {
                 CACHE[type] = response;
@@ -21,6 +20,7 @@ var confapi = confapi || (function () {
                 return deferred.reject(api);
             });
         }
+        CACHE[type] = deferred.promise();
         return deferred.promise();
     };
 
@@ -128,8 +128,8 @@ var confapi = confapi || (function () {
                     });
                     // fixed time
                     var sessioin_date = rowData['sessioin_date'];
-                    rowData['start_Date'] = new Date(sessioin_date.value + ' ' + sessioin_date.timezone_db);
-                    rowData['end_Date'] = new Date(sessioin_date.value2 + ' ' + sessioin_date.timezone_db);;
+                    rowData['start_Date'] = new Date(Date.UTC.apply(null, sessioin_date.value.split(/[- :]/igm)));
+                    rowData['end_Date'] = new Date(Date.UTC.apply(null, sessioin_date.value2.split(/[- :]/igm)));
                     return rowData;
                 });
                 var SessionData = {};
