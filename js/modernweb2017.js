@@ -102,11 +102,11 @@ var modernweb2017 = new Vue({
         Modal_Speaker: {}
     },
     computed: {
-        ModalData: function() {
+        ModalData: function () {
             var Modal_ID = this.Modal_ID;
             return this.Speaker[Modal_ID] || {}
         },
-        SpeakerFilter: function() {
+        SpeakerFilter: function () {
             var speaker = this.Speaker;
             return {
                 keynote: this.filter(speaker, 'session_type', 'keynote', true),
@@ -118,8 +118,8 @@ var modernweb2017 = new Vue({
         }
     },
     methods: {
-        filter: function(data, field, value, boolean) {
-            return $.grep(data, function(obj) {
+        filter: function (data, field, value, boolean) {
+            return $.grep(data, function (obj) {
                 if (typeof obj[field] === 'object') {
                     return (!!~$.inArray(value, obj[field]) == boolean) ? obj : null;
                 } else {
@@ -127,22 +127,22 @@ var modernweb2017 = new Vue({
                 }
             });
         },
-        showModal: function(sID) {
+        showModal: function (sID) {
             this.Modal_ID = sID;
             $('#modal_box').modal('show');
         },
-        showModal: function(speaker) {
+        showModal: function (speaker) {
             this.Modal_Speaker = speaker;
             $('a[href="#speakerModalAgenda"]').tab('show');
             $('#speakerModal').modal('show');
         },
-        arcToSpan: function(str) {
+        arcToSpan: function (str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
         }
     },
     filters: {
-        time: function(date) {
-            var leftPadZero = function(str, n) {
+        time: function (date) {
+            var leftPadZero = function (str, n) {
                 str = ('' + str);
                 return Array(n - str.length + 1).join('0') + str;
             }
@@ -152,29 +152,29 @@ var modernweb2017 = new Vue({
             return '';
         }
     },
-    beforeCreate: function() {
+    beforeCreate: function () {
         $.when(
             confapi.getSessionWithSpeaker(),
             confapi.getSpeakerWithSession()
             // confapi.getSponsor()
-        ).done(function(session, speaker, sponsor) {
+        ).done(function (session, speaker, sponsor) {
             session['0'] = {};
             modernweb2017.Session = session;
             modernweb2017.Speaker = speaker;
             // modernweb2017.Sponsor = sponsor;
 
-            modernweb2017.$nextTick(function() {
+            modernweb2017.$nextTick(function () {
                 $('body').addClass('is-active');
-                setTimeout(function() {
+                setTimeout(function () {
                     $('#loading').remove();
                 }, 500);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
-                ]).done(function(script, textStatus) {
-                    $.getScript('js/app.js').done(function() {
+                ]).done(function (script, textStatus) {
+                    $.getScript('js/app.js').done(function () {
                         console.log('done');
-                    }).fail(function(jqxhr, settings, exception) {
+                    }).fail(function (jqxhr, settings, exception) {
                         console.log(window.FB);
                         console.log('fail', jqxhr, settings, exception)
                     });
