@@ -140,14 +140,14 @@
                                 <td class="agenda__table-td">
                                     <div class="agenda__t-time">09:40 - 10:40</div>
                                 </td>
-                                <td colspan="4" class="agenda__table-td">
+                                <td colspan="4" class="agenda__table-td" v-for="session_table_D1[sID]['9:40']">
                                     <a href="" class="agenda__t-keynote">
                                         <div class="agenda__t-keynote-topic">
-                                            The evolution and the future of the web
+                                            {{ Session.title }}
                                         </div>
                                         <div class="agenda__t-keynote-name">
-                                            <img src="img/keynote.jpg" alt="">
-                                            <span>北村英志</span>
+                                            <img :src="Speaker.avatar" alt="">
+                                            <span>{{ Speaker.speaker }}</span>
                                         </div>
                                     </a>
                                 </td>
@@ -186,7 +186,6 @@
                             </tr>
                             <tr class="agenda__t-stripe hidden-xs">
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                                 <td class="agenda__table-td">
                                     <div class="agenda__t-track">Track I</div>
@@ -466,10 +465,8 @@
                                     </a>
                                 </td>
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                             </tr>
                             <tr class="agenda__t-rest">
@@ -557,13 +554,14 @@
                             </tr>
                             <tr class="agenda__t-stripe hidden-xs">
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">中國技術<br><span>出品人 史海峰</span></div>
+                                    <div class="agenda__t-track">中國技術
+                                        <br><span>出品人 史海峰</span></div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">中國技術<br><span>出品人 程劭非</span></div>
+                                    <div class="agenda__t-track">中國技術
+                                        <br><span>出品人 程劭非</span></div>
                                 </td>
                                 <td class="agenda__table-td">
                                     <div class="agenda__t-track">Track V</div>
@@ -629,7 +627,6 @@
                                 <td class="agenda__table-td">
                                     <div class="agenda__t-time">13:55~14:20</div>
                                 </td>
-                                
                                 <td class="agenda__table-td">
                                     <a href="" class="agenda__t-class">
                                         <span class="agenda__t-class-track">Track V</span>
@@ -814,10 +811,8 @@
                                     </a>
                                 </td>
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                                 <td class="agenda__table-td">
-                                    
                                 </td>
                             </tr>
                             <tr class="agenda__t-rest">
