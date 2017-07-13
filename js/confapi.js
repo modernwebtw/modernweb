@@ -1,4 +1,4 @@
-var confapi = confapi || (function() {
+var confapi = confapi || (function () {
     // config
     var Domain = 'http://confapi.ithome.com.tw';
     var currentData = document.currentScript || {};
@@ -7,16 +7,16 @@ var confapi = confapi || (function() {
     var LOG = currentData.log || false;
     var CACHE = {};
     // private method
-    var getJSONP = function(type) {
+    var getJSONP = function (type) {
         var deferred = $.Deferred();
         var api = Domain + '/api/v1.3/' + type + '.jsonp?nid=' + NID + '&callback=?';
         if (!!CACHE[type]) {
             // return CACHE[type];
         } else {
-            $.getJSON(api).then(function(response) {
+            $.getJSON(api).then(function (response) {
                 // CACHE[type] = response;
                 return deferred.resolve(response);
-            }).fail(function() {
+            }).fail(function () {
                 return deferred.reject(api);
             });
         }
@@ -24,7 +24,7 @@ var confapi = confapi || (function() {
         return deferred.promise();
     };
 
-    var ConvertEmptyArrayToString = function(rowData, arrayKey) {
+    var ConvertEmptyArrayToString = function (rowData, arrayKey) {
         for (var i = 0; i < arrayKey.length; i++) {
             var key = arrayKey[i];
             rowData[key] = (rowData[key].length === 0) ? '' : rowData[key];
@@ -34,9 +34,9 @@ var confapi = confapi || (function() {
 
     // public method
     return {
-        getSession: function() {
-            return getJSONP('sessionlist').then(function(response) {
-                return $.map(response, function(rowData, index) {
+        getSession: function () {
+            return getJSONP('sessionlist').then(function (response) {
+                return $.map(response, function (rowData, index) {
                     rowData = ConvertEmptyArrayToString(rowData, [
                         'title',
                         'classroom',
@@ -47,6 +47,7 @@ var confapi = confapi || (function() {
                         'language',
                         'forum_type'
                     ]);
+                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&');
                     rowData['session_start'] = rowData['session_start'] + '000';
                     rowData['session_end'] = rowData['session_end'] + '000';
                     var SD = new Date(+rowData['session_start']);
@@ -59,9 +60,9 @@ var confapi = confapi || (function() {
                 });
             });
         },
-        getSpeaker: function() {
-            return getJSONP('spk').then(function(response) {
-                return $.map(response, function(rowData, index) {
+        getSpeaker: function () {
+            return getJSONP('spk').then(function (response) {
+                return $.map(response, function (rowData, index) {
                     rowData = ConvertEmptyArrayToString(rowData, [
                         'company',
                         'company_url',
@@ -85,9 +86,9 @@ var confapi = confapi || (function() {
                 });
             });
         },
-        getSponsor: function() {
-            return getJSONP('sponsorlist').then(function(response) {
-                return $.map(response, function(rowData, index) {
+        getSponsor: function () {
+            return getJSONP('sponsorlist').then(function (response) {
+                return $.map(response, function (rowData, index) {
                     rowData = ConvertEmptyArrayToString(rowData, [
                         'title',
                         'alt_title',
@@ -97,7 +98,7 @@ var confapi = confapi || (function() {
                     rowData['logo'] = Domain + rowData['logo'];
                     rowData['hash_path'] = 'sponsor-inner.html#s' + rowData['vendor_id'];
                     // fixed google icon
-                    rowData['social_links'] = $(rowData['social_links']).map(function(index, social_link) {
+                    rowData['social_links'] = $(rowData['social_links']).map(function (index, social_link) {
                         if (social_link['service'] == 'googleplus') {
                             social_link['service'] = 'google-plus';
                         }
@@ -108,15 +109,15 @@ var confapi = confapi || (function() {
                 });
             });
         },
-        getSessionWithSpeaker: function() {
-            return $.when(this.getSession(), this.getSpeaker()).then(function(Session, Speaker) {
+        getSessionWithSpeaker: function () {
+            return $.when(this.getSession(), this.getSpeaker()).then(function (Session, Speaker) {
                 var SpeakerData = {};
                 for (var i = 0; i < Speaker.length; i++) {
                     var target_id = Speaker[i]['target_id'];
                     SpeakerData[target_id] = Speaker[i];
                 };
-                Session = $.map(Session, function(rowData) {
-                    rowData['speaker'] = $.map(rowData['speaker'], function(data) {
+                Session = $.map(Session, function (rowData) {
+                    rowData['speaker'] = $.map(rowData['speaker'], function (data) {
                         var target_id = data['target_id'];
                         if (!!SpeakerData[target_id] && data['target_id'] == SpeakerData[target_id]['target_id']) {
                             // add hash
@@ -182,16 +183,16 @@ var confapi = confapi || (function() {
                 return SessionData;
             });
         },
-        getSpeakerWithSession: function() {
-            return $.when(this.getSession(), this.getSpeaker()).then(function(Session, Speaker) {
+        getSpeakerWithSession: function () {
+            return $.when(this.getSession(), this.getSpeaker()).then(function (Session, Speaker) {
                 var SessionData = {};
-                $.each(Session, function(i, v) {
+                $.each(Session, function (i, v) {
                     if (!!v.speaker.length) {
-                        $.each(v.speaker, function(index, value) {
+                        $.each(v.speaker, function (index, value) {
                             SessionData[value.target_id] = SessionData[value.target_id] || [];
                             // fixed time
                             var sessioin_date = v['sessioin_date'];
-                            var leftPadZero = function(str, n) {
+                            var leftPadZero = function (str, n) {
                                 str = ('' + str);
                                 return Array(n - str.length + 1).join('0') + str;
                             }
@@ -209,7 +210,7 @@ var confapi = confapi || (function() {
                         });
                     }
                 });
-                var SpeakerData = $.map(Speaker, function(rowData) {
+                var SpeakerData = $.map(Speaker, function (rowData) {
                     var session = SessionData[rowData.target_id] || [];
                     rowData['session'] = session;
                     rowData['session_type'] = '';
