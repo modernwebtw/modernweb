@@ -141,15 +141,15 @@
                                     <div class="agenda__t-time">09:40 - 10:40</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['9:40']">
-                                    <div class="agenda__t-keynote">
-                                        <div class="agenda__t-keynote-topic">
-                                            {{ Session[sID].title }}
-                                        </div>
-                                        <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                            <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
-                                                <span>{{ speaker.speaker }}</span>
-                                            </div>
+                                    <div class="agenda__t-keynote-topic">
+                                        {{ Session[sID].title }}
+                                    </div>
+                                    <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+                                        <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
+                                            <img :src="speaker.avatar" alt="">
+                                            <span>{{ speaker.speaker }}</span>
+                                            <br> {{ speaker.company }}
+                                            <!-- {{ speaker.position }} -->
                                         </div>
                                     </div>
                                 </td>
@@ -172,8 +172,10 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
+                                            <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
+                                            <br> {{ speaker.company }}
+                                            <!-- {{ speaker.position }} -->
                                         </div>
                                     </div>
                                 </td>
@@ -353,8 +355,10 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
+                                            <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
+                                            <br> {{ speaker.company }}
+                                            <!-- {{ speaker.position }} -->
                                         </div>
                                     </div>
                                 </td>
@@ -377,8 +381,10 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
+                                            <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
+                                            <br> {{ speaker.company }}
+                                            <!-- {{ speaker.position }} -->
                                         </div>
                                     </div>
                                 </td>
@@ -401,8 +407,10 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
+                                            <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
+                                            <br> {{ speaker.company }}
+                                            <!-- {{ speaker.position }} -->
                                         </div>
                                     </div>
                                 </td>
