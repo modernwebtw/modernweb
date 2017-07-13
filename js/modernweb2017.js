@@ -195,10 +195,10 @@ var modernweb2017 = new Vue({
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
                 ]).done(function(script, textStatus) {
                     $.getScript('js/app.js').done(function() {
-                        console.log('done');
+                        // console.log('done');
                     }).fail(function(jqxhr, settings, exception) {
-                        console.log(window.FB);
-                        console.log('fail', jqxhr, settings, exception)
+                        // console.log(window.FB);
+                        // console.log('fail', jqxhr, settings, exception)
                     });
                 });
             });
