@@ -147,7 +147,7 @@
                                         </div>
                                         <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                             <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                <img :src="speaker.avatar" alt="">
+                                                {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
                                                 <span>{{ speaker.speaker }}</span>
                                             </div>
                                         </div>
@@ -172,7 +172,7 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            <img :src="speaker.avatar" alt="">
+                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
                                     </div>
@@ -353,7 +353,7 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            <img :src="speaker.avatar" alt="">
+                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
                                     </div>
@@ -377,7 +377,7 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            <img :src="speaker.avatar" alt="">
+                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
                                     </div>
@@ -401,7 +401,7 @@
                                     </div>
                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                         <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                            <img :src="speaker.avatar" alt="">
+                                            {{ speaker.company }} {{ speaker.position }} <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
                                     </div>
@@ -419,12 +419,12 @@
                                 <td class="agenda__table-td">
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">中國技術
-                                        <br><span>出品人 史海峰</span></div>
+                                    <div class="agenda__t-track">中國技術日
+                                        <br><span>Web 架構 出品人</span></div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">中國技術
-                                        <br><span>出品人 程劭非</span></div>
+                                    <div class="agenda__t-track">中國技術日
+                                        <br><span>Web 前端 出品人 程劭非</span></div>
                                 </td>
                                 <td class="agenda__table-td">
                                     <div class="agenda__t-track">Track V</div>
@@ -443,7 +443,7 @@
                                         {{ Session[data.sID].title }}
                                     </div>
                                     <div class="agenda__t-class-name" v-for="speaker in Session[data.sID].speaker">
-                                        <div class="agenda__t-class" @click="showModal2(Session[sID])">
+                                        <div class="agenda__t-class" @click="showModal2(Session[data.sID])">
                                             <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
@@ -460,7 +460,7 @@
                                         {{ Session[data.sID].title }}
                                     </div>
                                     <div class="agenda__t-class-name" v-for="speaker in Session[data.sID].speaker">
-                                        <div class="agenda__t-class" @click="showModal2(Session[sID])">
+                                        <div class="agenda__t-class" @click="showModal2(Session[data.sID])">
                                             <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
