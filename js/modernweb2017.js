@@ -61,23 +61,35 @@ var session_table_D2 = {
     ],
     "13:30": [{
         sID: '2159', // 沈劍
-        rowspan: 2
+        rowspan: 2,
+        track: '中國技術 - 架構篇',
+        time: '13:40 ~ 14:20'
     }, {
         sID: '2163', // 袁鋒
-        rowspan: 2
+        rowspan: 2,
+        track: '中國技術 - 前端篇',
+        time: '13:40 ~ 14:20'
     }, {
         sID: '2156', // 鄭淳尹
-        rowspan: 1
+        rowspan: 1,
+        track: 'Track E',
+        time: ' '
     }, {
         sID: '2116', // 邱政憲
-        rowspan: 1
+        rowspan: 1,
+        track: 'Track F',
+        time: ' '
     }],
     "13:55": [{
         sID: '2118', // 莊兼愿
-        rowspan: 1
+        rowspan: 1,
+        track: 'Track E',
+        time: ' '
     }, {
         sID: '2122', // 卓承賢
-        rowspan: 1
+        rowspan: 1,
+        track: 'Track F',
+        time: ' '
     }],
     "14:30": [
         '2168', // 趙子明
