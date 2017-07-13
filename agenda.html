@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="http://modernweb.tw/img/favicon.gif" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="game/game.css">
     <!--[if lt IE 9]>
@@ -193,16 +193,16 @@
                                 <td class="agenda__table-td">
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track I</div>
+                                    <div class="agenda__t-track">Track A</div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track II</div>
+                                    <div class="agenda__t-track">Track B</div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track III</div>
+                                    <div class="agenda__t-track">Track C</div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track IV</div>
+                                    <div class="agenda__t-track">Track D</div>
                                 </td>
                             </tr>
                             <tr class="agenda__t-stripe">
@@ -436,10 +436,10 @@
                                         <br><span>Web 前端 出品人 程劭非</span></div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track V</div>
+                                    <div class="agenda__t-track">Track E</div>
                                 </td>
                                 <td class="agenda__table-td">
-                                    <div class="agenda__t-track">Track VI</div>
+                                    <div class="agenda__t-track">Track F</div>
                                 </td>
                             </tr>
                             <tr class="agenda__t-stripe">
@@ -490,7 +490,7 @@
                                     <div class="agenda__t-time">14:30 - 15:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D2['14:30']">
-                                    <span class="agenda__t-class-track">Track I</span>
+                                    <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                     <div class="agenda__t-class-topic">
                                         {{ Session[sID].title }}
                                     </div>
@@ -515,7 +515,7 @@
                                     <div class="agenda__t-time">15:30 - 16:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D2['15:30']">
-                                    <span class="agenda__t-class-track">Track I</span>
+                                    <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                     <div class="agenda__t-class-topic">
                                         {{ Session[sID].title }}
                                     </div>
@@ -540,7 +540,7 @@
                                     <div class="agenda__t-time">16:20 - 17:00</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D2['16:20']">
-                                    <span class="agenda__t-class-track">Track I</span>
+                                    <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                     <div class="agenda__t-class-topic">
                                         {{ Session[sID].title }}
                                     </div>

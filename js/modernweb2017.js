@@ -88,7 +88,7 @@ var session_table_D2 = {
     }, {
         sID: '2122', // 卓承賢
         rowspan: 1,
-        track: 'Track E',
+        track: 'Track F',
         time: ' '
     }],
     "14:30": [
