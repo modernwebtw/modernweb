@@ -1,6 +1,6 @@
 var confapi = (function() {
     var DOMAIN = 'https://confapi.ithome.com.tw';
-    var NID = '981';
+    var NID = currentData.nid || 2073;
     var LOG = false;
     var CACHE = false;
 
