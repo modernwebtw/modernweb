@@ -118,13 +118,15 @@ var checkHasElm = function(arrID){
 var $menu_target = (function(){
     return checkHasElm([
         '#about',
-        '#agenda'
+        '#agenda',
+        '#jobs'
     ]);
 }());
 var $buy_target = (function(){
     return checkHasElm([
         '#speaker',
-        '#agenda'
+        '#agenda',
+        '#jobs'
     ]);
 }());
 var $buy_ticket_btn = $('#buy_ticket');
