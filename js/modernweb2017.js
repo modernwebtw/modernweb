@@ -197,7 +197,17 @@ var modernweb2017 = new Vue({
                 $('body').addClass('is-active');
                 setTimeout(function () {
                     $('#loading').remove();
-                }, 500);
+                }, 500);     
+                function goScroll(target) {
+                    var target_top = $(target).offset().top;   
+
+                    $("html, body").stop().animate({
+                        scrollTop: target_top
+                    }, 1000, function() {
+                        location.hash = target;
+                    });
+                }           
+                console.log(location.hash);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
@@ -208,8 +218,11 @@ var modernweb2017 = new Vue({
                         // console.log(window.FB);
                         // console.log('fail', jqxhr, settings, exception)
                     });
-                });
+                });                
             });
         });
     }
 });
+
+
+
