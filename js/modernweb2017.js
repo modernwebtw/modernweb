@@ -126,7 +126,8 @@ var modernweb2017 = new Vue({
         Speaker: {},
         Sponsor: {},
         Modal_Speaker: {},
-        Modal_Session: {}
+        Modal_Session: {},
+        Jobs: {}
     },
     computed: {
         ModalData: function () {
@@ -185,14 +186,30 @@ var modernweb2017 = new Vue({
     beforeCreate: function () {
         $.when(
             confapi.getSessionWithSpeaker(),
-            confapi.getSpeakerWithSession()
-            // confapi.getSponsor()
+            confapi.getSpeakerWithSession(),
+            confapi.getSponsor()
         ).done(function (session, speaker, sponsor) {
             session['0'] = {};
             modernweb2017.Session = session;
             modernweb2017.Speaker = speaker;
-            // modernweb2017.Sponsor = sponsor;
-
+            modernweb2017.Sponsor = sponsor;
+            // jobs.html
+            if (!!~location.href.search(/jobs.html/igm)) {
+                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/jobs?nid=2272&callback=?').then(function (jobs) {
+                    $.map(jobs, function (jobRowData) {
+                        for (var i = 0; i < sponsor.length; i++) {
+                            console.log(jobRowData.nid, sponsor[i].vendor_id);
+                            if (jobRowData.nid == sponsor[i].vendor_id) {
+                                jobRowData.sponsor = sponsor[i];
+                                break;
+                            }
+                        }
+                        return jobRowData;
+                    });
+                    modernweb2017.Jobs = jobs;
+                })
+            }
+            // 
             modernweb2017.$nextTick(function () {
                 $('body').addClass('is-active');
                 setTimeout(function () {
