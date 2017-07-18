@@ -31,7 +31,7 @@
     &__mask {
         display: none;
     } 
-    @include media(">767px") {
+    @include media(">=870px") {
         &--scroll {
             background-color: rgba($space-color, .8);
             .menu__logo {
@@ -50,6 +50,9 @@
         @include media(">1199px") {
             width: 12%;
         }
+        @include media("<870px") {
+            display: none;
+        }
         img {
             width: 100%;
             user-select: none;
@@ -64,10 +67,13 @@
             width: 100%;
             user-select: none;
         }
+        @include media(">=870px") {
+            display: none;
+        }
     }
     &__content {
         float: right;
-        @include media("<768px") {
+        @include media("<870px") {
             float: none;
             position: fixed;
             right: 0;
@@ -89,13 +95,13 @@
         }
     }
     &__list {
-        @include media("<768px") {
+        @include media("<870px") {
             float: none;
             margin-top: 10%;
         }
         >li {
             float: left;
-            @include media("<768px") {
+            @include media("<870px") {
                 float: none;
             }
         }
@@ -105,15 +111,16 @@
             padding: 0 10px;
             color: #fff;
             @include font-hover (#fff, $hover-color: lighten($main-green, 8%), $active-color: darken($main-green, 7%));
-            @include media("<768px") {
+            @include media("<870px") {
                 margin: 20px auto;
                 text-align: center;
                 @include font-hover ($main-green, $hover-color: lighten($main-green, 8%), $active-color: darken($main-green, 7%));
             }
+            
         }
     }
     &__burger {
-        @include media(">767px") {
+        @include media(">=870px") {
             display: none;
         }
         width: 30px;
@@ -162,4 +169,18 @@
     display: block;
     margin: 12px 8px;
     padding: 3px 0;
+}
+
+.dropdown-hide-xs {
+    display: block;
+    @include media("<870px") {
+        display: none;
+    }
+}
+
+.menu__list a.dropdown-visible-xs {
+    display: none;
+    @include media("<870px") {
+       display: block;
+    }
 }
