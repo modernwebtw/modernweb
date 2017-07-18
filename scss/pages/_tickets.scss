@@ -130,7 +130,7 @@
     box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .2);
     transition: .2s linear;
     transform: translateX(100%);
-    z-index: 9999;
+    z-index: 100;
     visibility: hidden;
     &:hover,
     &:focus {

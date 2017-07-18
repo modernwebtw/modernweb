@@ -3,24 +3,24 @@ var confapi = confapi || (function () {
     var Domain = 'http://confapi.ithome.com.tw';
     var currentData = document.currentScript || {};
     currentData = currentData.dataset || {};
-    var NID = currentData.nid || 1838;
+    var NID = currentData.nid || 2073;
     var LOG = currentData.log || false;
     var CACHE = {};
     // private method
     var getJSONP = function (type) {
         var deferred = $.Deferred();
         var api = Domain + '/api/v1.3/' + type + '.jsonp?nid=' + NID + '&callback=?';
-
         if (!!CACHE[type]) {
-            return deferred.resolve(CACHE[type]);
+            // return CACHE[type];
         } else {
             $.getJSON(api).then(function (response) {
-                CACHE[type] = response;
+                // CACHE[type] = response;
                 return deferred.resolve(response);
             }).fail(function () {
                 return deferred.reject(api);
             });
         }
+        // CACHE[type] = deferred.promise();
         return deferred.promise();
     };
 
@@ -47,6 +47,7 @@ var confapi = confapi || (function () {
                         'language',
                         'forum_type'
                     ]);
+                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&');
                     rowData['session_start'] = rowData['session_start'] + '000';
                     rowData['session_end'] = rowData['session_end'] + '000';
                     var SD = new Date(+rowData['session_start']);
@@ -73,12 +74,12 @@ var confapi = confapi || (function () {
                         'full_profile'
                     ]);
                     // fixed null avatar
+                    // console.log(rowData['avatar']);
                     if (!!rowData['avatar'].length) {
                         rowData['avatar'] = Domain + rowData['avatar'];
                     } else {
                         rowData['avatar'] = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
                     }
-                    rowData['speaker'] = rowData['speaker'];
                     rowData['position'] = rowData['position'].replace(/&amp;/, '&');
                     rowData['hash_path'] = 'speaker.html#s' + rowData['target_id'];
                     return rowData;
@@ -128,8 +129,8 @@ var confapi = confapi || (function () {
                     });
                     // fixed time
                     var sessioin_date = rowData['sessioin_date'];
-                    rowData['start_Date'] = new Date(sessioin_date.value + ' ' + sessioin_date.timezone_db);
-                    rowData['end_Date'] = new Date(sessioin_date.value2 + ' ' + sessioin_date.timezone_db);;
+                    rowData['start_Date'] = new Date(Date.UTC.apply(null, sessioin_date.value.split(/[- :]/igm)));
+                    rowData['end_Date'] = new Date(Date.UTC.apply(null, sessioin_date.value2.split(/[- :]/igm)));
                     return rowData;
                 });
                 var SessionData = {};
