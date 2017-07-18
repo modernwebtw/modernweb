@@ -12,31 +12,31 @@ var session_table_D1 = {
         '2094', // 井村友美        
     ],
     "13:30": [
-    	'2123', // 高偉格
+        '2123', // 高偉格
         '2152', // 李曉清        
         '2121', // 張博凱
         '2157' // 王志誠
     ],
     "13:55": [
-    	'2120', // 林承澤
+        '2120', // 林承澤
         '2119', // 尤俊凱
         '2153', // 楊捷凱        
         '2117' // 洪毓翔
     ],
     "14:30": [
-    	'2127', // 徐銘谷
+        '2127', // 徐銘谷
         '2161', // 李建杭
         '2133', // 許精
         '2130' // 蘇學翔
-        
+
     ],
     "15:30": [
-    	'2128', // 吳俊賢
+        '2128', // 吳俊賢
         '2134', // 吳柏毅
         '2129', // 高見龍
         '2125' // 王毅丞
-        
-        
+
+
     ],
     "16:20": [
         '2132', // 林佑安
@@ -63,22 +63,22 @@ var session_table_D2 = {
         '2146', // 李維翰
     ],
     "13:30": [{
-    	sID: '2163', // 袁鋒
+        sID: '2163', // 袁鋒
         rowspan: 2,
         track: '中國技術日',
         time: '13:40 ~ 14:20'
-        
+
     }, {
         sID: '2159', // 沈劍
         rowspan: 2,
         track: '中國技術日',
         time: '13:40 ~ 14:20'
     }, {
-    	sID: '2116', // 邱政憲
+        sID: '2116', // 邱政憲
         rowspan: 1,
         track: 'Track F',
         time: ' '
-        
+
     }, {
         sID: '2156', // 鄭淳尹
         rowspan: 1,
@@ -97,11 +97,11 @@ var session_table_D2 = {
         time: ' '
     }],
     "14:30": [
-    	'2158', // 鐘恒
+        '2158', // 鐘恒
         '2168', // 趙子明
         '2131', // 彭兆蔚
         '2126' // 蘇泰安
-        
+
     ],
     "15:30": [
         '2169', // 潘佳韓
@@ -197,17 +197,7 @@ var modernweb2017 = new Vue({
                 $('body').addClass('is-active');
                 setTimeout(function () {
                     $('#loading').remove();
-                }, 500);     
-                function goScroll(target) {
-                    var target_top = $(target).offset().top;   
-
-                    $("html, body").stop().animate({
-                        scrollTop: target_top
-                    }, 1000, function() {
-                        location.hash = target;
-                    });
-                }           
-                console.log(location.hash);
+                }, 500);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
@@ -218,11 +208,8 @@ var modernweb2017 = new Vue({
                         // console.log(window.FB);
                         // console.log('fail', jqxhr, settings, exception)
                     });
-                });                
+                });
             });
         });
     }
 });
-
-
-
