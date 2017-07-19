@@ -105,24 +105,24 @@ var toggleScroll = function (boolean) {
 // scroll menu
 var $window = $(window);
 var $menu = $('#menu');
-var checkHasElm = function(arrID){
+var checkHasElm = function (arrID) {
     var $detect;
     for (var i = arrID.length - 1; i >= 0; i--) {
-        if($(arrID[i]).length > 0){
+        if ($(arrID[i]).length > 0) {
             $detect = $(arrID[i]);
             break;
         }
     }
     return $detect;
 };
-var $menu_target = (function(){
+var $menu_target = (function () {
     return checkHasElm([
         '#about',
         '#agenda',
         '#jobs'
     ]);
 }());
-var $buy_target = (function(){
+var $buy_target = (function () {
     return checkHasElm([
         '#speaker',
         '#agenda',
@@ -163,9 +163,11 @@ function goScroll(target) {
 
     $('html, body').stop().animate({
         scrollTop: sTop
-    }, 1000);
+    }, 500);
 }
 
+
+location.hash && goScroll(location.hash);
 
 // 2017.07.07 = 1499356800647
 var TimeDiff = (1499356800647 - +new Date());

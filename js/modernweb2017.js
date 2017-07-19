@@ -12,31 +12,31 @@ var session_table_D1 = {
         '2094', // 井村友美        
     ],
     "13:30": [
-    	'2123', // 高偉格
+        '2123', // 高偉格
         '2152', // 李曉清        
         '2121', // 張博凱
         '2157' // 王志誠
     ],
     "13:55": [
-    	'2120', // 林承澤
+        '2120', // 林承澤
         '2119', // 尤俊凱
         '2153', // 楊捷凱        
         '2117' // 洪毓翔
     ],
     "14:30": [
-    	'2127', // 徐銘谷
+        '2127', // 徐銘谷
         '2161', // 李建杭
         '2133', // 許精
         '2130' // 蘇學翔
-        
+
     ],
     "15:30": [
-    	'2128', // 吳俊賢
+        '2128', // 吳俊賢
         '2134', // 吳柏毅
         '2129', // 高見龍
         '2125' // 王毅丞
-        
-        
+
+
     ],
     "16:20": [
         '2132', // 林佑安
@@ -63,22 +63,22 @@ var session_table_D2 = {
         '2146', // 李維翰
     ],
     "13:30": [{
-    	sID: '2163', // 袁鋒
+        sID: '2163', // 袁鋒
         rowspan: 2,
         track: '中國技術日',
         time: '13:40 ~ 14:20'
-        
+
     }, {
         sID: '2159', // 沈劍
         rowspan: 2,
         track: '中國技術日',
         time: '13:40 ~ 14:20'
     }, {
-    	sID: '2116', // 邱政憲
+        sID: '2116', // 邱政憲
         rowspan: 1,
         track: 'Track F',
         time: ' '
-        
+
     }, {
         sID: '2156', // 鄭淳尹
         rowspan: 1,
@@ -97,11 +97,11 @@ var session_table_D2 = {
         time: ' '
     }],
     "14:30": [
-    	'2158', // 鐘恒
+        '2158', // 鐘恒
         '2168', // 趙子明
         '2131', // 彭兆蔚
         '2126' // 蘇泰安
-        
+
     ],
     "15:30": [
         '2169', // 潘佳韓
@@ -126,7 +126,8 @@ var modernweb2017 = new Vue({
         Speaker: {},
         Sponsor: {},
         Modal_Speaker: {},
-        Modal_Session: {}
+        Modal_Session: {},
+        Jobs: {}
     },
     computed: {
         ModalData: function () {
@@ -185,14 +186,30 @@ var modernweb2017 = new Vue({
     beforeCreate: function () {
         $.when(
             confapi.getSessionWithSpeaker(),
-            confapi.getSpeakerWithSession()
-            // confapi.getSponsor()
+            confapi.getSpeakerWithSession(),
+            confapi.getSponsor()
         ).done(function (session, speaker, sponsor) {
             session['0'] = {};
             modernweb2017.Session = session;
             modernweb2017.Speaker = speaker;
-            // modernweb2017.Sponsor = sponsor;
-
+            modernweb2017.Sponsor = sponsor;
+            // jobs.html
+            if (!!~location.href.search(/jobs.html/igm)) {
+                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/jobs?nid=2272&callback=?').then(function (jobs) {
+                    $.map(jobs, function (jobRowData) {
+                        for (var i = 0; i < sponsor.length; i++) {
+                            console.log(jobRowData.nid, sponsor[i].vendor_id);
+                            if (jobRowData.nid == sponsor[i].vendor_id) {
+                                jobRowData.sponsor = sponsor[i];
+                                break;
+                            }
+                        }
+                        return jobRowData;
+                    });
+                    modernweb2017.Jobs = jobs;
+                })
+            }
+            // 
             modernweb2017.$nextTick(function () {
                 $('body').addClass('is-active');
                 setTimeout(function () {
