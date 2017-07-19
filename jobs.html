@@ -82,7 +82,7 @@
                             <span></span>
                         </div>
                         <div class="menu__content">
-                            <a href="" class="menu__burger-logo">
+                            <a href="index.html" class="menu__burger-logo">
                                 <img src="img/logo_color.svg" alt="Modern Web 2017">
                             </a>
                             <ul class="list-unstyled menu__list">
@@ -124,9 +124,13 @@
                 <div class="row">
                     <div class="col-md-offset-1 col-md-10">
                         <div class="jobs__wrapper" v-for="job in Jobs">
-                            <a href="" target="_blank" class="jobs__logo"><img src="img/ithome.jpg" alt=""></a>
+                            <a :href="job.sponsor.official_site" target="_blank" class="jobs__logo">
+                                <img :src="job.sponsor.logo" alt="">
+                            </a>
                             <div class="jobs__content">
-                                <div class="jobs__name">{{ job.sponsor.title }}</div>
+                                <a :href="job.sponsor.official_site" target="_blank" class="jobs__name">
+                                    {{ job.sponsor.title }}
+                                </a>
                                 <div class="jobs__name-en">{{ job.sponsor.english_title }}</div>
                                 <div class="jobs__desc" v-html="job.sponsor.description"></div>
                                 <!--<a href="" class="jobs__btn jobs__btn--white">瞭解更多</a>-->

@@ -106,9 +106,12 @@ a {
         }
         @include media(">768px") {
             left: 0;
-            top: -6%;
+            // top: -6%;
             font-size: 8em;
             font-size: 8vw;
+        }
+        @include media(">=1400px") {
+            top: -6%;
         }
     }
     h1 {

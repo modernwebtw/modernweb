@@ -45,6 +45,7 @@
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 1.6;
+		@include font-hover(#fff);
 	}
 	&__name-en {
 		font-size: 20px;
@@ -94,10 +95,11 @@
 		ul {
 			margin-top: 10px;
 			padding-left: 24px;
+			a {
+				font-weight: normal;
+				@include font-hover ($space-color);
+			}
 		}
-		a {
-			font-weight: normal;
-			@include font-hover ($space-color);
-		}
+		
 	}
 }
