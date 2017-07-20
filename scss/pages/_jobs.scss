@@ -53,7 +53,12 @@
 	}
 	&__desc {
 		margin-bottom: 10px;
+		font-size: 16px;
 		line-height: 1.6;
+		opacity: .95;
+		a {
+			@include font-hover(#fff,$hover-color: $space-color, $active-color: $space-color);
+		}
 	}
 	&__btn {
 		display: inline-block;
