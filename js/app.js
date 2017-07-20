@@ -1,5 +1,4 @@
 // google map
-
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
@@ -19,42 +18,42 @@ function init() {
 }
 
 // game
-$('#modal_game_start').on('shown.bs.modal', function() {
+$('#modal_game_start').on('shown.bs.modal', function () {
     ga('send', 'event', 'CTA', 'click', "Enter MW17 Game");
     $('.modal-backdrop').addClass('game-bg-waring');
 });
 
-$('#alien').click(function() {
+$('#alien').click(function () {
     $('#modal_game_start').modal('show');
 });
 
-$('#btn_game_start').click(function() {
+$('#btn_game_start').click(function () {
     ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
     gameStart();
 });
 
-$('#btn_continue').click(function() {
+$('#btn_continue').click(function () {
     ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
     gameStart();
 });
 
 // 返回基地
-$('#btn_back').click(function() {
+$('#btn_back').click(function () {
     gamePause();
 });
 
 // 先閃避
-$('#btn_game_back').click(function() {
+$('#btn_game_back').click(function () {
     ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");
     gamePause();
 });
 
-$('#btn_exit').click(function() {
+$('#btn_exit').click(function () {
     ga('send', 'event', 'CTA', 'click', "Exit MW17 Game");
     gamePause();
 });
 
-$('#btn_share_fb').click(function() {
+$('#btn_share_fb').click(function () {
     ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#score').text();
     FB.init({
@@ -67,10 +66,10 @@ $('#btn_share_fb').click(function() {
         picture: 'http://modernweb.tw/img/game_share.jpg',
         description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
         caption: 'Modern Web 2017 ─ 8/10-11 登場'
-    }, function(response) {});
+    }, function (response) {});
 });
 
-var gameStart = function() {
+var gameStart = function () {
     $('html, body').scrollTop(0);
     $('body').addClass('game_start');
     var $game = $('#game');
@@ -84,17 +83,17 @@ var gameStart = function() {
     toggleScroll(false);
 }
 
-var gamePause = function() {
+var gamePause = function () {
     $('body').removeClass('game_start');
     Game.pause();
     toggleScroll(true);
 }
 
-var toggleScroll = function(boolean) {
+var toggleScroll = function (boolean) {
     if (boolean) {
         $(window).off('scroll touchmove mousewheel');
     } else {
-        $(window).on('scroll touchmove mousewheel', function(e) {
+        $(window).on('scroll touchmove mousewheel', function (e) {
             e.preventDefault();
             e.stopPropagation();
             return false;
@@ -105,7 +104,7 @@ var toggleScroll = function(boolean) {
 // scroll menu
 var $window = $(window);
 var $menu = $('#menu');
-var checkHasElm = function(arrID) {
+var checkHasElm = function (arrID) {
     var $detect;
     for (var i = arrID.length - 1; i >= 0; i--) {
         if ($(arrID[i]).length > 0) {
@@ -115,14 +114,14 @@ var checkHasElm = function(arrID) {
     }
     return $detect;
 };
-var $menu_target = (function() {
+var $menu_target = (function () {
     return checkHasElm([
         '#about',
         '#agenda',
         '#jobs'
     ]);
 }());
-var $buy_target = (function() {
+var $buy_target = (function () {
     return checkHasElm([
         '#speaker',
         '#agenda',
@@ -131,18 +130,18 @@ var $buy_target = (function() {
 }());
 var $buy_ticket_btn = $('#buy_ticket');
 var timer;
-$window.scroll(function() {
+$window.scroll(function () {
     if (timer) {
         window.clearTimeout(timer);
     }
-    timer = window.setTimeout(function() {
+    timer = window.setTimeout(function () {
         $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
         $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $buy_target.offset().top);
     }, 200);
 });
 
 // mobile
-$(".menu__burger, .menu__mask").on('click', function() {
+$(".menu__burger, .menu__mask").on('click', function () {
     $('.menu__burger').toggleClass("on");
     $('.menu__content').toggleClass('on');
     $('.menu').toggleClass('on');
@@ -150,32 +149,31 @@ $(".menu__burger, .menu__mask").on('click', function() {
 });
 
 // scroll
-$('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function() {
+$('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function () {
     var target = '#' + $(this).attr('href').split('#')[1];
     goScroll(target);
     return false;
 });
 
 function goScroll(target) {
-    var target_top = $(target).offset().top;
+    var $target = $(target);
+    var target_top = $target.offset().top;
     var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
     var sTop = target_top - header_height;
-
     $('html, body').stop().animate({
         scrollTop: sTop
     }, 500);
 }
 
-
 location.hash && goScroll(location.hash);
 
 // 2017.07.07 = 1499356800647
-var TimeDiff = (1499356800647 - +new Date());
-var is201707070000 = TimeDiff > 0 ? TimeDiff : 4;
-var openTicket = function openTicket() {
-    $('#ticket_earlyBird').html('<a href="#" class="btn ticket__button disabled">截止購票</a>');
-    $('#ticket_discount').html('<a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170040" class="btn ticket__button">立即購票</a>');
-    $('#ticket_peers').html('<a href="http://s.itho.me/modernweb/2017/Modern_Web_2017_group_application_%20form.xlsx" class="btn ticket__button">立即購票</a>');
-}
+// var TimeDiff = (1499356800647 - +new Date());
+// var is201707070000 = TimeDiff > 0 ? TimeDiff : 4;
+// var openTicket = function openTicket() {
+//     $('#ticket_earlyBird').html('<a href="#" class="btn ticket__button disabled">截止購票</a>');
+//     $('#ticket_discount').html('<a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170040" class="btn ticket__button">立即購票</a>');
+//     $('#ticket_peers').html('<a href="http://s.itho.me/modernweb/2017/Modern_Web_2017_group_application_%20form.xlsx" class="btn ticket__button">立即購票</a>');
+// }
 
-setTimeout(openTicket, TimeDiff);
+// setTimeout(openTicket, TimeDiff);

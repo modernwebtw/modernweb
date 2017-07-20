@@ -188,12 +188,15 @@ var modernweb2017 = new Vue({
             confapi.getSessionWithSpeaker(),
             confapi.getSpeakerWithSession(),
             confapi.getSponsor()
-        ).done(function (session, speaker, sponsor) {
+        ).then(function (session, speaker, sponsor) {
             session['0'] = {};
             modernweb2017.Session = session;
             modernweb2017.Speaker = speaker;
             modernweb2017.Sponsor = sponsor;
+            return sponsor;
+        }).then(function (sponsor) {
             // jobs.html
+            var deferred = $.Deferred();
             if (!!~location.href.search(/jobs.html/igm)) {
                 $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function (jobs) {
                     $.map(jobs, function (jobRowData) {
@@ -207,10 +210,15 @@ var modernweb2017 = new Vue({
                         return jobRowData;
                     });
                     modernweb2017.Jobs = jobs;
+                    deferred.resolve('');
                 })
+            } else {
+                deferred.resolve('');
             }
-            // 
+            return deferred.promise();
+        }).then(function () {
             modernweb2017.$nextTick(function () {
+                console.log('$nextTick', $(location.hash).length, +new Date());
                 $('body').addClass('is-active');
                 setTimeout(function () {
                     $('#loading').remove();
@@ -218,13 +226,8 @@ var modernweb2017 = new Vue({
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
-                ]).done(function (script, textStatus) {
-                    $.getScript('js/app.js').done(function () {
-                        // console.log('done');
-                    }).fail(function (jqxhr, settings, exception) {
-                        // console.log(window.FB);
-                        // console.log('fail', jqxhr, settings, exception)
-                    });
+                ]).then(function () {
+                    $.getScript('js/app.js');
                 });
             });
         });
