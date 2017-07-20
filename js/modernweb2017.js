@@ -195,11 +195,10 @@ var modernweb2017 = new Vue({
             modernweb2017.Sponsor = sponsor;
             // jobs.html
             if (!!~location.href.search(/jobs.html/igm)) {
-                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/jobs?nid=2272&callback=?').then(function (jobs) {
+                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function (jobs) {
                     $.map(jobs, function (jobRowData) {
                         for (var i = 0; i < sponsor.length; i++) {
-                            console.log(jobRowData.nid, sponsor[i].vendor_id);
-                            if (jobRowData.nid == sponsor[i].vendor_id) {
+                            if (jobRowData.sponsor_id == sponsor[i].vendor_id) {
                                 jobRowData.sponsor = sponsor[i];
                                 break;
                             }
