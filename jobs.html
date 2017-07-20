@@ -142,7 +142,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <a :href="job.more_link" class="jobs__btn jobs__btn--blue">SEE ALL</a>
+                                    <a :href="job.more_link" target="_blank" class="jobs__btn jobs__btn--blue">SEE ALL</a>
                                 </div>
                             </div>
                         </div>
@@ -168,54 +168,7 @@
                 </div>
             </div>
         </footer>
-        <!-- 講師簡介 -->
-        <div class="modal scale fade speaker-brief-modal" tabindex="-1" role="dialog" id="sessionModal">
-            <div class="modal-dialog" role="document">
-                <div class="speaker-brief">
-                    <div class="speaker-brief__head clearfix" v-for="speaker in Modal_Session.speaker">
-                        <div class="speaker-brief__img speaker-brief--animate">
-                            <img :src="speaker.avatar" alt="">
-                        </div>
-                        <div class="speaker-brief__person speaker-brief--animate">
-                            <div class="speaker-brief__name">
-                                {{ speaker.speaker }}
-                            </div>
-                            <div class="speaker-brief__company">
-                                {{ speaker.company }}
-                                <br> {{ speaker.position }}
-                            </div>
-                        </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="speaker-brief__body speaker-brief--animate">
-                        <ul class="list-inline  speaker-brief__tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#sessionModalAgenda" aria-controls="#sessionModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                            </li>
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="sessionModalAgenda">
-                                <div class="speaker-brief__agenda">
-                                    <div class="speaker-brief__agenda-title">
-                                        {{ Modal_Session.title }}
-                                    </div>
-                                    <div class="speaker-brief__agenda-content" v-html="Modal_Session.summary"></div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="speakerModalIntro" v-for="speaker in Modal_Session.speaker">
-                                <div class="speaker-brief__intro" v-html="speaker.full_profile"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
+        
         <a href="index.html#ticket" class="buy-ticket" id="buy_ticket"><img src="img/astronaut1.svg" alt="" class="hidden-xs">立即購票</a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
