@@ -198,6 +198,7 @@ var modernweb2017 = new Vue({
                 $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function (jobs) {
                     $.map(jobs, function (jobRowData) {
                         for (var i = 0; i < sponsor.length; i++) {
+                            sponsor[i].title = sponsor[i].title.replace(/&amp;/igm, '&');
                             if (jobRowData.sponsor_id == sponsor[i].vendor_id) {
                                 jobRowData.sponsor = sponsor[i];
                                 break;
