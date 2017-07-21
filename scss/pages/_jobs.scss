@@ -57,7 +57,7 @@
 		line-height: 1.6;
 		opacity: .95;
 		a {
-			@include font-hover(#fff,$hover-color: $space-color, $active-color: $space-color);
+			@include font-hover(#ffd82c);
 		}
 	}
 	&__btn {
