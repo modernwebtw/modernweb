@@ -127,7 +127,7 @@ var modernweb2017 = new Vue({
         Sponsor: {},
         Modal_Speaker: {},
         Modal_Session: {},
-        Jobs: {}
+        Jobs: [1, 2, 4]
     },
     computed: {
         ModalData: function () {
@@ -199,7 +199,7 @@ var modernweb2017 = new Vue({
             var deferred = $.Deferred();
             if (!!~location.href.search(/jobs.html/igm)) {
                 $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function (jobs) {
-                    $.map(jobs, function (jobRowData) {
+                    modernweb2017.Jobs = $.map(jobs, function (jobRowData) {
                         for (var i = 0; i < sponsor.length; i++) {
                             sponsor[i].title = sponsor[i].title.replace(/&amp;/igm, '&');
                             if (jobRowData.sponsor_id == sponsor[i].vendor_id) {
@@ -207,18 +207,18 @@ var modernweb2017 = new Vue({
                                 break;
                             }
                         }
-                        return jobRowData;
+                        if (!!jobRowData.sponsor) {
+                            return jobRowData;
+                        }
                     });
-                    modernweb2017.Jobs = jobs;
                     deferred.resolve('');
-                })
+                }.bind(this));
             } else {
                 deferred.resolve('');
             }
             return deferred.promise();
         }).then(function () {
             modernweb2017.$nextTick(function () {
-                console.log('$nextTick', $(location.hash).length, +new Date());
                 $('body').addClass('is-active');
                 setTimeout(function () {
                     $('#loading').remove();

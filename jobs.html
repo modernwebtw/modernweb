@@ -68,7 +68,7 @@
             </ul>
         </div>
     </div>
-    <div id="modernweb2017" v-cloa58k>
+    <div id="modernweb2017" v-cloak>
         <nav class="menu" id="menu">
             <div class="wrapper">
                 <div class="row">
@@ -123,29 +123,30 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="col-md-offset-1 col-md-10">
-                        <div class="jobs__wrapper" v-for="job in Jobs" :id="'s'+job.sponsor.vendor_id">
-                            <a :href="job.sponsor.official_site" target="_blank" class="jobs__logo" style="background-color: #fff;">
+                        <template v-for="job in Jobs">
+                            <div class="jobs__wrapper" :id="'s'+job.sponsor.vendor_id">
+                                <a :href="job.sponsor.official_site" target="_blank" class="jobs__logo" style="background-color: #fff;">
                                 <img :src="job.sponsor.logo" :alt="job.sponsor.title">
                             </a>
-                            <div class="jobs__content">
-                                <a :href="job.sponsor.official_site" target="_blank" class="jobs__name">
+                                <div class="jobs__content">
+                                    <a :href="job.sponsor.official_site" target="_blank" class="jobs__name">
                                     {{ job.sponsor.title }}
                                 </a>
-                                <div class="jobs__name-en">{{ job.sponsor.english_title }}</div>
-                                <div class="jobs__desc" v-html="job.sponsor.description"></div>
-                                <!--<a href="" class="jobs__btn jobs__btn--white">瞭解更多</a>-->
-                                <div class="jobs__list">矚目職缺
-                                    <ul>
-                                        <li v-for="list in job.jobs">
-                                            <a :href="list.url" target="_blank">
+                                    <div class="jobs__name-en">{{ job.sponsor.english_title }}</div>
+                                    <div class="jobs__desc" v-html="job.sponsor.description"></div>
+                                    <div class="jobs__list">矚目職缺
+                                        <ul>
+                                            <li v-for="list in job.jobs">
+                                                <a :href="list.url" target="_blank">
                                                 {{ list.title }}
                                             </a>
-                                        </li>
-                                    </ul>
-                                    <a :href="job.more_link" target="_blank" class="jobs__btn jobs__btn--blue">SEE ALL</a>
+                                            </li>
+                                        </ul>
+                                        <a :href="job.more_link" target="_blank" class="jobs__btn jobs__btn--blue">SEE ALL</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </template>
                     </div>
                 </div>
             </div>
