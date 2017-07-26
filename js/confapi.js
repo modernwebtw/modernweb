@@ -180,7 +180,6 @@ var confapi = confapi || (function () {
                 //     console.table(newTimeSection);
                 // }())
                 // ====
-                console.log('SessionData', SessionData['2094']['language']);
                 return SessionData;
             });
         },
