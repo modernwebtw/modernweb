@@ -180,6 +180,7 @@ var confapi = confapi || (function () {
                 //     console.table(newTimeSection);
                 // }())
                 // ====
+                console.log('SessionData', SessionData['2094']['language']);
                 return SessionData;
             });
         },
@@ -199,14 +200,8 @@ var confapi = confapi || (function () {
                             var date = new Date(sessioin_date.value + ' ' + sessioin_date.timezone_db);
                             var time = leftPadZero(date.getHours(), 2) + ':' + leftPadZero(date.getMinutes(), 2);
                             // end fixed time
-                            SessionData[value.target_id].push({
-                                'title': v.title,
-                                'track': v.track,
-                                'summary': v.summary,
-                                'session_id': v.session_id,
-                                'session_type': v.session_type,
-                                'time': time
-                            });
+                            v['time'] = time
+                            SessionData[value.target_id].push(v);
                         });
                     }
                 });
