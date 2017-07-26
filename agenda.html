@@ -155,8 +155,7 @@
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['9:40']">
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
-                                            <span  class="speaker-brief__agenda-type">EN</span>
-                                            {{ Session[sID].title }}
+                                            <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>                                            {{ Session[sID].title }}
                                         </div>
                                         <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                             <div>
@@ -185,8 +184,7 @@
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['11:00']">
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
-                                            <span  class="speaker-brief__agenda-type">EN</span>
-                                            {{ Session[sID].title }}
+                                            <span class="speaker-brief__agenda-type">EN</span> {{ Session[sID].title }}
                                         </div>
                                         <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                             <div>
@@ -677,8 +675,7 @@
                             <div role="tabpanel" class="tab-pane active" id="sessionModalAgenda">
                                 <div class="speaker-brief__agenda">
                                     <div class="speaker-brief__agenda-title">
-                                        <span  class="speaker-brief__agenda-type">EN</span>
-                                        {{ Modal_Session.title }}
+                                        <span v-if="Modal_Session.language == '英文'" class="speaker-brief__agenda-type">EN</span>                                        {{ Modal_Session.title }}
                                     </div>
                                     <div class="speaker-brief__agenda-content" v-html="Modal_Session.summary"></div>
                                 </div>

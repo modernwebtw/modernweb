@@ -885,8 +885,8 @@
                             <div role="tabpanel" class="tab-pane active" id="speakerModalAgenda">
                                 <div class="speaker-brief__agenda" v-for="session in Modal_Speaker.session">
                                     <div class="speaker-brief__agenda-title">
-                                        <span  class="speaker-brief__agenda-type">EN</span>
-                                        <!-- v-if="session.language == '英文'" -->
+                                        <span v-if="session.language == '英文'" class="speaker-brief__agenda-type">EN</span>
+                                        <!--  -->
                                         {{ session.title }}
                                     </div>
                                     <div class="speaker-brief__agenda-content" v-html="session.summary"></div>
