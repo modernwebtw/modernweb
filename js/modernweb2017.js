@@ -110,8 +110,8 @@ var session_table_D2 = {
         '2135' // 陳鋒逸
     ],
     "16:20": [
-        '2174', // 陳斌
         '2173', // 賀師俊
+        '2174', // 陳斌
         '2171', // 
         '2172' // 
     ],
@@ -130,11 +130,11 @@ var modernweb2017 = new Vue({
         Jobs: [1, 2, 4]
     },
     computed: {
-        ModalData: function () {
+        ModalData: function() {
             var Modal_ID = this.Modal_ID;
             return this.Speaker[Modal_ID] || {}
         },
-        SpeakerFilter: function () {
+        SpeakerFilter: function() {
             var speaker = this.Speaker;
             return {
                 keynote: this.filter(speaker, 'session_type', 'keynote', true),
@@ -146,8 +146,8 @@ var modernweb2017 = new Vue({
         }
     },
     methods: {
-        filter: function (data, field, value, boolean) {
-            return $.grep(data, function (obj) {
+        filter: function(data, field, value, boolean) {
+            return $.grep(data, function(obj) {
                 if (typeof obj[field] === 'object') {
                     return (!!~$.inArray(value, obj[field]) == boolean) ? obj : null;
                 } else {
@@ -155,25 +155,25 @@ var modernweb2017 = new Vue({
                 }
             });
         },
-        showModal: function (speaker) {
+        showModal: function(speaker) {
             this.Modal_Speaker = speaker;
             $('a[href="#speakerModalAgenda"]').tab('show');
             $('#speakerModal').modal('show');
         },
-        showModal2: function (session) {
+        showModal2: function(session) {
             this.Modal_Session = session;
             if (!!session.speaker.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
             }
         },
-        arcToSpan: function (str) {
+        arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
         }
     },
     filters: {
-        time: function (date) {
-            var leftPadZero = function (str, n) {
+        time: function(date) {
+            var leftPadZero = function(str, n) {
                 str = ('' + str);
                 return Array(n - str.length + 1).join('0') + str;
             }
@@ -183,23 +183,23 @@ var modernweb2017 = new Vue({
             return '';
         }
     },
-    beforeCreate: function () {
+    beforeCreate: function() {
         $.when(
             confapi.getSessionWithSpeaker(),
             confapi.getSpeakerWithSession(),
             confapi.getSponsor()
-        ).then(function (session, speaker, sponsor) {
+        ).then(function(session, speaker, sponsor) {
             session['0'] = {};
             modernweb2017.Session = session;
             modernweb2017.Speaker = speaker;
             modernweb2017.Sponsor = sponsor;
             return sponsor;
-        }).then(function (sponsor) {
+        }).then(function(sponsor) {
             // jobs.html
             var deferred = $.Deferred();
             if (!!~location.href.search(/jobs.html/igm)) {
-                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function (jobs) {
-                    modernweb2017.Jobs = $.map(jobs, function (jobRowData) {
+                $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?conf_id=2073&callback=?').then(function(jobs) {
+                    modernweb2017.Jobs = $.map(jobs, function(jobRowData) {
                         for (var i = 0; i < sponsor.length; i++) {
                             sponsor[i].title = sponsor[i].title.replace(/&amp;/igm, '&');
                             if (jobRowData.sponsor_id == sponsor[i].vendor_id) {
@@ -217,16 +217,16 @@ var modernweb2017 = new Vue({
                 deferred.resolve('');
             }
             return deferred.promise();
-        }).then(function () {
-            modernweb2017.$nextTick(function () {
+        }).then(function() {
+            modernweb2017.$nextTick(function() {
                 $('body').addClass('is-active');
-                setTimeout(function () {
+                setTimeout(function() {
                     $('#loading').remove();
                 }, 500);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
-                ]).then(function () {
+                ]).then(function() {
                     $.getScript('js/app.js');
                 });
             });
