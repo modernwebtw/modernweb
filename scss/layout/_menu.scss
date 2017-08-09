@@ -95,6 +95,7 @@
         }
     }
     &__list {
+        overflow: hidden;
         @include media("<870px") {
             float: none;
             margin-top: 10%;
@@ -107,14 +108,17 @@
         }
         a {
             display: block;
-            margin: 12px 12px;
-            padding: 0 10px;
+            margin: 12px 6px;
+            padding: 0 6px;
             color: #fff;
             @include font-hover (#fff, $hover-color: lighten($main-green, 8%), $active-color: darken($main-green, 7%));
             @include media("<870px") {
                 margin: 20px auto;
                 text-align: center;
                 @include font-hover ($main-green, $hover-color: lighten($main-green, 8%), $active-color: darken($main-green, 7%));
+            }
+            @include media(">=1200px") {
+                margin: 12px 12px;
             }
             
         }

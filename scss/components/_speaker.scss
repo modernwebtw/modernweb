@@ -79,7 +79,7 @@
     &--animate {
         opacity: 0;
         transition: .3s ease-out;
-        transform: translateY(10px);
+        // transform: translateY(10px);
     }
     &__head {
         position: relative;
@@ -95,7 +95,7 @@
         top: -30px;
         max-width: 120px;
         box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .7);
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
         @include media(">599px") {
             float: left;
             left: -20px;
@@ -111,7 +111,7 @@
         padding-right: 20px;
         margin-top: -16px;
         margin-bottom: 10px;
-        transition-delay: 0.4s;
+        transition-delay: 0.2s;
         @include media(">599px") {
             margin-top: 16px;
             margin-bottom: 0;
@@ -134,7 +134,7 @@
     &__body {
         padding: 10px 20px;
         min-height: 150px;
-        transition-delay: 0.5s;
+        transition-delay: 0.2s;
     }
     &__agenda-title {
         margin-bottom: 10px;
@@ -145,6 +145,18 @@
         @include media(">599px") {
             font-size: 20px;
         }
+    }
+    &__agenda-type {
+        display: inline-block;
+        padding: 0px 4px;
+        font-size: 14px;
+        font-weight: 400;
+        color:$main-green;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        border: 1px solid $main-green;
+        // background-color: $main-green;
+        vertical-align: middle;
     }
     &__agenda-content,
     &__intro {

@@ -1,21 +1,38 @@
 .sponser {
-	padding: 10% 0;
+	margin: 10% 0 20%;
 	color: #fff;
 	text-align: center;
 	&__host {
-		span {
+		display: inline-block;
+		margin-bottom: 60px;	
+		a {
 			display: block;
-			margin-bottom: 10px;
-			@include media(">768px") {
-				display: inline-block;
-				margin-bottom: 0;
-				padding-right: 20px;
-			}
+			margin-top: 20px;
+			// @include media(">768px") {
+			// 	display: inline-block;
+			// 	margin-bottom: 0;
+			// 	padding-right: 20px;
+			// }
 		}
 		img {
+			display: block;
 			@include media("<=768px") {
 				width: 40%;
 			}
+		}
+	}
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__link {
+		display: block;
+		max-width: 200px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		img {
+			display: block;
+			width: 100%;
+			box-shadow: 0 20px 40px -20px rgba(0,0,0,.5);
 		}
 	}
 }

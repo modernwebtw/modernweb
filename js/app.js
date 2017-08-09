@@ -1,5 +1,4 @@
 // google map
-
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
@@ -105,28 +104,30 @@ var toggleScroll = function (boolean) {
 // scroll menu
 var $window = $(window);
 var $menu = $('#menu');
-var checkHasElm = function(arrID){
+var checkHasElm = function (arrID) {
     var $detect;
     for (var i = arrID.length - 1; i >= 0; i--) {
-        if($(arrID[i]).length > 0){
+        if ($(arrID[i]).length > 0) {
             $detect = $(arrID[i]);
             break;
         }
     }
     return $detect;
 };
-var $menu_target = (function(){
+var $menu_target = (function () {
     return checkHasElm([
         '#about',
         '#agenda',
-        '#jobs'
+        '#jobs',
+        '#event'
     ]);
 }());
-var $buy_target = (function(){
+var $buy_target = (function () {
     return checkHasElm([
         '#speaker',
         '#agenda',
-        '#jobs'
+        '#jobs',
+        '#event'
     ]);
 }());
 var $buy_ticket_btn = $('#buy_ticket');
@@ -143,7 +144,7 @@ $window.scroll(function () {
 
 // mobile
 $(".menu__burger, .menu__mask").on('click', function () {
-    $(this).toggleClass('on');
+    $('.menu__burger').toggleClass("on");
     $('.menu__content').toggleClass('on');
     $('.menu').toggleClass('on');
     $('body').toggleClass('is-hidden');
@@ -157,23 +158,24 @@ $('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function () {
 });
 
 function goScroll(target) {
-    var target_top = $(target).offset().top;
+    var $target = $(target);
+    var target_top = $target.offset().top;
     var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
     var sTop = target_top - header_height;
-
     $('html, body').stop().animate({
         scrollTop: sTop
-    }, 1000);
+    }, 500);
 }
 
+location.hash && goScroll(location.hash);
 
 // 2017.07.07 = 1499356800647
-var TimeDiff = (1499356800647 - +new Date());
-var is201707070000 = TimeDiff > 0 ? TimeDiff : 4;
-var openTicket = function openTicket() {
-    $('#ticket_earlyBird').html('<a href="#" class="btn ticket__button disabled">截止購票</a>');
-    $('#ticket_discount').html('<a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170040" class="btn ticket__button">立即購票</a>');
-    $('#ticket_peers').html('<a href="http://s.itho.me/modernweb/2017/Modern_Web_2017_group_application_%20form.xlsx" class="btn ticket__button">立即購票</a>');
-}
+// var TimeDiff = (1499356800647 - +new Date());
+// var is201707070000 = TimeDiff > 0 ? TimeDiff : 4;
+// var openTicket = function openTicket() {
+//     $('#ticket_earlyBird').html('<a href="#" class="btn ticket__button disabled">截止購票</a>');
+//     $('#ticket_discount').html('<a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170040" class="btn ticket__button">立即購票</a>');
+//     $('#ticket_peers').html('<a href="http://s.itho.me/modernweb/2017/Modern_Web_2017_group_application_%20form.xlsx" class="btn ticket__button">立即購票</a>');
+// }
 
-setTimeout(openTicket, TimeDiff);
+// setTimeout(openTicket, TimeDiff);
