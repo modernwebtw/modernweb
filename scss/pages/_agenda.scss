@@ -19,6 +19,7 @@
         width: 100%;
         background-color: #fff;
         &-td {
+        	padding-top: 16px;
             text-align: center;
             vertical-align: top;
             border-bottom: 1px solid #bababa;
@@ -77,6 +78,7 @@
 	&-keynote {
 		display: inline-block;
 		padding: 24px 16px;
+		padding-top: 8px;
 		text-align: center;
 		cursor: pointer;
 		&-topic {
@@ -130,6 +132,7 @@
 	&-class {
 		display: inline-block;
 		padding: 20px 16px;
+		padding-top: 8px;
 		text-align: center;
 		cursor: pointer;
 		&-topic {

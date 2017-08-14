@@ -145,10 +145,10 @@
                                     <div class="agenda__t-time">09:40 - 10:40</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['9:40']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div><a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a></div>
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
-                                            <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ Session[sID].title }}
+                                            <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ Session[sID].title }} 
                                         </div>
                                         <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                             <div>
@@ -174,10 +174,10 @@
                                     <div class="agenda__t-time">11:00 - 12:00</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['11:00']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div><a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a></div>
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
-                                            <span class="speaker-brief__agenda-type">EN</span> {{ Session[sID].title }}
+                                            <span class="speaker-brief__agenda-type">EN</span> {{ Session[sID].title }} 
                                         </div>
                                         <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                             <div>
@@ -219,11 +219,11 @@
                                     <div class="agenda__t-time">13:30 - 13:55</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D1['13:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div><a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a></div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
-                                            {{ Session[sID].title }}
+                                            {{ Session[sID].title }} 
                                         </div>
                                         <div class="agenda__t-class-name" v-for="speaker in Session[sID].speaker">
                                             <img :src="speaker.avatar" alt="">
@@ -237,17 +237,18 @@
                                     <div class="agenda__t-time">13:55~14:20</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D1['13:55']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div><a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a></div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
-                                            {{ Session[sID].title }}
+                                            {{ Session[sID].title }} 
                                         </div>
                                         <div class="agenda__t-class-name" v-for="speaker in Session[sID].speaker">
                                             <img :src="speaker.avatar" alt="">
                                             <span>{{ speaker.speaker }}</span>
                                         </div>
                                     </div>
+
                                 </td>
                             </tr>
                             <tr class="agenda__t-rest">
@@ -263,7 +264,9 @@
                                     <div class="agenda__t-time">14:30 - 15:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D1['14:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
@@ -289,7 +292,9 @@
                                     <div class="agenda__t-time">15:30 - 16:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D1['15:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
@@ -315,7 +320,9 @@
                                     <div class="agenda__t-time">16:20 - 17:00</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D1['16:20']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
@@ -368,7 +375,9 @@
                                     <div class="agenda__t-time">09:40 - 10:20</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['9:40']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
                                             {{ Session[sID].title }}
@@ -397,7 +406,9 @@
                                     <div class="agenda__t-time">10:30 - 11:10</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['10:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
                                             {{ Session[sID].title }}
@@ -425,7 +436,9 @@
                                     <div class="agenda__t-time">11:20 - 12:00</div>
                                 </td>
                                 <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['11:20']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                         <div class="agenda__t-keynote-topic">
                                             {{ Session[sID].title }}
@@ -471,7 +484,9 @@
                                     <div class="agenda__t-time">13:30 - 13:55</div>
                                 </td>
                                 <td :rowspan="data.rowspan" class="agenda__table-td" v-for="data in session_table_D2['13:30']">
-                                    <a :href="Session[data.sID].download_link" target="_blank" v-if="!!Session[data.sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[data.sID].download_link" target="_blank" v-if="!!Session[data.sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[data.sID])">
                                         <span class="agenda__t-class-track">{{ data.track }}<br>
                                         <div v-if="data.time != ' '"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ data.time }}</div></span>
@@ -490,8 +505,11 @@
                                     <div class="agenda__t-time">13:55~14:20</div>
                                 </td>
                                 <td :rowspan="data.rowspan" class="agenda__table-td" v-for="data in session_table_D2['13:55']">
+                                    <div>
+                                         <a :href="Session[data.sID].download_link" target="_blank" v-if="!!Session[data.sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[data.sID])">
-                                        <a :href="Session[data.sID].download_link" target="_blank" v-if="!!Session[data.sID].download_link"><img src="img/pdf.png"></a>
+                                       
                                         <span class="agenda__t-class-track">{{ data.track }}</span>
                                         <div class="agenda__t-class-topic">
                                             {{ Session[data.sID].title }}
@@ -516,7 +534,9 @@
                                     <div class="agenda__t-time">14:30 - 15:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D2['14:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
@@ -542,7 +562,9 @@
                                     <div class="agenda__t-time">15:30 - 16:10</div>
                                 </td>
                                 <td class="agenda__table-td" v-for="sID in session_table_D2['15:30']">
-                                    <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    <div>
+                                        <a :href="Session[sID].download_link" target="_blank" v-if="!!Session[sID].download_link"><img src="img/pdf.png"></a>
+                                    </div>
                                     <div class="agenda__t-class" @click="showModal2(Session[sID])">
                                         <span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                         <div class="agenda__t-class-topic">
