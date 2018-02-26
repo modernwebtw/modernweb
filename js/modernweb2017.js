@@ -76,13 +76,13 @@ var session_table_D2 = {
     }, {
         sID: '2116', // 邱政憲
         rowspan: 1,
-        track: 'Track F',
+        track: 'Track E',
         time: ' '
 
     }, {
         sID: '2156', // 鄭淳尹
         rowspan: 1,
-        track: 'Track E',
+        track: 'Track F',
         time: ' '
     }],
     "13:55": [{
