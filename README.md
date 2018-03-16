@@ -1,10 +1,11 @@
 # Modern Web 
 
-http://modernweb.tw
+https://modernweb.tw
 
-2017 8/10
+2018 3/16
 
 ## versions:
+- cfp //2018 call for speaker
 - 2017
 - 2016
 - 2015
