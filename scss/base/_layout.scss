@@ -1,0 +1,88 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing:inherit;
+}
+html {
+	overflow-x: hidden;
+}
+body {
+	min-height: 100vh;
+	position: relative;
+	background-color: #18052D;
+}
+a{
+	transition: all .3s ease;
+}
+
+// ** nav
+.navbar-inverse{
+	width: 100%;
+	background-color: $bg-color1;
+	border-color: $bg-color2;
+    box-shadow: 0 0 16px #b8a3e4aa;
+	@include media("<=767px"){
+		position: absolute;
+	}
+	.navbar-header{
+		@include media("<=1200px",">=768px"){
+		width: 22%;
+		}
+		.navbar-toggle{
+		border-radius: 0px;
+		padding: 14px;
+	    margin-top: 5%;
+		border-color: $font-color-pu2;
+			.icon-bar{
+				background-color: $font-color-pu4;
+			}
+		}
+	}
+	.navbar-logobox{
+		display: block;
+		padding: 3% 2% 3% 6%;
+    	width: 50%;
+    	@include media("<=1200px",">=768px"){
+    		width: 95%;
+    		padding-top: 14%;
+    	}
+		img{width: 100%;}
+	}
+	.navbar-toggle:focus, .navbar-toggle:hover{
+		background-color: $bg-color2;
+	}
+	.navbar-nav li{
+		@include media("<=767px"){
+			border-bottom: 1px solid $bg-color2;
+			text-align: center;
+		}
+		a{	font-size: 16px;
+			color: $font-color-pu3;
+			line-height: 55px;
+			padding: 1.1em;
+		}
+	}
+	ul li:last-child{
+		border-bottom: none;
+	}
+}
+// ** nav
+
+// ta
+	.ta{
+		position: relative;
+		width: 55%;
+		left: 22%;
+		top: 30px;
+		@include media("<=767px"){
+			position: absolute;
+			top: 18%;
+		}
+		.ta-txt{
+			position: absolute;
+    		width: 54%;
+    		top: 31%;
+    		left: 25%;
+		}
+	}
+// ta end
