@@ -10,9 +10,18 @@ body {
 	min-height: 100vh;
 	position: relative;
 	background-color: #18052D;
+	@include media("<=768px"){
+	min-height: 100%;
+	}
 }
 a{
 	transition: all .3s ease;
+}
+section, header,{
+	position: relative;
+}
+header{
+	z-index: 999;
 }
 
 // ** nav
@@ -60,6 +69,9 @@ a{
 			color: $font-color-pu3;
 			line-height: 55px;
 			padding: 1.1em;
+			@include media("<=767px"){
+			padding: .3em;
+			}
 		}
 	}
 	ul li:last-child{
@@ -76,7 +88,7 @@ a{
 		top: 30px;
 		@include media("<=767px"){
 			position: absolute;
-			top: 18%;
+			top: 14vh;
 		}
 		.ta-txt{
 			position: absolute;

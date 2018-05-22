@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/setting.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -1114,8 +1115,12 @@
                 </svg>
             </div>
             <!--  -->
-            <img src="img/rocket.svg" class="rocket" id="rocket">
-            <svg width="50" height="50" style="position: absolute; left: 111%; top: 23%; display: none;" id="rocket-exhaust">
+            <div class="rocket-box">
+                <img src="img/rocket.svg" class="rocket" id="rocket">
+                <span class="rocket-line"></span>
+            </div>
+            
+            <!-- <svg width="50" height="50" style="position: absolute; left: 111%; top: 23%; display: none;" id="rocket-exhaust">
                 <circle id="exhau1" r="4" cx="0" cy="0" fill="white" />
                 <animate xlink:href="#exhau1" attributeName="cx" from="0" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
                 <animate xlink:href="#exhau1" attributeName="cy" from="0" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
@@ -1125,7 +1130,7 @@
                 <circle id="exhau3" r="4" cx="0" cy="10" fill="white" />
                 <animate xlink:href="#exhau3" attributeName="cx" from="0" to="20" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
                 <animate xlink:href="#exhau3" attributeName="cy" from="10" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-            </svg>
+            </svg> -->
             <img src="img/rock-02.svg" class="rock rock1">
             <img src="img/rock-04.svg" class="rock rock2">
             <img src="img/rock-05.svg" class="rock rock3">
