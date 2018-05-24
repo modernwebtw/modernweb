@@ -43,7 +43,7 @@ function roundRecta(ctx, x, y, w, h, r) {
             this.c.width = this.c.width;
             this.c.height = this.c.height;
             this.ctx = this.c.getContext("2d");
-            this.color = "rgb(17, 33, 51)";
+            this.color = "rgb(20, 15, 43)";
             this.bullets = [];
             this.enemyBullets = [];
             this.enemies = [];

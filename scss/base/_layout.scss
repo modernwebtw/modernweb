@@ -1,7 +1,15 @@
+// @include font-face(fontawesome, font/fontawesome);
+// @font-face {
+// 	font-family: "fontawesome";
+// 	src: url("font/fontawesome.eot") format("eot"),
+// 		 url("font/fontawesome.woff2") format("woff2"),
+// 		 url("font/fontawesome.woff") format("woff"),
+// 		 url("font/fontawesome.ttf") format("truetype"),
+// 		 url("font/fontawesome.svg#fontawesome") format("svg");
+// }
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing:inherit;
 }
 html {
 	overflow-x: hidden;
@@ -10,15 +18,63 @@ body {
 	min-height: 100vh;
 	position: relative;
 	background-color: #18052D;
+    font-family: "Open Sans", "Helvetica Neue", 微軟正黑體, Helvetica, Arial, sans-serif;
+	color: #ddd;
+	font-size: 15px;
 	@include media("<=768px"){
 	min-height: 100%;
 	}
 }
+h1,h2,h3,h4,h5,h6{ color: #fff;}
+h1 { font-size: 36px; margin-bottom: 40px; }
+h2 { font-size: 32px;}
+h3 { font-size: 30px;}
+h4 { font-size: 24px;}
+h5 { font-size: 22px; font-weight: 600;}
+h6 { font-size: 20px; font-weight: 600;}
+strong { font-weight: 700; }
+p { font-size: 16px; line-height: 1.6em; }
+p:last-child { margin-bottom: 0px; }
+p { color: #ddd; }
+ul{list-style: none; line-height: 1.9em;}
+ul li{ list-style: none;}
+
+.overflow-y{overflow-y: scroll;}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: $font-color-pu3;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: $font-color-pu1;
+}
+// .bg-animation{
+// 	animation: bg-animation 30s ease infinite;
+// 	background: linear-gradient(270deg, #18052d, #3f0c7a, #0c5c7a, #497853);}
 a{
 	transition: all .3s ease;
 }
+button, .btn{
+	color:#ddd; transition: all .3s ease;
+	font-size: 16px;
+}
 section, header,{
 	position: relative;
+}
+section{
+    padding: 2% 0;
+	.ul li{
+    margin-bottom: 1em;
+	&:before{ content: '•';
+    position: absolute;
+    font-size: 30px;
+    left: -.8%;
+    color: $font-color-pu3; }
+	}
 }
 header{
 	z-index: 999;

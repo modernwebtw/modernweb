@@ -1,3 +1,55 @@
+
+.bg-animation{animation: bg-animation 30s ease infinite;}
+@keyframes bg-animation{ 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.float-star01{animation-name: float-star01;}
+.float-star02{animation-name: float-star02;}
+@keyframes float-star01{
+
+  10%, {
+    transform: translate3d(10px, 0, 0);
+}
+  20%{
+     transform: translate3d(0, 40px, 0);
+  }
+  50%{
+     transform: translate3d(0, 60px, 0);
+     opacity: .6;
+  }
+  70%{
+     transform: translate3d(0, 40px, 0);
+  }
+  80%{
+     transform: translate3d(0, 10px, 0);
+  }
+}
+@keyframes float-star02{
+
+  10%, {
+    transform: translate3d(10px, 0, 0);
+}
+  20%{
+     transform: translate3d(20px, 0, 0);
+  }
+  50%{
+     transform: translate3d(10px, 0, 0);
+     transform: rotate(10deg);
+     opacity: .8;
+  }
+  70%{
+     transform: translate3d(10px, 0, 0);
+  }
+  80%{
+     transform: translate3d(10px, 0, 0);
+     transform: rotate(-10deg);
+  }
+}
+
+
 @-webkit-keyframes rotate-right {
     from {
         -webkit-transform: rotate(0deg);

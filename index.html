@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/setting.css">
-    <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="game/flappy/style.css">
     <link rel="stylesheet" href="game/sinuous/style.css">
+    <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -64,9 +64,9 @@
                 <div class="navbar-header">
                     <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navtop">
                         <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="icol-bar"></span>
+                        <span class="icol-bar"></span>
+                        <span class="icol-bar"></span>
                     <a>
                     <a class="navbar-logobox" href="index.html">
                         <img src="img/logo.svg" alt="">
@@ -90,6 +90,7 @@
         </nav>
     </header>
     <section class="section--kv">
+        <div class="star"><img src="img/bg-star01.svg" class="bg--star01"><img src="img/bg-star02.svg" class="bg--star02"></div>
         <div class="ta">
             <div id="alien" class="alien">
                 <div class="alien-notice">打我啊打我啊</div>
@@ -1122,17 +1123,6 @@
                 <img src="img/rocket.svg" class="rocket" id="rocket" onmouseover="this.src='img/rocket.gif';" onmouseout="this.src='img/rocket.svg';">
                 <span class="rocket-line"></span>
             </div>
-            <!-- <svg width="50" height="50" style="position: absolute; left: 111%; top: 23%; display: none;" id="rocket-exhaust">
-                <circle id="exhau1" r="4" cx="0" cy="0" fill="white" />
-                <animate xlink:href="#exhau1" attributeName="cx" from="0" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-                <animate xlink:href="#exhau1" attributeName="cy" from="0" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-                <circle id="exhau2" r="4" cx="10" cy="0" fill="white" />
-                <animate xlink:href="#exhau2" attributeName="cx" from="10" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-                <animate xlink:href="#exhau2" attributeName="cy" from="0" to="20" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-                <circle id="exhau3" r="4" cx="0" cy="10" fill="white" />
-                <animate xlink:href="#exhau3" attributeName="cx" from="0" to="20" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-                <animate xlink:href="#exhau3" attributeName="cy" from="10" to="30" dur="1s" begin="0s" repeatCount="indefinite" repeatDur="indefinite" fill="freeze" id="circ-anim" />
-            </svg> -->
             <img src="img/rock-02.svg" class="rock rock1">
             <img src="img/rock-04.svg" class="rock rock2">
             <img src="img/rock-05.svg" class="rock rock3">
@@ -1141,88 +1131,24 @@
     <section class="section--key">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
-                    <ul>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
-                        <li>*</li>
+                <div class="col-md-6 col-xs-12 key__title">
+                    <h2><span>Modern<br> Web </span> 2018</h2>
+                    <div class="deco-01"></div>
+                </div>
+                <div class="col-md-6 col-xs-12 key__list">
+                    <ul class="ul">
+                        <li>
+                            <h4>臺灣最全方面的 Web 技術盛會</h4>
+                            <p>2 天會期，超過 20 場精彩演講，前端、後端、架構，三大主題面面俱到，精心規劃的議程內容，有趣精彩的場邊活動，來場豐富的 Web 探索之旅吧！</p>
+                        </li>
+                        <li>
+                            <h4>國際作者、開發大師，首度來台！</h4>
+                            <p>著有多本開發書籍的 Jeremy Keith(Clearleft)、專注在 AMP 的 Paul Bakaus(Google)、吃太多糖果的 Felix Rieseberg(Slack)，多位大師首度來台分享 Web 技術。</p>
+                        </li>
+                        <li>
+                            <h4>中國最新 Web 技術實務經驗交流</h4>
+                            <p>二大出品人領軍，特別策劃一日下午雙軌前端、後端架構的議程，帶來第一手的中國 Web 技術觀點，與實務心得經驗。</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1231,7 +1157,141 @@
     <section class="section--speaker">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12 col-xs-12">
+                    <h3 class="title">焦點講師<span>Keynote Speakers</span></h3>
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right">詳細介紹</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right">詳細介紹</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right">詳細介紹</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right">詳細介紹</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
                 </div>
             </div>
         </div>
@@ -1239,7 +1299,109 @@
     <section class="section--history">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12">
+                    <div class="title history__title">
+                        <h2>Modern Web 2018</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <ul class="timeline timeline-centered">
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="num">1</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">一想到網站技術大會，就會想到 ModernWeb</h4>
+                                    <p>連續 3 年大受好評，2018 年 為期 2 天的會期，500 人與會，超過 20 場專業演講，精彩的議程內容，更多大師登場，前端、後端、架構，三大主題全面展開，來自中國的 Web 技術分享 - 特別策劃一天的中國技術日。還有滿滿的場邊活動，將再次打造全新的「心」感受。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="num">2</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">首度登台！國際大師坐了一天飛機也要來！</h4>
+                                    <p>你一定都有看過他寫的書，同時也是 Web 開發者的 Jeremy Keith，首度從英國遠渡重洋來台，帶來最新的觀點，最精彩的演說，錯過這一次，可能要再等 4 年；來自於美國 Slack 的 Felix Rieseberg ，喜歡吃糖果的大男孩，投入在 Open Source 的懷抱中，將在這首次登上的舞中，帶來豐富的議程演說。 </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="num">3</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">電腦不會挑選議程，但是我們會！</h4>
+                                    <p>大會的的議程 200% 都是由專業團隊嚴選，今年 ModernWeb18 講者投稿熱烈，在眾多投稿中仔細審核內容、反覆討論而定案。為滿足更多 Web 人的需求，2018 年，特別規劃，從前端、後端及架構三大主題，滿滿的 2 天，滿滿的收獲。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="num">4</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">前端巧手、後端好手、全端高手，全台好手齊聚！</h4>
+                                    <p>參加研討會，除了專心聽議程吸收經驗之外，最重要的當然是把握現場與其它好手交流、還有與專家面對面討教的機會。在這個場域中，將聚集了全台的各路好手，不論是技術交流、認識朋友、吸收知識或是獲取經驗，都是非常難能可得寶貴的機會。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="num">5</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">好吃、好玩、又好拿！滿足你的腦子與肚子</h4>
+                                    <p>研究指出，大腦就算「甚麼也不想」，每分鐘也會消耗0.1卡，若是在思考較複雜的事情時，每分鐘甚至會燃燒1~1.5卡，為了維持大腦正常的運作，將供應各種補充能量的「補給品」，累了嗎？補充能量再上；當然還有不能錯過的 ModernWeb 18 大會紀念服等你來收集！</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item period">
+                                <div class="timeline-info">
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3>里程碑</h3>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="time">2018 <span>July</span></span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>三大主題議程，從前端、後端、架構，開拓更廣闊的 WEB 新視野。世界級技術叢書作者，同時也是知名開發者 Jeremy Keith，首度來台。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="time">2017 <span>July</span></span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <!-- <h4 class="timeline-title">好吃、好玩、又好拿！滿足你的腦子與肚子</h4> -->
+                                    <p>議程大爆滿，超豐富的二天四軌議程，首度超過 30 場精彩的專業講座。來自世界各地的大師， Google、Slack、騰訊 …. 最多國際大師的場域。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="time">2016 <span>Aug</span></span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>首次精心策劃，中國電商 Web - 中國技術日，廣邀中國專家登台。台灣 Web 開發者年度票選，再參加期待度最高的研討會。</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span class="time">2015 <span>May</span></span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>首度在台舉辦，吸引超過600人報名，500人與會，大受好評。Web 人不能不認識的 Java Scrip 之父、PHP 之父，重量級登場！</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1247,15 +1409,174 @@
     <section class="section--quote">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12">
+                    <!-- <h3 class="title">焦點講師<span>Keynote Speakers</span></h3> -->
+                    <div class="quote__Carouselbox">
+                        <div class='container carousel'>
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <!-- <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol> -->
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner text-center" role="listbox">
+                                    <div class="item active">
+                                        <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
+                                            <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
+                                        </div>
+                                        <div class="col-sm-4 text-left pull-right">
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
+                                            <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
+                                        </div>
+                                        <div class="col-sm-4 text-left pull-right">
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
+                                            <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
+                                        </div>
+                                        <div class="col-sm-4 text-left pull-right">
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="section--ticket">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12">
+                    <h3 class="title">購票資訊<span>Tickets</span></h3>
+
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot01">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot02">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot03">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot04">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot05">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot06">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div><div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot07">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot08">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot09">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                            <div class="col-sm-2 ticket__item__btn">
+                                <button class="btn">立即購票</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1263,7 +1584,8 @@
     <section class="section--org">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12">
+                    <h3 class="title">主辦單位<span>Organizer</span></h3>
                 </div>
             </div>
         </div>
@@ -1271,16 +1593,18 @@
     <section class="section--footer">
         <div class="container">
             <div class="row">
-                <div class="con-sm-12">
+                <div class="col-sm-12">
+                    <div class="col-sm-8"></div>
+                    <div class="col-sm-4"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
     <!-- sinuous -->
     <div id="sinuous_bg"></div>
     <canvas id="world" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px; display: none;"></canvas>
-    <div id="status" class="ui"></div>
-    <div id="message" class="ui" style="left: 0px; top: 0px; display: none; z-index: 0;">
+    <div id="status" class="ui" style="display: none;"></div>
+    <div id="message" class="ui" style="left: 0px; top: 200px; display: none; z-index: 0;">
         <h2 id="title"></h2>
         <ul>
             <li>1. 閃避殞石</li>
@@ -1293,56 +1617,13 @@
         </ul>
         <a href="#" id="startButton">Start</a>
     </div>
-    <div id="btn_sinuous_exit">Exit</div>
+    <!-- <div id="btn_sinuous_exit">Exit</div> -->
     <!-- modal_sinous_start -->
     <div id="modal_sinous_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="game-modal__panel game-modal__panel--warning clearfix" id="sinuous_box">
                 <div class="game-modal__monster">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="220px" height="231px" viewBox="0 0 361 231" overflow="visible" enable-background="new 0 0 361 231" xml:space="preserve">
-                        <defs>
-                        </defs>
-                        <polygon fill="#FFFFFF" points="53.2,31.1 70.3,80.3 132.6,77.8 92.9,15 " />
-                        <rect x="297" y="113.3" fill="#A73935" width="46.1" height="4.1" />
-                        <path fill="#EF4F4D" d="M11.9,67.5c-4.3,0-7.8,21.4-7.8,47.8l7.8,0L11.9,67.5z" />
-                        <path fill="#FFFFFF" d="M320.1,115.3l-266.3,0l0-40.9c0,0,39.2-28,108.2-28C230.9,46.4,320.1,102.4,320.1,115.3z" />
-                        <path fill="#F8AB1F" d="M275.1,80.3c-4.6,10.3-7.2,22.2-7.2,35l52.1,0C320.1,109.5,301.7,94.7,275.1,80.3z" />
-                        <polygon fill="#EF4F4D" points="0,43.1 17.7,47.4 92.9,15 83.9,0 " />
-                        <path opacity="0.2" d="M203.3,115.3c0-18.5-15-33.4-33.4-33.4c-18.5,0-33.4,15-33.4,33.4H203.3z" />
-                        <path fill="#EF4F4D" d="M115.6,115.3V50.8c-22.4,4.4-39.1,11.3-49.5,16.5l0,48L115.6,115.3z" />
-                        <path fill="#57A6FF" d="M199.8,115.3c0-16.5-13.4-29.9-29.9-29.9v29.9H199.8z" />
-                        <path fill="#3469D3" d="M169.9,85.4c-16.5,0-29.9,13.4-29.9,29.9l29.9,0V85.4z" />
-                        <path opacity="0.2" d="M251.8,115.3c0-11.9-9.6-21.5-21.5-21.5c-11.8,0-21.5,9.6-21.5,21.5L251.8,115.3z" />
-                        <path fill="#57A6FF" d="M248,115.3c0-9.8-7.9-17.7-17.7-17.7l0,17.7L248,115.3z" />
-                        <path fill="#3469D3" d="M230.3,97.7c-9.8,0-17.7,7.9-17.7,17.7l17.7,0L230.3,97.7z" />
-                        <rect x="35.7" y="74.4" fill="#F8AB1F" width="18.1" height="40.9" />
-                        <polygon fill="#FFFFFF" points="11.9,67.3 11.9,115.3 35.7,115.3 35.7,74.4 " />
-                        <path fill="#FFFFFF" d="M101.7,84.5c-4.1,0-7.4-3.3-7.4-7.4c0-4.1,3.3-7.4,7.4-7.4c4.1,0,7.4,3.3,7.4,7.4
-    C109.2,81.2,105.8,84.5,101.7,84.5z" />
-                        <path fill="#FFFFFF" d="M83.1,104.4c-6.2,0-11.2-5-11.2-11.2c0-6.2,5-11.2,11.2-11.2c6.2,0,11.2,5,11.2,11.2
-    C94.3,99.4,89.3,104.4,83.1,104.4z" />
-                        <polygon fill="#C5C5C5" points="53.2,199.5 70.3,150.3 132.6,152.9 92.9,215.6 " />
-                        <path fill="#A73935" d="M11.9,163.1c-4.3,0-7.8-21.4-7.8-47.8l7.8,0L11.9,163.1z" />
-                        <path fill="#C5C5C5" d="M320.1,115.3l-266.3,0l0,40.9c0,0,39.2,28,108.2,28C230.9,184.3,320.1,128.2,320.1,115.3z" />
-                        <path fill="#FF6A1D" d="M275.1,150.3c-4.6-10.3-7.2-22.2-7.2-35l52.1,0C320.1,121.2,301.7,136,275.1,150.3z" />
-                        <polygon fill="#A73935" points="0,187.5 17.7,183.3 92.9,215.6 83.9,230.7 " />
-                        <path opacity="0.2" d="M203.3,115.3c0,18.5-15,33.4-33.4,33.4c-18.5,0-33.4-15-33.4-33.4H203.3z" />
-                        <path fill="#A73935" d="M115.6,115.3l0,64.5c-22.4-4.4-39.1-11.3-49.5-16.5l0-48L115.6,115.3z" />
-                        <path fill="#3469D3" d="M199.8,115.3c0,16.5-13.4,29.9-29.9,29.9l0-29.9H199.8z" />
-                        <path fill="#2A508C" d="M169.9,145.2c-16.5,0-29.9-13.4-29.9-29.9l29.9,0L169.9,145.2z" />
-                        <path opacity="0.2" d="M251.8,115.3c0,11.9-9.6,21.5-21.5,21.5c-11.8,0-21.5-9.6-21.5-21.5L251.8,115.3z" />
-                        <path fill="#3469D3" d="M248,115.3c0,9.8-7.9,17.7-17.7,17.7v-17.7L248,115.3z" />
-                        <path fill="#2A508C" d="M230.3,133c-9.8,0-17.7-7.9-17.7-17.7l17.7,0V133z" />
-                        <rect x="35.7" y="115.3" fill="#FF6A1D" width="18.1" height="40.9" />
-                        <polygon fill="#C5C5C5" points="11.9,163.4 11.9,115.3 35.7,115.3 35.7,156.3 " />
-                        <path fill="#F8AB1F" d="M350.8,125.7c-5.7,0-10.4-4.6-10.4-10.4c0-5.7,4.6-10.4,10.3-10.4c5.7,0,10.4,4.6,10.4,10.4
-    C361.2,121,356.5,125.7,350.8,125.7z" />
-                        <path fill="#FFFFFF" d="M352.6,117.4c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4c2.2,0,4,1.8,4,4C356.7,115.6,354.9,117.4,352.6,117.4z" />
-                        <path fill="#FFFFFF" d="M233.7,117.4c-3,0-5.4-2.4-5.5-5.4c0-3,2.4-5.4,5.4-5.4c3,0,5.4,2.4,5.4,5.4
-    C239.1,114.9,236.7,117.4,233.7,117.4z" />
-                        <path fill="#FFFFFF" d="M175.5,119.1c-5.2,0-9.3-4.2-9.3-9.3c0-5.2,4.2-9.3,9.3-9.3c5.2,0,9.3,4.2,9.3,9.3
-    C184.9,114.9,180.7,119.1,175.5,119.1z" />
-                    </svg>
+                    <img src="game/sinuous/rocket.svg">
                 </div>
                 <div class="game-modal__desc">
                     <div class="game-modal__warning">殞石來襲！</div>
@@ -1382,8 +1663,8 @@
     <!-- end of sinuous -->
     <!-- game -->
     <div id="game_bg"></div>
-    <canvas id="game" width="1000px" height="900px" style="position: absolute; left: 25%; top: 0px; display: none;"></canvas>
-    <div id="btn_exit">Exit</div>
+    <canvas id="game" width="1000px" height="1000px"></canvas>
+    <!-- <div id="btn_exit">Exit</div> -->
     <!-- modal_game_start -->
     <div id="modal_game_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -1589,7 +1870,7 @@
                 <div class="game-modal__desc">
                     <div class="game-modal__warning">Game Over</div>
                     <p>本次作戰分數：</p>
-                    <div id="score" class="game-modal__score"></div>
+                    <div id="flappy_score" class="game-modal__score"></div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="game-modal__btn-group">
@@ -1611,7 +1892,7 @@
     <script src="js/confapi.js" data-nid="2073"></script>
     <script src="game/alien/game.js"></script>
     <script src="game/sinuous/game.js"></script>
-    <!-- <script src="game/flappy/main.js"></script> -->
+    <script src="game/flappy/main.js"></script>    
     <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

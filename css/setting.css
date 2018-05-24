@@ -2,14 +2,22 @@
     z-index: 9000;
 }
 
+#game {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    display: none;
+}
+
 #game_bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #112133;    
+    background-color: #140f2b;    
     display: none;
+    background-image: url(../img/bg-star01.svg);
 }
 
 .stopScroll {
@@ -33,5 +41,5 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #112133;
+    background-color: #140f2b;
 }
