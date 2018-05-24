@@ -1,6 +1,6 @@
 function smile() {
     var a;
-    a = document.getElementById("flappy1");
+    a = document.getElementById("div1");
     a.innerHTML = "&#xf118;";
     setTimeout(function() {
         a.innerHTML = "&#xf11a;";
@@ -21,7 +21,7 @@ function myFunction(x) {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
 
-var myCanvas = document.getElementById('flappy');
+var myCanvas = document.getElementById('myCanvas');
 // myCanvas.width = myCanvas.clientWidth;
 // myCanvas.height = myCanvas.clientHeight;
 
@@ -122,14 +122,14 @@ function make_bird_slow_and_fall() {
 var pipe_piece_image_store = [
     // 'img/a1-1.png',
     // 'img/a1-2.png',
-    'game/flappy/img/a2-1.png',
-    'game/flappy/img/a2-2.png',
-    'game/flappy/img/a3-1.png',
-    'game/flappy/img/a3-2.png',
-    'game/flappy/img/a4-1.png',
-    'game/flappy/img/a4-2.png',
-    'game/flappy/img/a5-1.png',
-    'game/flappy/img/a5-2.png',
+    'img/a2-1.png',
+    'img/a2-2.png',
+    'img/a3-1.png',
+    'img/a3-2.png',
+    'img/a4-1.png',
+    'img/a4-2.png',
+    'img/a5-1.png',
+    'img/a5-2.png',
 
 ];
 
@@ -217,6 +217,7 @@ function display_intro_instructions() {
     ctx.fillText("Press, touch or click to start", myCanvas.width / 2, myCanvas.height / 4);
 }
 
+
 function display_game_over() {
     var final_score = score;
     ctx.font = "30px Courier New";
@@ -226,6 +227,8 @@ function display_game_over() {
     ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
     ctx.font = "20px Courier New";
     ctx.fillText("Click, touch, or press to play again", myCanvas.width / 2, 300);
+
+    parent.closeIFrame();
 }
 
 function display_bar_running_along_bottom() {
@@ -243,9 +246,6 @@ function reset_game() {
     // and load them back in their starting positions
     score = 0;
 }
-
-
-
 
 function Do_a_Frame() {
     ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -285,7 +285,7 @@ function Do_a_Frame() {
 var bottom_bar = new Image();
 bottom_bar.src = "";
 // console.log(pipes);
-var bird = new MySprite("game/flappy/img/astronaut.png");
+var bird = new MySprite("img/astronaut.png");
 bird.x = myCanvas.width / 3;
 bird.y = myCanvas.height / 2;
 setInterval(Do_a_Frame, 1000 / FPS);
