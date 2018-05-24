@@ -32,15 +32,14 @@ var sinuousStart = function() {
     });
     SinuousWorld.init();
     toggleScroll(false);
-    $('.rocket-box').removeClass('rocket-fly');
+    $('.rocket').removeClass('rocket-fly');
 }
 
 var sinuousPause = function() {
     $('body').removeClass('game_start');
     SinuousWorld.paused;
     toggleScroll(true);
-    $('.rocket-box').removeClass('rocket-fly');
-    $('.rocket-line').show();
+    $('.rocket').removeClass('rocket-fly');
 }
 
 $(document).click(function(evt) {
@@ -51,10 +50,16 @@ $(document).click(function(evt) {
     }
 });
 
+$('#rocket').mouseenter(
+    function() { $('#rocket-exhaust').show(); }
+)
+
+$('#rocket').mouseleave(
+    function() { $('#rocket-exhaust').hide(); }
+)
 
 $('#rocket').click(function() {
-    // $('.rocket-line').hide();
-    $('.rocket-box').addClass('rocket-fly');
+    $('.rocket').addClass('rocket-fly');
     $('#modal_sinous_start').modal('show');
 });
 
@@ -65,8 +70,7 @@ $('#modal_sinuous_start').on('shown.bs.modal', function() {
 
 $('#btn_sinuous_start').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
+    $('.p--box').hide();
     $('#game').hide();
     $('canvas#world').addClass('topLayer').show();
     $('#status').css('z-index', '9999').show();
@@ -75,30 +79,27 @@ $('#btn_sinuous_start').click(function() {
 
 $('#btn_sinuous_continue').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
+    $('.p--box').hide();
     $('#game').hide();
     $('#game_bg').hide();
     $('canvas#world').addClass('topLayer').show();
-    $('#status').css('z-index', '9999').show();
     sinuousStart();
+    // btnSinuousStartClickHandler();
 });
 
 $('#btn_back2').click(function() {
-    $('.ta').show();
-    $('.header').show();
+    $('.p--box').show();
     sinuousPause();
 });
 
 $('#btn_sinuous_back').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");    
+    // ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");
     sinuousPause();
 });
 
 $('#btn_sinuous_exit').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Exit MW17 Game");
-    $('.ta').show();
-    $('.header').show();
+    $('.p--box').show();
     sinuousPause();
 });
 
@@ -116,8 +117,7 @@ $('.alienUFO').click(function() {
 
 $('#btn_game_start').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
+    $('.p--box').hide();
     $('#game').show();
     $('#game_bg').show();
     gameStart();
@@ -132,8 +132,7 @@ $('#btn_continue').click(function() {
 
 // 返回基地
 $('#btn_back').click(function() {
-    $('.ta').show();
-    $('.header').show();
+    $('.p--box').show();
     $('#game').hide();
     $('#game_bg').hide();
     gamePause();
@@ -147,9 +146,25 @@ $('#btn_game_back').click(function() {
 
 $('#btn_exit').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Exit MW17 Game");
-    $('.ta').show();
+    $('.p--box').show();
     gamePause();
 });
+
+// $('#btn_share_fb').click(function() {
+//     ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+//     var score = $('#score').text();
+//     FB.init({
+//         appId: '1615126938703368'
+//     });
+//     FB.ui({
+//         method: 'feed',
+//         link: location.href,
+//         title: '我在 Modern Web 2017 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
+//         picture: 'http://modernweb.tw/img/game_share.jpg',
+//         description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
+//         caption: 'Modern Web 2017 ─ 8/10-11 登場'
+//     }, function(response) {});
+// });
 
 var gameStart = function() {
     $('html, body').scrollTop(0);
@@ -171,60 +186,6 @@ var gamePause = function() {
     toggleScroll(true);
 }
 
-// flappy
-
-$('.rock').click(function() {
-    $('#modal_flappy_start').modal('show');
-});
-
-$('#modal_flappy_start').on('shown.bs.modal', function() {
-    // ga('send', 'event', 'CTA', 'click', "Enter MW17 Game");
-    $('.modal-backdrop').addClass('game-bg-waring');
-});
-
-$('#btn_flappy_start').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
-    $('#game').hide();
-    $('canvas#flappy').addClass('topLayer').show();
-});
-
-$('#btn_flappy_continue').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
-    $('#game').hide();
-    $('#game_bg').hide();
-    $('canvas#flappy').addClass('topLayer').show();
-    // sinuousStart();
-
-});
-
-$('#btn_back3').click(function() {
-    $('.ta').show();
-    $('.header').show();
-    // sinuousPause();
-});
-
-$('#btn_flappy_back').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");
-    // sinuousPause();
-});
-
-$('#btn_flappy_exit').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Exit MW17 Game");
-    $('.ta').show();
-    // sinuousPause();
-});
-
-
-$('.rock').mouseenter(function() {
-    $('.rock').css('cursor', 'pointer');
-    $('.rock3').addClass('rock-rotate1');
-    $('.rock2').addClass('rock-rotate2');
-});
-
 var toggleScroll = function(boolean) {
     if (boolean) {
         $(window).off('scroll touchmove mousewheel');
@@ -237,11 +198,14 @@ var toggleScroll = function(boolean) {
     }
 }
 
+// flappy
 
-window.setInterval(function() {
-    var $UFOnotice = $('.alien-notice');
-    $UFOnotice.css('opacity', $UFOnotice.css('opacity') === '1' ? '0' : '1');
-}, 1000);
+$('.rock').mouseenter(function() {
+    $('.rock').css('cursor', 'pointer');
+    $('.rock3').addClass('rock-rotate1');
+    $('.rock2').addClass('rock-rotate2');
+});
+
 
 // scroll menu
 var $window = $(window);
@@ -310,22 +274,6 @@ function goScroll(target) {
 }
 
 location.hash && goScroll(location.hash);
-
-$('#btn_sinuous_share_fb').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#score').text();
-    FB.init({
-        appId: '1615126938703368'
-    });
-    FB.ui({
-        method: 'feed',
-        link: location.href,
-        title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/game_share.jpg',
-        description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
-        caption: 'Modern Web 2017 ─ 8/10-11 登場'
-    }, function(response) {});
-});
 
 // 2017.07.07 = 1499356800647
 // var TimeDiff = (1499356800647 - +new Date());

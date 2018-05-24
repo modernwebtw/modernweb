@@ -519,11 +519,32 @@ button, .btn {
   transition: all .3s ease;
   font-size: 16px; }
 
+.btn--buy {
+  background: #531d8d;
+  color: #fff !important; }
+
+.btn--stop {
+  background: #aba1c4;
+  color: #fff !important; }
+
+.btn--undo {
+  background: #d8d0e7;
+  border: 1px solid #aba1c4;
+  color: #aba1c4 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: not-allowed; }
+
 section, header {
   position: relative; }
 
 section {
-  padding: 2% 0; }
+  padding: 1.2% 0;
+  margin: 3% 0 4% 0; }
   section .ul li {
     margin-bottom: 1em; }
     section .ul li:before {
@@ -778,25 +799,107 @@ section .title {
       margin-bottom: 5px;
       margin-left: 30px;
       margin-top: 10px;
-      line-height: .9; }
+      line-height: .9;
+      font-weight: 400;
+      font-size: 28px; }
       .section--ticket .ticket__item .ticket__item__title h3 .date {
         font-size: 16px;
         letter-spacing: 2px; }
-      .section--ticket .ticket__item .ticket__item__title h3.dot01:before {
-        background: #5cd1d0;
-        content: '';
-        display: block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        position: absolute;
-        top: 30px;
-        left: 20px; }
+  .section--ticket .ticket__item .dot01:before {
+    background: #5cd1d0;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot02:before {
+    background: #4688da;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot03:before {
+    background: #c17bac;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot04:before {
+    background: #ba4455;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot05:before {
+    background: #8199ba;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot06:before {
+    background: #ba7a5b;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot07:before {
+    background: #f4e895;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot08:before {
+    background: #377254;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+  .section--ticket .ticket__item .dot09:before {
+    background: #531d8d;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
   .section--ticket .ticket__item .ticket__item__disc p {
     font-size: 16px;
     color: #321357; }
   .section--ticket .ticket__item .ticket__item__price {
-    border-left: 2px solid #ddd;
+    border-left: 2px solid #eee;
     padding-left: 3%; }
     .section--ticket .ticket__item .ticket__item__price h3 {
       display: inline-block;
@@ -810,6 +913,50 @@ section .title {
     border-radius: 0px;
     color: #321357;
     letter-spacing: 4px; }
+
+.section--org .org__logobox img {
+  display: block;
+  margin: 1% auto;
+  max-width: 220px; }
+
+.section--spon {
+  text-align: center; }
+  .section--spon .spon__diam, .section--spon .spon__wgold, .section--spon .spon__gold, .section--spon .spon__silver {
+    background: #331257;
+    padding: 10px 10px 20px;
+    margin: 1%; }
+    .section--spon .spon__diam img, .section--spon .spon__wgold img, .section--spon .spon__gold img, .section--spon .spon__silver img {
+      display: block;
+      margin: 1% auto;
+      background: #333;
+      color: #333;
+      margin: 10px; }
+
+.section--footer .footer__social li a {
+  background: #eee;
+  font-size: 20px;
+  color: #321357;
+  float: left;
+  margin: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px; }
+  .section--footer .footer__social li a:hover {
+    background: #a692da; }
+
+.section--footer .footer__fbshare {
+  margin: 2%; }
+
+.section--footer .bg--star01 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1; }
 
 #alien {
   position: absolute;

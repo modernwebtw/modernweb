@@ -62,11 +62,16 @@ button, .btn{
 	color:#ddd; transition: all .3s ease;
 	font-size: 16px;
 }
+.btn--buy{ background: $font-color-pu2; color:#fff !important;}
+.btn--stop{ background: $bg-color4; color: #fff !important;}
+.btn--undo{ background: $bg-color3; border:1px solid $bg-color4; color:$bg-color4 !important;user-select: none;touch-action: manipulation;cursor: not-allowed;}
+
 section, header,{
 	position: relative;
 }
 section{
-    padding: 2% 0;
+    padding: 1.2% 0;
+    margin: 3% 0 4% 0;
 	.ul li{
     margin-bottom: 1em;
 	&:before{ content: '•';

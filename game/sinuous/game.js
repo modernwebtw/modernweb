@@ -1,26 +1,26 @@
 /**
- * Original version http://hakim.se/experiments/html5/game/sinuous/01/
+ * Original version http://hakim.se/experiments/html5/sinuous/01/
  */
 
 var rocketImg = new Image();
-rocketImg.src = "game/sinuous/rocket.svg";
+rocketImg.src = "sinuous/rocket.svg";
 var meteorite = [];
 meteorite[0] = new Image();
-meteorite[0].src = "game/sinuous/meteorite1.png";
+meteorite[0].src = "sinuous/meteorite1.png";
 meteorite[1] = new Image();
-meteorite[1].src = "game/sinuous/meteorite2.png";
+meteorite[1].src = "sinuous/meteorite2.png";
 meteorite[2] = new Image();
-meteorite[2].src = "game/sinuous/meteorite3.png";
+meteorite[2].src = "sinuous/meteorite3.png";
 meteorite[3] = new Image();
-meteorite[3].src = "game/sinuous/meteorite4.png";
+meteorite[3].src = "sinuous/meteorite4.png";
 meteorite[4] = new Image();
-meteorite[4].src = "game/sinuous/meteorite5.png";
+meteorite[4].src = "sinuous/meteorite5.png";
 meteorite[5] = new Image();
-meteorite[5].src = "game/sinuous/meteorite6.png";
+meteorite[5].src = "sinuous/meteorite6.png";
 
 
 var boostImg = new Image();
-boostImg.src = "game/sinuous/booster.png";
+boostImg.src = "sinuous/booster.png";
 
 SinuousWorld = new function() {
 

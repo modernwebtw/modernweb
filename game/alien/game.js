@@ -6,15 +6,15 @@ var loadImage = function(path) {
 }
 var monster = [{
     color: '#A8FF73',
-    img: loadImage('game/alien/monster1.png')
+    img: loadImage('game/monster1.png')
 }, {
     color: '#FF8A73',
-    img: loadImage('game/alien/monster2.png')
+    img: loadImage('game/monster2.png')
 }, {
     color: '#39BD7A',
-    img: loadImage('game/alien/monster3.png')
+    img: loadImage('game/monster3.png')
 }];
-var player_image = loadImage('game/alien/player.png');
+var player_image = loadImage('game/player.png');
 
 // 
 
