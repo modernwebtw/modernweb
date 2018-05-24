@@ -67,7 +67,6 @@ $('#btn_sinuous_start').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
     $('.ta').hide();
     $('.header').hide();
-    $('body').addClass('stopScroll');
     $('#game').hide();
     $('canvas#world').addClass('topLayer').show();
     $('#status').css('z-index', '9999').show();
@@ -77,7 +76,7 @@ $('#btn_sinuous_start').click(function() {
 $('#btn_sinuous_continue').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
     $('.ta').hide();
-    $('.header').hide();    
+    $('.header').hide();
     $('#game').hide();
     $('#game_bg').hide();
     $('canvas#world').addClass('topLayer').show();
@@ -87,7 +86,6 @@ $('#btn_sinuous_continue').click(function() {
 
 $('#btn_back2').click(function() {
     $('.ta').show();
-    $('body').removeClass('stopScroll');
     $('.header').show();
     sinuousPause();
 });
@@ -114,16 +112,14 @@ $('#modal_game_start').on('shown.bs.modal', function() {
 
 $('.alienUFO').click(function() {
     $('#modal_game_start').modal('show');
-    console.log('123');
 });
 
 $('#btn_game_start').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Play MW17 Game");
     $('.ta').hide();
-    $('body').addClass('stopScroll');
     $('.header').hide();
     $('#game').show();
-    $('#game_bg').show().css('overflow', 'hidden');
+    $('#game_bg').show();
     gameStart();
 });
 
@@ -138,9 +134,8 @@ $('#btn_continue').click(function() {
 $('#btn_back').click(function() {
     $('.ta').show();
     $('.header').show();
-    $('body').removeClass('stopScroll');
     $('#game').hide();
-    $('#game_bg').hide();    
+    $('#game_bg').hide();
     gamePause();
 });
 
@@ -176,26 +171,10 @@ var gamePause = function() {
     toggleScroll(true);
 }
 
-$('#btn_share_fb').click(function () {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#score').text();
-    FB.init({
-        appId: '1615126938703368'
-    });
-    FB.ui({
-        method: 'feed',
-        link: location.href,
-        title: '我在 Modern Web 2017 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/game_share.jpg',
-        description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
-        caption: 'Modern Web 2017 ─ 8/10-11 登場'
-    }, function (response) {});
-});
-
 // flappy
 
 $('.rock').click(function() {
-    $('#modal_flappy_start').modal('show');    
+    $('#modal_flappy_start').modal('show');
 });
 
 $('#modal_flappy_start').on('shown.bs.modal', function() {
@@ -208,17 +187,15 @@ $('#btn_flappy_start').click(function() {
     $('.ta').hide();
     $('.header').hide();
     $('#game').hide();
-    $('#game_bg').show();
-    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
-    $('body').addClass('stopScroll');
+    $('canvas#flappy').addClass('topLayer').show();
 });
 
 $('#btn_flappy_continue').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
     $('.ta').hide();
-    $('.header').hide();    
+    $('.header').hide();
     $('#game').hide();
-    $('#game_bg').show();
+    $('#game_bg').hide();
     $('canvas#flappy').addClass('topLayer').show();
     // sinuousStart();
 
@@ -226,10 +203,7 @@ $('#btn_flappy_continue').click(function() {
 
 $('#btn_back3').click(function() {
     $('.ta').show();
-    $('body').removeClass('stopScroll');
     $('.header').show();
-    $('canvas#flappy').removeClass('topLayer').hide();
-    $('#modal_flappy_over').modal('hide').removeClass('topLayer');
     // sinuousPause();
 });
 
@@ -261,10 +235,6 @@ var toggleScroll = function(boolean) {
             return false;
         })
     }
-}
-
-function closeIFrame(){
-     $('#flappy').remove();
 }
 
 
@@ -304,15 +274,15 @@ var $buy_target = (function() {
 }());
 var $buy_ticket_btn = $('#buy_ticket');
 var timer;
-// $window.scroll(function() {
-//     if (timer) {
-//         window.clearTimeout(timer);
-//     }
-//     timer = window.setTimeout(function() {
-//         $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
-//         $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $buy_target.offset().top);
-//     }, 200);
-// });
+$window.scroll(function() {
+    if (timer) {
+        window.clearTimeout(timer);
+    }
+    timer = window.setTimeout(function() {
+        $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
+        $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $buy_target.offset().top);
+    }, 200);
+});
 
 // mobile
 $(".menu__burger, .menu__mask").on('click', function() {
