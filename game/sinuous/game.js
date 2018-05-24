@@ -3,7 +3,11 @@
  */
 
 var rocketImg = new Image();
+<<<<<<< HEAD
 rocketImg.src = "sinuous/rocket.svg";
+=======
+rocketImg.src = "game/sinuous/rocket.png";
+>>>>>>> ef41ac623eaf00a2ea4ce2db55430bc021a731db
 var meteorite = [];
 meteorite[0] = new Image();
 meteorite[0].src = "sinuous/meteorite1.png";
@@ -335,8 +339,8 @@ SinuousWorld = new function() {
             // var rocketImg = new Image();
             // rocketImg.src = "rocket.svg";
 
-            var rocketX = player.position.x - 21;
-            var rocketY = player.position.y - 21;
+            var rocketX = player.position.x - 36;
+            var rocketY = player.position.y - 36;
             context.drawImage(rocketImg, rocketX, rocketY);
 
             // context.fillStyle = 'rgba';
@@ -500,7 +504,7 @@ function Player() {
     this.trail = [];
     this.trail1 = [];
     this.trail2 = [];
-    this.size = 18;
+    this.size = 50;
     this.boost = 0;
 }
 Player.prototype = new Point();
