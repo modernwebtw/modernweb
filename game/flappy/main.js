@@ -277,6 +277,7 @@ function Do_a_Frame() {
             {
                 make_bird_slow_and_fall();
                 display_game_over();
+                parent.closeIFrame();
                 // score = 0;
                 break;
             }
