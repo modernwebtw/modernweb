@@ -12,7 +12,7 @@
     <meta property="og:image" content="img/fb.jpg" />
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
-    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/setting.css">
     <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="game/flappy/style.css">
@@ -1288,7 +1288,7 @@
             <li>3. 移動距離越長，可獲得越多分數加成</li>
             <li>4. 以防護罩擊破越多殞石，可獲得越多分數加成</li>
             <li id="share" style="display: none;">
-                <button id="btn_share_fb" type="button" class="btn btn-primary game-modal__btn game-modal__btn--line">分享戰績</button>
+                <!-- <button id="btn_share_fb" type="button" class="btn btn-primary game-modal__btn game-modal__btn--line">分享戰績</button> -->
             </li>
         </ul>
         <a href="#" id="startButton">Start</a>
@@ -1483,12 +1483,8 @@
     </div>
     <!-- /.modal_game_over -->
     <!-- end_of_game -->
-    <!-- flappy -->
-    <div id="flappy_bg"></div>
-    <div id="flappy1" class="fa"></div>
-    <canvas id="flappy" width=1000 height=950 style="background:url('game/flappy/img/bg2.png'); position: absolute; left: 25%; top: 0px; display: none;"> </canvas>
-    <h3> <i onclick="myFunction(this)" class=""></i></h3>
-    <div id="btn_flappy_exit">Exit</div>
+    <!-- flappy -->        
+    <div id="div1" class="fa"></div>    
     <!-- modal_flappy_start -->
     <div id="modal_flappy_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -1609,12 +1605,13 @@
     <!-- end_of_flappy -->
     <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
+    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/confapi.js" data-nid="2073"></script>
     <script src="game/alien/game.js"></script>
     <script src="game/sinuous/game.js"></script>
-    <script src="game/flappy/main.js"></script>
+    <!-- <script src="game/flappy/main.js"></script> -->
     <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
