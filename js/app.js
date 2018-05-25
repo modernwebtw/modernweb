@@ -196,7 +196,7 @@ $('#btn_flappy_start').click(function() {
     $('.ta').hide();
     $('.header').hide();
     $('#game').hide();
-    $('#game_bg').show();
+    $('#flappy_bg').show();
     $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
     $('body').addClass('stopScroll');
 });
@@ -206,7 +206,7 @@ $('#btn_flappy_continue').click(function() {
     $('.ta').hide();
     $('.header').hide();
     $('#game').hide();
-    $('#game_bg').show();
+    $('#flappy_bg').show();
     $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
     $('body').addClass('stopScroll');
 });
@@ -223,7 +223,7 @@ $('#btn_flappy_back').click(function() {
     $('.ta').show();
     $('body').removeClass('stopScroll');
     $('.header').show();    
-    $('#game_bg').hide();
+    $('#flappy_bg').hide();
 });
 
 $('#btn_flappy_exit').click(function() {
@@ -231,7 +231,7 @@ $('#btn_flappy_exit').click(function() {
     $('.ta').show();
     $('body').removeClass('stopScroll');
     $('.header').show();    
-    $('#game_bg').hide();    
+    $('#flappy_bg').hide();    
 });
 
 
