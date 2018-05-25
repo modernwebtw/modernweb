@@ -91,9 +91,8 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
             }
         }
     }
-    .modal-content{margin: 0 auto; color: $font-color-pu1; background-color: $bg-color3; width: 70%; border-radius: 0px;
+    .modal-content{color: $font-color-pu1; background-color: $bg-color3; width: 70%; border-radius: 0px;
             .modal-header{ border-bottom: 1px solid $font-color-pu4;
-                .close{ color: $font-color-pu1;}
             }
             .speaker-brief__body .list-inline>li .tab{display: inline-block; font-size: 16px; padding: 2px 3px;}
             .speaker-brief__body .list-inline>li .active{ border-bottom: 1px solid #fff;}
@@ -149,7 +148,6 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         float: left;
         width: 100%;
         height: 100%;
-        p{color: #fff;}
         .ticket__item__dot,.ticket__item__title,.ticket__item__disc,.ticket__item__price,.ticket__item__btn{
             display: table-cell;
             vertical-align: middle;
@@ -239,7 +237,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
 }
 
 .alienUFO {
-    width: 28%;
+    width: 90px;
     cursor: pointer;
     -webkit-animation: around-the-world 5s linear infinite;
     -webkit-transition: all .5s;

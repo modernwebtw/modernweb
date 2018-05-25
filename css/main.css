@@ -170,7 +170,11 @@
 .modal-content {
   background-color: #d8d0e7;
   border-radius: 0px;
-  color: #321357; }
+  color: #321357;
+  width: 80%;
+  margin: 20% auto;
+  min-height: 40vh;
+  padding: 2%; }
   .modal-content h5 {
     color: #321357; }
   .modal-content p {
@@ -181,7 +185,10 @@
       color: #321357;
       top: 1%;
       right: 1%;
-      position: absolute; }
+      position: absolute;
+      font-size: 2.5em; }
+  .modal-content .modal-body {
+    text-align: left; }
   .modal-content .tab-content {
     padding: 10px 5px; }
   .modal-content .list-inline > li .tab {
@@ -805,15 +812,12 @@ section .title {
       border-radius: 50%; }
 
 .section--speaker .modal-content {
-  margin: 0 auto;
   color: #321357;
   background-color: #d8d0e7;
   width: 70%;
   border-radius: 0px; }
   .section--speaker .modal-content .modal-header {
     border-bottom: 1px solid #e2c8ff; }
-    .section--speaker .modal-content .modal-header .close {
-      color: #321357; }
   .section--speaker .modal-content .speaker-brief__body .list-inline > li .tab {
     display: inline-block;
     font-size: 16px;
@@ -884,8 +888,6 @@ section .title {
   float: left;
   width: 100%;
   height: 100%; }
-  .section--ticket .ticket__item p {
-    color: #fff; }
   .section--ticket .ticket__item .ticket__item__dot, .section--ticket .ticket__item .ticket__item__title, .section--ticket .ticket__item .ticket__item__disc, .section--ticket .ticket__item .ticket__item__price, .section--ticket .ticket__item .ticket__item__btn {
     display: table-cell;
     vertical-align: middle;
@@ -1084,7 +1086,7 @@ section .title {
   z-index: 99; }
 
 .alienUFO {
-  width: 28%;
+  width: 90px;
   cursor: pointer;
   -webkit-animation: around-the-world 5s linear infinite;
   -webkit-transition: all .5s;
