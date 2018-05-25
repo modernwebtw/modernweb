@@ -1,4 +1,6 @@
 .section--kv{
+    margin: 0; min-height: 50vh; top: 90px;
+    overflow: hidden;
     .star{
         position: absolute;
         width: 100%;
@@ -26,15 +28,20 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     span{ font-size: 28px; color:$font-color-green; display: block; margin: 10px auto 20px auto; letter-spacing: 2px; font-weight: 200;}
 }
 .section--key{
+    margin-top: 90px;
     .key__title{
         line-height: 18px;
         h2{
             font-size: 64px;
             color: $font-color-pu3;
         }
-        .deco-01{background: url('../img/deco-01.svg') no-repeat; 
-            background-size: 100%; 
-            width: 350px; height: 370px; position: relative; z-index: -1;}
+        .deco-01{
+            background: url('../img/deco-01.svg') no-repeat;
+            background-size: 100%;
+            width: 350px; height: 370px; position: relative;
+            @include media("<=768"){
+                opacity: .3; right: 0; top: 10%; position: absolute;}
+            }
     }
     .key__list{
         margin-top: 10%;
@@ -52,10 +59,18 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
             border-bottom: 2px solid #ddd;
             padding: 8% 0 5%;
             margin: 2%;
+            @include media("<=767px"){
+                border-bottom: none;
+            }
             .btn{
                 background: $font-color-pu1;
                 border: 1px solid $font-color-pu2;
                 width: 120px;
+                float: right;
+                @include media("<=767px"){
+                    float: left;
+                    width: 100%;
+                }
                 &:hover, &:active, &:visited, &:link {color: $bg-color1; background: #fff;}
             }
         }
@@ -76,11 +91,11 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
             }
         }
     }
-    .modal-content{ background-color: $bg-color1; width: 70%; border-radius: 0px;
+    .modal-content{margin: 0 auto; color: $font-color-pu1; background-color: $bg-color3; width: 70%; border-radius: 0px;
             .modal-header{ border-bottom: 1px solid $font-color-pu4;
-                .close{ color: $font-color-pu4;}
+                .close{ color: $font-color-pu1;}
             }
-            .speaker-brief__body .list-inline>li .tab{display: inline-block; color:#fff; font-size: 16px; padding: 2px 3px;}
+            .speaker-brief__body .list-inline>li .tab{display: inline-block; font-size: 16px; padding: 2px 3px;}
             .speaker-brief__body .list-inline>li .active{ border-bottom: 1px solid #fff;}
     }
     .speaker-brief__agenda-content{padding: 2%;}
@@ -134,13 +149,13 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         float: left;
         width: 100%;
         height: 100%;
-        p{color: $font-color-pu1;}
+        p{color: #fff;}
         .ticket__item__dot,.ticket__item__title,.ticket__item__disc,.ticket__item__price,.ticket__item__btn{
             display: table-cell;
             vertical-align: middle;
             line-height: 5em;
             padding: 5px 10px;;
-            height: 82px;
+            min-height: 82px;
         }
         .ticket__item__title{
             padding: 3px 3px 3px 20px;
@@ -148,6 +163,16 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
                 .date{ font-size: 16px; letter-spacing: 2px;}
             }
         }
+        .ticket__item__disc{
+            line-height: 1.4em;
+            p{font-size: 16px; color: $font-color-pu1;}
+        }
+        .disc__attn{ background: $font-color-green; text-align: center;
+            a{color:#fff;display: block;width: 100%;
+                &hover{color:$font-color-pu2; background:#fff;}
+            }
+        }
+
         .dot01:before{ background: $dot01; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
         .dot02:before{ background: $dot02; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
         .dot03:before{ background: $dot03; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
@@ -157,15 +182,12 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         .dot07:before{ background: $dot07; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
         .dot08:before{ background: $dot08; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
         .dot09:before{ background: $dot09; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
-        .ticket__item__disc{
-            p{font-size: 16px;color: $font-color-pu1;}
-        }
         .ticket__item__price{
             border-left: 2px solid #eee; padding-left: 3%;
             h3{ display: inline-block;  color: $font-color-pu1; font-weight: 200;}
         }
         .ticket__item__btn{
-            .btn{width: 90%; padding: 10px; font-size: 20px; margin:5px 8px; border-radius: 0px; color: $font-color-pu1; letter-spacing: 4px;}
+            .btn{word-break: break-all; width: 90%; padding: 10px; font-size: 1.1em; margin:1%; border-radius: 0px; color: $font-color-pu1; letter-spacing: 4px;}
         }
     }
 }
@@ -180,7 +202,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     .spon__diam,.spon__wgold,.spon__gold,.spon__silver{
         background: $bg-color2; padding: 10px 10px 20px;
         margin: 1%;
-        img{ display: block; margin:1% auto; background:#333; color:#333; margin: 10px;}
+        img{ display: block; margin:3%; padding:2%; background:#333; color:#333;}
     }
 
     .spon__diam{}
@@ -190,15 +212,22 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
 }
 .section--footer{
     .footer__social{
-        li a{ background: #eee; font-size: 20px; color: $font-color-pu1; float: left; margin: 8px; border-radius: 50%; width: 40px; height: 40px; border-radius: 50%;
+        width: 100%;
+        margin: 4% auto;
+        float: left;
+        li a{ background: $font-color-pu4; font-size: 20px; color: $font-color-pu1; float: left; margin: 8px; border-radius: 50%; width: 40px; height: 40px; border-radius: 50%;
         width: 40px;
         height: 40px;
         text-align: center;
         line-height: 40px;
         &:hover{ background: $font-color-pu3;}
+
         }
     }
-    .footer__fbshare{margin: 2%;}
+    .footer__fbshare{
+        margin: 2%;
+        iframe{left:0;}
+    }
     .bg--star01{ width: 100%; position: absolute; bottom:0; z-index: -1;}
 }
 

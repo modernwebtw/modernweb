@@ -236,6 +236,35 @@ $font-color-pu1-hover: scale-color($font-color-pu3, $lightness: 32%);
                 background: $font-color-pu1;
             }
         }
-/*==================================
-    TIMELINE end
-==================================*/
+/*  TIMELINE end */
+
+// modal
+.modal-content {
+    background-color: $bg-color3;
+    border-radius: 0px;
+    color: $font-color-pu1;
+    h5{color: $font-color-pu1;}
+    p{color: $font-color-pu1;}
+    .modal-header {
+        border-bottom: 1px solid $font-color-pu1;
+        .close {
+            color: $font-color-pu1;
+            top: 1%;
+            right: 1%;
+            position: absolute;
+        }
+    }
+    .tab-content{padding: 10px 5px;}
+    .list-inline>li .tab {
+        display: inline-block;
+        color: $font-color-pu2;
+        font-size: 16px;
+        padding: 2px 4px;
+        border: 1px solid #fff;
+        text-decoration: none;
+        &:hover{ border: 1px solid  $font-color-pu2; text-decoration: none;}
+    }
+    .list-inline>li .active {
+        border-bottom: 1px solid #fff;
+    }
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="game/sinuous/style.css">
     <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="rwd.css">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -64,9 +65,9 @@
                 <div class="navbar-header">
                     <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navtop">
                         <span class="sr-only"></span>
-                        <span class="icol-bar"></span>
-                        <span class="icol-bar"></span>
-                        <span class="icol-bar"></span>
+                        <span class="icol-bar icol-bar-a"></span>
+                        <span class="icol-bar icol-bar-a"></span>
+                        <span class="icol-bar icol-bar-a"></span>
                     <a>
                     <a class="navbar-logobox" href="index.html">
                         <img src="img/logo.svg" alt="">
@@ -76,14 +77,12 @@
                 <!-- nav -->
                 <div class="collapse navbar-collapse" id="navtop">
                     <ul class="nav navbar-nav">
-                        <li><a href="">首頁</a></li>
-                        <li><a href="">議程</a></li>
-                        <li><a href="">講者</a></li>
-                        <li><a href="">售票</a></li>
-                        <li><a href="">交通</a></li>
-                        <li><a href="">場邊活動</a></li>
-                        <li><a href="">徵才</a></li>
-                        <li><a href="">回顧</a></li>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="#special">2018特色</a></li>
+                        <li><a href="#speaker">講者</a></li>
+                        <li><a href="#ticket">售票</a></li>
+                        <li><a href="#quote">歷年參賽</a></li>
+                        <li><a href="#history">里程碑</a></li>
                     </ul>
                 </div>
                 <!-- nav end -->
@@ -1128,7 +1127,7 @@
             <img src="img/rock-05.svg" class="rock rock3">
         </div>
     </section>
-    <section class="section--key">
+    <section class="section--key" id="special">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12 key__title">
@@ -1154,21 +1153,21 @@
             </div>
         </div>
     </section>
-    <section class="section--speaker">
+    <section class="section--speaker" id="speaker">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <h3 class="title">焦點講師<span>Keynote Speakers</span></h3>
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
-                        <div class="col-sm-5 col-xs-12">
+                        <div class="col-sm-5 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
@@ -1181,10 +1180,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1229,19 +1228,20 @@
                     </div>
                     <!--end of speaker__item -->
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
                         </div>
-                        <div class="col-sm-7 col-xs-12">
+                        <div class="col-sm-7 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
                         <div class="modal-dialog" role="document">
@@ -1250,10 +1250,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1298,15 +1298,15 @@
                     </div>
                     <!--end of speaker__item -->
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
-                        <div class="col-sm-5 col-xs-12">
+                        <div class="col-sm-5 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
@@ -1319,10 +1319,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1367,19 +1367,20 @@
                     </div>
                     <!--end of speaker__item -->
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
                         </div>
-                        <div class="col-sm-7 col-xs-12">
+                        <div class="col-sm-7 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
                         <div class="modal-dialog" role="document">
@@ -1388,10 +1389,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1436,15 +1437,15 @@
                     </div>
                     <!--end of speaker__item -->
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-7 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-7 col-sm-pull-1 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
-                        <div class="col-sm-5 col-xs-12">
+                        <div class="col-sm-5 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
@@ -1457,10 +1458,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1505,19 +1506,20 @@
                     </div>
                     <!--end of speaker__item -->
                     <!-- speaker__item -->
-                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
-                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                    <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-5">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
                             </div>
                         </div>
-                        <div class="col-sm-7 col-xs-12">
+                        <div class="col-sm-7 col-xs-7">
                             <div class="speaker__disc pull-right">
                                 <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
                         <div class="modal-dialog" role="document">
@@ -1526,10 +1528,10 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body row">
-                                    <div class="col-sm-4">
+                                    <div class="col-xs-4">
                                         <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="col-xs-8">
                                         <div class="speaker-box__name">
                                             陳縕儂
                                         </div>
@@ -1687,7 +1689,7 @@
             </div>
         </div>
     </section>
-    <section class="section--quote">
+    <section class="section--quote" id="quote">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -1747,133 +1749,148 @@
         </div>
         </div>
     </section>
-    <section class="section--ticket">
+    <section class="section--ticket" id="ticket">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 class="title">購票資訊<span>Tickets</span></h3>
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot01">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            <h3 class="dot dot01">早鳥票<br><span class="date">5/28-6/11</span></h3>
                         </div>
                         <div class="col-sm-2 ticket__item__price">
                             <h3>$4,490</h3>
                         </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--buy">立即購票</button>
+                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">立即購票</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot02">社群票<br><span class="date">6/26-7/6</span></h3>
+                            <h3 class="dot dot02">共同推廣票<br><span class="date">5/28-6/11</span></h3>
                         </div>
                         <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
+                            <h3>$3,990</h3>
                         </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張
-                            <a href="#ticket" class="pull-right"><i class="fa fa-info-circle fa-1x"></i> 社群購票注意說明</a>
-                            <div class="modal fade speaker-modal" id="ticket" role="dialog" aria-labelledby="ticketLabel">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-sm-12">
-                                                <p>dhfhrfh</p>
+                        <div class="col-sm-5 ticket__item__disc line-h-18">
+                            雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。
+                        </div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180018" target=
+                            "_blank">立即購票</a>
+                        </div>
+                        <div class="col-sm-12 disc__attn">
+                                <a class="btn btn-txt" data-toggle="modal" data-target="#ticketModal">
+                                    <i class="fa fa-info-circle fa-1x"></i> 共同推廣票注意事項
+                                </a>
+                            </div>
+                            <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="ticketModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">共同推廣票注意事項</h5>
+                                                        <a class="btn close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot dot03">學生票<br><span class="date">6/11-7/12</span></h3>
                         </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$1,990</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc"><p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。<br>（限額 30 名，售完為止）</p></div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--buy">立即購票</button>
+                            <a class="btn btn--stop" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">停止購票</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot03">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            <h3 class="dot dot04">線上優惠<br><span class="date">6/12-7/12</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$5,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot dot05">2 人同行<br><span class="date">6/12-7/12</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$8,990</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot dot06">贊助商優惠<br><span class="date">6/12-7/12</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">雙日入場票，填寫表單回傳報名。</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot dot07">xxxx票<br><span class="date">6/26-7/6</span></h3>
                         </div>
                         <div class="col-sm-2 ticket__item__price">
                             <h3>$4,490</h3>
                         </div>
                         <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--stop">停止購票</button>
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot04">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            <h3 class="dot dot08">xxx票<br><span class="date">6/26-7/6</span></h3>
                         </div>
                         <div class="col-sm-2 ticket__item__price">
                             <h3>$4,490</h3>
                         </div>
                         <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot05">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                            <h3 class="dot dot09">現場原價<br><span class="date">7/18-7/19</span></h3>
                         </div>
                         <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
+                            <h3>$8,000</h3>
                         </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張，現場報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
-                        </div>
-                    </div>
-                    <div class="col-sm12 ticket__item">
-                        <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot06">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                        </div>
-                        <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
-                        </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                        <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
-                        </div>
-                    </div>
-                    <div class="col-sm12 ticket__item">
-                        <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot07">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                        </div>
-                        <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
-                        </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                        <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
-                        </div>
-                    </div>
-                    <div class="col-sm12 ticket__item">
-                        <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot08">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                        </div>
-                        <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
-                        </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                        <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
-                        </div>
-                    </div>
-                    <div class="col-sm12 ticket__item">
-                        <div class="col-sm-3 ticket__item__title">
-                            <h3 class="dot09">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                        </div>
-                        <div class="col-sm-2 ticket__item__price">
-                            <h3>$4,490</h3>
-                        </div>
-                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                        <div class="col-sm-2 ticket__item__btn">
-                            <button class="btn btn--undo">尚未開賣</button>
+                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            "_blank">尚未開賣</a>
                         </div>
                     </div>
                 </div>
@@ -1881,7 +1898,7 @@
         </div>
         </div>
     </section>
-    <section class="section--org">
+    <section class="section--org" id="org">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -1891,39 +1908,39 @@
             </div>
         </div>
     </section>
-    <section class="section--spon">
+    <section class="section--spon" id="spon">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-xs-12">
                     <h3 class="title">贊助廠商<span>Sponsors</span></h3>
                 </div>
-                <div class="col-sm-12 spon__diam">
+                <div class="col-sm-12 col-xs-12 spon__diam">
                     <h4>鑽石級</h4>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div>
-                <div class="col-sm-12 spon__wgold">
+                <div class="col-sm-12 col-xs-12 spon__wgold">
                     <h4>白金級</h4>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div>
-                <div class="col-sm-12 spon__gold">
+                <div class="col-sm-12 col-xs-12 spon__gold">
                     <h4>黃金級</h4>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div>
-                <div class="col-sm-12 spon__silver">
+                <div class="col-sm-12 col-xs-12 spon__silver">
                     <h4>銀級</h4>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div>
             </div>
         </div>
@@ -1931,7 +1948,7 @@
     <section class="section--footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-xs-12">
                     <div class="col-sm-8">
                         <h5>聯絡 Modern Web 服務小組</h5>
                         <ul>
@@ -1949,7 +1966,7 @@
                                 <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 col-xs-12">
                             <div class="footer__fbshare hidden-sm hidden-xs">
                                 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="154" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
                             </div>
