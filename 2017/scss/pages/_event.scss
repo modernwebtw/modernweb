@@ -1,0 +1,202 @@
+.event {
+	margin: 5% 0 20%;
+}
+
+.event-base {
+	@include media("<768px") {
+		padding: 0 15px;
+	}
+	
+	@include media(">=768px") {
+		position: relative;
+		padding: 20px;
+		padding-right: 40px;
+		background-color: rgba(0,0,0,.28);
+		box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .4);
+		&-line {
+			position: absolute;
+			left: 41%;
+			top: 30px;
+			width: 1px;
+			height: calc(100% - 60px);
+			background-color: $main-green;
+			&:before,&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				width: 4px;
+				height: 4px;
+				background-color: $main-green;
+				transform: translateX(-50%) rotate(45deg) ;
+			}
+			&:before {
+				top: 0;
+			}
+			&:after {
+				bottom: 0;
+			}
+		}
+	}
+	
+}
+
+.event-nav {
+	float: left;
+	width: 40%;
+	text-align: center;
+	@include media("<768px") {
+		float: none;
+		width: 100%;
+	}
+	&__list {
+		margin-bottom: 0;
+		font-size: 0;
+		li {
+			display: inline-block;
+			width: 33.33%;
+			margin: 10px 0;
+			@include media(">=768px") {
+				&.active a {
+					background-color: rgba(255,255,255,.1);
+				}
+			}
+			@include media("<768px") {
+				margin: 8px 0;
+				&.active a {
+					color: $space-color;
+					background-color: $yellow;
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			padding-bottom: 10px;
+			font-size: 16px;
+			letter-spacing: 1px;
+			color: $yellow;
+			border-radius: 4px;
+			&:hover {
+				background-color: rgba(255,255,255,.1);
+			}
+			@include media("<768px")  {
+				padding: 4px 0;
+				width: 96%;
+				font-size: 14px;
+				border: 1px solid $yellow;
+				border-radius: 0;
+			}
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			@include media("<768px") {
+				display: none;
+			}
+		}
+	}
+}
+
+.event-panel {
+	float: left;
+	width: 60%;
+	padding-left: 50px;
+	@include media("<768px") {
+		float: none;
+		width: 100%;
+		padding: 0;
+		margin-top: 10px;
+		
+	}
+	&__content {
+		color: #fff;
+		@include media("<768px") {
+			padding: 10px 20px;
+			background-color: rgba(0,0,0,.28);
+			box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .4);
+		}
+	}
+	&__heading {
+		position: relative;
+		border-bottom: 1px solid $main-green;
+		&:before,&:after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			width: 4px;
+			height: 4px;
+			background-color: $main-green;
+			transform: rotate(45deg);
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+	}
+	&__title {
+		margin-top: 10px;
+		margin-bottom: 4px;
+		color: $yellow;
+		letter-spacing: 1px;
+	}
+	&__subtitle {
+		margin-top: 0;
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+	&__detail {
+		padding: 20px 0;
+		padding-left: 4px;
+		font-weight: 300;
+		strong {
+			display: block;
+			margin-top: 20px;
+			color: $yellow;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		a {
+			@include font-hover(lighten($main-green,5%));
+		}
+	}
+	&__info {
+		margin-bottom: 20px;
+		li+li {
+			margin-top: 10px;
+		}
+	}
+	&__badge {
+		display: inline-block;
+		padding: 0 6px;
+		margin-right: 10px;
+		font-size: 18px;
+		letter-spacing: 1px;
+		background-color: $main-green;
+	}
+}
+.event2-img {
+	float: right;
+	@include media("<768px") {
+		float: none;
+		margin-top: 20px;
+	}
+}
+.event7-img {
+	margin-top: 40px;
+	img {
+		max-width: 100%;
+	}
+}
+.event9-img {
+	display: block;
+	width: 90%;
+	margin: 20px auto 0;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(#fff,.7);
+	img {
+		max-width: 100%;
+	}
+}

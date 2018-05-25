@@ -1,0 +1,110 @@
+.jobs {
+	margin: 5% 0 20%;
+	&__wrapper {
+		position: relative;
+		margin-bottom: 40px;
+		text-align: center;
+		@include media(">=1200px") {
+			margin-bottom: 80px;
+		}
+	}
+	&__logo {
+		display: inline-block;
+		margin: 0 auto;
+		margin-bottom: -40px;
+		width: 60%;
+		max-width: 300px;
+		box-shadow: 0 20px 40px -20px rgba(0,0,0,.7);
+		img {
+			width: 100%;
+		}
+		@include media(">=1200px") {
+			position: absolute;
+   			top: 40px;
+			left: 0;
+			width: 100%;
+		}
+	}
+	&__content {
+		// margin-left: 240px;
+		padding: 20px;
+		padding-top: 60px;
+		// padding-left: 100px;
+		color: #fff;
+		text-align: left;
+		background-color: $main-green;
+		box-shadow: 0 20px 40px -20px rgba(0,0,0,.7);
+		@include media(">=1200px") {
+   			margin-left: 240px;
+			padding: 24px;
+   			padding-top: 40px;
+   			padding-left: 90px;
+		}
+	}
+	&__name {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.6;
+		@include font-hover(#fff);
+	}
+	&__name-en {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	&__desc {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 1.6;
+		opacity: .95;
+		a {
+			@include font-hover(#ffd82c);
+		}
+	}
+	&__btn {
+		display: inline-block;
+		padding: 1px 12px;
+		font-size: 14px;
+		font-weight: 500;
+		&--white {
+			color: #fff;
+			border: 1px solid #fff;
+			&:hover,&:focus {
+		    	color: $main-green;
+		    	background-color: #fff;
+		    }
+		    &:active {
+		    	color: $main-green;
+		    	background-color: darken(#fff,2%);
+    		}
+		}
+		&--blue {
+			color: $space-color;
+			border: 1px solid $space-color;
+			&:hover,&:focus {
+		    	color: #fff;
+		    	background-color: $space-color;
+		    }
+		    &:active {
+		    	color: #fff;
+		    	background-color: darken($space-color,2%);
+    		}
+		}
+
+	}
+	&__list {
+		margin-top: 20px;
+		padding: 16px 24px;
+		font-weight: 700;
+		color: $space-color;
+		background-color: rgba(#fff,.5);
+		ul {
+			margin-top: 10px;
+			padding-left: 24px;
+			a {
+				font-weight: normal;
+				@include font-hover ($space-color);
+			}
+		}
+		
+	}
+}

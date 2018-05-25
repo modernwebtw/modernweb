@@ -1,0 +1,228 @@
+
+.bg-animation{animation: bg-animation 30s ease infinite;}
+@keyframes bg-animation{ 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.float-star01{animation-name: float-star01;}
+.float-star02{animation-name: float-star02;}
+@keyframes float-star01{
+
+  10%, {
+    transform: translate3d(10px, 0, 0);
+}
+  20%{
+     transform: translate3d(0, 40px, 0);
+  }
+  50%{
+     transform: translate3d(0, 60px, 0);
+     opacity: .6;
+  }
+  70%{
+     transform: translate3d(0, 40px, 0);
+  }
+  80%{
+     transform: translate3d(0, 10px, 0);
+  }
+}
+@keyframes float-star02{
+
+  10%, {
+    transform: translate3d(10px, 0, 0);
+}
+  20%{
+     transform: translate3d(20px, 0, 0);
+  }
+  50%{
+     transform: translate3d(10px, 0, 0);
+     transform: rotate(10deg);
+     opacity: .8;
+  }
+  70%{
+     transform: translate3d(10px, 0, 0);
+  }
+  80%{
+     transform: translate3d(10px, 0, 0);
+     transform: rotate(-10deg);
+  }
+}
+
+
+@-webkit-keyframes rotate-right {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-left {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes hover {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(5%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes pull {
+    0% {
+        -webkit-transform: scaleY(1);
+    }
+    40% {
+        -webkit-transform: scaleY(1.01);
+    }
+    60% {
+        -webkit-transform: scaleY(0.99);
+    }
+    80% {
+        -webkit-transform: scaleY(1.01);
+    }
+    100% {
+        -webkit-transform: scaleY(0.99);
+    }
+    80% {
+        -webkit-transform: scaleY(1.01);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+    }
+}
+
+#countryObjects {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-right 240s linear 0s infinite;
+}
+
+#floatingGlobe {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-left 360s linear 0s infinite;
+}
+
+#globe {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: hover 0s linear 0s infinite;
+}
+
+#windmill {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 331px 201px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-right 2s linear 0s infinite;
+}
+
+#cloud1 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: hover 3s linear 1s infinite;
+}
+
+#cloud2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: hover 3s linear 2s infinite;
+}
+
+#cloud3 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: hover 3s linear 3s infinite;
+}
+
+#circle1 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+
+#circle2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+
+#circle3 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+
+#circle4 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+
+#circle5 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 200px 200px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+
+// 主體旋轉
+.boat__rudder {
+    transform-origin: center center;
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -webkit-animation: rudder-rotate 80s linear infinite;
+    animation: rudder-rotate 80s linear infinite;
+}
+@-webkit-keyframes rudder-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+@keyframes rudder-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+// 主體旋轉 結束
