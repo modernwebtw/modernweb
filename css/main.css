@@ -1164,23 +1164,34 @@ section .title {
 
 .radar__rotate {
   -webkit-animation: radar-rotate2 3s infinite alternate linear;
-  animation: radar-rotate2 3s infinite alternate linear; }
+  animation: radar-rotate2 3s infinite alternate linear;
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg); }
 
 @-webkit-keyframes radar-rotate2 {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+    -webkit-transform-origin: 53% 5%;
+    transform-origin: 53% 5%; }
   100% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg); } }
+    -webkit-transform: rotate(33deg);
+    transform: rotate(33deg);
+    -webkit-transform-origin: 53% 5%;
+    transform-origin: 53% 5%; } }
 
 @keyframes radar-rotate2 {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+    -webkit-transform-origin: 53% 5%;
+    transform-origin: 53% 5%; }
   100% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg); } }
+    -webkit-transform: rotate(33deg);
+    transform: rotate(33deg);
+    -webkit-transform-origin: 53% 5%;
+    transform-origin: 53% 5%; } }
 
 .radar__wave path {
   opacity: 0; }
@@ -1432,64 +1443,77 @@ section .title {
     transform: translateX(-80px); } }
 
 .rocket {
-  width: 35%; }
+  width: 35%;
+  cursor: pointer; }
+
+.rocket:hover {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px; }
 
 @-webkit-keyframes shake {
   10%, 90% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     transform-origin: 1% 1%;
     -webkit-transform-origin: 1% 1%;
     -moz-transform-origin: 1% 1%; }
   20%, 80% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
     transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;
     -moz-transform-origin: 0% 0%; }
   30%, 50%, 70% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
     transform-origin: 1% 1%;
     -webkit-transform-origin: 1% 1%;
     -moz-transform-origin: 1% 1%; }
   40%, 60% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
     transform-origin: 2% 2%;
     -webkit-transform-origin: 2% 2%;
     -moz-transform-origin: 2% 2%; } }
 
 @keyframes shake {
   10%, 90% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     transform-origin: 1% 1%;
     -webkit-transform-origin: 1% 1%;
     -moz-transform-origin: 1% 1%; }
   20%, 80% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
     transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;
     -moz-transform-origin: 0% 0%; }
   30%, 50%, 70% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
     transform-origin: 1% 1%;
     -webkit-transform-origin: 1% 1%;
     -moz-transform-origin: 1% 1%; }
   40%, 60% {
-    transform: rotate(215deg);
-    -webkit-transform: rotate(215deg);
-    -moz-transform: rotate(215deg);
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
     transform-origin: 2% 2%;
     -webkit-transform-origin: 2% 2%;
     -moz-transform-origin: 2% 2%; } }

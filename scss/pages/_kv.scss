@@ -315,14 +315,19 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
             // transform-origin: 0 0;
             animation: radar-rotate2 3s infinite alternate linear;
             @keyframes radar-rotate2 {
-                0% {
-                    transform:rotate(0deg);
-                }
-                100% {
-                    transform: rotate(20deg);
-                }
-            }
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                        transform-origin: 53% 5%;
+                    }
+                    100% {
+                        -webkit-transform: rotate(33deg);
+                        transform: rotate(33deg);
+                        transform-origin: 53% 5%;
+                    }
+            }   transform: rotate(20deg); 
         }
+        
         &__wave {
             path {
                 opacity: 0;
@@ -499,69 +504,54 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     }
 }
 .rocket {
-    // position: absolute;
-    // cursor: pointer;
-    // top: 70%;
-    // left: 155%;
     width: 35%;
-    // margin: -472px 0 0 -480px;
-    // transform: rotate(215deg);
-    // -webkit-transform: rotate(215deg);
-    // -moz-transform: rotate(215deg);
-    // transform-origin: 0% 0%;
-    // -webkit-transform-origin: 0% 0%;
-    // -moz-transform-origin: 0% 0%;
-    // z-index: 999;
+    cursor: pointer;
 }
 
-// .rocket:hover {
-//     animation: shake 10s cubic-bezier(.36, .07, .19, .97) both infinite;
-//     transform: rotate(215deg);
-//     -webkit-transform: rotate(215deg);
-//     -moz-transform: rotate(215deg);
-//     transform-origin: 0% 0%;
-//     -webkit-transform-origin: 0% 0%;
-//     -moz-transform-origin: 0% 0%;
-//     backface-visibility: hidden;
-//     perspective: 1000px;
-// }
+.rocket:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
 
 @keyframes shake {
-    10%, 90% {
-        transform: rotate(215deg);
-        -webkit-transform: rotate(215deg);
-        -moz-transform: rotate(215deg);
+        10%, 90% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
         transform-origin: 1% 1%;
         -webkit-transform-origin: 1% 1%;
         -moz-transform-origin: 1% 1%;
     }
-
     20%, 80% {
-        transform: rotate(215deg);
-        -webkit-transform: rotate(215deg);
-        -moz-transform: rotate(215deg);
+        transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
         transform-origin: 0% 0%;
         -webkit-transform-origin: 0% 0%;
         -moz-transform-origin: 0% 0%;
     }
-
     30%, 50%, 70% {
-        transform: rotate(215deg);
-        -webkit-transform: rotate(215deg);
-        -moz-transform: rotate(215deg);
+        transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -moz-transform: rotate(4deg);
         transform-origin: 1% 1%;
         -webkit-transform-origin: 1% 1%;
         -moz-transform-origin: 1% 1%;
     }
-
     40%, 60% {
-        transform: rotate(215deg);
-        -webkit-transform: rotate(215deg);
-        -moz-transform: rotate(215deg);
+        transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
         transform-origin: 2% 2%;
         -webkit-transform-origin: 2% 2%;
         -moz-transform-origin: 2% 2%;
     }
+
 }
 
 .rocket-fly {
