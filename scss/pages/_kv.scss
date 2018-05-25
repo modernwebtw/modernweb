@@ -70,6 +70,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
                 @include media("<=767px"){
                     float: left;
                     width: 100%;
+                    margin-top: 10px;
                 }
                 &:hover, &:active, &:visited, &:link {color: $bg-color1; background: #fff;}
             }

@@ -40,6 +40,8 @@ $font-color-pu1-hover: scale-color($font-color-pu3, $lightness: 32%);
         color: $font-color-pu1;
         h1, h2, h3, h4, h5, h6, p {
             color: $font-color-pu1;
+            margin: 1.5% 1%;
+            line-height: 1.5em;
         }
     }
 

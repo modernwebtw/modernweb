@@ -69,6 +69,8 @@
 	/* speaker */
 	.modal.in .modal-dialog{height: 110px;}
 
+	.section--quote{display: none;}
+
 	/* history */
 	.section--history{ margin-bottom: 300px;}
 
@@ -97,7 +99,3 @@
 @media screen and (max-width:550px ){.section--kv { min-height: 80vh;} }
 @media screen and (max-width:480px ){.section--kv { min-height: 70vh;} }
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }
-
-
-
-
