@@ -91,7 +91,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
             }
         }
     }
-    .modal-content{color: $font-color-pu1; background-color: $bg-color3; width: 70%; border-radius: 0px;
+    .modal-content{
             .modal-header{ border-bottom: 1px solid $font-color-pu4;
             }
             .speaker-brief__body .list-inline>li .tab{display: inline-block; font-size: 16px; padding: 2px 3px;}

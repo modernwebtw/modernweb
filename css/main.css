@@ -811,19 +811,16 @@ section .title {
     .section--speaker .speaker__item .speaker__imgbox img {
       border-radius: 50%; }
 
-.section--speaker .modal-content {
-  color: #321357;
-  background-color: #d8d0e7;
-  width: 70%;
-  border-radius: 0px; }
-  .section--speaker .modal-content .modal-header {
-    border-bottom: 1px solid #e2c8ff; }
-  .section--speaker .modal-content .speaker-brief__body .list-inline > li .tab {
-    display: inline-block;
-    font-size: 16px;
-    padding: 2px 3px; }
-  .section--speaker .modal-content .speaker-brief__body .list-inline > li .active {
-    border-bottom: 1px solid #fff; }
+.section--speaker .modal-content .modal-header {
+  border-bottom: 1px solid #e2c8ff; }
+
+.section--speaker .modal-content .speaker-brief__body .list-inline > li .tab {
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px 3px; }
+
+.section--speaker .modal-content .speaker-brief__body .list-inline > li .active {
+  border-bottom: 1px solid #fff; }
 
 .section--speaker .speaker-brief__agenda-content {
   padding: 2%; }
