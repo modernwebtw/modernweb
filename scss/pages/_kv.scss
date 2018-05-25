@@ -144,15 +144,24 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         }
         .ticket__item__title{
             padding: 3px 3px 3px 20px;
-            h3{ color: $font-color-pu1; margin-bottom: 5px; margin-left: 30px; margin-top: 10px; line-height: .9;
+            h3{ color: $font-color-pu1; margin-bottom: 5px; margin-left: 30px; margin-top: 10px; line-height: .9; font-weight: 400; font-size: 28px;
                 .date{ font-size: 16px; letter-spacing: 2px;}
-                &.dot01{ &:before{ background: $dot01; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}}}
-                }
+            }
+        }
+        .dot01:before{ background: $dot01; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot02:before{ background: $dot02; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot03:before{ background: $dot03; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot04:before{ background: $dot04; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot05:before{ background: $dot05; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot06:before{ background: $dot06; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot07:before{ background: $dot07; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot08:before{ background: $dot08; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
+        .dot09:before{ background: $dot09; content:''; display:block; width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 30px; left: 20px;}
         .ticket__item__disc{
             p{font-size: 16px;color: $font-color-pu1;}
         }
         .ticket__item__price{
-            border-left: 2px solid #ddd; padding-left: 3%;
+            border-left: 2px solid #eee; padding-left: 3%;
             h3{ display: inline-block;  color: $font-color-pu1; font-weight: 200;}
         }
         .ticket__item__btn{
@@ -160,8 +169,38 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         }
     }
 }
-.section--org{}
-.section--footer{}
+.section--org{
+    .org__logobox{
+        img{ display: block; margin:1% auto; max-width: 220px;}
+    }
+
+}
+.section--spon{
+    text-align: center;
+    .spon__diam,.spon__wgold,.spon__gold,.spon__silver{
+        background: $bg-color2; padding: 10px 10px 20px;
+        margin: 1%;
+        img{ display: block; margin:1% auto; background:#333; color:#333; margin: 10px;}
+    }
+
+    .spon__diam{}
+    .spon__wgold{}
+    .spon__gold{}
+    .spon__silver{}
+}
+.section--footer{
+    .footer__social{
+        li a{ background: #eee; font-size: 20px; color: $font-color-pu1; float: left; margin: 8px; border-radius: 50%; width: 40px; height: 40px; border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        &:hover{ background: $font-color-pu3;}
+        }
+    }
+    .footer__fbshare{margin: 2%;}
+    .bg--star01{ width: 100%; position: absolute; bottom:0; z-index: -1;}
+}
 
 #alien {
     position: absolute;

@@ -12,7 +12,7 @@
     <meta property="og:image" content="img/fb.jpg" />
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/setting.css">
     <link rel="stylesheet" href="game/flappy/style.css">
     <link rel="stylesheet" href="game/sinuous/style.css">
@@ -1163,7 +1163,7 @@
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-7 col-sm-pull-1 col-xs-12">
                             <div class="speaker__disc pull-right">
-                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
                                 <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
@@ -1237,9 +1237,62 @@
                         </div>
                         <div class="col-sm-7 col-xs-12">
                             <div class="speaker__disc pull-right">
-                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right">詳細介紹</button>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1248,14 +1301,67 @@
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-7 col-sm-pull-1 col-xs-12">
                             <div class="speaker__disc pull-right">
-                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right">詳細介紹</button>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
                         <div class="col-sm-5 col-xs-12">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1269,9 +1375,62 @@
                         </div>
                         <div class="col-sm-7 col-xs-12">
                             <div class="speaker__disc pull-right">
-                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right">詳細介紹</button>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1280,14 +1439,136 @@
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-7 col-sm-pull-1 col-xs-12">
                             <div class="speaker__disc pull-right">
-                                <h4 class="name">北村英志<span>Eiji Kitamura</span></h4>
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
                                 <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
-                                <button class="btn pull-right">詳細介紹</button>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                             </div>
                         </div>
                         <div class="col-sm-5 col-xs-12">
                             <div class="speaker__imgbox">
                                 <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of speaker__item -->
+                    <!-- speaker__item -->
+                    <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
+                        <div class="col-sm-5 col-sm-pull-1 col-xs-12">
+                            <div class="speaker__imgbox">
+                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="speaker__disc pull-right">
+                                <h4 class="name">北村英志 <span> Eiji Kitamura</span></h4>
+                                <p>Hiiir 時間軸科技共同創辦人暨技術總監</p>
+                                <button class="btn pull-right" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-sm-4">
+                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="speaker-box__name">
+                                            陳縕儂
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            台大資工系助理教授
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 speaker-brief__body">
+                                        <hr>
+                                        <ul class="list-inline" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="speakerModalAgenda" class="tab-pane active">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-title"><span class="speaker-brief__agenda-type">EN</span> Bots and AI - Future of the Web with Conversational Interface
+                                                    </div>
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>Using voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                        <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                        <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane">
+                                                <div class="speaker-brief__intro overflow-y">
+                                                    <p>dgdgdgdgdUsing voice commands has been ubiquitous nowadays, as more mobile phone users use voice assistants like Siri, as well as devices like Amazon Echo and Google Home have been invading our living rooms. You can interact with the intelligent assistant without leaving your couch. At the same time, chatbots have gained popularity, and services like Slack and Facebook Messenger let you achieve tasks without leaving the client- you can schedule a meeting, order some pizza, call a taxi, etc.</p>
+                                                    <p>Historically in web development, we have been relying on various UI elements to interact with users. Now with the new technologies, you can develop rich applications with the natural user interactions with a minimal visual interface. This enables countless use cases for richer and more accessible web applications.</p>
+                                                    <p>In this talk, Tomomi Imura will talk about the trend of the conversational interface, and what and how you can build with JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1427,7 +1708,8 @@
                                             <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
                                         </div>
                                         <div class="col-sm-4 text-left pull-right">
-                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民
+                                                <br><span>Nobody / Random Wild Dummies</span></p>
                                         </div>
                                     </div>
                                     <div class="item">
@@ -1435,7 +1717,8 @@
                                             <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
                                         </div>
                                         <div class="col-sm-4 text-left pull-right">
-                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民
+                                                <br><span>Nobody / Random Wild Dummies</span></p>
                                         </div>
                                     </div>
                                     <div class="item">
@@ -1443,7 +1726,8 @@
                                             <h3>「 不要問為什麼沒有人做這個，因為沒有人就是你！」<br><span>"nobody gonna do this? you are the one."</span></h3>
                                         </div>
                                         <div class="col-sm-4 text-left pull-right">
-                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民<br><span>Nobody / Random Wild Dummies</span></p>
+                                            <p class="carousel-inner__name">— 沒有人，野生的隨機鄉民
+                                                <br><span>Nobody / Random Wild Dummies</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1468,117 +1752,133 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h3 class="title">購票資訊<span>Tickets</span></h3>
-
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot01">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot01">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--buy">立即購票</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot02">社群票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張
+                            <a href="#ticket" class="pull-right"><i class="fa fa-info-circle fa-1x"></i> 社群購票注意說明</a>
+                            <div class="modal fade speaker-modal" id="ticket" role="dialog" aria-labelledby="ticketLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body row">
+                                            <div class="col-sm-12">
+                                                <p>dhfhrfh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot02">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--buy">立即購票</button>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot03">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot03">早鳥票<br><span class="date">6/26-7/6</span></h3>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot04">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot05">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--stop">停止購票</button>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot06">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
-                        </div><div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot07">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot04">早鳥票<br><span class="date">6/26-7/6</span></h3>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot08">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
                         </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot09">早鳥票<br><span class="date">6/26-7/6</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <button class="btn">立即購票</button>
-                            </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot05">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot06">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot07">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot08">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
+                        </div>
+                    </div>
+                    <div class="col-sm12 ticket__item">
+                        <div class="col-sm-3 ticket__item__title">
+                            <h3 class="dot09">早鳥票<br><span class="date">6/26-7/6</span></h3>
+                        </div>
+                        <div class="col-sm-2 ticket__item__price">
+                            <h3>$4,490</h3>
+                        </div>
+                        <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
+                        <div class="col-sm-2 ticket__item__btn">
+                            <button class="btn btn--undo">尚未開賣</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="section--org">
@@ -1586,6 +1886,44 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h3 class="title">主辦單位<span>Organizer</span></h3>
+                    <div class="org__logobox"><img src="img/ithome.svg" alt="" class="img-responsive"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section--spon">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="title">贊助廠商<span>Sponsors</span></h3>
+                </div>
+                <div class="col-sm-12 spon__diam">
+                    <h4>鑽石級</h4>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                </div>
+                <div class="col-sm-12 spon__wgold">
+                    <h4>白金級</h4>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                </div>
+                <div class="col-sm-12 spon__gold">
+                    <h4>黃金級</h4>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                </div>
+                <div class="col-sm-12 spon__silver">
+                    <h4>銀級</h4>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="col-sm-3"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div>
             </div>
         </div>
@@ -1594,11 +1932,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="col-sm-8"></div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8">
+                        <h5>聯絡 Modern Web 服務小組</h5>
+                        <ul>
+                            <li>客服專線：02-25622880 #3622 開小姐（週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30）</li>
+                            <li>客服信箱： service@mail.ithome.com.tw</li>
+                        </ul>
+                        <p>iThome 版權所有</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-12">
+                            <ul class="footer__social">
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/home?status=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="footer__fbshare hidden-sm hidden-xs">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="154" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <img src="img/bg-star01.svg" class="bg--star01">
     </section>    
     <!-- sinuous -->
     <div id="sinuous_bg"></div>
@@ -1612,7 +1972,7 @@
             <li>3. 移動距離越長，可獲得越多分數加成</li>
             <li>4. 以防護罩擊破越多殞石，可獲得越多分數加成</li>
             <li id="share" style="display: none;">
-                <!-- <button id="btn_share_fb" type="button" class="btn btn-primary game-modal__btn game-modal__btn--line">分享戰績</button> -->
+                <button id="btn_share_fb" type="button" class="btn btn-primary game-modal__btn game-modal__btn--line">分享戰績</button>
             </li>
         </ul>
         <a href="#" id="startButton">Start</a>
@@ -1628,7 +1988,7 @@
                 <div class="game-modal__desc">
                     <div class="game-modal__warning">殞石來襲！</div>
                     <p>在行駛途中遭遇殞石群,
-                        <br>是否繼續航行？</p>
+                        <br>是否繼續前進？</p>
                     <div class="game-modal__btn-group">
                         <button id="btn_sinuous_back" type="button" class="btn game-modal__btn game-modal__btn--line" data-dismiss="modal">先按兵不動</button>
                         <button id="btn_sinuous_start" type="button" class="btn game-modal__btn game-modal__btn--solid" data-dismiss="modal">勇往直前</button>

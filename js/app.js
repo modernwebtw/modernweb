@@ -178,22 +178,6 @@ var gamePause = function() {
     toggleScroll(true);
 }
 
-$('#btn_share_fb').click(function () {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#score').text();
-    FB.init({
-        appId: '1615126938703368'
-    });
-    FB.ui({
-        method: 'feed',
-        link: location.href,
-        title: '我在 Modern Web 2017 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/game_share.jpg',
-        description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
-        caption: 'Modern Web 2017 ─ 8/10-11 登場'
-    }, function (response) {});
-});
-
 // flappy
 
 $('.rock').click(function() {

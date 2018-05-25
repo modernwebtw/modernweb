@@ -2,6 +2,7 @@
 $bg-color1: #22073e;
 $bg-color2: #331257;
 $bg-color3: #d8d0e7;
+$bg-color4: #aba1c4; //purple with gray
 
 $font-color: #fff;
 $font-color-pu1: #321357;
@@ -19,7 +20,7 @@ $dot05: #8199ba;
 $dot06: #ba7a5b;
 $dot07: #f4e895;
 $dot08: #377254;
-$dot08: $font-color-pu2;
+$dot09: $font-color-pu2;
 
 
 
@@ -238,4 +239,3 @@ $font-color-pu1-hover: scale-color($font-color-pu3, $lightness: 32%);
 /*==================================
     TIMELINE end
 ==================================*/
-
