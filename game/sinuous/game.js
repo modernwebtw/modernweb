@@ -98,6 +98,7 @@ SinuousWorld = new function() {
             boosts = [];
             score = 0;
             difficulty = 1;
+            velocity = 0;
 
             player.trail = [];
             player.trail1 = [];
