@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/setting.css">
+    <link rel="stylesheet" href="game/flappy/style.css">
+    <link rel="stylesheet" href="game/sinuous/style.css">
+    <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -1117,7 +1120,7 @@
             </div>
             <!--  -->
             <div class="rocket-box">
-                <img src="img/rocket.svg" class="rocket" id="rocket">
+                <img src="img/rocket.svg" class="rocket" id="rocket" onmouseover="this.src='img/rocket.gif';" onmouseout="this.src='img/rocket.svg';">
                 <span class="rocket-line"></span>
             </div>
             <img src="img/rock-02.svg" class="rock rock1">
@@ -1956,15 +1959,7 @@
             </div>
         </div>
         <img src="img/bg-star01.svg" class="bg--star01">
-    </section>
-    <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
-    <script src="js/vue.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/confapi.js" data-nid="2073"></script>
-    <script src="game/alien/game.js"></script>
-    <script src="game/sinuous/game.js"></script>
-    <script src="game/flappy/game.js"></script>
+    </section>    
     <!-- sinuous -->
     <div id="sinuous_bg"></div>
     <canvas id="world" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px; display: none;"></canvas>
@@ -1982,13 +1977,13 @@
         </ul>
         <a href="#" id="startButton">Start</a>
     </div>
-    <div id="btn_sinuous_exit">Exit</div>
+    <!-- <div id="btn_sinuous_exit">Exit</div> -->
     <!-- modal_sinous_start -->
     <div id="modal_sinous_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="game-modal__panel game-modal__panel--warning clearfix" id="sinuous_box">
                 <div class="game-modal__monster">
-                    <img src="sinuous/rocket.svg">
+                    <img src="game/sinuous/rocket.svg">
                 </div>
                 <div class="game-modal__desc">
                     <div class="game-modal__warning">殞石來襲！</div>
@@ -2029,7 +2024,7 @@
     <!-- game -->
     <div id="game_bg"></div>
     <canvas id="game" width="1000px" height="1000px"></canvas>
-    <div id="btn_exit">Exit</div>
+    <!-- <div id="btn_exit">Exit</div> -->
     <!-- modal_game_start -->
     <div id="modal_game_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -2129,6 +2124,145 @@
     </div>
     <!-- /.modal_game_over -->
     <!-- end_of_game -->
+    <!-- flappy -->        
+    <div id="div1" class="fa"></div>    
+    <!-- modal_flappy_start -->
+    <div id="modal_flappy_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="game-modal__panel game-modal__panel--warning clearfix">
+                <div class="game-modal__monster">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.93 115.45">
+                        <defs>
+                            <style>
+                            .cls-1 {
+                                fill: #7b6ab7;
+                            }
+                            .cls-2 {
+                                fill: #937bd6;
+                            }
+                            .cls-3 {
+                                fill: #6a5aaf;
+                            }
+                            .cls-4 {
+                                opacity: 0.2;
+                            }
+                            .cls-5 {
+                                fill: none;
+                            }
+                            </style>
+                        </defs>
+                        <title>rock</title>
+                        <path class="cls-1" d="M61.15,2.76s19.07,2.61,23.6,4.85,30.37,18.23,30.37,18.23l22.56,22.8L114,99.12,59.31,114.57,1.94,82.51l-.22-38A83.38,83.38,0,0,1,5.81,34a73.43,73.43,0,0,1,6.52-8.74Z" />
+                        <path class="cls-2" d="M61.15,2.76,18.79,22.52s-7.15,10.81-8.43,13.79S7.62,48.68,7.62,48.68l3.22,15.57L1.94,82.51,48.15,101l24.62,9.74L114,99.12,95.73,57.47,78.16,34.24Z" />
+                        <path class="cls-3" d="M27.47,31h0A4.74,4.74,0,0,1,31,25.32c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M6.43,56.18h0A4.74,4.74,0,0,1,10,50.49c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M19.23,84h0a4.72,4.72,0,0,1,3.54-5.7c4.59-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M48.85,69.45h0a4.74,4.74,0,0,1,3.55-5.7C57,62.48,58,67.63,58,67.63Z" />
+                        <path class="cls-3" d="M71,75.92h0a4.74,4.74,0,0,1,3.55-5.7c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M34.83,96.23h0a4.74,4.74,0,0,1,3.55-5.7C43,89.26,44,94.41,44,94.41Z" />
+                        <path class="cls-3" d="M57,98.28h0a4.73,4.73,0,0,1,3.54-5.7c4.59-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M48.76,36.78h0a4.74,4.74,0,0,1,3.55-5.7C56.89,29.81,57.92,35,57.92,35Z" />
+                        <path class="cls-3" d="M28.14,58.14h0a4.74,4.74,0,0,1,3.55-5.69c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M76.38,21.75h0a4.74,4.74,0,0,1,3.55-5.69c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M115.66,55.16h0a4.74,4.74,0,0,1,3.55-5.7c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M100.68,76h0a4.74,4.74,0,0,1,3.55-5.7c4.58-1.27,5.61,3.88,5.61,3.88Z" />
+                        <path class="cls-3" d="M86.87,51.91h0A5,5,0,0,1,86.78,45c3.08-3.69,6.63.13,6.63.13Z" />
+                        <path class="cls-4" d="M137.68,48.64,95.73,57.47l-3,34.76s-15.61,4.06-18.6,5.21-15.27,7.79-15.27,7.79l.44,9.34L114,99.12Z" />
+                        <path class="cls-4" d="M137.68,48.64,92.74,92.23S79.33,95.8,75,97.18s-16.1,8-16.1,8l.44,9.34,13.76-3.7L114,99.12Z" />
+                        <path class="cls-4" d="M115.12,25.84s-7.35,2.85-16.61,5.41a104.76,104.76,0,0,1-20.35,3S64.39,49.39,48.39,59.35A265.13,265.13,0,0,1,1.94,82.51l57.37,32.06L114,99.12l23.69-50.48Z" />
+                        <polygon class="cls-4" points="105.59 79.56 92.74 92.23 114.19 99.65 105.59 79.56" />
+                        <polygon id="_切片_" data-name="&lt;切片&gt;" class="cls-5" points="0 115.5 1.5 2 139 2 137.5 115.5 0 115.5" />
+                    </svg>
+                </div>
+                <div class="game-modal__desc">
+                    <div class="game-modal__warning">遭遇流星群！</div>
+                    <p>在星球探索過程中遭遇流星群，
+                        <br>是否繼續前進？</p>
+                    <div class="game-modal__btn-group">
+                        <button id="btn_flappy_back" type="button" class="btn game-modal__btn game-modal__btn--line" data-dismiss="modal">先撤退</button>
+                        <button id="btn_flappy_start" type="button" class="btn game-modal__btn game-modal__btn--solid" data-dismiss="modal">繼續前進</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal_flappy_start -->
+    <!-- modal_flappy_over -->
+    <div id="modal_flappy_over" class="modal fade game-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="game-modal__panel clearfix">
+                <div class="game-modal__monster">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 178" class="alien__svg">
+                        <path opacity="0.2" fill="#FFFFFF" enable-background="new" d="M168.2,137.4V68.2C168.2,30.5,137.7,0,100,0S31.8,30.5,31.8,68.2
+                            v69.2H168.2z" />
+                        <path fill="#A8FF73" d="M140,138.4c0,22.1-17.9,40-40,40l0,0c-22.1,0-40-17.9-40-40v-69c0-22.1,17.9-40,40-40l0,0
+                            c22.1,0,40,17.9,40,40V138.4z" />
+                        <path fill="#231815" d="M100.1,88.5c3.7,0,12.8,0.4,18.3,3.4C122,93.8,123.3,98.3,121.3,101.8c-1.899,3.601-6.399,4.9-9.899,2.9
+                            c-0.9-0.5-5-1.601-11.4-1.601c-6.4,0-10.5,1-11.4,1.5c-3.5,2.101-8,0.9-10-2.5c-2.1-3.5-0.9-8,2.5-10
+                            C86.5,88.8,96.2,88.5,100.1,88.5" />
+                        <path fill="none" d="M100.1,88.5c3.7,0,12.8,0.4,18.3,3.4C122,93.8,123.3,98.3,121.3,101.8c-1.899,3.601-6.399,4.9-9.899,2.9
+                            c-0.9-0.5-5-1.601-11.4-1.601c-6.4,0-10.5,1-11.4,1.5c-3.5,2.101-8,0.9-10-2.5c-2.1-3.5-0.9-8,2.5-10
+                            C86.5,88.8,96.2,88.5,100.1,88.5" />
+                        <path fill="#FFFFFF" d="M120,64.4c0,11-9,20-20,20s-20-9-20-20s8.9-20,20-20C111.1,44.4,120,53.3,120,64.4z" />
+                        <polygon fill="#FF8787" points="155,139.6 43.2,139.6 50.5,114.1 147.8,114.1 " />
+                        <path fill="#87B1FF" d="M190.8,154.7c0,13.1-12.3,23.7-27.399,23.7H36.6c-15.1,0-27.4-10.601-27.4-23.7l0,0
+                            C9.2,141.6,21.5,131,36.6,131h126.8C178.6,131,190.8,141.6,190.8,154.7L190.8,154.7z" />
+                        <path fill="#5D5DB3" d="M200,154.7c0,7.7-6.3,14-14,14H14c-7.7,0-14-6.3-14-14l0,0c0-7.7,6.3-14,14-14h172
+                            C193.7,140.8,200,147,200,154.7L200,154.7z" />
+                        <path fill="#FFFFFF" d="M34.5,154.7c0,2.7-2.2,4.8-4.8,4.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8
+                            C32.4,149.9,34.5,152.1,34.5,154.7z" />
+                        <path fill="#FFFFFF" d="M61.9,154.7c0,2.7-2.2,4.8-4.8,4.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8
+                            C59.8,149.9,61.9,152.1,61.9,154.7z" />
+                        <path fill="#FFFFFF" d="M89.3,154.7c0,2.7-2.2,4.8-4.8,4.8s-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8S89.3,152.1,89.3,154.7z" />
+                        <path fill="#FFFFFF" d="M116.7,154.7c0,2.7-2.2,4.8-4.8,4.8c-2.7,0-4.801-2.2-4.801-4.8c0-2.7,2.2-4.8,4.801-4.8
+                            C114.6,149.9,116.7,152.1,116.7,154.7z" />
+                        <path fill="#FFFFFF" d="M144.1,154.7c0,2.7-2.199,4.8-4.8,4.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8
+                            C142,149.9,144.1,152.1,144.1,154.7z" />
+                        <path fill="#FFFFFF" d="M171.5,154.7c0,2.7-2.2,4.8-4.8,4.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.199-4.8,4.8-4.8
+                            C169.4,149.9,171.5,152.1,171.5,154.7z" />
+                        <line fill="none" stroke="#231815" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="110.5" y1="58.7" x2="96.2" y2="73.1" />
+                        <line fill="none" stroke="#231815" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="110.5" y1="73.1" x2="96.2" y2="58.7" />
+                        <path fill="#FF7373" d="M97.5,96.3c-5.426,1.613-9.822,5.165-12.062,9.309c1.081-0.087,2.162-0.409,3.162-1.009
+                            c0.9-0.5,5-1.5,11.4-1.5c6.4,0,10.5,1.101,11.4,1.601c0.855,0.488,1.771,0.777,2.692,0.887
+                            C111.588,100.489,104.895,94.202,97.5,96.3z" />
+                    </svg>
+                </div>
+                <div class="game-modal__desc">
+                    <div class="game-modal__warning">Game Over</div>
+                    <p>本次作戰分數：</p>
+                    <div id="flappy_score" class="game-modal__score"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="game-modal__btn-group">
+                    <button id="btn_flappy_continue" type="button" class="btn btn game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button>
+                    <button id="btn_share_fb" type="button" class="btn btn game-modal__btn game-modal__btn--line">分享戰績</button>
+                    <!-- <button id="btn_ranking" type="button" class="btn btn game-modal__btn game-modal__btn--line">登陸戰績</button> -->
+                    <button id="btn_flappy_back" type="button" class="btn btn game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal_flappy_over -->
+    <!-- end_of_flappy -->
+    <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
+    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/confapi.js" data-nid="2073"></script>
+    <script src="game/alien/game.js"></script>
+    <script src="game/sinuous/game.js"></script>
+    <script src="game/flappy/main.js"></script>    
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>
