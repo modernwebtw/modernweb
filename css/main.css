@@ -1166,24 +1166,34 @@ section .title {
     bottom: -12px; } }
 
 .radar__rotate {
-  -webkit-animation: radar-rotate2 3s infinite alternate linear;
-  animation: radar-rotate2 3s infinite alternate linear; }
+    -webkit-animation: radar-rotate2 3s infinite alternate linear;
+    animation: radar-rotate2 3s infinite alternate linear;
+}
 
 @-webkit-keyframes radar-rotate2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg); } }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+}
 
 @keyframes radar-rotate2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg); } }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        transform-origin: 53% 5%;
+    }
+    100% {
+        -webkit-transform: rotate(33deg);
+        transform: rotate(33deg);
+        transform-origin: 53% 5%;
+    }
+}   transform: rotate(20deg); } }
+
 
 .radar__wave path {
   opacity: 0; }
