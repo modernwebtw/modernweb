@@ -22,6 +22,7 @@
 
 var sinuousStart = function() {
     $('html, body').scrollTop(0);
+    $('#sinuous_bg').show();
     $('body').addClass('game_start');
     var $sinuous = $('#sinuous');
     var g_w = $sinuous.width();
@@ -89,6 +90,7 @@ $('#btn_back2').click(function() {
     $('.ta').show();
     $('body').removeClass('stopScroll');
     $('.header').show();
+    $('#sinuous_bg').hide();
     sinuousPause();
 });
 
@@ -202,11 +204,11 @@ $('#btn_flappy_start').click(function() {
 $('#btn_flappy_continue').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
     $('.ta').hide();
-    $('.header').hide();    
+    $('.header').hide();
     $('#game').hide();
-    $('#game_bg').show();    
-    // sinuousStart();
-
+    $('#game_bg').show();
+    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
+    $('body').addClass('stopScroll');
 });
 
 $('#btn_back3').click(function() {
@@ -251,11 +253,12 @@ var toggleScroll = function(boolean) {
     }
 }
 
-function closeIFrame(){
-    $('iframe').remove();      
+function closeIFrame(){        
     $('.ta').show();
     $('#game_bg').hide();
-    $('#modal_flappy_over').modal('show');   
+    $('#modal_flappy_over').modal('show');  
+    // console.log(window.frames['flappy'].final_score);
+    $('iframe').remove();  
 }
 
 
@@ -350,8 +353,23 @@ $('#btn_sinuous_share_fb').click(function() {
 
 $('#btn_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#score').text();
-    console.log('score:',score);
+    var score = $('#score').text();    
+    FB.init({
+        appId: '1615126938703368'
+    });
+    FB.ui({
+        method: 'feed',
+        link: location.href,
+        title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
+        picture: 'http://modernweb.tw/img/game_share.jpg',
+        description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
+        caption: 'Modern Web 2017 ─ 8/10-11 登場'
+    }, function(response) {});
+});
+
+$('#btn_flappy_share_fb').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+    var score = $('#flappy_score').text();    
     FB.init({
         appId: '1615126938703368'
     });
