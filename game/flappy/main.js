@@ -1,23 +1,23 @@
-function smile() {
-    var a;
-    a = document.getElementById("div1");
-    a.innerHTML = "&#xf118;";
-    setTimeout(function() {
-        a.innerHTML = "&#xf11a;";
-    }, 1000);
-    setTimeout(function() {
-        a.innerHTML = "&#xf119;";
-    }, 2000);
-    setTimeout(function() {
-        a.innerHTML = "&#xf11a;";
-    }, 3000);
-}
-smile();
-setInterval(smile, 4000);
+// function smile() {
+//     var a;
+//     a = document.getElementById("div1");
+//     a.innerHTML = "&#xf118;";
+//     setTimeout(function() {
+//         a.innerHTML = "&#xf11a;";
+//     }, 1000);
+//     setTimeout(function() {
+//         a.innerHTML = "&#xf119;";
+//     }, 2000);
+//     setTimeout(function() {
+//         a.innerHTML = "&#xf11a;";
+//     }, 3000);
+// }
+// smile();
+// setInterval(smile, 4000);
 
-function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-}
+// function myFunction(x) {
+//     x.classList.toggle("fa-thumbs-down");
+// }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
 
@@ -214,7 +214,7 @@ function display_intro_instructions() {
     ctx.font = "25px Courier New";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
-    ctx.fillText("Press, touch or click to start", myCanvas.width / 2, myCanvas.height / 4);
+    ctx.fillText("點擊滑鼠以開始遊戲", myCanvas.width / 2, myCanvas.height / 4);
 }
 
 
@@ -226,8 +226,9 @@ function display_game_over() {
     ctx.fillText("Game Over", myCanvas.width / 2, 100);
     ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
     ctx.font = "20px Courier New";
-    ctx.fillText("Click, touch, or press to play again", myCanvas.width / 2, 300);
+    ctx.fillText("點擊滑鼠以再次遊戲", myCanvas.width / 2, 300);
 
+    window.top.flappy_score = final_score;
     parent.closeIFrame();
 }
 
