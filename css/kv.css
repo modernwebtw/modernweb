@@ -108,7 +108,7 @@
         transform: rotate(33deg);
         transform-origin: 53% 5%;
     }
-}   transform: rotate(20deg); } }
+}   
 
 
 .radar__wave path {
@@ -422,7 +422,7 @@
 }
 
 .rocket-fly {
-    /*width: 10%;*/
+    width: 35%;
     -webkit-animation: fly-away 8s ease-in;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;

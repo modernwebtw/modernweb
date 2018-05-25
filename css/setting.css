@@ -163,7 +163,7 @@ iframe {
 
 .game-modal__desc {
   color: #fff;
-  /*overflow: hidden;*/ }
+  overflow: visible; }
 
 .game-modal__desc p {
   text-align: center;
