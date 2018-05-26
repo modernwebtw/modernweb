@@ -51,7 +51,6 @@
     color: #fFf; height: 3px; width: 20px; margin: 3px 0 0; background: #e2c8ff;}
 
 	/* utili */
-	hr{float: left; position: relative; height: 2px;}
 	section:not(.section--kv){ margin-top: 8%; padding-left: 5%; padding-right: 5%;}
 	section .title::before {
     content: '';
@@ -67,18 +66,35 @@
 	.timeline-marker:last-child{ bottom: -6%; }
 
 	/* speaker */
-	.modal.in .modal-dialog{height: 110px;}
+	.modal.in .modal-dialog{height: 110px; width: 100%;}
 
 	.section--quote{display: none;}
 
 	/* history */
-	.section--history{ margin-bottom: 300px;}
+	.section--history{ margin-bottom: 300px; margin-top: 150px !important;
+		/* :before {
+	    width: 110%;
+	    height: 100px;
+	    left: -5%;
+	    position: absolute;
+	    top: -99px;
+	    background-size: cover;
+		}
+		.section--history:after {
+	    width: 110%;
+	    left: -5%;
+	    height: 200px;
+	    position: absolute;
+	    bottom: -199px;
+	    background-size: cover;
+		} */
+	}
 
 	/* ticket */
 	.section--ticket .ticket__item .ticket__item__btn .btn{
 		padding: 7px;letter-spacing: 2px;font-size: 16px;
 	}
-	.section--ticket .ticket__item{ text-align: center; padding: 3% 1%;}
+	.section--ticket .ticket__item{ text-align: center; padding: 20px 1%;}
 	.section--ticket .ticket__item .ticket__item__title{padding: 3px 3px 3px 0;}
 	.section--ticket .ticket__item .ticket__item__title h3{line-height: 1em;font-size: 24px;}
 	.section--ticket .ticket__item .dot:before{ top: -10px; left: 51%;}
@@ -97,5 +113,8 @@
 
 @media screen and (max-width:667px ){.section--kv { min-height: 85vh;} }
 @media screen and (max-width:550px ){.section--kv { min-height: 80vh;} }
-@media screen and (max-width:480px ){.section--kv { min-height: 70vh;} }
+@media screen and (max-width:480px ){
+	.section--kv { min-height: 70vh;}
+	.section--ticket .ticket__item{} 
+}
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }

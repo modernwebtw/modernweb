@@ -1,6 +1,5 @@
 .section--kv{
     margin: 0; min-height: 50vh; top: 90px;
-    overflow: hidden;
     .star{
         position: absolute;
         width: 100%;
@@ -56,7 +55,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         .speaker__disc{
             width: 100%;
             margin-right: 0;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 2px solid $font-color-pu2;
             padding: 8% 0 5%;
             margin: 2%;
             @include media("<=767px"){
@@ -67,6 +66,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
                 border: 1px solid $font-color-pu2;
                 width: 120px;
                 float: right;
+                margin-top: 20px;
                 @include media("<=767px"){
                     float: left;
                     width: 100%;
@@ -93,10 +93,19 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         }
     }
     .modal-content{
+        a{color: #781dfb;
+            &:hover, &:focus, &:active{color: $font-color-pu3;}
+        }
+            .speaker-box__name{font-size: 30px;margin-bottom: 10px;}
+            .speaker-box__title{font-size: 16px;}
             .modal-header{ border-bottom: 1px solid $font-color-pu4;
             }
-            .speaker-brief__body .list-inline>li .tab{display: inline-block; font-size: 16px; padding: 2px 3px;}
-            .speaker-brief__body .list-inline>li .active{ border-bottom: 1px solid #fff;}
+            .speaker-brief__bottom{
+                hr{border-color:#bbb;}
+            }
+    }
+    .speaker-brief__intro{padding: 8px 4px; 
+        p{line-height:1.4em;}
     }
     .speaker-brief__agenda-content{padding: 2%;}
 }
@@ -196,36 +205,50 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     }
 
 }
+.logo-img{width:280px;display: block; margin: 10px auto; background:#fff;}
 .section--spon{
     text-align: center;
     .spon__diam,.spon__wgold,.spon__gold,.spon__silver{
         background: $bg-color2; padding: 10px 10px 20px;
         margin: 1%;
-        img{ display: block; margin:3%; padding:2%; background:#333; color:#333;}
+        // img{ display: block; margin:3%; padding:2%; background:#fff;}
     }
-
     .spon__diam{}
     .spon__wgold{}
     .spon__gold{}
     .spon__silver{}
 }
+.section--buy{
+    // img{margin:10px; float: left;}
+}
 .section--footer{
+    .footer__contact{
+        background:#18052d;
+        h5{ margin-bottom: 10px; color: #eee;}
+        ul{ line-height: 1.6em; color: #eee;}
+        p{ color: #969696; margin-top: 50px;}
+    }
     .footer__social{
         width: 100%;
         margin: 4% auto;
         float: left;
-        li a{ background: $font-color-pu4; font-size: 20px; color: $font-color-pu1; float: left; margin: 8px; border-radius: 50%; width: 40px; height: 40px; border-radius: 50%;
+        li a{
+        background: $font-color-pu4;
+        font-size: 20px;
+        color: $font-color-pu1;
+        float: left; margin: 8px;
+        border-radius: 50%; width: 40px;
+        height: 40px; border-radius: 50%;
         width: 40px;
         height: 40px;
         text-align: center;
         line-height: 40px;
         &:hover{ background: $font-color-pu3;}
-
         }
     }
     .footer__fbshare{
-        margin: 2%;
-        iframe{left:0;}
+        position: relative;
+        iframe{left:0; width:340px; height:124px; position: relative;}
     }
     .bg--star01{ width: 100%; position: absolute; bottom:0; z-index: -1;}
 }
