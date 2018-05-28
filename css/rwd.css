@@ -58,7 +58,7 @@
     .hidden-sm-down{display: none}
     .navbar-inverse .dropdown{float: none; width: 100%;}
     .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;}
-    .navbar-inverse .navbar-nav li a{padding:1.1em 1em;}
+    .navbar-inverse .navbar-nav li a{padding:1vh;}
     .dropdown-menu.btn .caret{display: none;}
 
 	/* utili */
@@ -125,10 +125,9 @@
 	.section--ticket .ticket__item .dot:before{left: calc(50% - 6px);}
 }
 
-@media screen and (max-width:667px ){.section--kv { min-height: 85vh;} }
-@media screen and (max-width:550px ){.section--kv { min-height: 80vh;} }
-@media screen and (max-width:480px ){
-	.section--kv { min-height: 70vh;}
-	.section--ticket .ticket__item{} 
-}
+@media screen and (max-width:667px ){
+	.section--kv { min-height: 85vh; margin: 3vh 1vh 10vh 1vh;}
+	.ta{top:2vh;}
+			 }
+@media screen and (max-width:550px ){ .section--kv { min-height: 80vh;} }
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }
