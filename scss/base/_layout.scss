@@ -75,6 +75,9 @@ button, .btn{
 	font-size: 16px;
 	&:focus, &hover{ color:#ddd;}
 }
+.inactivelink{
+	pointer-events: none;
+   cursor: default;}
 .text-over-h{overflow: hidden; text-overflow: ellipsis; }
 .btn-txt{ color: $font-color-pu2;}
 .btn--buy{ background: $font-color-pu2; color:#fff !important;}
@@ -165,6 +168,22 @@ header{
 	}
 	ul li:last-child{
 		border-bottom: none;
+	}
+	.dropdown{
+		float: left;
+		a:hover,a:active,a:visited{ color:$font-color-pu3;}
+		.btn{
+		background: transparent;
+		}
+	}
+	.navbar-nav .dropdown-menu li a{
+			line-height: 10px;
+			padding: 10px 1em;
+			text-align: center;
+		}
+	.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
+		background: transparent;
+		border-color: transparent;
 	}
 }
 // ** nav

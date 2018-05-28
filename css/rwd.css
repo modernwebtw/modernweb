@@ -1,3 +1,8 @@
+@media (min-width: 768px){
+	.visible-sm-down{
+		display: none !important;
+	}
+}
 @media (max-width:1200px) and (max-width:1023px) {
 	.ta{ width: 70%; left: 15%;}
 	.ta .ta-txt {
@@ -49,6 +54,12 @@
 	/* menu */
 	.navbar-inverse .navbar-header .navbar-toggle .icol-bar-a{display: block;
     color: #fFf; height: 3px; width: 20px; margin: 3px 0 0; background: #e2c8ff;}
+    /* .dropdown-menu{display: block; background: transparent; } */
+    .hidden-sm-down{display: none}
+    .navbar-inverse .dropdown{float: none; width: 100%;}
+    .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;}
+    .navbar-inverse .navbar-nav li a{padding:1.1em 1em;}
+    .dropdown-menu.btn .caret{display: none;}
 
 	/* utili */
 	section:not(.section--kv){ margin-top: 8%; padding-left: 5%; padding-right: 5%;}
@@ -66,7 +77,8 @@
 	.timeline-marker:last-child{ bottom: -6%; }
 
 	/* speaker */
-	.modal.in .modal-dialog{height: 110px; width: 100%;}
+	/* .speaker__item__img:nth-child(odd){ float: left;} */
+ 	.modal.in .modal-dialog{height: 110px; width: 100%;}
 
 	.section--quote{display: none;}
 

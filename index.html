@@ -82,8 +82,21 @@
                         <li><a href="#special">2018特色</a></li>
                         <li><a href="#speaker">講者</a></li>
                         <li><a href="#ticket">售票</a></li>
-                        <li><a href="#quote">歷年參賽</a></li>
-                        <li><a href="#history">里程碑</a></li>
+                        <!-- <li><a href="#history">里程碑</a></li> -->
+                        <li class="hidden-sm-down">
+                            <div class="dropdown hidden-sm-down">
+                              <a class="btn dropdown-toggle hidden-sm-down" type="button" data-toggle="dropdown">歷年參賽
+                              <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="https://modernweb.tw/2017/index.html" target="_blank">2017</a></li>
+                                <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
+                                <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
+                              </ul>
+                            </div>
+                        </li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2016/index.html" target="_blank" class="visible-sm-up">回顧 2016</a></li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2015/index.html" target="_blank" class="visible-sm-up">回顧 2015</a></li>
                     </ul>
                 </div>
                 <!-- nav end -->
@@ -1300,7 +1313,7 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 speaker__item">
                         <div class="col-sm-7 col-sm-pull-1 col-xs-7">
-                            <div class="speaker__disc">
+                            <div class="speaker__disc pull-right">
                                 <h4 class="name">Paul Bakaus <span> </span></h4>
                                 <p>任職單位: Google <br>
                                     Paul Bakaus leads AMP Developer Relations and a variety of other initiatives centered on bringing great UX to everyone on the web.
@@ -1835,7 +1848,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <h5 class="modal-title" id="exampleModalLabel">共同推廣票注意事項</h5>
-                                                <p>共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項共同推廣票注意事項</p>
+                                                <p>雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。 </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1850,7 +1863,7 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc"><p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。<br>（限額 30 名，售完為止）</p></div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--stop" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--stop inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">停止購票</a>
                         </div>
                     </div>
@@ -1863,7 +1876,7 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
                     </div>
@@ -1876,7 +1889,7 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
                     </div>
@@ -1889,11 +1902,11 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票，填寫表單回傳報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
                     </div>
-                    <div class="col-sm12 ticket__item">
+                    <!-- <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
                             <h3 class="dot dot07">xxxx票<br><span class="date">6/26-7/6</span></h3>
                         </div>
@@ -1902,11 +1915,11 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
-                    </div>
-                    <div class="col-sm12 ticket__item">
+                    </div> -->
+                    <!-- <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
                             <h3 class="dot dot08">xxx票<br><span class="date">6/26-7/6</span></h3>
                         </div>
@@ -1915,10 +1928,10 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">入場票 1 張</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-sm12 ticket__item">
                         <div class="col-sm-3 ticket__item__title">
                             <h3 class="dot dot09">現場原價<br><span class="date">7/18-7/19</span></h3>
@@ -1928,7 +1941,7 @@
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張，現場報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
+                            <a class="btn btn--undo inactivelink inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">尚未開賣</a>
                         </div>
                     </div>

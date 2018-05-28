@@ -606,6 +606,10 @@ button, .btn {
   button:focus, buttonhover, .btn:focus, .btnhover {
     color: #ddd; }
 
+.inactivelink {
+  pointer-events: none;
+  cursor: default; }
+
 .text-over-h {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -727,6 +731,19 @@ header {
         padding: .3em; } }
   .navbar-inverse ul li:last-child {
     border-bottom: none; }
+  .navbar-inverse .dropdown {
+    float: left; }
+    .navbar-inverse .dropdown a:hover, .navbar-inverse .dropdown a:active, .navbar-inverse .dropdown a:visited {
+      color: #a692da; }
+    .navbar-inverse .dropdown .btn {
+      background: transparent; }
+  .navbar-inverse .navbar-nav .dropdown-menu li a {
+    line-height: 10px;
+    padding: 10px 1em;
+    text-align: center; }
+  .navbar-inverse .nav .open > a, .navbar-inverse .nav .open > a:focus, .navbar-inverse .nav .open > a:hover {
+    background: transparent;
+    border-color: transparent; }
 
 .ta {
   position: relative;
@@ -816,44 +833,48 @@ section .title {
   .section--key .key__list {
     margin-top: 10%; }
 
-.section--speaker .speaker__item {
+.section--speaker .speaker__item .speaker__item__img {
   padding: 3% 1%; }
-  .section--speaker .speaker__item .speaker__disc {
-    width: 100%;
-    margin-right: 0;
-    border-bottom: 2px solid #531d8d;
-    padding: 8% 0 5%;
-    margin: 2%; }
+  .section--speaker .speaker__item .speaker__item__img:nth-child(odd) {
+    float: right; }
+
+.section--speaker .speaker__item .speaker__disc {
+  width: 100%;
+  margin-right: 0;
+  border-bottom: 2px solid #531d8d;
+  padding: 8% 0 5%;
+  margin: 2%; }
+  @media (max-width: 767px) {
+    .section--speaker .speaker__item .speaker__disc {
+      border-bottom: none; } }
+  .section--speaker .speaker__item .speaker__disc .btn {
+    background: #321357;
+    border: 1px solid #531d8d;
+    width: 120px;
+    float: right;
+    margin-top: 20px; }
     @media (max-width: 767px) {
-      .section--speaker .speaker__item .speaker__disc {
-        border-bottom: none; } }
-    .section--speaker .speaker__item .speaker__disc .btn {
-      background: #321357;
-      border: 1px solid #531d8d;
-      width: 120px;
-      float: right;
-      margin-top: 20px; }
-      @media (max-width: 767px) {
-        .section--speaker .speaker__item .speaker__disc .btn {
-          float: left;
-          width: 100%;
-          margin-top: 10px; } }
-      .section--speaker .speaker__item .speaker__disc .btn:hover, .section--speaker .speaker__item .speaker__disc .btn:active, .section--speaker .speaker__item .speaker__disc .btn:visited, .section--speaker .speaker__item .speaker__disc .btn:link {
-        color: #22073e;
-        background: #fff; }
-  .section--speaker .speaker__item .speaker__imgbox {
-    width: 100%; }
-    .section--speaker .speaker__item .speaker__imgbox:after {
-      content: '';
-      position: absolute;
-      background: url("../img/deco-speacker.svg") no-repeat;
-      width: 110%;
-      min-height: 500px;
-      top: -34px;
-      left: -6px;
-      z-index: -1; }
-    .section--speaker .speaker__item .speaker__imgbox img {
-      border-radius: 50%; }
+      .section--speaker .speaker__item .speaker__disc .btn {
+        float: left;
+        width: 100%;
+        margin-top: 10px; } }
+    .section--speaker .speaker__item .speaker__disc .btn:hover, .section--speaker .speaker__item .speaker__disc .btn:active, .section--speaker .speaker__item .speaker__disc .btn:visited, .section--speaker .speaker__item .speaker__disc .btn:link {
+      color: #22073e;
+      background: #fff; }
+
+.section--speaker .speaker__item .speaker__imgbox {
+  width: 100%; }
+  .section--speaker .speaker__item .speaker__imgbox:after {
+    content: '';
+    position: absolute;
+    background: url("../img/deco-speacker.svg") no-repeat;
+    width: 110%;
+    min-height: 500px;
+    top: -34px;
+    left: -6px;
+    z-index: -1; }
+  .section--speaker .speaker__item .speaker__imgbox img {
+    border-radius: 50%; }
 
 .section--speaker .modal-content a {
   color: #781dfb; }
@@ -908,25 +929,24 @@ section .title {
       text-align: center;
       color: #a692da; }
 
-.section--quote .quote__Carouselbox .carousel-control.right, .section--quote .quote__Carouselbox .carousel-control.left {
-  background-image: transparent;
-  background-color: transparent;
-  background: transparent;
-  top: calc(50% - 10px); }
-
-.section--quote .quote__Carouselbox .carousel-control.right i, .section--quote .quote__Carouselbox .carousel-control.left i {
-  font-size: 50px; }
-
-.section--quote .quote__Carouselbox .slide {
-  width: 100%; }
-
-.section--quote .quote__Carouselbox .carousel-inner__q h3 {
-  line-height: 1.4em;
-  color: #e2c8ff; }
-
-.section--quote .quote__Carouselbox .carousel-inner__q h3 span {
-  font-weight: 300;
-  margin-left: 10px; }
+.section--quote {
+  min-height: 220px; }
+  .section--quote .quote__Carouselbox .carousel-control.right, .section--quote .quote__Carouselbox .carousel-control.left {
+    background-image: transparent;
+    background-color: transparent;
+    background: transparent;
+    top: calc(50% - 10px); }
+  .section--quote .quote__Carouselbox .carousel-control.right i, .section--quote .quote__Carouselbox .carousel-control.left i {
+    font-size: 50px; }
+  .section--quote .quote__Carouselbox .slide {
+    width: 100%; }
+  .section--quote .quote__Carouselbox .carousel-inner__q h3 {
+    line-height: 1.4em;
+    color: #e2c8ff;
+    max-width: 930px; }
+  .section--quote .quote__Carouselbox .carousel-inner__q h3 span {
+    font-weight: 300;
+    margin-left: 10px; }
 
 .section--ticket .buy {
   background: #ffffff; }
@@ -1096,7 +1116,6 @@ section .title {
 .section--spon {
   text-align: center; }
   .section--spon .spon__diam, .section--spon .spon__wgold, .section--spon .spon__gold, .section--spon .spon__silver {
-    background: #331257;
     padding: 10px 10px 20px;
     margin: 1%; }
 

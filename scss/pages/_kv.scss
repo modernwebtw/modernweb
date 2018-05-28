@@ -51,7 +51,12 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
 
 .section--speaker{
     .speaker__item{
-        padding: 3% 1%;
+        .speaker__item__img{
+            padding: 3% 1%;
+            &:nth-child(odd){
+            float: right;
+            }
+        }
         .speaker__disc{
             width: 100%;
             margin-right: 0;
@@ -128,6 +133,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     }
 }
 .section--quote{
+    min-height: 220px;
     .quote__Carouselbox{
         .carousel-control{
             &.right, &.left{ background-image: transparent;
@@ -140,7 +146,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         width: 100%;
     }
     .carousel-inner__q{
-        h3{line-height: 1.4em; color:$font-color-pu4;}
+        h3{line-height: 1.4em; color:$font-color-pu4; max-width: 930px;}
         h3 span{font-weight: 300; margin-left: 10px;}
     }
     .carousel-inner__name{}
@@ -209,7 +215,8 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
 .section--spon{
     text-align: center;
     .spon__diam,.spon__wgold,.spon__gold,.spon__silver{
-        background: $bg-color2; padding: 10px 10px 20px;
+        // background: $bg-color2; 
+        padding: 10px 10px 20px;
         margin: 1%;
         // img{ display: block; margin:3%; padding:2%; background:#fff;}
     }
