@@ -348,7 +348,7 @@ $('#btn_sinuous_share_fb').click(function() {
     });
     FB.ui({
         method: 'feed',
-        link: 'https://modernweb.tw/',
+        link: 'https://modernweb.tw/2017',
         // title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
         source: 'https://modernweb.tw/img/FBR.jpg',
         // description: 'Modern Web 2018 ─ 技術在我們手上，世界就在我們手上',
