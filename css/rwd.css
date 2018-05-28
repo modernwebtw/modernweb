@@ -121,6 +121,8 @@
 	.ticket__item__btn{
 		height: auto;
 	}
+	.section--ticket .ticket__item .ticket__item__title h3{ margin-left: 0;}
+	.section--ticket .ticket__item .dot:before{left: calc(50% - 6px);}
 }
 
 @media screen and (max-width:667px ){.section--kv { min-height: 85vh;} }

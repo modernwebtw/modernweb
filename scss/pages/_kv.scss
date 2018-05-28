@@ -229,6 +229,7 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
     // img{margin:10px; float: left;}
 }
 .section--footer{
+    overflow: hidden;
     .footer__contact{
         background:#18052d;
         h5{ margin-bottom: 10px; color: #eee;}

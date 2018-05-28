@@ -662,7 +662,8 @@ section {
   margin: 3% 0 4% 0; }
   @media (max-width: 767px) {
     section {
-      padding: 1.2% 0; } }
+      padding: 1.2% 0;
+      overflow: hidden; } }
   section .ul li {
     margin-bottom: 1em; }
     section .ul li:before {
@@ -1119,52 +1120,51 @@ section .title {
     padding: 10px 10px 20px;
     margin: 1%; }
 
-.section--footer .footer__contact {
-  background: #18052d; }
-  .section--footer .footer__contact h5 {
-    margin-bottom: 10px;
-    color: #eee; }
-  .section--footer .footer__contact ul {
-    line-height: 1.6em;
-    color: #eee; }
-  .section--footer .footer__contact p {
-    color: #969696;
-    margin-top: 50px; }
-
-.section--footer .footer__social {
-  width: 100%;
-  margin: 4% auto;
-  float: left; }
-  .section--footer .footer__social li a {
-    background: #e2c8ff;
-    font-size: 20px;
-    color: #321357;
-    float: left;
-    margin: 8px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px; }
-    .section--footer .footer__social li a:hover {
-      background: #a692da; }
-
-.section--footer .footer__fbshare {
-  position: relative; }
-  .section--footer .footer__fbshare iframe {
-    left: 0;
-    width: 340px;
-    height: 124px;
+.section--footer {
+  overflow: hidden; }
+  .section--footer .footer__contact {
+    background: #18052d; }
+    .section--footer .footer__contact h5 {
+      margin-bottom: 10px;
+      color: #eee; }
+    .section--footer .footer__contact ul {
+      line-height: 1.6em;
+      color: #eee; }
+    .section--footer .footer__contact p {
+      color: #969696;
+      margin-top: 50px; }
+  .section--footer .footer__social {
+    width: 100%;
+    margin: 4% auto;
+    float: left; }
+    .section--footer .footer__social li a {
+      background: #e2c8ff;
+      font-size: 20px;
+      color: #321357;
+      float: left;
+      margin: 8px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px; }
+      .section--footer .footer__social li a:hover {
+        background: #a692da; }
+  .section--footer .footer__fbshare {
     position: relative; }
-
-.section--footer .bg--star01 {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: -1; }
+    .section--footer .footer__fbshare iframe {
+      left: 0;
+      width: 340px;
+      height: 124px;
+      position: relative; }
+  .section--footer .bg--star01 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1; }
 
 #alien {
   position: absolute;
