@@ -340,7 +340,10 @@ $('#btn_sinuous_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#sinuous_score').text();    
     FB.init({
-        appId: '1615126938703368'
+        appId: '1615126938703368',
+        status     : true,
+        xfbml      : true,
+        version    : 'v2.7' // or v2.6, v2.5, v2.4, v2.3
     });
     FB.ui({
         method: 'feed',
