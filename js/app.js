@@ -334,6 +334,7 @@ function goScroll(target) {
 }
 
 location.hash && goScroll(location.hash);
+var modernwebUrl = location.href;
 
 $('#btn_sinuous_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
@@ -345,7 +346,7 @@ $('#btn_sinuous_share_fb').click(function() {
         method: 'feed',
         link: 'https://modernweb.tw/',
         title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/FBR.jpg',
+        picture: modernwebUrl+'img/FBR.jpg',
         description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
         caption: 'Modern Web 2017 ─ 8/10-11 登場'
     }, function(response) {});
@@ -361,7 +362,7 @@ $('#btn_share_fb').click(function() {
         method: 'feed',
         link: location.href,
         title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/FBU.jpg',
+        picture: modernwebUrl+'img/FBU.jpg',
         description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
         caption: 'Modern Web 2017 ─ 8/10-11 登場'
     }, function(response) {});
@@ -377,7 +378,7 @@ $('#btn_flappy_share_fb').click(function() {
         method: 'feed',
         link: location.href,
         title: '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-        picture: 'http://modernweb.tw/img/FBP.jpg',
+        picture: modernwebUrl+'img/FBP.jpg',
         description: 'Modern Web 2017 ─ 技術在我們手上，世界就在我們手上',
         caption: 'Modern Web 2017 ─ 8/10-11 登場'
     }, function(response) {});
