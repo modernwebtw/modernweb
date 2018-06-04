@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Modern Web 2017 ─ 技術在我們手上，世界就在我們手上</title>
-    <meta property="og:url" content="http://modernweb.tw/" />
+    <meta name="description" content="Modern Web 2017將在8/10-11兩日，邀集來自 Google、Slack、易寶支付、螞蟻金服、騰訊...等世界級的 Web 公司的開發者，分享他們的技術觀點，還有台灣優秀的開發者帶來最新、最深入的技術分享。2天4軌最豐盛而精彩的技術與交流盛會，就在Modern Web 2017">
+    <meta property="og:url" content="https://modernweb.tw/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Modern Web 2017 ─ 技術在我們手上，世界就在我們手上" />
     <meta property="og:description" content="Modern Web 2017將在8/10-11兩日，邀集來自 Google、Slack、易寶支付、螞蟻金服、騰訊...等世界級的 Web 公司的開發者，分享他們的技術觀點，還有台灣優秀的開發者帶來最新、最深入的技術分享。2天4軌最豐盛而精彩的技術與交流盛會，就在Modern Web 2017"
     />
-    <meta property="og:image" content="http://modernweb.tw/img/fb.jpg" />
+    <meta property="og:image" content="https://modernweb.tw/img/fb.jpg" />
     <meta property="fb:app_id" content="1615126938703368" />
+    <link rel="icon" type="image/png" href="https://modernweb.tw/img/favicon.gif" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?27">
     <link rel="stylesheet" href="game/game.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -57,7 +59,6 @@
                     <circle fill="#FFFFFF" cx="58.6" cy="24.4" r="2.6" />
                     <circle fill="#FFFFFF" cx="55.4" cy="27" r="3" />
                 </g>
-
             </svg>
             <ul class="loading__dot">
                 <li></li>
@@ -65,14 +66,13 @@
                 <li></li>
             </ul>
         </div>
-
     </div>
-    <div id="modernweb2017" v-cloa58k>
+    <div id="modernweb2017" v-cloak>
         <nav class="menu" id="menu">
             <div class="wrapper">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="#header" class="pull-left menu__logo hidden-xs">
+                        <a href="index.html" class="pull-left menu__logo">
                             <img src="img/logo.svg" alt="Modern Web 2017">
                         </a>
                         <div class="menu__burger">
@@ -81,29 +81,31 @@
                             <span></span>
                         </div>
                         <div class="menu__content">
-                            <a href="" class="menu__burger-logo visible-xs">
+                            <a href="index.html" class="menu__burger-logo">
                                 <img src="img/logo_color.svg" alt="Modern Web 2017">
                             </a>
                             <ul class="list-unstyled menu__list">
-                                <li><a href="#about">特色</a></li>
+                                <li><a href="index.html">首頁</a></li>
+                                <li><a href="agenda.html">議程</a></li>
                                 <li><a href="#speaker">講者</a></li>
                                 <li><a href="#ticket">售票</a></li>
                                 <li><a href="#traffic">交通</a></li>
-                                <li><a href="http://s.itho.me/modernweb/2017/ModernWeb2017-Sponsorship-v20170617.pdf" target="_blank">贊助</a></li>
-                                <li class="hidden-xs">
+                                <li><a href="event.html">場邊活動</a></li>
+                                <li><a href="jobs.html">徵才</a></li>
+                                <li class="dropdown-hide-xs">
                                     <div class="dropdown">
                                         <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         回顧
                                         <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                            <li><a href="http://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
-                                            <li><a href="http://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
+                                            <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
+                                            <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="http://modernweb.tw/2015/index.html" target="_blank" class="visible-xs">回顧 2015</a></li>
-                                <li><a href="http://modernweb.tw/2016/index.html" target="_blank" class="visible-xs">回顧 2016</a></li>
+                                <li><a href="https://modernweb.tw/2015/index.html" target="_blank" class="dropdown-visible-xs">回顧 2015</a></li>
+                                <li><a href="https://modernweb.tw/2016/index.html" target="_blank" class="dropdown-visible-xs">回顧 2016</a></li>
                             </ul>
                         </div>
                         <div class="menu__mask"></div>
@@ -394,7 +396,6 @@
                             <circle fill="#FFFFFF" cx="51.881" cy="48.155" r="1.505" />
                         </g>
                     </svg>
-
                     <div class="sparkling">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 130">
                             <polygon fill="#FFFFFF" points="47.9,0 50.5,8.5 59,11 50.5,13.6 47.9,22.1 45.4,13.6 36.9,11 45.4,8.5 " />
@@ -468,7 +469,7 @@
                     </div>
                     <div class="col-md-8">
                         <template v-for="(speaker, index) in SpeakerFilter.featured">
-                            <div class="keynote-speaker clearfix" :class="{ 'keynote-speaker--right': index % 2 == 1 }" @click="showModal(speaker)">
+                            <div class="keynote-speaker clearfix" :class="{ 'keynote-speaker--right': index % 2 == 1 }" @click="showModal(speaker)" :id="'s' + speaker.target_id">
                                 <div class="keynote-speaker__img">
                                     <img :src="speaker.avatar" alt="" class="img-responsive">
                                 </div>
@@ -528,7 +529,7 @@
                     <div class="col-md-8">
                         <div class="featured-speaker clearfix">
                             <template v-for="speaker in SpeakerFilter.china">
-                                <div class="featured-speaker__wrapper" @click="showModal(speaker)">
+                                <div class="featured-speaker__wrapper" @click="showModal(speaker)" :id="'s' + speaker.target_id">
                                     <div class="speaker">
                                         <div class="speaker__img">
                                             <img :src="speaker.avatar" alt="" class="img-responsive">
@@ -557,7 +558,7 @@
                                 <h1>講師陣容</h1>
                             </div>
                         </div>
-                        <div class="speakers__speaker" v-for="speaker in SpeakerFilter.normal">
+                        <div class="speakers__speaker" v-for="speaker in SpeakerFilter.normal" :id="'s' + speaker.target_id">
                             <div class="speaker" @click="showModal(speaker)">
                                 <div class="speaker__img">
                                     <img :src="speaker.avatar" alt="" class="img-responsive">
@@ -593,15 +594,15 @@
                                 </div>
                                 <div class="ticket__price">$ 4,490</div>
                                 <div class="ticket__desc">入場票 1 張</div>
-                                <div class="ticket__btn"><a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170039" class="btn ticket__button">立即購票</a></div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
                                 <div class="ticket__name">學生票
-                                    <div class="ticket__time">6/26-7/6</div>
+                                    <div class="ticket__time">6/26-8/7</div>
                                 </div>
                                 <div class="ticket__price">$ 1,990</div>
-                                <div class="ticket__desc">入場票 1 張，限在學學生，報到時需攜帶學生證。資格驗證不符或當日未攜帶學生證將不予入場(30個名額)</div>
-                                <div class="ticket__btn"><a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170041" class="btn ticket__button">立即購票</a></div>
+                                <div class="ticket__desc">入場票 1 張，限在學學生，報到時需攜帶學生證。資格驗證不符或當日未攜帶學生證將不予入場(30個名額，售完為止)</div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
                                 <div class="ticket__name">線上優惠票
@@ -609,10 +610,7 @@
                                 </div>
                                 <div class="ticket__price">$ 5,490</div>
                                 <div class="ticket__desc">入場票 1 張</div>
-                                <div class="ticket__btn">
-                                    <!-- <a href="" class="btn ticket__button">立即購票</a> -->
-                                    <div class="ticket__fake-btn">即將開賣</div>
-                                </div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
                                 <div class="ticket__name">2 人同行
@@ -620,10 +618,7 @@
                                 </div>
                                 <div class="ticket__price">$ 8,980</div>
                                 <div class="ticket__desc">入場票 2 張</div>
-                                <div class="ticket__btn">
-                                    <!-- <a href="" class="btn ticket__button">立即購票</a> -->
-                                    <div class="ticket__fake-btn">即將開賣</div>
-                                </div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
                                 <div class="ticket__name">銀級贊助套票
@@ -631,7 +626,7 @@
                                 </div>
                                 <div class="ticket__price">$ 60,000</div>
                                 <div class="ticket__desc">入場票 10 張 + 現場攤位 + 贊助露出</div>
-                                <div class="ticket__btn"><a href="mailto:chrishuang@mail.ithome.com.tw?subject=洽詢銀級贊助套票" class="btn ticket__button">立即洽詢</a></div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
                                 <div class="ticket__name">銅級贊助套票
@@ -639,26 +634,15 @@
                                 </div>
                                 <div class="ticket__price">$ 30,000</div>
                                 <div class="ticket__desc">入場票 3 張 + 現場攤位 + 贊助露出</div>
-                                <div class="ticket__btn"><a href="mailto:chrishuang@mail.ithome.com.tw?subject=洽詢銅級贊助套票" class="btn ticket__button">立即洽詢</a></div>
+                                <div class="ticket__btn"><a href="#" class="btn ticket__button disabled">截止購票</a></div>
                             </div>
                             <div class="ticket">
-                                <div class="ticket__name">現場票(雙日)
-                                    <div class="ticket__time">8/10-11</div>
+                                <div class="ticket__name">原價
                                 </div>
                                 <div class="ticket__price">$ 8,000</div>
                                 <div class="ticket__desc">雙日入場票</div>
                                 <div class="ticket__btn">
-                                    <div class="ticket__fake-btn">現場購買</div>
-                                </div>
-                            </div>
-                            <div class="ticket">
-                                <div class="ticket__name">現場票(單日)
-                                    <div class="ticket__time">8/10-11</div>
-                                </div>
-                                <div class="ticket__price">$ 6,400</div>
-                                <div class="ticket__desc">單日入場票</div>
-                                <div class="ticket__btn">
-                                    <div class="ticket__fake-btn">現場購買</div>
+
                                 </div>
                             </div>
                         </div>
@@ -680,13 +664,13 @@
                     <div class="col-md-4">
                         <div class="traffic__loaction">
                             臺灣大學社會科學院
-                            <br><span>(臺北市大安區羅斯福路四段一號)</span>
+                            <br><span>(臺北市大安區羅斯福路四段一號｜近辛亥路二段、復興南路口)</span>
                         </div>
                         <div class="traffic__transportation">
                             <h3>自行開車</h3>
                             <ul>
                                 <li>社會科學院大樓位於臺大校總區北門（辛亥路與復興南路交叉口的西南角）的西側，靠近法律系霖澤館。</li>
-                                <li>停車場位於社科院大樓地下室 B1和B2（建議停B2，停車位多而方便），入口請：
+                                <li>停車場（$40/小時）位於社科院大樓地下室 B1和B2（建議停B2，停車位多而方便），入口請：
                                     <ol>
                                         <li>由復興南路往南穿過辛亥路進入臺大北門，再右轉進入停車場。</li>
                                         <li>由辛亥路往東行駛，在復興南路口右轉進入台大北門，50 公尺後再右轉進入停車場。</li>
@@ -708,14 +692,120 @@
                 </div>
             </div>
         </section>
+        <section class="supply">
+            <div class="title-bg-word">Food & <br>Bervege</div>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="title">
+                            <h1>能量補給站</h1>
+                        </div>
+                        <div class="supply__deco">
+                            <img src="img/s-alien1.svg" alt="">
+                            <img src="img/s-alien2.svg" alt="">
+                            <img src="img/s-alien3.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">雙主菜便當</h2>
+                                    <p class="supply-box__desc">今天中午吃雞肉還是豬肉？何必選呢，兩個一起吃粗飽～（不怕不怕，還是備有素食餐喔！）</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">愛地球多喝水</h2>
+                                    <p class="supply-box__desc">報到時，大會送你一個樂扣樂扣地球杯，別忘了寫上名字、沒事就多裝水、多喝水。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">咖啡因</h2>
+                                    <p class="supply-box__desc">#Serverless 沒事，但<br>
+                                        #Coffeeless 工程師就要暴動了。<br>
+                                        大會除了各種罐裝咖啡，也歡迎您到306來杯星巴克。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                        
+                             <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">歡樂飲料池</h2>
+                                    <p class="supply-box__desc">3 樓有個歡樂飲料池，用浮冰的清涼滿足你身體的渴望，快伸手撈出，然後一飲而盡！</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">人氣零食嘉年華</h2>
+                                    <p class="supply-box__desc">大腦思考複雜的事情時，每分鐘會燃燒 1 至 1.5 卡的熱量！近 30 種零食餅乾等著滿足你嚼嚼的衝動！</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">國際洋芋片大展</h2>
+                                    <p class="supply-box__desc">切片還是粉壓？來逛逛國際洋芋片大展，6 國 35 種花樣，你喜歡那一樣？（品客曾經否認自己是洋芋片說……)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                        
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">人和裝備都餓了</h2>
+                                    <p class="supply-box__desc">3 樓各間用餐休息區（301、305、306、307）除了中午坐下來吃便當，還是平時手機筆店充電的好地方，歡迎有閒來坐。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">讓我們野餐趣</h2>
+                                    <p class="supply-box__desc">平時整天坐在辦公室，還記得藍天白雲微風與綠樹嗎？拿著零食便當到三樓空中花園走走吧！</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="supply-box">
+                                    <h2 class="supply-box__title">Party All the Time</h2>
+                                    <p class="supply-box__desc">8/10下午 2 點半起，歡樂池將開始出現冰涼啤酒，讓我們拿掉一點點害羞，多表達一下自己！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="sponser">
             <div class="wrapper">
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8">
                         <div class="sponser__host">
-                            <span>主辦單位</span><img src="img/ithome.svg" alt="">
+                            主辦單位
+                            <a href="jobs.html#s2272" class="sponser__link">
+                                <img src="img/ithome.svg" alt="iThome">
+                            </a>
                         </div>
                     </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sponser__title">大會贊助商</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2 col-sm-3 col-xs-6"><a href="jobs.html#s2274" class="sponser__link"><img src="img/104_logo.jpg" alt=""></a></div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><a href="jobs.html#s2277" class="sponser__link"><img src="img/91_LOGO.jpg" alt=""></a></div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><a href="jobs.html#s2281" class="sponser__link"><img src="img/carousell.jpg" alt=""></a></div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><a href="jobs.html#s2275" class="sponser__link"><img src="img/ruten_logo.jpg" alt=""></a></div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2 col-sm-3 col-xs-6"><a href="jobs.html#s2282" class="sponser__link"><img src="img/shopline.jpg" alt=""></a></div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><a href="jobs.html#s2273" class="sponser__link"><img src="img/titansoft_logo.jpg" alt=""></a></div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><a href="jobs.html#s2280" class="sponser__link"><img src="img/trunk.jpg" alt=""></a></div>
                 </div>
             </div>
         </section>
@@ -881,6 +971,8 @@
                             <div role="tabpanel" class="tab-pane active" id="speakerModalAgenda">
                                 <div class="speaker-brief__agenda" v-for="session in Modal_Speaker.session">
                                     <div class="speaker-brief__agenda-title">
+                                        <span v-if="session.language == '英文'" class="speaker-brief__agenda-type">EN</span>
+                                        <!--  -->
                                         {{ session.title }}
                                     </div>
                                     <div class="speaker-brief__agenda-content" v-html="session.summary"></div>
@@ -896,14 +988,12 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-        <a href="#ticket" class="buy-ticket" id="buy_ticket"><img src="img/astronaut1.svg" alt="" class="hidden-xs">立即購票</a>
+        <a href="#ticket" class="buy-ticket" id="buy_ticket"><img src="img/astronaut1.svg" alt="" class="hidden-xs">票賣光囉</a>
     </div>
     <!-- /.modal -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="https://connect.facebook.net/zh_TW/all.js"></script>
-    <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/confapi.js" data-nid="2073"></script>
