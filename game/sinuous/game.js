@@ -110,8 +110,7 @@ SinuousWorld = new function() {
             // message.style.display = 'none';
             // status.style.display = 'block';
 
-            time = new Date().getTime();
-            console.log('111');
+            time = new Date().getTime();            
         }
     }
 
@@ -124,7 +123,7 @@ SinuousWorld = new function() {
             enemies = [];
             boosts = [];
             score = 0;
-            difficulty = 1;
+            difficulty = 1;            
 
             player.trail = [];
             player.trail1 = [];
