@@ -57,9 +57,12 @@
     top: 4px;
     left: 0;
     width: 15px;
-    -webkit-transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-    -o-transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out; }
+    -webkit-transition: background 0.3s ease-in-out,
+ border 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out,
+ border 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+ border 0.3s ease-in-out; }
   .timeline-marker:after {
     content: "";
     width: 3px;
@@ -1373,95 +1376,6 @@ section .title {
     transform: rotate(-35deg);
     -webkit-transform-origin: 0% 0%;
     transform-origin: 0% 0%; } }
-
-.alien-notice {
-  position: absolute;
-  width: 120px;
-  left: -35%;
-  top: -30px;
-  padding: 2px 8px;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  background-color: rgba(247, 170, 31, 0.9);
-  border-radius: 20px;
-  -webkit-animation: pendulum 5s linear infinite;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  opacity: 0; }
-
-.alien-notice:after {
-  position: absolute;
-  left: calc(50% - 8px);
-  top: 99%;
-  content: '';
-  border-top: 8px solid rgba(247, 170, 31, 0.9);
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent; }
-
-.alien:hover .alien-notice {
-  opacity: 1;
-  -webkit-animation: pendulum 5s linear infinite;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s; }
-
-@-webkit-keyframes pendulum {
-  0% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
-  25% {
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg);
-    -webkit-transform-origin: -10% -300%;
-    transform-origin: -10% -300%; }
-  50% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
-  75% {
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
-    -webkit-transform-origin: 30% 120%;
-    transform-origin: 30% 120%; }
-  100% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; } }
-
-@keyframes pendulum {
-  0% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
-  25% {
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg);
-    -webkit-transform-origin: -10% -300%;
-    transform-origin: -10% -300%; }
-  50% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
-  75% {
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
-    -webkit-transform-origin: 30% 120%;
-    transform-origin: 30% 120%; }
-  100% {
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; } }
 
 .game-modal .modal-dialog {
   position: relative;

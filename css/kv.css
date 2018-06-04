@@ -244,55 +244,55 @@
   0% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; }
   25% {
     -webkit-transform: rotate(-30deg);
     transform: rotate(-30deg);
-    -webkit-transform-origin: -10% -300%;
-    transform-origin: -10% -300%; }
+    -webkit-transform-origin: -20% -310%;;
+    transform-origin: -20% -310%; }
   50% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; }
   75% {
     -webkit-transform: rotate(-40deg);
     transform: rotate(-40deg);
-    -webkit-transform-origin: 30% 120%;
-    transform-origin: 30% 120%; }
+    -webkit-transform-origin: 50% 380%;
+    transform-origin: 50% 380%; }
   100% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; } }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; } }
 
 @keyframes pendulum {
   0% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; }
   25% {
     -webkit-transform: rotate(-30deg);
     transform: rotate(-30deg);
-    -webkit-transform-origin: -10% -300%;
-    transform-origin: -10% -300%; }
+    -webkit-transform-origin: -20% -310%;;
+    transform-origin: -20% -310%; }
   50% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; }
   75% {
     -webkit-transform: rotate(-40deg);
     transform: rotate(-40deg);
-    -webkit-transform-origin: 30% 120%;
-    transform-origin: 30% 120%; }
+    -webkit-transform-origin: 50% 380%;
+    transform-origin: 50% 380%; }
   100% {
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-    -webkit-transform-origin: 10% -90%;
-    transform-origin: 10% -90%; } }
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 10% 70%; } }
 
 .rocket-box {
     -webkit-transform: rotate(215deg);
