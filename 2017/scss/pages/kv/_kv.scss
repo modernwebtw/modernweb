@@ -1,0 +1,36 @@
+.kv {
+    position: relative;
+    background-color: rgba(17, 40, 66, 0.7);
+    img,
+    svg {
+        width: 100%;
+        user-select: none;
+    }
+}
+
+.kv-head {
+	height: 540px;
+	color: #fff;
+	text-align: center;
+	background-image: url(../img/agenda-head.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	h1 {
+		margin-top: 0;
+		padding-top: 10%;
+		letter-spacing: 2px;
+	}
+    @include media("<=1400px") {
+        height: 400px;
+    }
+    @include media("<=1200px") {
+        height: 300px;
+    }
+    @include media("<768px") {
+        height: 150px;
+    }
+}
+
+
+
