@@ -72,9 +72,9 @@ SinuousWorld = new function() {
             document.addEventListener('mousemove', documentMouseMoveHandler, false);
             document.addEventListener('mousedown', documentMouseDownHandler, false);
             document.addEventListener('mouseup', documentMouseUpHandler, false);
-            canvas.addEventListener('touchstart', documentTouchStartHandler, false);
-            document.addEventListener('touchmove', documentTouchMoveHandler, false);
-            document.addEventListener('touchend', documentTouchEndHandler, false);
+            // canvas.addEventListener('touchstart', documentTouchStartHandler, false);
+            // document.addEventListener('touchmove', documentTouchMoveHandler, false);
+            // document.addEventListener('touchend', documentTouchEndHandler, false);
             window.addEventListener('resize', windowResizeHandler, false);
             // startButton.addEventListener('click', startButtonClickHandler, false);
             btnSinuousStart.addEventListener('click', btnSinuousStartClickHandler, false);
