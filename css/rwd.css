@@ -1,3 +1,4 @@
+
 @media (min-width: 768px){
 	.visible-sm-down{
 		display: none !important;
@@ -58,7 +59,7 @@
     .hidden-sm-down{display: none}
     .navbar-inverse .dropdown{float: none; width: 100%;}
     .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;}
-    .navbar-inverse .navbar-nav li a{padding:1.1em 1em;}
+    .navbar-inverse .navbar-nav li a{padding:1vh;}
     .dropdown-menu.btn .caret{display: none;}
 
 	/* utili */
@@ -77,30 +78,18 @@
 	.timeline-marker:last-child{ bottom: -6%; }
 
 	/* speaker */
-	/* .speaker__item__img:nth-child(odd){ float: left;} */
+	.section--speaker .speaker__item{margin:3% 0 5%;}
+	.speaker__item:nth-child(4n) .speaker__imgbox{float:left; right:0 ; left:0;}
+	.speaker__item .speaker__imgbox{width: 80%; margin:2% 0 !important; left:10% !important;}
+	.section--speaker .speaker__item .speaker__imgbox img{ margin: 0 auto;}
+	.section--speaker .speaker__item .speaker__imgbox:after{ left: -2%;}
+	.section--speaker .speaker__item .speaker__disc{ text-align: center; left: 0;}
  	.modal.in .modal-dialog{height: 110px; width: 100%;}
 
 	.section--quote{display: none;}
 
 	/* history */
-	.section--history{ margin-bottom: 300px; margin-top: 150px !important;
-		/* :before {
-	    width: 110%;
-	    height: 100px;
-	    left: -5%;
-	    position: absolute;
-	    top: -99px;
-	    background-size: cover;
-		}
-		.section--history:after {
-	    width: 110%;
-	    left: -5%;
-	    height: 200px;
-	    position: absolute;
-	    bottom: -199px;
-	    background-size: cover;
-		} */
-	}
+	.section--history{ margin-bottom: 10px; margin-top: 10px !important;}
 
 	/* ticket */
 	.section--ticket .ticket__item .ticket__item__btn .btn{
@@ -121,12 +110,13 @@
 	.ticket__item__btn{
 		height: auto;
 	}
+	.section--ticket .ticket__item .ticket__item__title h3{ margin-left: 0;}
+	.section--ticket .ticket__item .dot:before{left: calc(50% - 6px);}
 }
 
-@media screen and (max-width:667px ){.section--kv { min-height: 85vh;} }
-@media screen and (max-width:550px ){.section--kv { min-height: 80vh;} }
-@media screen and (max-width:480px ){
-	.section--kv { min-height: 70vh;}
-	.section--ticket .ticket__item{} 
-}
+@media screen and (max-width:667px ){
+	.section--kv { min-height: 85vh; margin: 3vh 1vh 10vh 1vh;}
+	.ta{top:2vh;}
+			 }
+@media screen and (max-width:550px ){ .section--kv { min-height: 80vh;} }
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }
