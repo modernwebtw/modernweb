@@ -22,10 +22,9 @@
 //
 
 var myCanvas = document.getElementById('myCanvas');
-// myCanvas.width = myCanvas.clientWidth;
-// myCanvas.height = myCanvas.clientHeight;
 
-//check browser support
+
+// check browser support
 if (myCanvas.getContext) {
     var ctx = myCanvas.getContext('2d');
 } else {
