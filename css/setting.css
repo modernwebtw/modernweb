@@ -184,15 +184,14 @@ iframe {
   text-align: center; }
 
 .game-modal__btn {
-  padding: 6px 20px;
-  font-size: 18px;
+  padding: 6px 20px;  
   font-weight: 700;
   color: #fff;
   border: 1px solid #73fff0;
   background-color: rgb(30, 194, 201);
   border-radius: 0;
       transition: all .3s ease;
-    font-size: 20px; }
+    font-size: 24px; }
 
 .game-modal__btn + .game-modal__btn {
   margin-left: 20px; }
@@ -236,7 +235,8 @@ iframe {
 .game-sinuous_modal__btn--solid {
   color: #bf4908;
   background-color: #f9b700;
-  font-size: 24px; }
+  font-size: 24px;
+  margin-left: 20px; }
 
 .game-sinuous_modal__btn--solid:focus, .game-sinuous_modal__btn--solid:hover {
   color: #A00008;
