@@ -75,8 +75,8 @@ section .title{font-size: 32px; margin: 0 auto; text-align: center; letter-spaci
         margin-top: 10%;
     }
 }
-.speaker__item:nth-child(4n) .speaker__imgbox{ float:right; right:0; left:8%;}
-.speaker__item:nth-child(4n) .speaker__disc{left:0;}
+.speaker__item:nth-child(2n) .speaker__imgbox{ float:right; right:0; left:8%;}
+.speaker__item:nth-child(2n) .speaker__disc{left:0;}
 .section--speaker{
     .speaker__item{
         .speaker__item__img{
