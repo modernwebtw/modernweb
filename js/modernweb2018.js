@@ -218,10 +218,9 @@ var modernweb2018 = new Vue({
 
 
             modernweb2018.$nextTick(function() {
-                // $('body').addClass('is-active');
-                // setTimeout(function() {
-                //     $('#loading').remove();
-                // }, 500);
+                $('button[data-toggle="modal"]').click(function(e) {
+                    e.preventDefault();
+                });
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     // $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')

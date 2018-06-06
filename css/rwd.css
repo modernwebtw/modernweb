@@ -79,7 +79,7 @@
 
 	/* speaker */
 	.section--speaker .speaker__item{margin:3% 0 5%;}
-	.speaker__item:nth-child(4n) .speaker__imgbox{float:left; right:0 ; left:0;}
+	.speaker__item:nth-child(2n) .speaker__imgbox{float:left; right:0 ; left:0;}
 	.speaker__item .speaker__imgbox{width: 80%; margin:2% 0 !important; left:10% !important;}
 	.section--speaker .speaker__item .speaker__imgbox img{ margin: 0 auto;}
 	.section--speaker .speaker__item .speaker__imgbox:after{ left: -2%;}
