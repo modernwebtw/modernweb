@@ -2293,38 +2293,6 @@
             })
         }
     }
-
-    // scroll menu
-    var $window = $(window);
-    var $menu = $('#menu');
-    var checkHasElm = function(arrID) {
-        var $detect;
-        for (var i = arrID.length - 1; i >= 0; i--) {
-            if ($(arrID[i]).length > 0) {
-                $detect = $(arrID[i]);
-                break;
-            }
-        }
-        return $detect;
-    };
-    var $menu_target = (function() {
-        return checkHasElm([
-            '#about',
-            '#agenda',
-            '#jobs',
-            '#event'
-        ]);
-    }());
-    var $buy_target = (function() {
-        return checkHasElm([
-            '#speaker',
-            '#agenda',
-            '#jobs',
-            '#event'
-        ]);
-    }());
-    var $buy_ticket_btn = $('#buy_ticket');
-    var timer;
     // mobile
     $(".menu__burger, .menu__mask").on('click', function() {
         $('.menu__burger').toggleClass("on");
@@ -2335,7 +2303,7 @@
 
 
     // scroll
-    $('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function() {
+    $('a[href^="#"]:not([href="#"]), #buy_ticket').click(function() {
         var target = '#' + $(this).attr('href').split('#')[1];
         goScroll(target);
         return false;
@@ -2344,7 +2312,7 @@
     function goScroll(target) {
         var $target = $(target);
         var target_top = $target.offset().top;
-        var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
+        var header_height = ($('html').width() <= 768) ? 0 : $('.navbar-nav').height();
         var sTop = target_top - header_height;
         $('html, body').stop().animate({
             scrollTop: sTop
