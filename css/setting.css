@@ -1,3 +1,8 @@
+body.modal-open {
+    overflow: visible;
+    padding-right: 0 !important;
+}
+
 .rock {
     display: none;
 }
