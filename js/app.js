@@ -10,6 +10,33 @@ var toggleScroll = function(boolean) {
     }
 }
 
+// mobile
+$(".menu__burger, .menu__mask").on('click', function() {
+    $('.menu__burger').toggleClass("on");
+    $('.menu__content').toggleClass('on');
+    $('.menu').toggleClass('on');
+    $('body').toggleClass('is-hidden');
+});
+
+// scroll
+$('a[href^="#"]:not([href="#"]), #buy_ticket').click(function(e) {
+    var target = '#' + $(this).attr('href').split('#')[1];
+    goScroll(target);
+    return false;
+});
+
+function goScroll(target) {
+    var $target = $(target);
+    var target_top = $target.offset().top;
+    var header_height = ($('html').width() <= 768) ? 0 : $('.navbar-nav').height();
+    var sTop = target_top - header_height;
+    $('html, body').stop().animate({
+        scrollTop: sTop
+    }, 500);
+}
+
+location.hash && goScroll(location.hash);
+
 // google map
 // google.maps.event.addDomListener(window, 'load', init);
 
@@ -194,6 +221,12 @@ var gamePause = function() {
 
 // flappy
 
+$('.rock').mouseenter(function() {
+    $('.rock').css('cursor', 'pointer');
+    $('.rock3').addClass('rock-rotate1');
+    $('.rock2').addClass('rock-rotate2');
+});
+
 $('.rock').click(function() {
     $('#modal_flappy_start').modal('show');
 });
@@ -246,10 +279,6 @@ $('#btn_flappy_exit').click(function() {
     $('#flappy_bg').hide();
 });
 
-
-
-
-
 function closeIFrame() {
     $('.ta').show();
     $('#game_bg').hide();
@@ -265,26 +294,90 @@ window.setInterval(function() {
 }, 1000);
 
 
-// $window.scroll(function() {
-//     if (timer) {
-//         window.clearTimeout(timer);
-//     }
-//     timer = window.setTimeout(function() {
-//         $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
-//         $buy_ticket_btn.toggleClass('active', $window.scrollTop() >= $buy_target.offset().top);
-//     }, 200);
-// });
+$(document).ready(function() {
+    $("#loading").hide();
+});
+
+var modernwebDesc = 'Modern Web 2018 ─ 技術在我們手上，世界就在我們手上';
+var modernwebUrl = location.href;
+
+$('#btn_share_fb').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+    var score = $('#score').text();
+    FB.init({
+        appId: '1293787864089459', //test FBid
+        status: true,
+        xfbml: true,
+        version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+    });
+
+    // var FBTitle = 'tile';
+    var modernwebPic = 'https://modernweb.tw/img/FBU.jpg';
+
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        link: modernwebUrl,
+        action_properties: JSON.stringify({
+            object: {
+                'og:title': '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
+                'og:description': modernwebDesc,
+                'og:image': modernwebPic
+            }
+        })
+    }, function(response) {});
+});
+
+$('#btn_flappy_share_fb').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+    var score = $('#flappy_score').text();
+    FB.init({
+        appId: '1615126938703368',
+        status: true,
+        xfbml: true,
+        version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+    });
+    var modernwebPic = 'https://modernweb.tw/img/FBP.jpg';
+
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        link: modernwebUrl,
+        action_properties: JSON.stringify({
+            object: {
+                'og:title': '我在 Modern Web 2018 隱藏任務中，越過牛牛大軍與牠的快樂伙伴，獲得 ' + score + ' 分，一起來挑戰吧！',
+                'og:description': modernwebDesc,
+                'og:image': modernwebPic
+            }
+        })
+    }, function(response) {});
+});
 
 
 
+$('#btn_sinuous_share_fb').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    var score = $('#sinuous_score').text();
+    FB.init({
+        appId: '1293787864089459', //test FBid
+        status: true,
+        xfbml: true,
+        version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+    });
+    var modernwebPic = 'https://modernweb.tw/img/FBR.jpg';
 
-// 2017.07.07 = 1499356800647
-// var TimeDiff = (1499356800647 - +new Date());
-// var is201707070000 = TimeDiff > 0 ? TimeDiff : 4;
-// var openTicket = function openTicket() {
-//     $('#ticket_earlyBird').html('<a href="#" class="btn ticket__button disabled">截止購票</a>');
-//     $('#ticket_discount').html('<a href="https://ec.ithome.com.tw/modernweb2017/class?p=20170040" class="btn ticket__button">立即購票</a>');
-//     $('#ticket_peers').html('<a href="http://s.itho.me/modernweb/2017/Modern_Web_2017_group_application_%20form.xlsx" class="btn ticket__button">立即購票</a>');
-// }
-
-// setTimeout(openTicket, TimeDiff);
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        link: modernwebUrl,
+        action_properties: JSON.stringify({
+            object: {
+                'og:title': '我在 Modern Web 2018 隱藏任務中，閃避迎面而來的無數殞石，獲得 ' + score + ' 分，一起來挑戰吧！',
+                'og:description': modernwebDesc,
+                'og:image': modernwebPic
+            }
+        })
+    }, function(response) {});
+});
