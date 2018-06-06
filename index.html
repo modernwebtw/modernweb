@@ -14,7 +14,7 @@
     <meta property="og:image:height" content="346" />
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="game/flappy/style.css">
     <link rel="stylesheet" href="game/sinuous/style.css">
     <link rel="stylesheet" href="game/alien/style.css">
@@ -26,18 +26,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48349256-7"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-48349256-7');
+    gtag('config', 'UA-48349256-7');
     </script>
 </head>
 
@@ -45,46 +44,45 @@
     <!-- loading animation -->
     <div class="loading" id="loading">
         <div class="loading__logo">
-            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 201.9 38" style="enable-background:new 0 0 201.9 38;" xml:space="preserve">
-<g>
-    <g>
-        <path style="fill:#FFFFFF;" d="M183.4,30v-1.6h0.8c0.4,0,0.8,0.1,1.1,0.4c0.4,0.3,0.6,0.8,0.6,1.4v7.4h-1.6v-7.4v-0.1l0,0v0l0,0
-            c0,0,0,0-0.1,0c0,0-0.1,0-0.1,0H183.4z"/>
-        <path style="fill:#FFFFFF;" d="M187.2,31.3v-0.4c0-0.7,0.2-1.3,0.7-1.8c0.5-0.5,1.1-0.7,1.8-0.7h9.7c0.7,0,1.3,0.2,1.8,0.7
+            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 201.9 38" style="enable-background:new 0 0 201.9 38;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path style="fill:#FFFFFF;" d="M183.4,30v-1.6h0.8c0.4,0,0.8,0.1,1.1,0.4c0.4,0.3,0.6,0.8,0.6,1.4v7.4h-1.6v-7.4v-0.1l0,0v0l0,0
+            c0,0,0,0-0.1,0c0,0-0.1,0-0.1,0H183.4z" />
+                        <path style="fill:#FFFFFF;" d="M187.2,31.3v-0.4c0-0.7,0.2-1.3,0.7-1.8c0.5-0.5,1.1-0.7,1.8-0.7h9.7c0.7,0,1.3,0.2,1.8,0.7
             c0.5,0.5,0.7,1.1,0.7,1.8v0.4c0,0.7-0.2,1.2-0.7,1.7c0.4,0.5,0.7,1,0.7,1.7v0.5c0,0.7-0.2,1.3-0.7,1.7c-0.5,0.5-1.1,0.7-1.8,0.7
             h-9.7c-0.7,0-1.3-0.2-1.8-0.7c-0.5-0.5-0.7-1.1-0.7-1.7v-0.5c0-0.6,0.2-1.2,0.7-1.7C187.4,32.5,187.2,31.9,187.2,31.3z
              M200.3,30.9c0-0.2-0.1-0.5-0.3-0.6c-0.2-0.2-0.4-0.3-0.6-0.3h-9.7c-0.2,0-0.5,0.1-0.6,0.3c-0.2,0.2-0.3,0.4-0.3,0.6v0.4
             c0,0.2,0.1,0.5,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3h9.7c0.2,0,0.5-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6V30.9z M200.3,34.6
             c0-0.2-0.1-0.5-0.3-0.6c-0.2-0.2-0.4-0.3-0.6-0.3h-9.7c-0.2,0-0.5,0.1-0.6,0.3c-0.2,0.2-0.3,0.4-0.3,0.6v0.5
-            c0,0.2,0.1,0.5,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3h9.7c0.2,0,0.5-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6V34.6z"/>
-    </g>
-    <path style="fill:#FFFFFF;" d="M11.1,26.2L22.3,14v23.1h-2.4V20.3l-8.7,9.5l-8.7-9.5v16.8h-2.4V14L11.1,26.2z"/>
-    <path style="fill:#FFFFFF;" d="M33.9,18.4c2.7,0,4.9,0.9,6.8,2.8c1.9,1.9,2.8,4.1,2.8,6.8c0,2.6-0.9,4.9-2.8,6.8
+            c0,0.2,0.1,0.5,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3h9.7c0.2,0,0.5-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6V34.6z" />
+                    </g>
+                    <path style="fill:#FFFFFF;" d="M11.1,26.2L22.3,14v23.1h-2.4V20.3l-8.7,9.5l-8.7-9.5v16.8h-2.4V14L11.1,26.2z" />
+                    <path style="fill:#FFFFFF;" d="M33.9,18.4c2.7,0,4.9,0.9,6.8,2.8c1.9,1.9,2.8,4.1,2.8,6.8c0,2.6-0.9,4.9-2.8,6.8
         c-1.9,1.9-4.1,2.8-6.8,2.8c-2.6,0-4.9-0.9-6.8-2.8c-1.9-1.9-2.8-4.2-2.8-6.8c0-2.7,0.9-4.9,2.8-6.8C29,19.4,31.3,18.4,33.9,18.4z
          M33.9,20.9c-2,0-3.7,0.7-5.1,2.1c-1.4,1.4-2.1,3.1-2.1,5.1c0,2,0.7,3.7,2.1,5.1c1.4,1.4,3.1,2.1,5.1,2.1c2,0,3.7-0.7,5.1-2.1
-        c1.4-1.4,2.1-3.1,2.1-5.1c0-2-0.7-3.7-2.1-5.1C37.6,21.6,35.9,20.9,33.9,20.9z"/>
-    <path style="fill:#FFFFFF;" d="M82,31.4l2.1,1.2c-0.8,1.5-2,2.7-3.5,3.7c-1.5,0.9-3.2,1.4-5,1.4c-2.6,0-4.9-0.9-6.8-2.8
+        c1.4-1.4,2.1-3.1,2.1-5.1c0-2-0.7-3.7-2.1-5.1C37.6,21.6,35.9,20.9,33.9,20.9z" />
+                    <path style="fill:#FFFFFF;" d="M82,31.4l2.1,1.2c-0.8,1.5-2,2.7-3.5,3.7c-1.5,0.9-3.2,1.4-5,1.4c-2.6,0-4.9-0.9-6.8-2.8
         c-1.9-1.9-2.8-4.2-2.8-6.8c0-2.7,0.9-4.9,2.8-6.8c1.9-1.9,4.2-2.8,6.8-2.8c1.7,0,3.2,0.4,4.7,1.2c1.5,0.8,2.6,1.9,3.4,3.2l-12.4,11
         c1.2,0.9,2.7,1.4,4.3,1.4c1.4,0,2.6-0.3,3.7-1C80.5,33.5,81.4,32.6,82,31.4z M69.7,32l10.6-9.4c-1.3-1.2-2.9-1.7-4.7-1.7
-        c-2,0-3.7,0.7-5.1,2.1c-1.4,1.4-2.1,3.1-2.1,5.1C68.5,29.5,68.9,30.8,69.7,32z"/>
-    <path style="fill:#FFFFFF;" d="M154.1,31.4l2.1,1.2c-0.8,1.5-2,2.7-3.5,3.7c-1.5,0.9-3.2,1.4-5,1.4c-2.6,0-4.9-0.9-6.8-2.8
+        c-2,0-3.7,0.7-5.1,2.1c-1.4,1.4-2.1,3.1-2.1,5.1C68.5,29.5,68.9,30.8,69.7,32z" />
+                    <path style="fill:#FFFFFF;" d="M154.1,31.4l2.1,1.2c-0.8,1.5-2,2.7-3.5,3.7c-1.5,0.9-3.2,1.4-5,1.4c-2.6,0-4.9-0.9-6.8-2.8
         c-1.9-1.9-2.8-4.2-2.8-6.8c0-2.7,0.9-4.9,2.8-6.8c1.9-1.9,4.2-2.8,6.8-2.8c1.7,0,3.2,0.4,4.7,1.2c1.5,0.8,2.6,1.9,3.4,3.2l-12.4,11
         c1.2,0.9,2.7,1.4,4.3,1.4c1.4,0,2.6-0.3,3.7-1C152.6,33.5,153.4,32.6,154.1,31.4z M141.8,32l10.6-9.4c-1.3-1.2-2.9-1.7-4.7-1.7
-        c-2,0-3.7,0.7-5.1,2.1c-1.4,1.4-2.1,3.1-2.1,5.1C140.6,29.5,141,30.8,141.8,32z"/>
-    <polygon style="fill:#FFFFFF;" points="136.6,14 131.1,30.1 125.8,14.3 120.4,30.1 115,14 112.4,14 120.4,37.7 125.8,21.9 
-        131.1,37.7 139.2,14     "/>
-    <path style="fill:#FFFFFF;" d="M96.1,18.9c-0.8-0.3-1.6-0.5-2.6-0.5c-2,0-3.8,0.7-5.2,2.1c-1.4,1.4-2.1,3.1-2.1,5.2v11.4h2.4V25.7
-        c0-1.4,0.5-2.5,1.4-3.4c0.9-0.9,2.1-1.4,3.4-1.4c0.6,0,1.1,0.1,1.6,0.3L96.1,18.9z"/>
-    <path style="fill:#FFFFFF;" d="M110.2,20.5c-1.4-1.4-3.1-2.1-5.2-2.1c0,0,0,0,0,0h0h0h0c0,0,0,0,0,0c-2,0-3.8,0.7-5.2,2.1
+        c-2,0-3.7,0.7-5.1,2.1c-1.4,1.4-2.1,3.1-2.1,5.1C140.6,29.5,141,30.8,141.8,32z" />
+                    <polygon style="fill:#FFFFFF;" points="136.6,14 131.1,30.1 125.8,14.3 120.4,30.1 115,14 112.4,14 120.4,37.7 125.8,21.9 
+        131.1,37.7 139.2,14     " />
+                    <path style="fill:#FFFFFF;" d="M96.1,18.9c-0.8-0.3-1.6-0.5-2.6-0.5c-2,0-3.8,0.7-5.2,2.1c-1.4,1.4-2.1,3.1-2.1,5.2v11.4h2.4V25.7
+        c0-1.4,0.5-2.5,1.4-3.4c0.9-0.9,2.1-1.4,3.4-1.4c0.6,0,1.1,0.1,1.6,0.3L96.1,18.9z" />
+                    <path style="fill:#FFFFFF;" d="M110.2,20.5c-1.4-1.4-3.1-2.1-5.2-2.1c0,0,0,0,0,0h0h0h0c0,0,0,0,0,0c-2,0-3.8,0.7-5.2,2.1
         c-1.4,1.4-2.1,3.1-2.1,5.2v11.4h2.4V25.7c0-1.4,0.5-2.5,1.4-3.4c0.9-0.9,2.1-1.4,3.4-1.4h0c1.3,0,2.5,0.5,3.4,1.4
-        c0.9,0.9,1.4,2.1,1.4,3.4v11.4h2.4V25.7C112.3,23.6,111.6,21.9,110.2,20.5z"/>
-    <path style="fill:#FFFFFF;" d="M158.3,13.9V28c0-0.6,0.1-1.3,0.2-1.9c-0.1,0.6-0.2,1.2-0.2,1.9c0,2.6,0.9,4.9,2.8,6.8
+        c0.9,0.9,1.4,2.1,1.4,3.4v11.4h2.4V25.7C112.3,23.6,111.6,21.9,110.2,20.5z" />
+                    <path style="fill:#FFFFFF;" d="M158.3,13.9V28c0-0.6,0.1-1.3,0.2-1.9c-0.1,0.6-0.2,1.2-0.2,1.9c0,2.6,0.9,4.9,2.8,6.8
         c1.9,1.9,4.1,2.8,6.8,2.8c2.6,0,4.9-0.9,6.8-2.8c1.9-1.9,2.8-4.2,2.8-6.8c0-2.7-1-4.9-2.8-6.8c-1.9-1.9-4.2-2.8-6.8-2.8
         c-2.7,0-4.9,0.9-6.8,2.8c-0.1,0.1-0.1,0.2-0.2,0.3c0,0-0.1,0.1-0.1,0.1v-7.7H158.3z M160.8,28c0-2,0.7-3.7,2.1-5.1
         c1.4-1.4,3.1-2.1,5.1-2.1c2,0,3.7,0.7,5.1,2.1c1.4,1.4,2.1,3.1,2.1,5.1c0,2-0.7,3.7-2.1,5.1c-1.4,1.4-3.1,2.1-5.1,2.1
-        c-2,0-3.7-0.7-5.1-2.1C161.5,31.7,160.8,30,160.8,28z M159,24.6c0-0.1,0-0.1,0.1-0.2C159,24.5,159,24.6,159,24.6z"/>
-    <path class="loading__rocket" style="fill:#FFFFFF;" d="M65.8,9.4C65.9,8.9,66,8.3,66,7.8v0C66,4.7,64.7,2,62.8,1C61,2,59.7,4.7,59.7,7.8v0
+        c-2,0-3.7-0.7-5.1-2.1C161.5,31.7,160.8,30,160.8,28z M159,24.6c0-0.1,0-0.1,0.1-0.2C159,24.5,159,24.6,159,24.6z" />
+                    <path class="loading__rocket" style="fill:#FFFFFF;" d="M65.8,9.4C65.9,8.9,66,8.3,66,7.8v0C66,4.7,64.7,2,62.8,1C61,2,59.7,4.7,59.7,7.8v0
         c0,0.6,0,1.1,0.1,1.6c-0.8,0.7-1.3,1.7-1.3,2.8c0,0.7,0.2,1.3,0.5,1.9c0.4-0.6,1.1-1.1,2-1.3c0.2,0.3,0.4,0.6,0.6,0.8v8
         c0-0.1-0.1-0.1-0.1-0.1c-0.1-0.1-0.1-0.2-0.2-0.3c-1.9-1.9-4.1-2.8-6.8-2.8c-2.6,0-4.9,0.9-6.8,2.8c-1.9,1.9-2.8,4.1-2.8,6.8
         c0,2.6,0.9,4.9,2.8,6.8c1.9,1.9,4.2,2.8,6.8,2.8c2.7,0,4.9-0.9,6.8-2.8c1.9-1.9,2.8-4.2,2.8-6.8c0-0.3,0-0.5,0-0.5v-14
@@ -92,17 +90,16 @@
         c-0.5-0.3-1-0.4-1.6-0.4c-1.6,0-3,1.3-3,3c0,0.3,0,0.6,0.1,0.9c-0.8,0.3-1.4,1-1.4,1.9c0,0,0,0.1,0,0.1c-1.4,0.2-2.4,1.4-2.4,2.8
         c0,0,0,0.1,0,0.1c-0.1-0.1-0.2-0.2-0.4-0.3c-1.4-1.4-2.1-3.1-2.1-5.1c0-2,0.7-3.7,2.1-5.1c1.4-1.4,3.1-2.1,5.1-2.1
         c2,0,3.7,0.7,5.1,2.1c0.2,0.2,0.4,0.5,0.6,0.7C59.2,23.7,58.3,24.3,57.9,25.2z M62.8,7.3c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8
-        c1,0,1.8,0.8,1.8,1.8C64.6,6.5,63.8,7.3,62.8,7.3z"/>
-    <polygon style="fill:#FFFFFF;" points="180.8,30.3 179.7,30.3 180.3,27.3 182,27.3"/>
-</g>
-<g class="loading__bubble">
+        c1,0,1.8,0.8,1.8,1.8C64.6,6.5,63.8,7.3,62.8,7.3z" />
+                    <polygon style="fill:#FFFFFF;" points="180.8,30.3 179.7,30.3 180.3,27.3 182,27.3" />
+                </g>
+                <g class="loading__bubble">
                     <circle fill="#FFFFFF" cx="50.6" cy="31.7" r="2.8" />
                     <circle fill="#FFFFFF" cx="52.1" cy="28.9" r="2" />
                     <circle fill="#FFFFFF" cx="58.6" cy="24.4" r="2.6" />
                     <circle fill="#FFFFFF" cx="55.4" cy="27" r="3" />
                 </g>
-
-</svg>
+            </svg>
             <ul class="loading__dot">
                 <li></li>
                 <li></li>
@@ -136,13 +133,13 @@
                         <!-- <li><a href="#history">里程碑</a></li> -->
                         <li class="hidden-sm-down">
                             <div class="dropdown hidden-sm-down">
-                              <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
+                                <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
                               <span class="caret"></span></a>
-                              <ul class="dropdown-menu">
-                                <li><a href="https://modernweb.tw/2017/index.html" target="_blank">2017</a></li>
-                                <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
-                                <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
-                              </ul>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://modernweb.tw/2017/index.html" target="_blank">2017</a></li>
+                                    <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
+                                    <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="visible-sm-down"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
@@ -1130,57 +1127,55 @@
                 </svg>
             </div>
             <div class="ta-txt">
-                <svg version="1.1" id="_0-ta-text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 491.8 257.7" style="enable-background:new 0 0 491.8 257.7;" xml:space="preserve">
-<title>ta-txt</title>
-<path style="fill:#FFFFFF;" d="M445.8,72.4v-3.8h1.9c1,0,1.9,0.3,2.7,1c1,0.8,1.5,2,1.5,3.2v17.8h-3.8v-18l0,0l-0.1-0.1l-0.2-0.1
-    L445.8,72.4z"/>
-<path style="fill:#FFFFFF;" d="M454.9,75.5v-0.9c0-3.3,2.6-5.9,5.9-5.9l0,0H484c3.3,0,5.9,2.6,5.9,5.9l0,0v0.9c0,1.5-0.5,2.9-1.6,4
+                <svg version="1.1" id="_0-ta-text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 491.8 257.7" style="enable-background:new 0 0 491.8 257.7;" xml:space="preserve">
+                    <title>ta-txt</title>
+                    <path style="fill:#FFFFFF;" d="M445.8,72.4v-3.8h1.9c1,0,1.9,0.3,2.7,1c1,0.8,1.5,2,1.5,3.2v17.8h-3.8v-18l0,0l-0.1-0.1l-0.2-0.1
+    L445.8,72.4z" />
+                    <path style="fill:#FFFFFF;" d="M454.9,75.5v-0.9c0-3.3,2.6-5.9,5.9-5.9l0,0H484c3.3,0,5.9,2.6,5.9,5.9l0,0v0.9c0,1.5-0.5,2.9-1.6,4
     c1,1.1,1.6,2.5,1.6,4v1.1c0,3.3-2.6,5.9-5.9,5.9l0,0h-23.2c-3.3,0-5.9-2.6-5.9-5.9l0,0v-1.1c0-1.5,0.5-3,1.6-4
     C455.4,78.4,454.8,77,454.9,75.5z M486.2,74.6c0-1.2-1-2.1-2.2-2.2h-23.2c-1.2,0-2.1,1-2.2,2.2v0.9c0,1.2,1,2.2,2.1,2.2l0,0H484
     c1.2,0,2.1-1,2.2-2.2V74.6z M486.2,83.6c0-1.2-1-2.1-2.2-2.2h-23.2c-1.2,0-2.1,1-2.2,2.2v1.1c0,0.6,0.2,1.1,0.6,1.5s0.9,0.6,1.5,0.6
-    H484c0.6,0,1.1-0.2,1.5-0.6s0.6-0.9,0.6-1.5v-1.1H486.2z"/>
-<path style="fill:#FFFFFF;" d="M33.2,63.4L60,34.1v55.4h-5.9V49.3L33.2,72.1L12.3,49.3v40.2H6.4V34.1L33.2,63.4z"/>
-<path style="fill:#FFFFFF;" d="M87.8,44.8c12.8-0.1,23.2,10.3,23.2,23S100.7,90.9,88,91c-12.8,0-23.2-10.3-23.2-23
+    H484c0.6,0,1.1-0.2,1.5-0.6s0.6-0.9,0.6-1.5v-1.1H486.2z" />
+                    <path style="fill:#FFFFFF;" d="M33.2,63.4L60,34.1v55.4h-5.9V49.3L33.2,72.1L12.3,49.3v40.2H6.4V34.1L33.2,63.4z" />
+                    <path style="fill:#FFFFFF;" d="M87.8,44.8c12.8-0.1,23.2,10.3,23.2,23S100.7,90.9,88,91c-12.8,0-23.2-10.3-23.2-23
     c0-6.2,2.4-12.1,6.8-16.5C75.8,47.1,81.7,44.7,87.8,44.8z M87.8,50.6c-9.4,0-17.1,7.7-17,17.2c0,9.4,7.7,17.1,17.2,17
-    c9.4,0,17.1-7.7,17-17.2c0-4.5-1.8-8.8-5-12C96.7,52.4,92.3,50.5,87.8,50.6z"/>
-<path style="fill:#FFFFFF;" d="M203,75.8l5.1,2.9c-1.9,3.6-4.8,6.7-8.3,8.8c-11,6.6-25.2,3-31.7-8c-2.1-3.5-3.2-7.6-3.3-11.7
+    c9.4,0,17.1-7.7,17-17.2c0-4.5-1.8-8.8-5-12C96.7,52.4,92.3,50.5,87.8,50.6z" />
+                    <path style="fill:#FFFFFF;" d="M203,75.8l5.1,2.9c-1.9,3.6-4.8,6.7-8.3,8.8c-11,6.6-25.2,3-31.7-8c-2.1-3.5-3.2-7.6-3.3-11.7
     c-0.1-6.2,2.4-12.1,6.8-16.3c9.1-9,23.8-8.8,32.7,0.3c1.1,1.1,2,2.3,2.9,3.6l-29.7,26.2c5.6,4.2,13.2,4.6,19.2,1
     C199.4,80.9,201.6,78.6,203,75.8z M173.6,77.4l25.5-22.6c-7.1-6.2-17.9-5.5-24.1,1.6c-2.8,3.2-4.3,7.2-4.2,11.4
-    C170.7,71.2,171.7,74.6,173.6,77.4z"/>
-<path style="fill:#00A199;" d="M375.5,75.8l5.1,2.9c-1.9,3.6-4.8,6.7-8.3,8.8c-11,6.6-25.2,3-31.7-8c-2.1-3.5-3.2-7.6-3.3-11.7
+    C170.7,71.2,171.7,74.6,173.6,77.4z" />
+                    <path style="fill:#00A199;" d="M375.5,75.8l5.1,2.9c-1.9,3.6-4.8,6.7-8.3,8.8c-11,6.6-25.2,3-31.7-8c-2.1-3.5-3.2-7.6-3.3-11.7
     c-0.1-6.2,2.4-12.1,6.8-16.3c9.1-9,23.8-8.8,32.7,0.3c1.1,1.1,2,2.3,2.9,3.6L350,81.5c5.6,4.2,13.2,4.6,19.2,1
     C371.9,80.9,374.1,78.6,375.5,75.8z M346.1,77.4l25.5-22.6c-7.1-6.2-17.9-5.5-24.1,1.6c-2.8,3.2-4.3,7.2-4.2,11.4
-    C343.2,71.2,344.2,74.6,346.1,77.4z"/>
-<polygon style="fill:#00A199;" points="333.6,34.1 320.6,72.7 307.8,35 295,72.7 281.9,34.1 275.7,34.1 295,90.9 307.8,53.2 
-    320.6,90.9 339.8,34.1 "/>
-<path style="fill:#FFFFFF;" d="M236.6,45.9c-2-0.8-4.1-1.1-6.2-1.1c-9.4-0.2-17.2,7.4-17.4,16.8c0,0.2,0,0.4,0,0.5v27.4h5.9V62.1
-    c-0.1-3.1,1.1-6.1,3.4-8.3c2.2-2.1,5.1-3.3,8.2-3.3c1.3,0,2.5,0.2,3.7,0.6L236.6,45.9z"/>
-<path style="fill:#FFFFFF;" d="M270.4,49.8c-3.3-3.3-7.7-5.1-12.4-5l0,0c-9.4-0.1-17.2,7.4-17.4,16.8c0,0.2,0,0.4,0,0.5v27.4h5.8
+    C343.2,71.2,344.2,74.6,346.1,77.4z" />
+                    <polygon style="fill:#00A199;" points="333.6,34.1 320.6,72.7 307.8,35 295,72.7 281.9,34.1 275.7,34.1 295,90.9 307.8,53.2 
+    320.6,90.9 339.8,34.1 " />
+                    <path style="fill:#FFFFFF;" d="M236.6,45.9c-2-0.8-4.1-1.1-6.2-1.1c-9.4-0.2-17.2,7.4-17.4,16.8c0,0.2,0,0.4,0,0.5v27.4h5.9V62.1
+    c-0.1-3.1,1.1-6.1,3.4-8.3c2.2-2.1,5.1-3.3,8.2-3.3c1.3,0,2.5,0.2,3.7,0.6L236.6,45.9z" />
+                    <path style="fill:#FFFFFF;" d="M270.4,49.8c-3.3-3.3-7.7-5.1-12.4-5l0,0c-9.4-0.1-17.2,7.4-17.4,16.8c0,0.2,0,0.4,0,0.5v27.4h5.8
     V62.1c-0.1-3.1,1.1-6.1,3.4-8.3c2.2-2.1,5.1-3.3,8.2-3.3l0,0c3-0.1,6,1.1,8.2,3.3s3.4,5.2,3.3,8.3v27.4h5.9V62.1
-    C275.5,57.5,273.7,53,270.4,49.8z"/>
-<path style="fill:#00A199;" d="M385.8,34v33.8c0-1.5,0.1-3,0.4-4.5c-0.3,1.5-0.4,3-0.4,4.5c-0.1,6.1,2.4,11.9,6.7,16.2
+    C275.5,57.5,273.7,53,270.4,49.8z" />
+                    <path style="fill:#00A199;" d="M385.8,34v33.8c0-1.5,0.1-3,0.4-4.5c-0.3,1.5-0.4,3-0.4,4.5c-0.1,6.1,2.4,11.9,6.7,16.2
     c8.7,9.3,23.2,9.7,32.5,1s9.7-23.2,1-32.5c-0.3-0.4-0.7-0.7-1-1c-9-9-23.5-9-32.5,0c-0.2,0.2-0.3,0.4-0.5,0.6l-0.3,0.3V34H385.8z
      M391.6,67.8c0-9.5,7.7-17.1,17.2-17.1s17.1,7.7,17.1,17.2S418.2,85,408.7,85c-4.5,0-8.9-1.8-12.1-5S391.5,72.4,391.6,67.8z
-     M387.2,59.7c0-0.1,0.1-0.3,0.1-0.4C387.3,59.4,387.3,59.5,387.2,59.7L387.2,59.7z"/>
-<path style="fill:#00A199;" d="M164.2,23.2c0.2-1.3,0.3-2.6,0.3-3.8l0,0c0-7.4-3.1-13.8-7.5-16.3c-4.4,2.5-7.5,8.9-7.5,16.3l0,0
+     M387.2,59.7c0-0.1,0.1-0.3,0.1-0.4C387.3,59.4,387.3,59.5,387.2,59.7L387.2,59.7z" />
+                    <path style="fill:#00A199;" d="M164.2,23.2c0.2-1.3,0.3-2.6,0.3-3.8l0,0c0-7.4-3.1-13.8-7.5-16.3c-4.4,2.5-7.5,8.9-7.5,16.3l0,0
     c0,1.3,0.1,2.6,0.3,3.8c-1.9,1.7-3.1,4.2-3.1,6.7c0,1.6,0.4,3.2,1.3,4.6c1.2-1.5,2.8-2.6,4.7-3.2c0.4,0.7,0.9,1.4,1.5,2v19.2
     l-0.3-0.3c-0.2-0.2-0.3-0.4-0.5-0.6c-9-9-23.5-9-32.5,0s-9,23.5,0,32.5s23.5,9,32.5,0c4.3-4.3,6.7-10.1,6.8-16.2V33.1
     c0.5-0.6,0.9-1.2,1.3-1.8c1.8,0.6,3.5,1.7,4.7,3.2c0.8-1.4,1.3-3,1.3-4.6C167.3,27.3,166.2,24.9,164.2,23.2z M145.4,61
     c-3.3-2.1-7.7-1-9.8,2.3c-1.1,1.7-1.3,3.9-0.8,5.8c-2,0.6-3.3,2.5-3.3,4.5c0,0.1,0,0.1,0,0.2c-3.3,0.5-5.8,3.3-5.8,6.7
     c0,0.1,0,0.2,0,0.2c-0.3-0.3-0.6-0.5-0.9-0.8c-6.6-6.9-6.3-17.8,0.6-24.4c6.7-6.3,17.1-6.3,23.8,0c0.5,0.5,1,1.1,1.5,1.7
     C148.3,57.5,146.3,58.9,145.4,61z M157.1,18.1c-2.3,0-4.2-1.9-4.2-4.2s1.9-4.2,4.2-4.2s4.2,1.9,4.2,4.2l0,0
-    C161.3,16.2,159.4,18.1,157.1,18.1z"/>
-<polygon style="fill:#FFFFFF;" points="439.5,73.2 437,73.2 438.3,66 442.5,66 "/>
-<text transform="matrix(1 0 0 1 -0.4474 152.3661)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">技術在我們手上</text>
-<text transform="matrix(1 0 0 1 247.2726 152.0461)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">世界就在我們手上</text>
-<text transform="matrix(1 0 0 1 157.6544 257.6969)" style="fill:#FFFFFF; font-family:'HelveticaNeue-Bold'; font-size:20px; letter-spacing:2;">2018 / 7 / 18 - 19</text>
-<text transform="matrix(1 0 0 1 139.9226 220.096)" style="fill:#FFFFFF; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:20px; letter-spacing:2;">華南銀行國際會議中心</text>
-<path style="fill:#F9B700;" d="M232.5,140.5c-0.1-0.2-0.3-0.4-0.5-0.5l-5.2-1.2l1.9-8.2c0.1-0.4-0.1-0.7-0.4-0.9
+    C161.3,16.2,159.4,18.1,157.1,18.1z" />
+                    <polygon style="fill:#FFFFFF;" points="439.5,73.2 437,73.2 438.3,66 442.5,66 " />
+                    <text transform="matrix(1 0 0 1 -0.4474 152.3661)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">技術在我們手上</text>
+                    <text transform="matrix(1 0 0 1 247.2726 152.0461)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">世界就在我們手上</text>
+                    <text transform="matrix(1 0 0 1 157.6544 257.6969)" style="fill:#FFFFFF; font-family:'HelveticaNeue-Bold'; font-size:20px; letter-spacing:2;">2018 / 7 / 18 - 19</text>
+                    <text transform="matrix(1 0 0 1 139.9226 220.096)" style="fill:#FFFFFF; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:20px; letter-spacing:2;">華南銀行國際會議中心</text>
+                    <path style="fill:#F9B700;" d="M232.5,140.5c-0.1-0.2-0.3-0.4-0.5-0.5l-5.2-1.2l1.9-8.2c0.1-0.4-0.1-0.7-0.4-0.9
     c-0.3-0.2-0.7-0.1-0.9,0.2l-9,12c-0.2,0.2-0.2,0.5-0.1,0.7c0.1,0.2,0.3,0.4,0.5,0.5l5.2,1.2l-1.9,8.2c-0.1,0.4,0.1,0.7,0.4,0.9h0.2
-    c0.3,0.1,0.6,0,0.8-0.3l9-12C232.6,141,232.6,140.8,232.5,140.5z"/>
-</svg>
-
+    c0.3,0.1,0.6,0,0.8-0.3l9-12C232.6,141,232.6,140.8,232.5,140.5z" />
+                </svg>
             </div>
             <!--  -->
             <div class="rocket-box">
@@ -1226,13 +1221,13 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker01.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker01.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">Felix Rieseberg <span> </span></h4>
-                                <p>任職單位: Slack<br>
-                                Software Engineer</p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
+                            <h4 class="name">Felix Rieseberg <span> </span></h4>
+                            <p>任職單位: Slack
+                                <br> Software Engineer</p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker01">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker01" role="dialog" aria-labelledby="speaker01Label">
@@ -1251,8 +1246,8 @@
                                                 Felix Rieseberg
                                             </div>
                                             <div class="speaker-box__title">
-                                                任職單位: Slack<br>
-                                                Software Engineer
+                                                任職單位: Slack
+                                                <br> Software Engineer
                                             </div>
                                         </div>
                                     </div>
@@ -1289,13 +1284,13 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-11 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker02.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker02.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">Jeremy Keith <span> </span></h4>
-                                <p>任職單位: Clearleft<br>
-                                An Irish web developer, author, and speaker</p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker02">詳細介紹</button>
+                            <h4 class="name">Jeremy Keith <span> </span></h4>
+                            <p>任職單位: Clearleft
+                                <br> An Irish web developer, author, and speaker</p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker02">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker02" role="dialog" aria-labelledby="speaker02Label">
@@ -1313,8 +1308,8 @@
                                             Jeremy Keith
                                         </div>
                                         <div class="speaker-box__title">
-                                            任職單位: Clearleft <br>
-                                            An Irish web developer, author, and speaker.
+                                            任職單位: Clearleft
+                                            <br> An Irish web developer, author, and speaker.
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12 speaker-brief__body">
@@ -1337,12 +1332,11 @@
                                             </div> -->
                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                 <div class="speaker-brief__intro overflow-y">
-                                                    <p>Jeremy Keith lives in Brighton, England where he makes websites with the splendid design agency <a href="https://clearleft.com/" target="_blank">Clearleft</a>.
-                                                        You may know him from such books as <a href="https://domscripting.com/" target="_blank">DOM Scripting</a>, 
+                                                    <p>Jeremy Keith lives in Brighton, England where he makes websites with the splendid design agency <a href="https://clearleft.com/" target="_blank">Clearleft</a>. You may know him from such books as <a href="https://domscripting.com/" target="_blank">DOM Scripting</a>,
                                                         <a href="https://bulletproofajax.com/" target="_blank">Bulletproof Ajax</a>, <a href="https://html5forwebdesigners.com/" target="_blank">HTML5 For Web Designers</a>, <a href="https://resilientwebdesign.com/" target="_blank">Resilient Web Design</a>, and, most recently, <a href="https://abookapart.com/products/going-offline" target="_blank">Going Offline</a>.</p>
-                                                        <blockquote>
-                                                            Jeremy Keith 國際知名的 Web 設計師，任職於 Web 諮詢公司 Clearleft。著有 DOM Scripting、 Going offline、Html5 for Web Designers、Bulletproof 等書。
-                                                        </blockquote>
+                                                    <blockquote>
+                                                        Jeremy Keith 國際知名的 Web 設計師，任職於 Web 諮詢公司 Clearleft。著有 DOM Scripting、 Going offline、Html5 for Web Designers、Bulletproof 等書。
+                                                    </blockquote>
                                                 </div>
                                             </div>
                                         </div>
@@ -1355,14 +1349,14 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker03.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker03.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">Paul Bakaus <span> </span></h4>
-                                <p>任職單位: Google <br>
-                                    Developer Advocate, AMP (Accelerated Mobile Pages)
-                                </p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker03">詳細介紹</button>
+                            <h4 class="name">Paul Bakaus <span> </span></h4>
+                            <p>任職單位: Google
+                                <br> Developer Advocate, AMP (Accelerated Mobile Pages)
+                            </p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker03">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker03" role="dialog" aria-labelledby="speaker03Label">
@@ -1380,8 +1374,8 @@
                                             Paul Bakaus
                                         </div>
                                         <div class="speaker-box__title">
-                                            任職單位: Google<br>
-                                            Developer Advocate, AMP (Accelerated Mobile Pages)
+                                            任職單位: Google
+                                            <br> Developer Advocate, AMP (Accelerated Mobile Pages)
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12 speaker-brief__body">
@@ -1404,9 +1398,11 @@
                                             </div> -->
                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                 <div class="speaker-brief__intro overflow-y">
-                                                    <p>Paul Bakaus leads AMP Developer Relations and a variety of other initiatives centered on bringing great UX to everyone on the web. <br><br>
-                                                        He and his team help developers, designers and decision makers to create better, faster, more immersive and more convincing digital experiences.<br><br>
-                                                         Prior to joining Google, he created the popular UI library jQuery UI, and later the Aves Engine, the first interactive HTML5 game engine - which he ultimately sold to Zynga.</p>
+                                                    <p>Paul Bakaus leads AMP Developer Relations and a variety of other initiatives centered on bringing great UX to everyone on the web.
+                                                        <br>
+                                                        <br> He and his team help developers, designers and decision makers to create better, faster, more immersive and more convincing digital experiences.
+                                                        <br>
+                                                        <br> Prior to joining Google, he created the popular UI library jQuery UI, and later the Aves Engine, the first interactive HTML5 game engine - which he ultimately sold to Zynga.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1419,13 +1415,14 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker04.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker04.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">Terry Yin <span> </span></h4>
-                                <p>任職單位: Odd-e<br>
-                                Programmer</p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker04">詳細介紹</button>
+                            <h4 class="name">Terry Yin <span> </span></h4>
+                            <p>任職單位: Odd-e
+                                <br> Programmer
+                            </p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker04">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker04" role="dialog" aria-labelledby="speaker04Label">
@@ -1443,7 +1440,8 @@
                                             Terry Yin
                                         </div>
                                         <div class="speaker-box__title">
-                                            <p>任職單位: Odd-e<br>Terry Yin is a programmer for life, a reflective practitioner.
+                                            <p>任職單位: Odd-e
+                                                <br>Terry Yin is a programmer for life, a reflective practitioner.
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12 speaker-brief__body">
@@ -1466,7 +1464,15 @@
                                             </div> -->
                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                 <div class="speaker-brief__intro overflow-y">
-                                                    <p>Terry Yin is a programmer for life, a reflective practitioner.<br> He has 20 years experience in the software industry.<br><br> Terry has been working at Nokia for 10 years mostly in R&D management and Agile transformation before joining Odd-e.<br> He has coached Large Scale Scrum and software development technical practices in a large variety of software companies.<br><br> Terry has been an active programmer for more than 25 years, crossing many domains. He’s open source software static analyser (<a href="https://github.com/terryyin/lizard" target="_blank">https://github.com/terryyin/lizard</a>) is used in many large organization, e.g. Nokia, Ericsson and even the Atlas experiment at CERN.<br><br> He's also the developer of the <a href="https://less.works" target="_blank">https://less.works</a> web site. He’s also an experienced trainer and conference speaker.</p>
+                                                    <p>Terry Yin is a programmer for life, a reflective practitioner.
+                                                        <br> He has 20 years experience in the software industry.
+                                                        <br>
+                                                        <br> Terry has been working at Nokia for 10 years mostly in R&D management and Agile transformation before joining Odd-e.
+                                                        <br> He has coached Large Scale Scrum and software development technical practices in a large variety of software companies.
+                                                        <br>
+                                                        <br> Terry has been an active programmer for more than 25 years, crossing many domains. He’s open source software static analyser (<a href="https://github.com/terryyin/lizard" target="_blank">https://github.com/terryyin/lizard</a>) is used in many large organization, e.g. Nokia, Ericsson and even the Atlas experiment at CERN.
+                                                        <br>
+                                                        <br> He's also the developer of the <a href="https://less.works" target="_blank">https://less.works</a> web site. He’s also an experienced trainer and conference speaker.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1479,12 +1485,13 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker05.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker05.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">曾義峰 <span> Ant</span></h4>
-                                <p>任職單位: Surasia<br>CTO</p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker05">詳細介紹</button>
+                            <h4 class="name">曾義峰 <span> Ant</span></h4>
+                            <p>任職單位: Surasia
+                                <br>CTO</p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker05">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker05" role="dialog" aria-labelledby="speaker05Label">
@@ -1502,7 +1509,8 @@
                                             曾義峰 (Ant)
                                         </div>
                                         <div class="speaker-box__title">
-                                            任職單位:Surasia <br>職稱:CTO
+                                            任職單位:Surasia
+                                            <br>職稱:CTO
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12 speaker-brief__body">
@@ -1525,8 +1533,10 @@
                                             </div> -->
                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                 <div class="speaker-brief__intro overflow-y">
-                                                    <p>網路暱稱 Ant。在互聯網行業超過 12 年的研發工作經驗，7 年的團隊管理經歷，4 年顧問諮詢資歷。對軟體架構及技術有高度的實戰經驗。<br><br>
-                                                    專注於「程式設計」、「資訊安全」及「智慧財產權」領域，擁有數場演講及教育訓練講師經歷，同時撰寫過數篇發明專利。</p>
+                                                    <p>網路暱稱 Ant。在互聯網行業超過 12 年的研發工作經驗，7 年的團隊管理經歷，4 年顧問諮詢資歷。對軟體架構及技術有高度的實戰經驗。
+                                                        <br>
+                                                        <br> 專注於「程式設計」、「資訊安全」及「智慧財產權」領域，擁有數場演講及教育訓練講師經歷，同時撰寫過數篇發明專利。
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1539,13 +1549,13 @@
                     <!-- speaker__item -->
                     <div class="col-sm-10 col-sm-push-1 col-xs-12 speaker__item">
                         <div class="col-sm-5 col-xs-12 speaker__imgbox">
-                                <img src="img/speaker06.jpg" alt="" class="img-responsive">
+                            <img src="img/speaker06.jpg" alt="" class="img-responsive">
                         </div>
                         <div class="col-sm-7 col-xs-12 speaker__disc">
-                                <h4 class="name">李維翰<span> Paul Li</span></h4>
-                                <p>任職單位: Oath<br>
-                                Front end engineer</p>
-                                <button class="btn" data-toggle="modal" data-target="#speaker06">詳細介紹</button>
+                            <h4 class="name">李維翰<span> Paul Li</span></h4>
+                            <p>任職單位: Oath
+                                <br> Front end engineer</p>
+                            <button class="btn" data-toggle="modal" data-target="#speaker06">詳細介紹</button>
                         </div>
                     </div>
                     <div class="modal fade speaker-modal" id="speaker06" role="dialog" aria-labelledby="speaker06Label">
@@ -1563,8 +1573,8 @@
                                             李維翰 (Paul Li)
                                         </div>
                                         <div class="speaker-box__title">
-                                            任職單位: Oath<br>
-                                            Front end engineer
+                                            任職單位: Oath
+                                            <br> Front end engineer
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12 speaker-brief__body">
@@ -1587,10 +1597,13 @@
                                             </div> -->
                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                 <div class="speaker-brief__intro overflow-y">
-                                                    <p>Paul is the lead programmer of the AMP project at Yahoo Taiwan and is always eager for modern web technologies.<br><br>
-He is also a frontend engineer at Yahoo Taiwan focusing on the user experience and bringing a vivid and smooth flow for users.<br><br>
-Paul surveyed the AMP project during Q4 of last year and adopted it for an e-commerce service - Auction in Yahoo Taiwan.<br><br>
-To make gains in both better mobile UX and organic traffic, AMP adoption will be his major focus in 2018.</p>
+                                                    <p>Paul is the lead programmer of the AMP project at Yahoo Taiwan and is always eager for modern web technologies.
+                                                        <br>
+                                                        <br> He is also a frontend engineer at Yahoo Taiwan focusing on the user experience and bringing a vivid and smooth flow for users.
+                                                        <br>
+                                                        <br> Paul surveyed the AMP project during Q4 of last year and adopted it for an e-commerce service - Auction in Yahoo Taiwan.
+                                                        <br>
+                                                        <br> To make gains in both better mobile UX and organic traffic, AMP adoption will be his major focus in 2018.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1842,8 +1855,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">立即購票</a>
+                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">立即購票</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
@@ -1857,8 +1869,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                             雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。
                         </div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180018" target=
-                            "_blank">立即購票</a>
+                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180018" target="_blank">立即購票</a>
                         </div>
                         <!-- <div class="col-sm-12 disc__attn">
                                 <a class="btn btn-txt" data-toggle="modal" data-target="#ticketModal">
@@ -1888,12 +1899,14 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         <div class="col-sm-2 ticket__item__price">
                             <h3>$1,990</h3>
                         </div>
-                        <div class="col-sm-5 ticket__item__disc"><p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。<br>（限額 30 名，售完為止）</p></div>
+                        <div class="col-sm-5 ticket__item__disc">
+                            <p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。
+                                <br>（限額 30 名，售完為止）</p>
+                        </div>
                         <div class="col-sm-2 ticket__item__btn">
                             <!-- <a class="btn btn--stop inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
                             "_blank">停止購票</a> -->
-                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">尚未開賣</a>
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
@@ -1905,8 +1918,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">尚未開賣</a>
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
@@ -1918,8 +1930,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">尚未開賣</a>
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                         </div>
                     </div>
                     <div class="col-sm12 ticket__item">
@@ -1931,8 +1942,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票，填寫表單回傳報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">尚未開賣</a>
+                            <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm12 ticket__item">
@@ -1970,8 +1980,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                         </div>
                         <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張，現場報名。</div>
                         <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--undo inactivelink inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target=
-                            "_blank">尚未開賣</a>
+                            <a class="btn btn--undo inactivelink inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                         </div>
                     </div>
                 </div>
@@ -2046,15 +2055,15 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
             <div class="row">
                 <div class="col-sm-12 col-xs-12 footer__contact">
                     <div class="col-sm-8">
-                            <h5>聯絡 Modern Web 服務小組</h5>
-                            <ul>
-                                <li>客服專線：<a href="tel:02-25622880">02-25622880 #3622 </a> 開小姐（ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
-                                <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
-                            </ul>
-                            <ul>
-                                <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
-                            </ul>
-                            <p>iThome 版權所有</p>
+                        <h5>聯絡 Modern Web 服務小組</h5>
+                        <ul>
+                            <li>客服專線：<a href="tel:02-25622880">02-25622880 #3622 </a> 開小姐（ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
+                            <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
+                        </ul>
+                        <ul>
+                            <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
+                        </ul>
+                        <p>iThome 版權所有</p>
                     </div>
                     <div class="col-sm-4">
                         <div class="col-sm-12">
@@ -2080,7 +2089,7 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
     <div id="sinuous_bg"></div>
     <canvas id="world" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px; display: none;"></canvas>
     <div id="status" class="ui" style="display: none;"></div>
-    <div id="message" class="ui" style="left: 0px; top: 200px; display: none; z-index: 0;">        
+    <div id="message" class="ui" style="left: 0px; top: 200px; display: none; z-index: 0;">
     </div>
     <!-- <div id="btn_sinuous_exit">Exit</div> -->
     <!-- modal_sinous_start -->
@@ -2121,8 +2130,8 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
                 </div>
                 <div class="clearfix"></div>
                 <div class="game-modal__btn-group">
-                    <!-- <button id="btn_sinuous_continue" type="button" class="btn btn game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button> -->
-                    <button id="btn_sinuous_share_fb" type="button" class="game-modal__btn game-sinuous_modal__btn">分享戰績</button>                    
+                    <button id="btn_sinuous_continue" type="button" class="game-modal__btn game-sinuous_modal__btn--solid" data-dismiss="modal">繼續作戰</button>
+                    <button id="btn_sinuous_share_fb" type="button" class="game-modal__btn game-sinuous_modal__btn">分享戰績</button>
                     <button id="btn_back2" type="button" class="game-modal__btn game-sinuous_modal__btn" data-dismiss="modal">返回基地</button>
                 </div>
             </div>
@@ -2182,9 +2191,9 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
     </div>
     <!-- /.modal_game_over -->
     <!-- end_of_game -->
-    <!-- flappy -->        
+    <!-- flappy -->
     <div id="div1" class="fa"></div>
-    <div id="flappy_bg"></div>  
+    <div id="flappy_bg"></div>
     <!-- modal_flappy_start -->
     <div id="modal_flappy_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -2237,191 +2246,178 @@ To make gains in both better mobile UX and organic traffic, AMP adoption will be
     <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
     <script src="https://connect.facebook.net/zh_TW/all.js"></script>
     <script src="js/vue.min.js"></script>
-
-    <script src="js/app.js"></script>
     <script src="js/confapi.js" data-nid="2073"></script>
     <script src="game/alien/game.js"></script>
     <script src="game/sinuous/game.js"></script>
     <!-- <script src="game/flappy/main.js"></script>     -->
+    <script src="js/app.js"></script>
     <script>
+    $('.rock').mouseenter(function() {
+        $('.rock').css('cursor', 'pointer');
+        $('.rock3').addClass('rock-rotate1');
+        $('.rock2').addClass('rock-rotate2');
+    });
 
-        $('.rock').mouseenter(function() {
-            $('.rock').css('cursor', 'pointer');
-            $('.rock3').addClass('rock-rotate1');
-            $('.rock2').addClass('rock-rotate2');
+    // scroll menu
+    var $window = $(window);
+    var $menu = $('#menu');
+    var checkHasElm = function(arrID) {
+        var $detect;
+        for (var i = arrID.length - 1; i >= 0; i--) {
+            if ($(arrID[i]).length > 0) {
+                $detect = $(arrID[i]);
+                break;
+            }
+        }
+        return $detect;
+    };
+    var $menu_target = (function() {
+        return checkHasElm([
+            '#about',
+            '#agenda',
+            '#jobs',
+            '#event'
+        ]);
+    }());
+    var $buy_target = (function() {
+        return checkHasElm([
+            '#speaker',
+            '#agenda',
+            '#jobs',
+            '#event'
+        ]);
+    }());
+    var $buy_ticket_btn = $('#buy_ticket');
+    var timer;
+    // mobile
+    $(".menu__burger, .menu__mask").on('click', function() {
+        $('.menu__burger').toggleClass("on");
+        $('.menu__content').toggleClass('on');
+        $('.menu').toggleClass('on');
+        $('body').toggleClass('is-hidden');
+    });
+
+
+    // scroll
+    $('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function() {
+        var target = '#' + $(this).attr('href').split('#')[1];
+        goScroll(target);
+        return false;
+    });
+
+    function goScroll(target) {
+        var $target = $(target);
+        var target_top = $target.offset().top;
+        var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
+        var sTop = target_top - header_height;
+        $('html, body').stop().animate({
+            scrollTop: sTop
+        }, 500);
+    }
+
+    location.hash && goScroll(location.hash);
+    </script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript">
+    //by mue
+    $(document).ready(function() {
+        $("#loading").hide();
+    });
+
+    var modernwebDesc = 'Modern Web 2018 ─ 技術在我們手上，世界就在我們手上';
+    var modernwebUrl = location.href;
+
+    $('#btn_share_fb').click(function() {
+        // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+        var score = $('#score').text();
+        FB.init({
+            appId: '1293787864089459', //test FBid
+            status: true,
+            xfbml: true,
+            version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
         });
 
-        var toggleScroll = function(boolean) {
-    if (boolean) {
-        $(window).off('scroll touchmove mousewheel');
-    } else {
-        $(window).on('scroll touchmove mousewheel', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        })
-    }
-}
-    
-// scroll menu
-var $window = $(window);
-var $menu = $('#menu');
-var checkHasElm = function(arrID) {
-    var $detect;
-    for (var i = arrID.length - 1; i >= 0; i--) {
-        if ($(arrID[i]).length > 0) {
-            $detect = $(arrID[i]);
-            break;
-        }
-    }
-    return $detect;
-};
-var $menu_target = (function() {
-    return checkHasElm([
-        '#about',
-        '#agenda',
-        '#jobs',
-        '#event'
-    ]);
-}());
-var $buy_target = (function() {
-    return checkHasElm([
-        '#speaker',
-        '#agenda',
-        '#jobs',
-        '#event'
-    ]);
-}());
-var $buy_ticket_btn = $('#buy_ticket');
-var timer;
-// mobile
-$(".menu__burger, .menu__mask").on('click', function() {
-    $('.menu__burger').toggleClass("on");
-    $('.menu__content').toggleClass('on');
-    $('.menu').toggleClass('on');
-    $('body').toggleClass('is-hidden');
-});
+        // var FBTitle = 'tile';
+        var modernwebPic = 'https://modernweb.tw/img/FBU.jpg';
 
-
-// scroll
-$('#menu a[href^="#"]:not([href="#"]), #buy_ticket').click(function() {
-    var target = '#' + $(this).attr('href').split('#')[1];
-    goScroll(target);
-    return false;
-});
-
-function goScroll(target) {
-    var $target = $(target);
-    var target_top = $target.offset().top;
-    var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
-    var sTop = target_top - header_height;
-    $('html, body').stop().animate({
-        scrollTop: sTop
-    }, 500);
-}
-
-location.hash && goScroll(location.hash);
-
-
-    </script>
-    <script>
-    (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script type="text/javascript"> //by mue
-    $(document).ready(function(){
-            $("#loading").hide();
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.shares',
+            link: modernwebUrl,
+            action_properties: JSON.stringify({
+                object: {
+                    'og:title': '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
+                    'og:description': modernwebDesc,
+                    'og:image': modernwebPic
+                }
+            })
+        }, function(response) {});
     });
 
-var modernwebDesc = 'Modern Web 2018 ─ 技術在我們手上，世界就在我們手上';    
-var modernwebUrl = location.href;
+    $('#btn_flappy_share_fb').click(function() {
+        // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+        var score = $('#flappy_score').text();
+        FB.init({
+            appId: '1615126938703368',
+            status: true,
+            xfbml: true,
+            version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+        });
+        var modernwebPic = 'https://modernweb.tw/img/FBP.jpg';
 
-$('#btn_share_fb').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#score').text();    
-    FB.init({
-        appId: '1293787864089459', //test FBid
-        status     : true,
-        xfbml      : true,
-        version    : 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.shares',
+            link: modernwebUrl,
+            action_properties: JSON.stringify({
+                object: {
+                    'og:title': '我在 Modern Web 2018 隱藏任務中，越過牛牛大軍與牠的快樂伙伴，獲得 ' + score + ' 分，一起來挑戰吧！',
+                    'og:description': modernwebDesc,
+                    'og:image': modernwebPic
+                }
+            })
+        }, function(response) {});
     });
 
-    // var FBTitle = 'tile';
-    var modernwebPic = 'https://modernweb.tw/img/FBU.jpg';
 
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.shares',
-        link: modernwebUrl,       
-        action_properties: JSON.stringify({
-                        object: {
-                            'og:title': '我在 Modern Web 2018 隱藏任務中，迎擊可愛又迷人的外星怪獸，獲得 ' + score + ' 分，一起來挑戰吧！',
-                            'og:description': modernwebDesc,
-                            'og:image': modernwebPic
-                        }
-                    })
-    }, function(response) {});
-});
 
-$('#btn_flappy_share_fb').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    var score = $('#flappy_score').text();    
-    FB.init({
-        appId: '1615126938703368',
-        status     : true,
-        xfbml      : true,
-        version    : 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+    $('#btn_sinuous_share_fb').click(function() {
+        // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        var score = $('#sinuous_score').text();
+        FB.init({
+            appId: '1293787864089459', //test FBid
+            status: true,
+            xfbml: true,
+            version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
+        });
+        var modernwebPic = 'https://modernweb.tw/img/FBR.jpg';
+
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.shares',
+            link: modernwebUrl,
+            action_properties: JSON.stringify({
+                object: {
+                    'og:title': '我在 Modern Web 2018 隱藏任務中，閃避迎面而來的無數殞石，獲得 ' + score + ' 分，一起來挑戰吧！',
+                    'og:description': modernwebDesc,
+                    'og:image': modernwebPic
+                }
+            })
+        }, function(response) {});
     });
-    var modernwebPic = 'https://modernweb.tw/img/FBP.jpg';
-
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.shares',
-        link: modernwebUrl,       
-        action_properties: JSON.stringify({
-                        object: {
-                            'og:title': '我在 Modern Web 2018 隱藏任務中，越過牛牛大軍與牠的快樂伙伴，獲得 ' + score + ' 分，一起來挑戰吧！',
-                            'og:description': modernwebDesc,
-                            'og:image': modernwebPic
-                        }
-                    })
-    }, function(response) {});
-});
-
-
-
-$('#btn_sinuous_share_fb').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
-    event.preventDefault();
-            event.stopImmediatePropagation();
-    var score = $('#sinuous_score').text();     
-    FB.init({
-        appId: '1293787864089459', //test FBid
-        status     : true,
-        xfbml      : true,
-        version    : 'v3.0' // or v2.6, v2.5, v2.4, v2.3
-    });
-    var modernwebPic = 'https://modernweb.tw/img/FBR.jpg';
-
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.shares',
-        link: modernwebUrl,       
-        action_properties: JSON.stringify({
-                        object: {
-                            'og:title': '我在 Modern Web 2018 隱藏任務中，閃避迎面而來的無數殞石，獲得 ' + score + ' 分，一起來挑戰吧！',
-                            'og:description': modernwebDesc,
-                            'og:image': modernwebPic
-                        }
-                    })
-    }, function(response) {});
-});
     </script>
 </body>
 <!-- test -->
+
 </html>
