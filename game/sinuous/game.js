@@ -62,7 +62,7 @@ SinuousWorld = new function() {
         message = document.getElementById('message');
         share = document.getElementById('share');
         title = document.getElementById('title');
-        startButton = document.getElementById('startButton');
+        btnSinuousContinue = document.getElementById('btn_sinuous_continue');
         btnSinuousStart = document.getElementById('btn_sinuous_start');
 
         if (canvas && canvas.getContext) {
@@ -76,8 +76,8 @@ SinuousWorld = new function() {
             // document.addEventListener('touchmove', documentTouchMoveHandler, false);
             // document.addEventListener('touchend', documentTouchEndHandler, false);
             window.addEventListener('resize', windowResizeHandler, false);
-            // startButton.addEventListener('click', startButtonClickHandler, false);
             btnSinuousStart.addEventListener('click', btnSinuousStartClickHandler, false);
+            btnSinuousContinue.addEventListener('click', btnSinuousStartClickHandler, false);
 
             player = new Player();
 
@@ -88,31 +88,6 @@ SinuousWorld = new function() {
         }
     };
 
-    function startButtonClickHandler(event) {
-        event.preventDefault();
-
-        if (playing == false) {
-            playing = true;
-
-            enemies = [];
-            boosts = [];
-            score = 0;
-            difficulty = 1;
-            velocity = 0;
-
-            player.trail = [];
-            player.trail1 = [];
-            player.trail2 = [];
-            player.position.x = mouseX;
-            player.position.y = mouseY;
-            player.boost = 0;
-
-            // message.style.display = 'none';
-            // status.style.display = 'block';
-
-            time = new Date().getTime();            
-        }
-    }
 
     function btnSinuousStartClickHandler(event) {
         event.preventDefault();
@@ -123,7 +98,7 @@ SinuousWorld = new function() {
             enemies = [];
             boosts = [];
             score = 0;
-            difficulty = 1;            
+            difficulty = 1;
 
             player.trail = [];
             player.trail1 = [];
@@ -136,6 +111,7 @@ SinuousWorld = new function() {
             // status.style.display = 'block';
 
             time = new Date().getTime();
+
         }
     }
 
@@ -367,17 +343,8 @@ SinuousWorld = new function() {
             context.beginPath();
             context.fillStyle = 'rgba(255, 255, 255, 0)';
             var meteoImg = new Image();
-            // var meteorite = ['meteorite1.png', 'meteorite2.png', 'meteorite3.png'];
-            // var rand = Math.floor(i / (enemies.length / meteorite.length));
-            // var meteorite = ["meteorite1.png", "meteorite2.png", "meteorite3.png"];
             meteoImg = meteorite[p.Src];
-            // console.log(p.Src, meteoImg.src);
 
-            // console.log(i, enemies.length, meteorite.length);
-            // var meteoImg1 = new Image();
-            // var ranSrc = 'meteorite' + Math.ceil(Math.random() * 3) + '.png';
-            // meteoImg1.src = ranSrc;
-            // meteoImg1.src = "meteorite1.png";
             context.drawImage(meteoImg, p.position.x - 10, p.position.y - 10);
 
             context.arc(p.position.x, p.position.y, p.size / 2, 0, Math.PI * 2, true);
@@ -397,7 +364,7 @@ SinuousWorld = new function() {
             p = boosts[i];
 
             if (p.distanceTo(player.position) < (player.size + p.size) * 0.5 && playing) {
-                player.boost = 300;
+                player.boost = 500;
 
                 for (j = 0; j < enemies.length; j++) {
                     e = enemies[j];
