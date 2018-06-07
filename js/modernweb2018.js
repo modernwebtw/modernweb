@@ -107,31 +107,6 @@ var modernweb2018 = new Vue({
         sortSessions: function() {
             var session = this.Session;
             return _.orderBy(session, 'session_start')
-        },
-        sortSessionByTime: function() {
-            var sessions = this.Session;
-            // var dates = session.map(function(ele){return ele.sessioin_date.value}).sort();
-            var dates = [];
-            for (var session in sessions) {
-                dates.push(session.start_Date);
-                dates.sort();
-            }
-
-            dates = $.unique(dates);
-            var sessionSortedByTime = [];
-            dates.forEach(function(element, index) {
-                sessionSortedByTime.push({ time: element });
-            });
-
-            for (var i = 0; i < sessionSortedByTime.length; i++) {
-                sessionSortedByTime[i].sessionOfSameTime = [];
-                for (var j = 0; j < session.length; j++) {
-                    if (session[j].start_Date == sessionSortedByTime[i].time) {
-                        sessionSortedByTime[i].sessionOfSameTime.push(session[j]);
-                    }
-                }
-            }
-            return sessionSortedByTime;
         }
     },
     methods: {
