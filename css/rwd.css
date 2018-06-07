@@ -11,6 +11,10 @@
     left: 23%;
 	}
 }
+@media (max-width:1200px){
+	.section--speaker--china .special .speaker--china__img{max-width: 100%;}
+}
+
 @media screen and (max-width:1024px ) {
 	.section--ticket .ticket__item .ticket__item__btn .btn{
 		width: 100%;
@@ -26,6 +30,7 @@
     top: -99px;
     background-size: cover;
 	}
+
 	.section--history:after {
     width: 110%;
     left: -5%;
@@ -86,6 +91,13 @@
 	.section--speaker .speaker__item .speaker__disc{ text-align: center; left: 0;}
  	.modal.in .modal-dialog{height: 110px; width: 100%;}
 
+ 	/* speaker china */
+ 	.section--speaker--china .special .deco-special .sp-h4{left: calc(50% - 50px);}
+ 	.section--speaker--china .speaker--china--list .speaker-box {margin: 5% 0;}
+ 	.section--speaker--china .speaker--china--list .speaker-box .speaker-box__name{ font-size: 20px; }
+ 	.section--speaker--china .speaker--china--list .speaker-box .speaker-box__title{font-size: 18px;}
+
+
 	.section--quote{display: none;}
 
 	/* history */
@@ -112,6 +124,9 @@
 	}
 	.section--ticket .ticket__item .ticket__item__title h3{ margin-left: 0;}
 	.section--ticket .ticket__item .dot:before{left: calc(50% - 6px);}
+
+	/* content agenda */
+	.kv-head{height: 22vh;}
 }
 
 @media screen and (max-width:667px ){
