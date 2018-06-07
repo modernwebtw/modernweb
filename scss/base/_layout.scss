@@ -49,9 +49,16 @@ p:last-child { margin-bottom: 0px; }
 p { color: #ddd; }
 ul{list-style: none; line-height: 1.9em;}
 ul li{ list-style: none;}
+
 .ma__t30{margin-top: 30px;}
 .overflow-y{overflow-y: visible;}
+.ma10{margin:10px;}
+.mat30{margin-top: 30px;}
+.mat20{margin-top: 20px;}
+.mab10{margin-bottom: 10px;}
 
+.border-china{ border: 3px solid #da8027;}
+.border-group{ border: 3px solid $font-color-pu3;}
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
