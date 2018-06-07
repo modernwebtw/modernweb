@@ -305,7 +305,7 @@ $('#btn_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#score').text();
     FB.init({
-        appId: '1293787864089459', //test FBid
+        appId: '1615126938703368',
         status: true,
         xfbml: true,
         version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
@@ -332,7 +332,7 @@ $('#btn_flappy_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#flappy_score').text();
     FB.init({
-        appId: '1615126938703368',
+        appId: '1293787864089459', //test FBid
         status: true,
         xfbml: true,
         version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
@@ -361,7 +361,7 @@ $('#btn_sinuous_share_fb').click(function() {
     event.stopImmediatePropagation();
     var score = $('#sinuous_score').text();
     FB.init({
-        appId: '1293787864089459', //test FBid
+        appId: '1615126938703368',
         status: true,
         xfbml: true,
         version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3
