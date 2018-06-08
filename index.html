@@ -12,6 +12,7 @@
     <meta property="og:image" content="https://modernweb.tw/img/fbimg2018.jpg" />
     <meta property="og:image:width" content="601" />
     <meta property="og:image:height" content="346" />
+    <link rel="icon" type="image/png" href="img/favicon.gif" sizes="16x16">
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -131,7 +132,7 @@
                             <li><a href="#special">2018特色</a></li>
                             <li><a href="#speaker">講者</a></li>
                             <li><a href="#ticket">售票</a></li>
-                            <!-- <li><a href="#history">里程碑</a></li> -->
+                            <li><a href="agenda.html">議程</a></li>
                             <li class="hidden-sm-down">
                                 <div class="dropdown hidden-sm-down">
                                     <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
@@ -1169,10 +1170,10 @@
     C148.3,57.5,146.3,58.9,145.4,61z M157.1,18.1c-2.3,0-4.2-1.9-4.2-4.2s1.9-4.2,4.2-4.2s4.2,1.9,4.2,4.2l0,0
     C161.3,16.2,159.4,18.1,157.1,18.1z" />
                         <polygon style="fill:#FFFFFF;" points="439.5,73.2 437,73.2 438.3,66 442.5,66 " />
-                        <text transform="matrix(1 0 0 1 -0.4474 152.3661)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">技術在我們手上</text>
-                        <text transform="matrix(1 0 0 1 247.2726 152.0461)" style="fill:#937BD6; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:28px;">世界就在我們手上</text>
-                        <text transform="matrix(1 0 0 1 157.6544 257.6969)" style="fill:#FFFFFF; font-family:'HelveticaNeue-Bold'; font-size:20px; letter-spacing:2;">2018 / 7 / 18 - 19</text>
-                        <text transform="matrix(1 0 0 1 139.9226 220.096)" style="fill:#FFFFFF; font-family:'NotoSansCJKtc-Medium-B5pc-H'; font-size:20px; letter-spacing:2;">華南銀行國際會議中心</text>
+                        <text transform="matrix(1 0 0 1 -0.4474 152.3661)" style="fill:#937BD6; font-size:28px;">技術在我們手上</text>
+                        <text transform="matrix(1 0 0 1 247.2726 152.0461)" style="fill:#937BD6; font-family: 'Open Sans',微軟正黑體, sans-serif; font-size:28px;">世界就在我們手上</text>
+                        <text transform="matrix(1 0 0 1 157.6544 257.6969)" style="fill:#FFFFFF; font-family: 'Open Sans',微軟正黑體, sans-serif; font-size:20px; letter-spacing:2;">2018 / 7 / 18 - 19</text>
+                        <text transform="matrix(1 0 0 1 139.9226 220.096)" style="fill:#FFFFFF; font-family: 'Open Sans',微軟正黑體, sans-serif; font-size:20px; letter-spacing:2;">華南銀行國際會議中心</text>
                         <path style="fill:#F9B700;" d="M232.5,140.5c-0.1-0.2-0.3-0.4-0.5-0.5l-5.2-1.2l1.9-8.2c0.1-0.4-0.1-0.7-0.4-0.9
     c-0.3-0.2-0.7-0.1-0.9,0.2l-9,12c-0.2,0.2-0.2,0.5-0.1,0.7c0.1,0.2,0.3,0.4,0.5,0.5l5.2,1.2l-1.9,8.2c-0.1,0.4,0.1,0.7,0.4,0.9h0.2
     c0.3,0.1,0.6,0,0.8-0.3l9-12C232.6,141,232.6,140.8,232.5,140.5z" />
@@ -1270,6 +1271,120 @@
                                             </div> -->
                                                         <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                             <div class="speaker-brief__intro overflow-y">
+                                                                <p>Paul is the lead programmer of the AMP project at Yahoo Taiwan and is always eager for modern web technologies.
+                                                                    <br>
+                                                                    <br> He is also a frontend engineer at Yahoo Taiwan focusing on the user experience and bringing a vivid and smooth flow for users.
+                                                                    <br>
+                                                                    <br> Paul surveyed the AMP project during Q4 of last year and adopted it for an e-commerce service - Auction in Yahoo Taiwan.
+                                                                    <br>
+                                                                    <br> To make gains in both better mobile UX and organic traffic, AMP adoption will be his major focus in 2018.</p>
+                                                                <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
+                                                                    <div class="speaker-brief__intro overflow-y">
+                                                                        <p v-html="speaker.profile"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end of speaker__item -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="section--speaker--china">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <h3 class="title">中國特邀<span>Featured Speakers</span></h3>
+                        <div class="col-sm-12 col-xs-12 special">
+                            <div class="deco-special">
+                                <h4 class="sp-h4">特別策劃</h4></div>
+                            <div class="col-sm-6">
+                                <h4>Modern Web, Modern China</h4>
+                                <p>Modern Web 2017 邀請史海峰（噹噹網架構部總監）、程劭非（阿里巴巴無線事業部高級技術專家）兩位擔任 Web 架構與前端技術議題的出品人，策劃、邀集中國 Web 公司帶來最新、最深入的技術與實作經驗，來台與本地開發者做最深入的交流。</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="col-sm-12 col-xs-12 mab10">
+                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                                    <div class="col-sm-9 col-xs-9">
+                                        <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
+                                        <h5 class="speaker--china__name">程劭非</h5>
+                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-xs-12 mab10">
+                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                                    <div class="col-sm-9 col-xs-9">
+                                        <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
+                                        <h5 class="speaker--china__name">程劭非</h5>
+                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- special row 01 -->
+                        <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
+                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.china">
+                                <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
+                                    <div class="speaker-box__head">
+                                        <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
+                                    </div>
+                                    <div class="speaker-box__name">
+                                        <h4>{{ speaker.speaker }}</h4>
+                                    </div>
+                                    <div class="speaker-box__title">
+                                        {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}
+                                    </div>
+                                    <!-- <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div> -->
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade speaker-modal" :id="'ca-speaker' + speaker.target_id" role="dialog" aria-labelledby="speaker01Label">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body row">
+                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
+                                                    <div class="col-xs-4">
+                                                        <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
+                                                    </div>
+                                                    <div class="col-xs-8">
+                                                        <div class="speaker-box__name">
+                                                            {{ speaker.speaker }}
+                                                        </div>
+                                                        <div class="speaker-box__title">
+                                                            任職單位: {{ speaker.company }}
+                                                            <br> {{ speaker.department }}{{ speaker.position }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                                    <hr>
+                                                    <ul class="list-inline" role="tablist">
+                                                        <!-- <li role="presentation">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li> -->
+                                                        <li role="presentation" class="active">
+                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>議程介紹議程介紹議程介紹</p>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
+                                                            <div class="speaker-brief__intro overflow-y">
                                                                 <p v-html="speaker.profile"></p>
                                                             </div>
                                                         </div>
@@ -1279,32 +1394,93 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Modal -->
                             </div>
                         </div>
-                        <!--end of speaker__item -->
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="section--speaker">
-        <div class="container speaker--china">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <h3 class="title">中國特邀<span>Featured Speakers</span></h3>
-                    <div class=""></div>
+        <section class="section--speaker">
+            <div class="container speaker--group">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <h3 class="title">講師陣容<span>Speakers</span></h3>
+                        <div class="col-sm-12">
+                            <!-- special row 01 -->
+                            <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
+                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal">
+                                    <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
+                                        <div class="speaker-box__head">
+                                            <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
+                                        </div>
+                                        <div class="speaker-box__name">
+                                            <h4>{{ speaker.speaker }}</h4>
+                                        </div>
+                                        <div class="speaker-box__title">
+                                            {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}
+                                        </div>
+                                        <!-- <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div> -->
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade speaker-modal" :id="'ca-speaker' + speaker.target_id" role="dialog" aria-labelledby="speaker01Label">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body row">
+                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
+                                                        <div class="col-xs-4">
+                                                            <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
+                                                        </div>
+                                                        <div class="col-xs-8">
+                                                            <div class="speaker-box__name">
+                                                                {{ speaker.speaker }}
+                                                            </div>
+                                                            <div class="speaker-box__title">
+                                                                任職單位: {{ speaker.company }}
+                                                                <br> {{ speaker.department }}{{ speaker.position }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                                        <hr>
+                                                        <ul class="list-inline" role="tablist">
+                                                            <!-- <li role="presentation">
+                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                            </li> -->
+                                                            <li role="presentation" class="active">
+                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
+                                                <div class="speaker-brief__agenda">
+                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                        <p>議程介紹議程介紹議程介紹</p>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
+                                                                <div class="speaker-brief__intro overflow-y">
+                                                                    <p v-html="speaker.profile"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section--speaker">
-        <div class="container speaker--group">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <h3 class="title">中國特邀<span>Featured Speakers</span></h3>
-                </div>
-            </div>
-        </div>
-    </section> -->
+        </section>
         <section class="section--history">
             <div class="container">
                 <div class="row">
@@ -1432,96 +1608,26 @@
                                                 <p class="carousel-inner__name">— 2017 參加者
                                                     <br><span></span></p>
                                             </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「謝謝主辦單位策劃了這麼好的活動，國內外大咖的Keynote Speech讓人聽到津津有味」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2017 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「這兩天過的很充實愉快！謝謝你們」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2017 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「除了精彩議程外，飲食、充電無憂的環境真的很棒！」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2017 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「有聽到想聽的！讚！」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2016 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「閃電秀很有趣，不過安排在用餐時間很神秘」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2017 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「覺得整體活動非常好，吃喝玩樂都有！當然還有學習啦」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2016 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「聽演講聽的很輕鬆～」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2016 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="carousel-inner__q col-sm-11 col-sm-push-1 text-left">
-                                                <h3>「Wifi有時不太穩，不過大會的整體安排很棒，期待明年～」<br><span></span></h3>
-                                            </div>
-                                            <div class="col-sm-4 text-left pull-right">
-                                                <p class="carousel-inner__name">— 2017 參加者
-                                                    <br><span></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                    <i class="fa fa-angle-left"></i>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                    <i class="fa fa-angle-right"></i>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </section>
+        <!-- <section class="section--speaker">
+        <div class="container speaker--china">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <h3 class="title">中國特邀<span>Featured Speakers</span></h3>
+                    <div class=""></div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section--speaker">
+        <div class="container speaker--group">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <h3 class="title">中國特邀<span>Featured Speakers</span></h3>
+                </div>
             </div>
-        </section>
+        </div>
+    </section> -->
         <section class="section--ticket" id="ticket">
             <div class="container">
                 <div class="row">
@@ -1678,29 +1784,29 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
-    <section class="section--org" id="org">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="title">主辦單位<span>Organizer</span></h3>
-                    <div class="org__logobox"><img src="img/ithome.svg" alt="" class="img-responsive"></div>
+            </div>
+        </section>
+        <section class="section--org" id="org">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="title">主辦單位<span>Organizer</span></h3>
+                        <div class="org__logobox"><img src="img/ithome.svg" alt="" class="img-responsive"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section--spon" id="spon">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <h3 class="title">贊助廠商<span>Sponsors</span></h3>
-                </div>
-                <div class="col-sm-12 col-xs-12 spon__diam">
-                    <h4>鑽石級</h4>
-                    <div class="col-sm-12"><img src="img/logo-dia01.png" alt="" class="img-responsive logo-img"></div>
-                </div>
-                <!-- <div class="col-sm-12 col-xs-12 spon__wgold">
+        </section>
+        <section class="section--spon" id="spon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <h3 class="title">贊助廠商<span>Sponsors</span></h3>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 spon__diam">
+                        <h4>鑽石級</h4>
+                        <div class="col-sm-12"><img src="img/logo-dia01.png" alt="" class="img-responsive logo-img"></div>
+                    </div>
+                    <!-- <div class="col-sm-12 col-xs-12 spon__wgold">
                     <h4>白金級</h4>
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
@@ -1714,258 +1820,255 @@
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div> -->
-                <div class="col-sm-12 col-xs-12 spon__silver">
-                    <h4>銀級</h4>
-                    <div class="col-sm-12"><img src="img/logo-silver01.png" alt="" class="img-responsive logo-img"></div>
+                    <div class="col-sm-12 col-xs-12 spon__silver">
+                        <h4>銀級</h4>
+                        <div class="col-sm-12"><img src="img/logo-silver01.png" alt="" class="img-responsive logo-img"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section--buy">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="title">共同勸敗<!-- <span>Buy</span> --><br><br></h3>
-                    <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy01.png" alt="" class="img-responsive logo-img"></div>
-                    <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy02.png" alt="" class="img-responsive logo-img"></div>
+        </section>
+        <section class="section--buy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="title">共同勸敗<!-- <span>Buy</span> --><br><br></h3>
+                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy01.png" alt="" class="img-responsive logo-img"></div>
+                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy02.png" alt="" class="img-responsive logo-img"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section--thx">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
-                    <div class="col-sm-4">
-                        <div class="org__logobox"><img src="img/hackmd.png" alt="" class="img-responsive logo-img"></div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="org__logobox"><img src="img/logo-thx.png" alt="" class="img-responsive logo-img"></div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="org__logobox"><img src="img/ten.jpg" alt="" class="img-responsive logo-img"></div>
-                    </div>
-                    
-                    
-                </div>
             </div>
-        </div>
-    </section>
-    <section class="section--footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12 footer__contact">
-                    <div class="col-sm-8">
-                        <h5>聯絡 Modern Web 服務小組</h5>
-                        <ul>
-                            <li>客服專線：<a href="tel:02-25622880">02-25622880 #3622 </a> 開小姐（ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
-                            <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
-                        </ul>
-                        <ul>
-                            <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
-                        </ul>
-                        <p>iThome 版權所有</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="col-sm-12">
-                            <ul class="footer__social">
-                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/home?status=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
-                            </ul>
+        </section>
+        <section class="section--thx">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/hackmd.png" alt="" class="img-responsive logo-img"></div>
                         </div>
-                        <div class="col-sm-12 col-xs-12">
-                            <div class="footer__fbshare hidden-sm hidden-xs">
-                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/logo-thx.png" alt="" class="img-responsive logo-img"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/ten.jpg" alt="" class="img-responsive logo-img"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="section--footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 footer__contact">
+                        <div class="col-sm-8">
+                            <h5>聯絡 Modern Web 服務小組</h5>
+                            <ul>
+                                <li>客服專線：<a href="tel:02-25622880">02-25622880 #3622 </a> 開小姐（ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
+                                <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
+                            </ul>
+                            <ul>
+                                <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
+                            </ul>
+                            <p>iThome 版權所有</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <ul class="footer__social">
+                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/home?status=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="footer__fbshare hidden-sm hidden-xs">
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- sinuous -->
+        <div id="sinuous_bg"></div>
+        <canvas id="world" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px; display: none;"></canvas>
+        <div id="status" class="ui" style="display: none;"></div>
+        <div id="message" class="ui" style="left: 0px; top: 200px; display: none; z-index: 0;">
         </div>
-        <!-- <img src="img/bg-star01.svg" class="bg--star01"> -->
-    </section>
-    <!-- sinuous -->
-    <div id="sinuous_bg"></div>
-    <canvas id="world" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px; display: none;"></canvas>
-    <div id="status" class="ui" style="display: none;"></div>
-    <div id="message" class="ui" style="left: 0px; top: 200px; display: none; z-index: 0;">
-    </div>
-    <!-- <div id="btn_sinuous_exit">Exit</div> -->
-    <!-- modal_sinous_start -->
-    <div id="modal_sinous_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-modal__panel game-sinuous_modal__panel--warning clearfix" id="sinuous_box">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_sinuous_img.jpg">
+        <!-- <div id="btn_sinuous_exit">Exit</div> -->
+        <!-- modal_sinous_start -->
+        <div id="modal_sinous_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-modal__panel game-sinuous_modal__panel--warning clearfix" id="sinuous_box">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_sinuous_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">小心！殞石群！！</div>
+                        <p>在行駛途中遭遇大量殞石群,是否繼續前進？</p>
+                        <div class="game-modal__btn-group">
+                            <button id="btn_sinuous_back" type="button" class="game-sinuous_modal__btn game-modal__btn--line" data-dismiss="modal">先繞道</button>
+                            <button id="btn_sinuous_start" type="button" class="game-modal__btn game-sinuous_modal__btn--solid" data-dismiss="modal">勇往直前</button>
+                        </div>
+                        <div class="game-modal_tips_box">
+                            <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
+                            <p class="game-modal_tips"><span>✕</span> 閃避各種殞石 <span>〇</span> 獲得防護罩</p>
+                            <p class="game-modal_tips"><span>分數++</span> 移動更長距離 or 用防護罩擊破殞石</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">小心！殞石群！！</div>
-                    <p>在行駛途中遭遇大量殞石群,是否繼續前進？</p>
+            </div>
+        </div>
+        <!-- /.modal_sinous_start -->
+        <!-- modal_sinuous_over -->
+        <div id="modal_sinuous_over" class="modal fade game-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-sinuous_modal__panel clearfix">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_sinuous_end_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">Game Over</div>
+                        <p>本次作戰分數：</p>
+                        <div id="sinuous_score" class="game-modal__score"></div>
+                    </div>
+                    <div class="clearfix"></div>
                     <div class="game-modal__btn-group">
-                        <button id="btn_sinuous_back" type="button" class="game-sinuous_modal__btn game-modal__btn--line" data-dismiss="modal">先繞道</button>
-                        <button id="btn_sinuous_start" type="button" class="game-modal__btn game-sinuous_modal__btn--solid" data-dismiss="modal">勇往直前</button>
-                    </div>
-                    <div class="game-modal_tips_box">
-                        <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
-                        <p class="game-modal_tips"><span>✕</span> 閃避各種殞石 <span>〇</span> 獲得防護罩</p>
-                        <p class="game-modal_tips"><span>分數++</span> 移動更長距離 or 用防護罩擊破殞石</p>
+                        <button id="btn_sinuous_continue" type="button" class="game-modal__btn game-sinuous_modal__btn--solid" data-dismiss="modal">繼續作戰</button>
+                        <button id="btn_sinuous_share_fb" type="button" class="game-modal__btn game-sinuous_modal__btn">分享戰績</button>
+                        <button id="btn_back2" type="button" class="game-modal__btn game-sinuous_modal__btn" data-dismiss="modal">返回基地</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.modal_sinous_start -->
-    <!-- modal_sinuous_over -->
-    <div id="modal_sinuous_over" class="modal fade game-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-sinuous_modal__panel clearfix">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_sinuous_end_img.jpg">
-                </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">Game Over</div>
-                    <p>本次作戰分數：</p>
-                    <div id="sinuous_score" class="game-modal__score"></div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="game-modal__btn-group">
-                    <button id="btn_sinuous_continue" type="button" class="game-modal__btn game-sinuous_modal__btn--solid" data-dismiss="modal">繼續作戰</button>
-                    <button id="btn_sinuous_share_fb" type="button" class="game-modal__btn game-sinuous_modal__btn">分享戰績</button>
-                    <button id="btn_back2" type="button" class="game-modal__btn game-sinuous_modal__btn" data-dismiss="modal">返回基地</button>
+        <!-- /.modal_sinuous_over -->
+        <!-- end of sinuous -->
+        <!-- game -->
+        <div id="game_bg"></div>
+        <canvas id="game" width="1000px" height="1000px"></canvas>
+        <!-- <div id="btn_exit">Exit</div> -->
+        <!-- modal_game_start -->
+        <div id="modal_game_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-modal__panel game-modal__panel--warning clearfix">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_alien_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">小心！星際戰爭！！</div>
+                        <p>在旅途中遭遇異星人攻擊，是否迎戰？</p>
+                        <div class="game-modal__btn-group">
+                            <button id="btn_game_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">先閃避</button>
+                            <button id="btn_game_start" type="button" class="game-modal__btn game-modal__btn--solid" data-dismiss="modal">立刻還擊</button>
+                        </div>
+                        <div class="game-modal_tips_box">
+                            <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
+                            <p class="game-modal_tips"><span>✕</span> 閃避異星人的攻擊 <span>||</span> 點擊滑鼠可暫停 </p>
+                            <p class="game-modal_tips"><span>分數++</span> 空白鍵發射光彈，消滅異星人</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.modal_sinuous_over -->
-    <!-- end of sinuous -->
-    <!-- game -->
-    <div id="game_bg"></div>
-    <canvas id="game" width="1000px" height="1000px"></canvas>
-    <!-- <div id="btn_exit">Exit</div> -->
-    <!-- modal_game_start -->
-    <div id="modal_game_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-modal__panel game-modal__panel--warning clearfix">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_alien_img.jpg">
-                </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">小心！星際戰爭！！</div>
-                    <p>在旅途中遭遇異星人攻擊，是否迎戰？</p>
+        <!-- /.modal_game_start -->
+        <!-- modal_game_over -->
+        <div id="modal_game_over" class="modal fade game-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-modal__panel clearfix">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_alien_end_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">Game Over</div>
+                        <p>本次作戰分數：</p>
+                        <div id="score" class="game-modal__score"></div>
+                    </div>
+                    <div class="clearfix"></div>
                     <div class="game-modal__btn-group">
-                        <button id="btn_game_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">先閃避</button>
-                        <button id="btn_game_start" type="button" class="game-modal__btn game-modal__btn--solid" data-dismiss="modal">立刻還擊</button>
-                    </div>
-                    <div class="game-modal_tips_box">
-                        <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
-                        <p class="game-modal_tips"><span>✕</span> 閃避異星人的攻擊 <span>||</span> 點擊滑鼠可暫停 </p>
-                        <p class="game-modal_tips"><span>分數++</span> 空白鍵發射光彈，消滅異星人</p>
+                        <button id="btn_continue" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button>
+                        <button id="btn_share_fb" type="button" class="game-modal__btn game-modal__btn--line">分享戰績</button>
+                        <!-- <button id="btn_ranking" type="button" class="btn btn game-modal__btn game-modal__btn--line">登陸戰績</button> -->
+                        <button id="btn_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.modal_game_start -->
-    <!-- modal_game_over -->
-    <div id="modal_game_over" class="modal fade game-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-modal__panel clearfix">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_alien_end_img.jpg">
-                </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">Game Over</div>
-                    <p>本次作戰分數：</p>
-                    <div id="score" class="game-modal__score"></div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="game-modal__btn-group">
-                    <button id="btn_continue" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button>
-                    <button id="btn_share_fb" type="button" class="game-modal__btn game-modal__btn--line">分享戰績</button>
-                    <!-- <button id="btn_ranking" type="button" class="btn btn game-modal__btn game-modal__btn--line">登陸戰績</button> -->
-                    <button id="btn_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
+        <!-- /.modal_game_over -->
+        <!-- end_of_game -->
+        <!-- flappy -->
+        <div id="div1" class="fa"></div>
+        <div id="flappy_bg"></div>
+        <!-- modal_flappy_start -->
+        <div id="modal_flappy_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-modal__panel game-flappy_modal__panel--warning clearfix">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_flappy_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">小心！有牛出沒！！</div>
+                        <p>在旅途中碰上大量哞哞，是否繼續前進？</p>
+                        <div class="game-modal__btn-group">
+                            <button id="btn_flappy_back" type="button" class="game-flappy_modal__btn game-modal__btn--line" data-dismiss="modal">找掩蔽</button>
+                            <button id="btn_flappy_start" type="button" class="game-modal__btn game-modal__btn--solid" data-dismiss="modal">繼續前進</button>
+                        </div>
+                        <div class="game-modal_tips_box">
+                            <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
+                            <p class="game-modal_tips"><span>✕</span> 閃避各種障礙物</p>
+                            <p class="game-modal_tips"><span>注意！</span> 碰地板或飛太高也會 GG 哦！</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.modal_game_over -->
-    <!-- end_of_game -->
-    <!-- flappy -->
-    <div id="div1" class="fa"></div>
-    <div id="flappy_bg"></div>
-    <!-- modal_flappy_start -->
-    <div id="modal_flappy_start" class="modal fade game-modal game-modal--warning" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-modal__panel game-flappy_modal__panel--warning clearfix">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_flappy_img.jpg">
-                </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">小心！有牛出沒！！</div>
-                    <p>在旅途中碰上大量哞哞，是否繼續前進？</p>
+        <!-- /.modal_flappy_start -->
+        <!-- modal_flappy_over -->
+        <div id="modal_flappy_over" class="modal fade game-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="game-flappy_modal__panel clearfix">
+                    <div class="game-modal__monster">
+                        <img src="img/modal/modal_flappy_end_img.jpg">
+                    </div>
+                    <div class="game-modal__desc">
+                        <div class="game-modal__warning">Game Over</div>
+                        <p>本次作戰分數：</p>
+                        <div id="flappy_score" class="game-modal__score"></div>
+                    </div>
+                    <div class="clearfix"></div>
                     <div class="game-modal__btn-group">
-                        <button id="btn_flappy_back" type="button" class="game-flappy_modal__btn game-modal__btn--line" data-dismiss="modal">找掩蔽</button>
-                        <button id="btn_flappy_start" type="button" class="game-modal__btn game-modal__btn--solid" data-dismiss="modal">繼續前進</button>
-                    </div>
-                    <div class="game-modal_tips_box">
-                        <h2 class="game-modal_tips_title">Tips ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧ ‧</h2>
-                        <p class="game-modal_tips"><span>✕</span> 閃避各種障礙物</p>
-                        <p class="game-modal_tips"><span>注意！</span> 碰地板或飛太高也會 GG 哦！</p>
+                        <!-- <button id="btn_flappy_continue" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button> -->
+                        <button id="btn_flappy_share_fb" type="button" class="game-modal__btn game-modal__btn--line">分享戰績</button>
+                        <!-- <button id="btn_ranking" type="button" class="btn btn game-modal__btn game-modal__btn--line">登陸戰績</button> -->
+                        <button id="btn_flappy_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.modal_flappy_start -->
-    <!-- modal_flappy_over -->
-    <div id="modal_flappy_over" class="modal fade game-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="game-flappy_modal__panel clearfix">
-                <div class="game-modal__monster">
-                    <img src="img/modal/modal_flappy_end_img.jpg">
-                </div>
-                <div class="game-modal__desc">
-                    <div class="game-modal__warning">Game Over</div>
-                    <p>本次作戰分數：</p>
-                    <div id="flappy_score" class="game-modal__score"></div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="game-modal__btn-group">
-                    <!-- <button id="btn_flappy_continue" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button> -->
-                    <button id="btn_flappy_share_fb" type="button" class="game-modal__btn game-modal__btn--line">分享戰績</button>
-                    <!-- <button id="btn_ranking" type="button" class="btn btn game-modal__btn game-modal__btn--line">登陸戰績</button> -->
-                    <button id="btn_flappy_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
-                </div>
-            </div>
         </div>
-    </div>
-    </div>
-    <!-- /.modal_flappy_over -->
-    <!-- end_of_flappy -->
-    <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
-    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
-    <script src="js/vue.min.js"></script>
-    <script src="js/confapi.js" data-nid="3531"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="js/modernweb2018.js"></script>
-    <script src="game/alien/game.js"></script>
-    <script src="game/sinuous/game.js"></script>
-    <!-- <script src="game/flappy/main.js"></script>     -->
-    <script src="js/app.js"></script>
-    <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+        <!-- /.modal_flappy_over -->
+        <!-- end_of_flappy -->
+        <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
+        <script src="https://connect.facebook.net/zh_TW/all.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/confapi.js" data-nid="3531"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        <script src="js/modernweb2018.js"></script>
+        <script src="game/alien/game.js"></script>
+        <script src="game/sinuous/game.js"></script>
+        <!-- <script src="game/flappy/main.js"></script>     -->
+        <script src="js/app.js"></script>
+        <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
 </body>
 <!-- test -->
 
