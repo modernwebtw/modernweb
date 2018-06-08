@@ -1307,23 +1307,23 @@
                                 <h4 class="sp-h4">特別策劃</h4></div>
                             <div class="col-sm-6">
                                 <h4>Modern Web, Modern China</h4>
-                                <p>Modern Web 2017 邀請史海峰（噹噹網架構部總監）、程劭非（阿里巴巴無線事業部高級技術專家）兩位擔任 Web 架構與前端技術議題的出品人，策劃、邀集中國 Web 公司帶來最新、最深入的技術與實作經驗，來台與本地開發者做最深入的交流。</p>
+                                <p>Modern Web 2018 邀請黃勇（特贊科技首席技術官）、趙錦江（阿里雲高級前端技術專家）兩位擔任 Web 架構與前端技術議題的出品人，策劃、邀集中國 Web 公司帶來最新、最深入的技術與實作經驗，來台與本地開發者做最深入的交流。</p>
                             </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="col-sm-12 col-xs-12 mab10">
-                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                            <div class="col-sm-6 col-xs-12" v-for="speaker in Speaker">
+                                <div class="col-sm-12 col-xs-12 mab10" v-if="speaker.target_id == '3550'">
+                                    <div class="col-sm-3 col-xs-3"><img :src="speaker.avatar" class="img-responsive speaker--china__img border-china border-china"></div>
                                     <div class="col-sm-9 col-xs-9">
                                         <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
-                                        <h5 class="speaker--china__name">程劭非</h5>
-                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                        <h5 class="speaker--china__name">{{ speaker.speaker }}</h5>
+                                        <p class="speaker--china__disc">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-xs-12 mab10">
-                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                                <div class="col-sm-12 col-xs-12 mab10" v-if="speaker.target_id == '3549'">
+                                    <div class="col-sm-3 col-xs-3"><img :src="speaker.avatar" class="img-responsive speaker--china__img border-china border-china"></div>
                                     <div class="col-sm-9 col-xs-9">
                                         <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
-                                        <h5 class="speaker--china__name">程劭非</h5>
-                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                        <h5 class="speaker--china__name">{{ speaker.speaker }}</h5>
+                                        <p class="speaker--china__disc">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                                     </div>
                                 </div>
                             </div>
