@@ -1308,44 +1308,50 @@
                                 <h4 class="sp-h4">特別策劃</h4></div>
                             <div class="col-sm-6">
                                 <h4>Modern Web, Modern China</h4>
-                                <p>Modern Web 2017 邀請史海峰（噹噹網架構部總監）、程劭非（阿里巴巴無線事業部高級技術專家）兩位擔任 Web 架構與前端技術議題的出品人，策劃、邀集中國 Web 公司帶來最新、最深入的技術與實作經驗，來台與本地開發者做最深入的交流。</p>
+                                <p>Modern Web 2018 邀請黃勇（特贊科技首席技術官）、趙錦江（阿里雲高級前端技術專家）兩位擔任 Web 架構與前端技術議題的出品人，策劃、邀集中國 Web 公司帶來最新、最深入的技術與實作經驗，來台與本地開發者做最深入的交流。</p>
                             </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="col-sm-12 col-xs-12 mab10">
-                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                            <div class="col-sm-6 col-xs-12" v-for="speaker in Speaker">
+                                <div class="col-sm-12 col-xs-12 mab10" v-if="speaker.target_id == '3550'">
+                                    <div class="col-sm-3 col-xs-3"><img :src="speaker.avatar" class="img-responsive speaker--china__img border-china border-china"></div>
                                     <div class="col-sm-9 col-xs-9">
                                         <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
-                                        <h5 class="speaker--china__name">程劭非</h5>
-                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                        <h5 class="speaker--china__name">{{ speaker.speaker }}</h5>
+                                        <p class="speaker--china__disc">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-xs-12 mab10">
-                                    <div class="col-sm-3 col-xs-3"><img src="img/speaker01.jpg" class="img-responsive speaker--china__img border-china border-china"></div>
+                                <div class="col-sm-12 col-xs-12 mab10" v-if="speaker.target_id == '3549'">
+                                    <div class="col-sm-3 col-xs-3"><img :src="speaker.avatar" class="img-responsive speaker--china__img border-china border-china"></div>
                                     <div class="col-sm-9 col-xs-9">
                                         <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
-                                        <h5 class="speaker--china__name">程劭非</h5>
-                                        <p class="speaker--china__disc">阿里巴巴 無線事業部高級技術專家</p>
+                                        <h5 class="speaker--china__name">{{ speaker.speaker }}</h5>
+                                        <p class="speaker--china__disc">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- special row 01 -->
+<<<<<<< HEAD
                         <div class="col-sm-12 col-xs-12 speaker--china--list text-center ma__t30">
                             <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
                                 <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
+=======
+                        <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
+                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.china">
+                                <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
+>>>>>>> a738d25b8980b6813d92da11e2e52ce0980d0573
                                     <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
+                                        <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
                                     </div>
                                     <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
+                                        <h4>{{ speaker.speaker }}</h4>
                                     </div>
                                     <div class="speaker-box__title">
-                                        台大資工系助理教授
+                                        {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}
                                     </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
+                                    <!-- <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div> -->
                                 </div>
                                 <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
+                                <div class="modal fade speaker-modal" :id="'ca-speaker' + speaker.target_id" role="dialog" aria-labelledby="speaker01Label">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -1354,15 +1360,15 @@
                                             <div class="modal-body row">
                                                 <div class="col-sm-12 col-xs-12 speaker-brief__top">
                                                     <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                                        <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
                                                     </div>
                                                     <div class="col-xs-8">
                                                         <div class="speaker-box__name">
-                                                            Felix Rieseberg
+                                                            {{ speaker.speaker }}
                                                         </div>
                                                         <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
+                                                            任職單位: {{ speaker.company }}
+                                                            <br> {{ speaker.department }}{{ speaker.position }}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1386,472 +1392,7 @@
                                             </div> -->
                                                         <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                             <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                        </div>
-                        <!-- special row 02 -->
-                        <div class="col-sm-12 col-xs-12 speaker--china--list text-center ma__t30">
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                            </div>
-                            <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                    <div class="speaker-box__head">
-                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
-                                    </div>
-                                    <div class="speaker-box__name">
-                                        <h4>程劭非</h4>
-                                    </div>
-                                    <div class="speaker-box__title">
-                                        台大資工系助理教授
-                                    </div>
-                                    <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body row">
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                    <div class="col-xs-4">
-                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                    </div>
-                                                    <div class="col-xs-8">
-                                                        <div class="speaker-box__name">
-                                                            Felix Rieseberg
-                                                        </div>
-                                                        <div class="speaker-box__title">
-                                                            任職單位: Slack
-                                                            <br> Software Engineer
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                    <hr>
-                                                    <ul class="list-inline" role="tablist">
-                                                        <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                        <li role="presentation" class="active">
-                                                            <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                        <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                            <div class="speaker-brief__intro overflow-y">
-                                                                <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
+                                                                <p v-html="speaker.profile"></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1874,22 +1415,22 @@
                         <h3 class="title">講師陣容<span>Speakers</span></h3>
                         <div class="col-sm-12">
                             <!-- special row 01 -->
-                            <div class="col-sm-12 col-xs-12 speaker--china--list text-center ma__t30">
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
+                            <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
+                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal">
+                                    <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
                                         <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
+                                            <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
                                         </div>
                                         <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
+                                            <h4>{{ speaker.speaker }}</h4>
                                         </div>
                                         <div class="speaker-box__title">
-                                            台大資工系助理教授
+                                            {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}
                                         </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
+                                        <!-- <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div> -->
                                     </div>
                                     <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
+                                    <div class="modal fade speaker-modal" :id="'ca-speaker' + speaker.target_id" role="dialog" aria-labelledby="speaker01Label">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -1898,282 +1439,15 @@
                                                 <div class="modal-body row">
                                                     <div class="col-sm-12 col-xs-12 speaker-brief__top">
                                                         <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                                            <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <div class="speaker-box__name">
-                                                                Felix Rieseberg
+                                                                {{ speaker.speaker }}
                                                             </div>
                                                             <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                    <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                                </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p>議程介紹議程介紹議程介紹</p>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                    <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                                </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p>議程介紹議程介紹議程介紹</p>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                    <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                                </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p>議程介紹議程介紹議程介紹</p>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                    <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                                </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p>議程介紹議程介紹議程介紹</p>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                            </div>
-                            <!-- special row 02 -->
-                            <div class="col-sm-12 col-xs-12 speaker--china--list text-center ma__t30">
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
+                                                                任職單位: {{ speaker.company }}
+                                                                <br> {{ speaker.department }}{{ speaker.position }}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2197,205 +1471,7 @@
                                             </div> -->
                                                             <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                                 <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </div>
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-                                    <div class="speaker-box" data-toggle="modal" data-target="#ca-speaker01">
-                                        <div class="speaker-box__head">
-                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-group">
-                                        </div>
-                                        <div class="speaker-box__name">
-                                            <h4>程劭非</h4>
-                                        </div>
-                                        <div class="speaker-box__title">
-                                            台大資工系助理教授
-                                        </div>
-                                        <div class="col-sm-12 speaker--china--list__disc">texttextxeteettexetxxt</div>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade speaker-modal" id="ca-speaker01" role="dialog" aria-labelledby="speaker01Label">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body row">
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
-                                                        <div class="col-xs-4">
-                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="speaker-box__name">
-                                                                Felix Rieseberg
-                                                            </div>
-                                                            <div class="speaker-box__title">
-                                                                任職單位: Slack
-                                                                <br> Software Engineer
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                        <hr>
-                                                        <ul class="list-inline" role="tablist">
-                                                            <!-- <li role="presentation">
-                                                <a class="tab" href="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                            </li> -->
-                                                            <li role="presentation" class="active">
-                                                                <a class="tab" href="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content">
-                                                            <!-- <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
-                                                <div class="speaker-brief__agenda">
-                                                    <div class="speaker-brief__agenda-content overflow-y">
-                                                        <p>議程介紹議程介紹議程介紹</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                                            <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
-                                                                <div class="speaker-brief__intro overflow-y">
-                                                                    <p>Felix Rieseberg is a Staff Software Engineer at Slack, a maintainer of multiple JavaScript libraries and tools, a member of the Electron maintainers group, and an avid fan of open source. He's the author of O'Reilly's "Introducing Electron" and frequently be seen speaking about web technologies.</p>
+                                                                    <p v-html="speaker.profile"></p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2860,16 +1936,24 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <section class="section--thx">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
-                        <div class="org__logobox"><img src="img/logo-thx.png" alt="" class="img-responsive logo-img"></div>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/hackmd.png" alt="" class="img-responsive logo-img"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/logo-thx.png" alt="" class="img-responsive logo-img"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="org__logobox"><img src="img/ten.jpg" alt="" class="img-responsive logo-img"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
         <section class="section--footer">
             <div class="container">

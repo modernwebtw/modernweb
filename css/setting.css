@@ -371,3 +371,7 @@ iframe {
     transition: all .3s ease;
     font-size: 24px;
 }
+
+section.section--speaker .ma__t30 {
+    min-height: 353px;
+}
