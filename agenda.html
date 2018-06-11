@@ -414,36 +414,16 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">13:30 - 13:55</div>
                                             </td>
-                                            <td class="agenda__table-td">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">Track A</span>
+                                            <td class="agenda__table-td" v-for="sID in session_table_D2['13:30']">
+                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        WAT JavaScript Date
+                                                        {{ Session[sID].title }}
                                                     </div>
-                                                    <div class="agenda__t-class-name"><img src="img/speaker01.jpg" alt=""> <span>高偉格(othree)</span></div>
-                                                </div>
-                                            </td>
-                                            <td class="agenda__table-td">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">Track B</span>
-                                                    <div class="agenda__t-class-topic">
-                                                        構建高可用消息推送平臺
+                                                    <div v-for="speaker in Session[sID].speaker">
+                                                        <a :href="'#s' + speaker.target_id">
+                                                            <div class="agenda__t-class-name"><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker }}</span></div>
+                                                        </a>
                                                     </div>
-                                                    <div class="agenda__t-class-name"><img src="img/speaker01.jpg" alt=""> <span>李曉清(清聲聆)</span></div>
-                                                </div>
-                                            </td>
-                                            <td class="agenda__table-td">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">Track C</span>
-                                                    <div class="agenda__t-class-topic">
-                                                        GraphQL + Relay 試玩心得 —— 串起前端與後端的資料橋樑
-                                                    </div>
-                                                    <div class="agenda__t-class-name"><img src="img/speaker01.jpg" alt=""> <span>張博凱(zetavg)</span></div>
-                                                </div>
-                                            </td>
-                                            <td class="agenda__table-td">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">Track D</span>
-                                                    <div class="agenda__t-class-topic">
-                                                        CSS3 Grid Layout 與蒙德里安
-                                                    </div>
-                                                    <div class="agenda__t-class-name"><img src="https://confapi.ithome.com.tw/sites/default/files/speaker_avatar/%E5%8D%A1%E6%96%AF.jpg" alt=""> <span>王志誠(卡斯伯)</span></div>
                                                 </div>
                                             </td>
                                         </tr>
