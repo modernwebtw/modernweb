@@ -1410,7 +1410,7 @@
                         <div class="col-sm-12">
                             <!-- special row 01 -->
                             <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal">
+                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal" v-if="speaker.target_id != '3564'">
                                     <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
                                         <div class="speaker-box__head">
                                             <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
