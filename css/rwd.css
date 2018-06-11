@@ -1,6 +1,11 @@
-/* -------!!!! -------*/
+/* --------------!!!! --------------
+   --------------!!!! --------------*/
 /* layout */
 section{overflow: hidden;}
+.logo-img{width: 300px;}
+header .navbar-inverse .navbar-nav{float: right;}
+.section--history{overflow: visible;}
+.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 4%;}
 
 /* uility */
 .bg-color4{ background: #aba1c4; }
@@ -59,9 +64,9 @@ section{overflow: hidden;}
 	100%{transform: translate3d(0, 20px, 0)}
 }
 
-.section--history{overflow: visible;}
 
-/* -------!!!!------- */
+/* --------------!!!! --------------
+   --------------!!!! --------------*/
 
 
 
@@ -83,9 +88,11 @@ section{overflow: hidden;}
 }
 @media (max-width:1200px){
 	.section--speaker--china .special .speaker--china__img{max-width: 100%;}
+	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 4.5%;}
 }
 
 @media screen and (max-width:1024px ) {
+	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 7%;}
 	.section--ticket .ticket__item .ticket__item__btn .btn{
 		width: 100%;
 		font-size: 1em;
@@ -209,6 +216,9 @@ section{overflow: hidden;}
 	.section--kv { min-height: 85vh; margin: 3vh 1vh 10vh 1vh;}
 	.ta{top:2vh;}
 			 }
-@media screen and (max-width:480px ){.table-coverbox{ overflow: scroll; }}
+@media screen and (max-width:480px ){
+	.table-coverbox{ overflow: scroll;}
+	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 7%;}
+}
 @media screen and (max-width:550px ){ .section--kv { min-height: 80vh;} }
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }
