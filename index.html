@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="game/sinuous/style.css">
     <link rel="stylesheet" href="game/alien/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/setting.css">
-    <link rel="stylesheet" type="text/css" href="css/rwd.css">
-    <link rel="stylesheet" type="text/css" href="css/kv.css">
+    <link rel="stylesheet" type="text/css" href="css/setting.css?321654">
+    <link rel="stylesheet" type="text/css" href="css/rwd.css?312654987">
+    <link rel="stylesheet" type="text/css" href="css/kv.css?1231536332">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -101,7 +101,6 @@
                             <li><a href="#speaker">講者</a></li>
                             <li><a href="#workshop">實戰工作坊</a></li>
                             <li><a href="#ticket">售票</a></li>
-                            <li><a href="agenda.html">議程</a></li>
                             <li class="hidden-sm-down">
                                 <div class="dropdown hidden-sm-down">
                                     <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
@@ -1240,13 +1239,6 @@
                                             </div> -->
                                                         <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                             <div class="speaker-brief__intro overflow-y">
-                                                                <p>Paul is the lead programmer of the AMP project at Yahoo Taiwan and is always eager for modern web technologies.
-                                                                    <br>
-                                                                    <br> He is also a frontend engineer at Yahoo Taiwan focusing on the user experience and bringing a vivid and smooth flow for users.
-                                                                    <br>
-                                                                    <br> Paul surveyed the AMP project during Q4 of last year and adopted it for an e-commerce service - Auction in Yahoo Taiwan.
-                                                                    <br>
-                                                                    <br> To make gains in both better mobile UX and organic traffic, AMP adoption will be his major focus in 2018.</p>
                                                                 <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
                                                                     <div class="speaker-brief__intro overflow-y">
                                                                         <p v-html="speaker.profile"></p>
@@ -1378,7 +1370,7 @@
                         <div class="col-sm-12">
                             <!-- special row 01 -->
                             <div class="col-sm-12 col-xs-12 speaker--china--list text-center">
-                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal">
+                                <div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1 ma__t30" v-for="speaker in SpeakerFilter.normal" v-if="speaker.target_id != '3564'">
                                     <div class="speaker-box" data-toggle="modal" :data-target="'#ca-speaker' + speaker.target_id">
                                         <div class="speaker-box__head">
                                             <img :src="speaker.avatar" alt="" class="img-circle img-responsive speaker-box__img speaker--china__img border-china border-china">
@@ -1736,14 +1728,14 @@
                                 <p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。
                                     <br>（限額 30 名，售完為止）</p>
                             </div>
-                            <div class="col-sm-2 ticket__item__btn">
+                            <!--   <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
+                            </div> -->
+                            <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180016" target="_blank">立即購票</a>
                             </div>
-                            <!--      <div class="col-sm-2 ticket__item__btn">
-                            <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180016" target=
-                            "_blank">立即購票</a>
-                        </div> -->
                         </div>
+                       
                         <!-- workshop -->
                         <div class="col-sm12 ticket__item">
                             <span id="ticket--workshop"></span>
