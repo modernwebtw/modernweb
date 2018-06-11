@@ -1,7 +1,7 @@
 /* -------!!!! -------*/
 /* layout */
 section{overflow: hidden;}
-
+.logo-img{width: 300px;}
 /* uility */
 .bg-color4{ background: #aba1c4; }
 .btn--default{
