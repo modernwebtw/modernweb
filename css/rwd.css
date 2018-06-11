@@ -3,6 +3,7 @@
 /* layout */
 section{overflow: hidden;}
 .logo-img{width: 300px;}
+header .navbar-inverse .navbar-nav{float: right;}
 .section--history{overflow: visible;}
 .section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 4%;}
 
