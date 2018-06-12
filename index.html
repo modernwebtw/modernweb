@@ -1326,6 +1326,7 @@
                                 <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
                                     <div class="speaker-brief__agenda" v-for="session in Modal_Speaker.session">
                                         <div class="speaker-brief__agenda-content overflow-y">
+                                            <p><b><big>{{ session.title }}</big></b></p>
                                             <p v-html="session.summary"></p>
                                         </div>
                                     </div>
@@ -1464,6 +1465,14 @@
                                                 <p class="carousel-inner__name">— 2017 參加者
                                                     <br><span></span></p>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="section--workshop" id="workshop">
             <div class="container">
@@ -1486,7 +1495,8 @@
                                             <div class="col-md-10 col-md-push-1 col-sm-12 col-xs-12 text-center">
                                                 <div class="col-md-3 col-sm-12 col-xs-12">
                                                     <img src="img/speaker-k.jpg" class="img-responsive workshop---speaker__img">
-                                                    <h5 class="workshop---speaker__name">楊捷凱 (Kevin) </h5></div>
+                                                    <h5 class="workshop---speaker__name">楊捷凱 (Kevin) </h5>
+                                                </div>
                                                 <div class="col-md-9 col-sm-12 col-xs-12 orkshop-collapsebox">
                                                     <!-- <button class="btn btn--default workshop--btn" data-toggle="collapse" data-target="#workshop-speaker">
                                                         <i class="fa fa-arrow-down"></i>
@@ -1508,9 +1518,9 @@
                                     <tr>
                                         <td>實戰大綱</td>
                                         <td class="text-left workshop-disc">
-                                            <p>Angular 是一套純前端的網頁開發框架，搭配 Firebase 更能讓我們在短的時間內建構出一個完成的網站雛形，且不需要任何後端技術支援，一切都透過 Firebase 提供的 API 與雲端資料庫搞定所有需求、快速實驗想法。
-                                                <br>
-                                                <br> 本次上手實作將帶領大家快速上手 Angular 與 Firebase 實作，你不需要有任何 Angular 或 TypeScript 的相關知識，讓我們用一天的時間，帶你瞭寫 Angular 與 Firebase 的神秘面紗。</p>
+                                            <p>Angular 是一套純前端的網頁開發框架，搭配 Firebase 更能讓我們在短的時間內建構出一個完成的網站雛形，且不需要任何後端技術支援，一切都透過 Firebase 提供的 API 與雲端資料庫搞定所有需求、快速實驗想法。</p>
+                                            <br>
+                                            <br> 本次上手實作將帶領大家快速上手 Angular 與 Firebase 實作，你不需要有任何 Angular 或 TypeScript 的相關知識，讓我們用一天的時間，帶你瞭寫 Angular 與 Firebase 的神秘面紗。</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -1756,7 +1766,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <section class="section--org" id="org">
             <div class="container">
@@ -1809,7 +1818,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <section class="section--thx">
             <div class="container">
@@ -1827,6 +1835,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section class="section--footer">
             <div class="container">

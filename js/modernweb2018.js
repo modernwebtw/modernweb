@@ -181,13 +181,16 @@ var modernweb2018 = new Vue({
             this.Modal_Speaker = speaker;
             $('a[href="#speakerModalIntro"]').tab('show');
             $('#speakerModal').modal('show');
-            console.log(Modal_Data);
         },
         showModal2: function(session) {
             this.Modal_Session = session;
             if (!!session.speaker.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
+                $('#tabSession').addClass('active');
+                $('#tabSpeaker').removeClass('active');
+                $('#sessionModalAgenda').addClass('active');
+                $('#sessionModalIntro').removeClass('active');
             }
         },
         showModal3: function(sponsor) {
