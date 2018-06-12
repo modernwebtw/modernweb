@@ -129,7 +129,7 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">09:40 - 10:20</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['9:40']">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['9:40']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
@@ -151,7 +151,7 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">10:30 - 11:10</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['10:30']">
+                                            <td colspan="4" class="agenda__table-td  td-hover" v-for="sID in session_table_D1['10:30']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
@@ -173,7 +173,7 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">11:20 - 12:00</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['11:20']">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['11:20']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
@@ -356,7 +356,7 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">09:40 - 10:20</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['9:40']">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['9:40']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
@@ -378,7 +378,7 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">10:30 - 11:10</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['10:30']">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['10:30']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
@@ -593,7 +593,7 @@
                                     <div role="tabpanel" id="sessionModalAgenda" class="tab-pane active">
                                         <div class="speaker-brief__agenda">
                                             <div class="speaker-brief__agenda-content overflow-y">
-                                                <p><b><big>{{ Modal_Session.title }}</big></b></p>
+                                                <p><b class="h3"><big>{{ Modal_Session.title }}</big></b></p>
                                                 <p v-html="Modal_Session.summary"></p>
                                             </div>
                                         </div>
