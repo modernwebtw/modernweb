@@ -179,20 +179,24 @@ var modernweb2018 = new Vue({
         },
         showModal: function(speaker) {
             this.Modal_Speaker = speaker;
-            $('a[href="#speakerModalAgenda"]').tab('show');
+            $('a[href="#speakerModalIntro"]').tab('show');
             $('#speakerModal').modal('show');
-        },
-        showModal: function(sponsor) {
-            this.Modal_Sponsor = sponsor;
-            $('a[href="#sponsorModal"]').tab('show');
-            $('#sponsorModal').modal('show');
         },
         showModal2: function(session) {
             this.Modal_Session = session;
             if (!!session.speaker.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
+                $('#tabSession').addClass('active');
+                $('#tabSpeaker').removeClass('active');
+                $('#sessionModalAgenda').addClass('active');
+                $('#sessionModalIntro').removeClass('active');
             }
+        },
+        showModal3: function(sponsor) {
+            this.Modal_Sponsor = sponsor;
+            $('a[href="#sponsorModal"]').tab('show');
+            $('#sponsorModal').modal('show');
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
