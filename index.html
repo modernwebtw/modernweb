@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="game/flappy/style.css">
     <link rel="stylesheet" href="game/sinuous/style.css">
     <link rel="stylesheet" href="game/alien/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/setting.css?321654">
-    <link rel="stylesheet" type="text/css" href="css/rwd.css?312654987">
-    <link rel="stylesheet" type="text/css" href="css/kv.css?1231536332">
+    <link rel="stylesheet" href="css/main.css?4544288">
+    <link rel="stylesheet" type="text/css" href="css/setting.css?3216514">
+    <link rel="stylesheet" type="text/css" href="css/rwd.css?3126587">
+    <link rel="stylesheet" type="text/css" href="css/kv.css?1231532">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -74,8 +74,7 @@
             </ul>
         </div>
     </div>
-        <!-- loading animation -->
-
+    <!-- loading animation -->
     <div id="modernweb2018">
         <header class="header">
             <nav class="navbar navbar-inverse">
@@ -99,7 +98,7 @@
                             <li><a href="index.html">首頁</a></li>
                             <li><a href="#special">2018特色</a></li>
                             <li><a href="#speaker">講者</a></li>
-                            <li><a href="#workshop">實戰工作坊</a></li>
+                            <!-- <li><a href="#workshop">實戰工作坊</a></li> -->
                             <li><a href="#ticket">售票</a></li>
                             <li class="hidden-sm-down">
                                 <div class="dropdown hidden-sm-down">
@@ -1274,7 +1273,7 @@
                                 <div class="col-sm-12 col-xs-12 mab10" v-if="speaker.target_id == '3550'">
                                     <div class="col-sm-3 col-xs-3"><img :src="speaker.avatar" class="img-responsive speaker--china__img border-china border-china"></div>
                                     <div class="col-sm-9 col-xs-9">
-                                        <h4 class="speaker--china__title">Web 前端技術議題 出品人</h4>
+                                        <h4 class="speaker--china__title">Web 架構議題 出品人</h4>
                                         <h5 class="speaker--china__name">{{ speaker.speaker }}</h5>
                                         <p class="speaker--china__disc">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                                     </div>
@@ -1543,7 +1542,7 @@
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <p>首度在台舉辦，吸引超過600人報名，500人與會，大受好評。Web 人不能不認識的 Java Scrip 之父、PHP 之父，重量級登場！</p>
+                                        <p>首度在台舉辦，吸引超過600人報名，500人與會，大受好評。Web 人不能不認識的 JavaScript 之父、PHP 之父，重量級登場！</p>
                                     </div>
                                 </li>
                             </ul>
@@ -1570,7 +1569,7 @@
                                                     <br><span></span></p>
                                             </div>
         </section>
-        <section class="section--workshop" id="workshop">
+        <section style="display: none;" class="section--workshop" id="workshop">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
@@ -1671,52 +1670,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <h3 class="title">購票資訊<span>Tickets</span></h3>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot dot01">早鳥票<br><span class="date">5/28-6/11</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$4,490</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">立即購票</a>
-                            </div>
-                        </div>
-                        <div class="col-sm12 ticket__item">
-                            <div class="col-sm-3 ticket__item__title">
-                                <h3 class="dot dot02">共同推廣票<br><span class="date">5/28-6/11</span></h3>
-                            </div>
-                            <div class="col-sm-2 ticket__item__price">
-                                <h3>$3,990</h3>
-                            </div>
-                            <div class="col-sm-5 ticket__item__disc line-h-18">
-                                雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。
-                            </div>
-                            <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180018" target="_blank">立即購票</a>
-                            </div>
-                            <!-- <div class="col-sm-12 disc__attn">
-                                <a class="btn btn-txt" data-toggle="modal" data-target="#ticketModal">
-                                    <i class="fa fa-info-circle fa-1x"></i> 共同推廣票注意事項
-                                </a>
-                            </div>
-                            <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="ticketModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                        <a class="btn close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </a>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5 class="modal-title" id="exampleModalLabel">共同推廣票注意事項</h5>
-                                                <p>雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                        </div>
+                        
                         <div class="col-sm12 ticket__item">
                             <div class="col-sm-3 ticket__item__title">
                                 <h3 class="dot dot03">學生票<br><span class="date">6/11-7/12</span></h3>
@@ -1735,7 +1689,6 @@
                                 <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180016" target="_blank">立即購票</a>
                             </div>
                         </div>
-                       
                         <!-- workshop -->
                         <div class="col-sm12 ticket__item">
                             <span id="ticket--workshop"></span>
@@ -1746,8 +1699,11 @@
                                 <h3>$2,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張。適合早鳥期間已購票報名 ModernWeb 者，可獲得大會提供之特惠序號，享特惠價格報名。</div>
+                           <!--  <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">尚未開賣</a>
+                            </div> -->
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180033" target="_blank">立即購票</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1758,8 +1714,11 @@
                                 <h3>$3,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張。 適合只想參加 Workshop 一日實戰工作坊的您。</div>
+                           <!--  <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180032" target="_blank">尚未開賣</a>
+                            </div> -->
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180032" target="_blank">立即購票</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1770,8 +1729,11 @@
                                 <h3>$7,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張 + ModernWeb 雙日入場票1張。適合尚未報名 ModernWeb，想一次報名 ModernWeb 及 Workshop 的您。（原價：8980）</div>
+                           <!--  <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">尚未開賣</a>
+                            </div> -->
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">立即購票</a>
                             </div>
                         </div>
                         <!-- workshop -->
@@ -1783,14 +1745,14 @@
                                 <h3>$5,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
-                            <div class="col-sm-2 ticket__item__btn">
+                           <!--  <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div>
-                            <!-- 
+                            </div> -->
+                            
                         <div class="col-sm-2 ticket__item__btn">
                             <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180015" target=
                             "_blank">立即購票</a>
-                        </div> -->
+                        </div>
                         </div>
                         <div class="col-sm12 ticket__item">
                             <div class="col-sm-3 ticket__item__title">
@@ -1800,13 +1762,13 @@
                                 <h3>$8,990</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
-                            <div class="col-sm-2 ticket__item__btn">
+                           <!--  <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div>
-                            <!--     <div class="col-sm-2 ticket__item__btn">
+                            </div> -->
+                                <div class="col-sm-2 ticket__item__btn">
                             <a class="btn btn--buy" href="download/ModernWeb2018團體報名表.xlsx" target=
                             "_blank">立即購票</a>
-                        </div>  -->
+                        </div> 
                         </div>
                         <div class="col-sm12 ticket__item">
                             <div class="col-sm-3 ticket__item__title">
@@ -1831,6 +1793,58 @@
                             <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
                             </div>
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot dot01">早鳥票<br><span class="date">5/28-6/11</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$4,490</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
+                           <!--  <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">立即購票</a>
+                            </div> -->
+                            <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">售票截止</a>
+                            </div> 
+                        </div>
+                        <div class="col-sm12 ticket__item">
+                            <div class="col-sm-3 ticket__item__title">
+                                <h3 class="dot dot02">共同推廣票<br><span class="date">5/28-6/11</span></h3>
+                            </div>
+                            <div class="col-sm-2 ticket__item__price">
+                                <h3>$3,990</h3>
+                            </div>
+                            <div class="col-sm-5 ticket__item__disc line-h-18">
+                                雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。
+                            </div>
+                            <!-- <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180018" target="_blank">立即購票</a>
+                            </div> -->
+                            <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">售票截止</a>
+                            </div> 
+                            <!-- <div class="col-sm-12 disc__attn">
+                                <a class="btn btn-txt" data-toggle="modal" data-target="#ticketModal">
+                                    <i class="fa fa-info-circle fa-1x"></i> 共同推廣票注意事項
+                                </a>
+                            </div>
+                            <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="ticketModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                        <a class="btn close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5 class="modal-title" id="exampleModalLabel">共同推廣票注意事項</h5>
+                                                <p>雙日入場票 1 張。需要輸入優惠碼！凡報名 7/8 的 LaravelConf 2018 或 7/14 的 FEDC 2018 其中一場大會，即可獲得 ModernWeb18 優惠碼一組。 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
                         </div>
                     </div>
                 </div>
