@@ -1196,7 +1196,7 @@
                                 </div>
                                 <div class="col-sm-7 col-xs-12 speaker__disc">
                                     <h4 class="name">{{ speaker.speaker }} <span> </span></h4>
-                                    <p>任職單位: {{ speaker.company }}
+                                    <p> {{ speaker.company }}
                                         <br> {{ speaker.department }} {{ speaker.position }}</p>
                                     <button class="btn" @click="showModal(speaker)">詳細介紹</button>
                                     <!--end of speaker__item -->
@@ -1303,7 +1303,7 @@
                                     {{ Modal_Speaker.speaker }}
                                 </div>
                                 <div class="speaker-box__title">
-                                    任職單位: {{ Modal_Speaker.company }}
+                                    {{ Modal_Speaker.company }}
                                     <br> {{ Modal_Speaker.department }}{{ Modal_Speaker.position }}
                                 </div>
                             </div>
