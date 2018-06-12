@@ -211,7 +211,7 @@
                                                 <div class="agenda__t-time">13:30 - 13:55</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['13:30']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
