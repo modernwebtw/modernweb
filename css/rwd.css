@@ -1,7 +1,6 @@
 /* --------------!!!! --------------
    --------------!!!! --------------*/
 /* layout */
-section{overflow: hidden;}
 .logo-img{width: 300px;}
 header .navbar-inverse .navbar-nav{float: right;}
 .section--history{overflow: visible;}
@@ -64,6 +63,9 @@ header .navbar-inverse .navbar-nav{float: right;}
 	100%{transform: translate3d(0, 20px, 0)}
 }
 
+/* 議程表 */
+.section--kv--content{margin:0; padding:0;}
+.kv-head{ background-position: center top; height: 40vh;box-shadow:0 0 30px 10px rgb(24, 5, 46) inset;}
 
 /* --------------!!!! --------------
    --------------!!!! --------------*/
@@ -92,6 +94,7 @@ header .navbar-inverse .navbar-nav{float: right;}
 }
 
 @media screen and (max-width:1024px ) {
+	section{overflow: hidden;}
 	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 7%;}
 	.section--ticket .ticket__item .ticket__item__btn .btn{
 		width: 100%;
@@ -99,8 +102,9 @@ header .navbar-inverse .navbar-nav{float: right;}
 		letter-spacing: 1px;
 	}
 	.section--key .key__title .deco-01{opacity: .3; right: 0; top: 10%; position: absolute;}
-	.section--history:before {
-    width: 110%;
+	.section--history{ overflow: hidden; margin: 3% 0 4% 0;}
+	/* .section--history:before {
+    width: 100%;
     height: 100px;
     left: -5%;
     position: absolute;
@@ -109,13 +113,13 @@ header .navbar-inverse .navbar-nav{float: right;}
 	}
 
 	.section--history:after {
-    width: 110%;
+    width: 100%;
     left: -5%;
     height: 200px;
     position: absolute;
     bottom: -199px;
     background-size: cover;
-	}
+	} */
 }
 
 @media screen and (max-width:767px ) {
@@ -140,7 +144,8 @@ header .navbar-inverse .navbar-nav{float: right;}
     /* .dropdown-menu{display: block; background: transparent; } */
     .hidden-sm-down{display: none}
     .navbar-inverse .dropdown{float: none; width: 100%;}
-    .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;}
+    header .navbar-inverse .navbar-nav{ float: none; width: 100%;}
+    /* .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;} */
     .navbar-inverse .navbar-nav li a{padding:1vh;}
     .dropdown-menu.btn .caret{display: none;}
 
@@ -178,9 +183,10 @@ header .navbar-inverse .navbar-nav{float: right;}
 	.section--quote{display: none;}
 
 	/* history */
-	.section--history{ margin-bottom: 10px; margin-top: 10px !important;}
+	.section--history{ margin-bottom: 10px; margin-top: 10px;}
 
 	/* workshop */
+	.section--workshop{margin-top: 20%;}
 	.table-workshop td:first-child{min-width: auto;font-size: 16px; display: none;}
 	.table-workshop h1, .table-workshop h2, .table-workshop h3, .table-workshop h4, .table-workshop h5, .table-workshop h6, .table-workshop p, .table-workshop time{
 		margin: 1% 2%;}
@@ -218,7 +224,7 @@ header .navbar-inverse .navbar-nav{float: right;}
 			 }
 @media screen and (max-width:480px ){
 	.table-coverbox{ overflow: scroll;}
-	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 7%;}
+	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 10.5%;}
 }
 @media screen and (max-width:550px ){ .section--kv { min-height: 80vh;} }
 @media screen and (max-width:320px ){.section--kv { min-height: 80vh;} }
