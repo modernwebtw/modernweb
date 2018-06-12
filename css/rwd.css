@@ -66,6 +66,14 @@ header .navbar-inverse .navbar-nav{float: right;}
 /* 議程表 */
 .section--kv--content{margin:0; padding:0;}
 .kv-head{ background-position: center top; height: 40vh;box-shadow:0 0 30px 10px rgb(24, 5, 46) inset;}
+.agenda__t-keynote:hover{background: #feffc1;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 2px #feffc1b5;}
+.agenda__t-class-name:hover{background: #feffc1;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 2px #feffc1b5;}
+
+.modal-body .h3{ font-size: 24px; color:#321357; margin: 20px 0 10px;display: block;}
 
 /* --------------!!!! --------------
    --------------!!!! --------------*/
