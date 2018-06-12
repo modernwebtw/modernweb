@@ -129,12 +129,12 @@
                                         </td>
                                     </tr>
                                     <tr v-for="ss in sessionSortedByTime" >
-                                        <template v-if="ss.session_id == '3585'">
+                                        
                                         <td class="agenda__table-td">
                                             <div class="agenda__t-time">{{ss.date | time}}</div>
                                         </td>
-                                        <td  class="agenda__table-td" v-for="sss in ss.sessionOfSameTime">
-                                            <div class="agenda__t-keynote">
+                                        <td  colspan="4"  class="agenda__table-td" v-for="sss in ss.sessionOfSameTime">
+                                            <div class="agenda__t-keynote" v-if="sss.session_id == '3585' ">
                                                 <div class="agenda__t-keynote-topic">{{sss.title}}
                                                 </div>
                                                 <div class="agenda__t-keynote-name">
@@ -145,7 +145,7 @@
                                                </div>
                                             </div>
                                         </td>
-                                        </template>
+                                       
                                     </tr>
 
                                 </tbody>
