@@ -179,13 +179,9 @@ var modernweb2018 = new Vue({
         },
         showModal: function(speaker) {
             this.Modal_Speaker = speaker;
-            $('a[href="#speakerModalAgenda"]').tab('show');
+            $('a[href="#speakerModalIntro"]').tab('show');
             $('#speakerModal').modal('show');
-        },
-        showModal: function(sponsor) {
-            this.Modal_Sponsor = sponsor;
-            $('a[href="#sponsorModal"]').tab('show');
-            $('#sponsorModal').modal('show');
+            console.log(Modal_Data);
         },
         showModal2: function(session) {
             this.Modal_Session = session;
@@ -193,6 +189,11 @@ var modernweb2018 = new Vue({
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
             }
+        },
+        showModal3: function(sponsor) {
+            this.Modal_Sponsor = sponsor;
+            $('a[href="#sponsorModal"]').tab('show');
+            $('#sponsorModal').modal('show');
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');

@@ -557,6 +557,58 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade speaker-modal" id="sessionModal" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-sm-12 col-xs-12 speaker-brief__top" v-for="speaker in Modal_Session.speaker">
+                                <div class="col-xs-4">
+                                    <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="speaker-box__name">
+                                        {{ speaker.speaker }}
+                                    </div>
+                                    <div class="speaker-box__title">
+                                        任職單位: {{ speaker.company }}
+                                        <br> {{ speaker.department }}{{ speaker.position }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                <hr>
+                                <ul class="list-inline" role="tablist">
+                                    <li role="presentation">
+                                        <a class="tab" data-target="#speakerModalAgenda" aria-controls="#speakerModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                    </li>
+                                    <li role="presentation" class="active">
+                                        <a class="tab" data-target="#speakerModalIntro" aria-controls="#speakerModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" id="speakerModalAgenda" class="tab-pane">
+                                        <div class="speaker-brief__agenda" v-for="session in Modal_Speaker.session">
+                                            <div class="speaker-brief__agenda-content overflow-y">
+                                                <p v-html="Modal_Session.summary"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" id="speakerModalIntro" class="tab-pane active">
+                                        <div class="speaker-brief__intro overflow-y">
+                                            <p v-html="speaker.profile"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
         </section>
         <section class="section--footer">
             <div class="container">
