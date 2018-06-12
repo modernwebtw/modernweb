@@ -172,21 +172,28 @@ var modernweb2018 = new Vue({
                 return false;
             }
 
-            function sortSessionByTime() {
-                var sessionSortedByTime = [];
+           function sortSessionByTime(){
+                var sessionSortedByTime =[];
                 var uniqueDates = [];
-                session = _.orderBy(session, 'session_start');
-                for (var i in session) {
-                    if (!isDateInArray(session[i].start_Date, uniqueDates)) {
+                session =  _.orderBy(session, 'session_start');
+                for(var i in session){
+                    if(!isDateInArray(session[i].start_Date, uniqueDates)){
                         uniqueDates.push(session[i].start_Date);
-                        sessionSortedByTime.push({ date: session[i].start_Date, sessionOfSameTime: [session[i]] });
-                    } else {
-                        for (var s = 0; s < sessionSortedByTime.length; s++) {
-                            if (session[i].start_Date.getTime() === sessionSortedByTime[s].date.getTime()) {
+                        sessionSortedByTime.push({date: session[i].start_Date,sessionOfSameTime: [session[i]]});
+                    }else{
+                        for(var s = 0;s<sessionSortedByTime.length;s++){
+                            if(session[i].start_Date.getTime() === sessionSortedByTime[s].date.getTime()){
                                 sessionSortedByTime[s].sessionOfSameTime.push(session[i]);
                             }
+                            if(sessionSortedByTime[s].sessionOfSameTime){
+                                sessionSortedByTime[s].sessionOfSameTime = _.orderBy(sessionSortedByTime[s].sessionOfSameTime, ['track'],['asc']);
+                            }
+
                         }
+
                     }
+                    
+                    
                 }
                 return sessionSortedByTime;
             }
