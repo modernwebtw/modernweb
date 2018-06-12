@@ -181,6 +181,10 @@ var modernweb2018 = new Vue({
             this.Modal_Speaker = speaker;
             $('a[href="#speakerModalIntro"]').tab('show');
             $('#speakerModal').modal('show');
+            $('#tabSession').removeClass('active');
+            $('#tabSpeaker').addClass('active');
+            $('#speakerModalAgenda').removeClass('active');
+            $('#speakerModalIntro').addClass('active');
         },
         showModal2: function(session) {
             this.Modal_Session = session;
