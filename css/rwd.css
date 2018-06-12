@@ -1,7 +1,6 @@
 /* --------------!!!! --------------
    --------------!!!! --------------*/
 /* layout */
-section{overflow: hidden;}
 .logo-img{width: 300px;}
 header .navbar-inverse .navbar-nav{float: right;}
 .section--history{overflow: visible;}
@@ -95,6 +94,7 @@ header .navbar-inverse .navbar-nav{float: right;}
 }
 
 @media screen and (max-width:1024px ) {
+	section{overflow: hidden;}
 	.section--workshop, .section--ticket, .section--spon, .section--org, .section--buy, .section--thx { padding-top: 7%;}
 	.section--ticket .ticket__item .ticket__item__btn .btn{
 		width: 100%;
@@ -102,7 +102,7 @@ header .navbar-inverse .navbar-nav{float: right;}
 		letter-spacing: 1px;
 	}
 	.section--key .key__title .deco-01{opacity: .3; right: 0; top: 10%; position: absolute;}
-	.section--history{ overflow: hidden;}
+	.section--history{ overflow: hidden; margin: 3% 0 4% 0;}
 	/* .section--history:before {
     width: 100%;
     height: 100px;
