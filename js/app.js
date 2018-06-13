@@ -242,7 +242,7 @@ $('#btn_flappy_start').click(function() {
     $('.header').hide();
     $('#game').hide();
     $('#flappy_bg').show();
-    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
+    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body").css({ 'height': '100%', 'width': '100%' });
     $('body').addClass('stopScroll');
 });
 
