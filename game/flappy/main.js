@@ -219,16 +219,25 @@ function display_intro_instructions() {
 
 function display_game_over() {
     var final_score = score;
-    ctx.font = "30px Courier New";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.fillText("Game Over", myCanvas.width / 2, 100);
-    ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
-    ctx.font = "20px Courier New";
-    ctx.fillText("點擊滑鼠以再次遊戲", myCanvas.width / 2, 300);
+    // ctx.font = "30px Courier New";
+    // ctx.fillStyle = "white";
+    // ctx.textAlign = "center";
+    // ctx.fillText("Game Over", myCanvas.width / 2, 100);
+    // ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
+    // ctx.font = "20px Courier New";
+    // ctx.fillText("點擊滑鼠以再次遊戲", myCanvas.width / 2, 300);
 
-    window.top.flappy_score = final_score;
-    parent.closeIFrame();
+    // window.top.flappy_score = final_score;
+    // parent.closeIFrame();
+
+    $('#modal_flappy_over').modal({
+        backdrop: 'static',
+        keyboard: true,
+        show: true
+    });
+
+    $('#game_bg').hide();
+    $('#flappy_score').text(final_score);
 }
 
 function display_bar_running_along_bottom() {
@@ -277,8 +286,6 @@ function Do_a_Frame() {
             {
                 make_bird_slow_and_fall();
                 display_game_over();
-                parent.closeIFrame();
-                // score = 0;
                 break;
             }
     }
@@ -290,3 +297,18 @@ var bird = new MySprite("img/astronaut.png");
 bird.x = myCanvas.width / 3;
 bird.y = myCanvas.height / 2;
 setInterval(Do_a_Frame, 1000 / FPS);
+
+$('#btn_flappy_back').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");    
+    $('.ta').show();
+    $('body').removeClass('stopScroll');
+    $('.header').show();
+    $('#flappy_bg').hide();
+    parent.closeIFrame();
+});
+
+$('#btn_flappy_continue').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
+    $('canvas#myCanvas').show();
+    game_mode == 'prestart';
+});
