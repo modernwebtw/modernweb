@@ -246,15 +246,15 @@ $('#btn_flappy_start').click(function() {
     $('body').addClass('stopScroll');
 });
 
-$('#btn_flappy_continue').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
-    $('#game').hide();
-    $('#flappy_bg').show();
-    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
-    $('body').addClass('stopScroll');
-});
+// $('#btn_flappy_continue').click(function() {
+//     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
+//     $('.ta').hide();
+//     $('.header').hide();
+//     $('#game').hide();
+//     $('#flappy_bg').show();
+//     $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
+//     $('body').addClass('stopScroll');
+// });
 
 $('#btn_back3').click(function() {
     $('.ta').show();
@@ -269,6 +269,7 @@ $('#btn_flappy_back').click(function() {
     $('body').removeClass('stopScroll');
     $('.header').show();
     $('#flappy_bg').hide();
+    closeIFrame();
 });
 
 $('#btn_flappy_exit').click(function() {
@@ -281,8 +282,9 @@ $('#btn_flappy_exit').click(function() {
 
 function closeIFrame() {
     $('.ta').show();
-    $('#game_bg').hide();
-    $('#modal_flappy_over').modal('show');
+    $('body').removeClass('stopScroll');
+    $('.header').show();
+    $('#flappy_bg').hide();
     // console.log(window.frames['flappy'].final_score);
     $('iframe').remove();
 }
