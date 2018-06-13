@@ -237,7 +237,6 @@ function display_game_over() {
     });
 
     $('#game_bg').hide();
-    $('canvas#myCanvas').hide();
     $('#flappy_score').text(final_score);
 }
 
@@ -287,8 +286,6 @@ function Do_a_Frame() {
             {
                 make_bird_slow_and_fall();
                 display_game_over();
-                parent.closeIFrame();
-                // score = 0;
                 break;
             }
     }
@@ -300,3 +297,18 @@ var bird = new MySprite("img/astronaut.png");
 bird.x = myCanvas.width / 3;
 bird.y = myCanvas.height / 2;
 setInterval(Do_a_Frame, 1000 / FPS);
+
+$('#btn_flappy_back').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Don't Want to Play MW17 Game");    
+    $('.ta').show();
+    $('body').removeClass('stopScroll');
+    $('.header').show();
+    $('#flappy_bg').hide();
+    parent.closeIFrame();
+});
+
+$('#btn_flappy_continue').click(function() {
+    // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
+    $('canvas#myCanvas').show();
+    game_mode == 'prestart';
+});
