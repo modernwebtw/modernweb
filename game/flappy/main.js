@@ -219,16 +219,26 @@ function display_intro_instructions() {
 
 function display_game_over() {
     var final_score = score;
-    ctx.font = "30px Courier New";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.fillText("Game Over", myCanvas.width / 2, 100);
-    ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
-    ctx.font = "20px Courier New";
-    ctx.fillText("點擊滑鼠以再次遊戲", myCanvas.width / 2, 300);
+    // ctx.font = "30px Courier New";
+    // ctx.fillStyle = "white";
+    // ctx.textAlign = "center";
+    // ctx.fillText("Game Over", myCanvas.width / 2, 100);
+    // ctx.fillText("Score: " + final_score, myCanvas.width / 2, 150);
+    // ctx.font = "20px Courier New";
+    // ctx.fillText("點擊滑鼠以再次遊戲", myCanvas.width / 2, 300);
 
-    window.top.flappy_score = final_score;
-    parent.closeIFrame();
+    // window.top.flappy_score = final_score;
+    // parent.closeIFrame();
+
+    $('#modal_flappy_over').modal({
+        backdrop: 'static',
+        keyboard: true,
+        show: true
+    });
+
+    $('#game_bg').hide();
+    $('canvas#myCanvas').hide();
+    $('#flappy_score').text(final_score);
 }
 
 function display_bar_running_along_bottom() {

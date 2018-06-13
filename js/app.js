@@ -277,6 +277,7 @@ $('#btn_flappy_exit').click(function() {
     $('body').removeClass('stopScroll');
     $('.header').show();
     $('#flappy_bg').hide();
+    closeIFrame();
 });
 
 function closeIFrame() {
