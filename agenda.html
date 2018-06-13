@@ -129,12 +129,12 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">09:40 - 10:20</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['9:40']">
-                                                <div class="agenda__t-keynote">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['9:40']">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -151,12 +151,12 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">10:30 - 11:10</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['10:30']">
-                                                <div class="agenda__t-keynote">
+                                            <td colspan="4" class="agenda__table-td  td-hover" v-for="sID in session_table_D1['10:30']">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -173,12 +173,12 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">11:20 - 12:00</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D1['11:20']">
-                                                <div class="agenda__t-keynote">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['11:20']">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -194,16 +194,20 @@
                                         <tr class="agenda__t-stripe hidden-xs">
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
+                                                <div class="agenda__t-track">Track A
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 101 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
+                                                <div class="agenda__t-track">Track B
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 201 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
+                                                <div class="agenda__t-track">Track C
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 202 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+                                                <div class="agenda__t-track">Track D
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 403 --></div>
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -211,7 +215,7 @@
                                                 <div class="agenda__t-time">13:30 - 13:55</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['13:30']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -236,7 +240,7 @@
                                                 <div class="agenda__t-time">14:20 - 15:00</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['14:20']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -261,7 +265,7 @@
                                                 <div class="agenda__t-time">15:10 - 15:50</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['15:10']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -286,7 +290,7 @@
                                                 <div class="agenda__t-time">16:00 - 16:40</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['16:00']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -311,7 +315,7 @@
                                                 <div class="agenda__t-time">16:50 - 17:30</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['16:50']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -356,12 +360,12 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">09:40 - 10:20</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['9:40']">
-                                                <div class="agenda__t-keynote">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['9:40']">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -378,12 +382,12 @@
                                             <td class="agenda__table-td">
                                                 <div class="agenda__t-time">10:30 - 11:10</div>
                                             </td>
-                                            <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['10:30']">
-                                                <div class="agenda__t-keynote">
+                                            <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['10:30']">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -399,16 +403,20 @@
                                         <tr class="agenda__t-stripe hidden-xs">
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track E <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
+                                                <div class="agenda__t-track">Track E
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 101 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track F <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
+                                                <div class="agenda__t-track">Track F
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 201 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track G <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
+                                                <div class="agenda__t-track">Track G
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 202 --></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track H <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+                                                <div class="agenda__t-track">Track H
+                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 403 --></div>
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -416,7 +424,7 @@
                                                 <div class="agenda__t-time">11:20 - 11:45</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['11:20']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -433,7 +441,7 @@
                                                 <div class="agenda__t-time">11:45 - 12:10</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['11:45']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -458,7 +466,7 @@
                                                 <div class="agenda__t-time">13:30 - 14:10</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['13:30']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -483,7 +491,7 @@
                                                 <div class="agenda__t-time">14:20 - 15:00</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['14:20']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -508,7 +516,7 @@
                                                 <div class="agenda__t-time">15:10 - 15:50</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['15:10']">
-                                                <div class="agenda__t-class"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+                                                <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -533,11 +541,11 @@
                                                 <div class="agenda__t-time">16:00 - 16:40</div>
                                             </td>
                                             <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['16:00']">
-                                                <div class="agenda__t-keynote">
+                                                <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
-                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span> 任職單位: {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+                                                        <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -557,6 +565,59 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade speaker-modal" id="sessionModal" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-sm-12 col-xs-12 speaker-brief__top" v-for="speaker in Modal_Session.speaker">
+                                <div class="col-xs-4">
+                                    <img :src="speaker.avatar" alt="" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="speaker-box__name">
+                                        {{ speaker.speaker }}
+                                    </div>
+                                    <div class="speaker-box__title">
+                                        {{ speaker.company }}
+                                        <br> {{ speaker.department }}{{ speaker.position }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                <hr>
+                                <ul class="list-inline" role="tablist">
+                                    <li role="presentation" class="active" id="tabSession">
+                                        <a class="tab" data-target="#sessionModalAgenda" aria-controls="#sessionModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                    </li>
+                                    <li role="presentation" id="tabSpeaker">
+                                        <a class="tab" data-target="#sessionModalIntro" aria-controls="#sessionModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" id="sessionModalAgenda" class="tab-pane active">
+                                        <div class="speaker-brief__agenda">
+                                            <div class="speaker-brief__agenda-content overflow-y">
+                                                <p><b class="h3"><big>{{ Modal_Session.title }}</big></b></p>
+                                                <p v-html="Modal_Session.summary"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" id="sessionModalIntro" class="tab-pane">
+                                        <div class="speaker-brief__intro overflow-y" v-for="speaker in Modal_Session.speaker">
+                                            <p v-html="speaker.profile"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
         </section>
         <section class="section--footer">
             <div class="container">
