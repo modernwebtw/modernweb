@@ -110,10 +110,13 @@ var session_table_D2 = {
         '3634'
     ],
     "16:00": [
-        '3635'
+        '3685'
     ],
     "16:40": [
         '3653'
+    ],
+    "16:50": [
+        '3635'
     ],
 }
 
@@ -188,13 +191,18 @@ var modernweb2018 = new Vue({
         },
         showModal2: function(session) {
             this.Modal_Session = session;
-            if (!!session.speaker.length) {
+            if (!!session.summary.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
                 $('#tabSession').addClass('active');
                 $('#tabSpeaker').removeClass('active');
                 $('#sessionModalAgenda').addClass('active');
                 $('#sessionModalIntro').removeClass('active');
+            }
+            $('#tabSpeaker').hide();
+            if(!!session.speaker.length){
+                $('#tabSpeaker').show();
+
             }
         },
         showModal3: function(sponsor) {
