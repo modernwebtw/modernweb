@@ -12,7 +12,7 @@
     <meta property="og:image" content="https://modernweb.tw/img/fbimg2018.jpg" />
     <meta property="og:image:width" content="601" />
     <meta property="og:image:height" content="346" />
-    <link rel="icon" type="image/png" href="img/favicon.gif" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon.ico?00779" sizes="16x16">
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,9 +43,11 @@
 
 <body>
     <div id="modernweb2018">
+
+        <div class="bg--content"></div>
         <header class="header">
-            <nav class="navbar navbar-inverse">
-                <div class="container">
+            <nav class="container navbar navbar-inverse">
+
                     <!-- logo  -->
                     <div class="navbar-header">
                         <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navtop">
@@ -54,7 +56,9 @@
                         <span class="icol-bar icol-bar-a"></span>
                         <span class="icol-bar icol-bar-a"></span>
                     </a>
-                        <a class="navbar-logobox" href="index.html">
+
+                    <a class="navbar-logobox" href="index.html">
+
                         <img src="img/logo.svg" alt="">
                     </a>
                     </div>
@@ -63,11 +67,14 @@
                     <div class="collapse navbar-collapse" id="navtop">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">首頁</a></li>
-                            <li><a href="index.html#special">2018特色</a></li>
+
                             <li><a href="index.html#speaker">講者</a></li>
-                            <li><a href="#workshop">實戰工作坊</a></li>
+                            <li><a href="index.html#feature">2018特色</a></li>
+                            <li><a href="index.html#workshop">實戰工作坊</a></li>
                             <li><a href="index.html#ticket">售票</a></li>
-                            <li><a href="agenda.html" class="visited">議程</a></li>
+                            <li><a href="agenda.html">議程</a></li>
+                            <li><a href="event.html">場邊活動</a></li>
+
                             <li class="hidden-sm-down">
                                 <div class="dropdown hidden-sm-down">
                                     <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
@@ -89,7 +96,7 @@
         </header>
         <section class="section--kv--content">
             <div class="kv-head">
-                <h2>議程表</h2>
+                <h2 class="title">議程表</h2>
             </div>
         </section>
         <section class="section--agenda">
@@ -134,7 +141,9 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -156,7 +165,9 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -178,7 +189,9 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -194,20 +207,18 @@
                                         <tr class="agenda__t-stripe hidden-xs">
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track A
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 101 --></div>
+
+                                                <div class="agenda__t-track">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track B
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 201 --></div>
+                                                <div class="agenda__t-track">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track C
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 202 --></div>
+                                                <div class="agenda__t-track">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track D
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 403 --></div>
+                                                <div class="agenda__t-track">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -215,7 +226,9 @@
                                                 <div class="agenda__t-time">13:30 - 13:55</div>
                                             </td>
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['13:30']">
+
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
+
                                                     <div class="agenda__t-class-topic">
                                                         {{ Session[sID].title }}
                                                     </div>
@@ -365,7 +378,9 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -387,7 +402,9 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -403,20 +420,18 @@
                                         <tr class="agenda__t-stripe hidden-xs">
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track E
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 101 --></div>
+
+                                                <div class="agenda__t-track">Track E <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track F
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 201 --></div>
+                                                <div class="agenda__t-track">Track F <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track G
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 202 --></div>
+                                                <div class="agenda__t-track">Track G <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track H
-                                                    <!-- <i aria-hidden="true " class="fa fa-map-marker"></i> 403 --></div>
+                                                <div class="agenda__t-track">Track H <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -545,6 +560,7 @@
                                                     <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
+
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
                                                     </div>
                                                 </div>
@@ -568,6 +584,7 @@
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -604,7 +621,9 @@
                                         {{ speaker.speaker }}
                                     </div>
                                     <div class="speaker-box__title">
+
                                         {{ speaker.company }}
+
                                         <br> {{ speaker.department }}{{ speaker.position }}
                                     </div>
                                 </div>
@@ -652,22 +671,27 @@
                                 <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
                             </ul>
                             <ul>
-                                <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62 " target="_blank">台北市信義區松仁路123號</a></li>
+
+                                <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
+
                             </ul>
                             <p>iThome 版權所有</p>
                         </div>
                         <div class="col-sm-4">
                             <div class="col-sm-12">
                                 <ul class="footer__social">
-                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/ " title=""><i aria-hidden="true " class="fa fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com/home?status=https://modernweb.tw/ " title=""><i aria-hidden="true " class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/ " title=""><i aria-hidden="true " class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="https://plus.google.com/share?url=https://modernweb.tw/ " title=""><i aria-hidden="true " class="fa fa-google-plus"></i></a></li>
+
+                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/home?status=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-12 col-xs-12">
                                 <div class="footer__fbshare hidden-sm hidden-xs">
-                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId " width="340 " height="124 " scrolling="no " frameborder="0 " allowtransparency="true " style="border:none;overflow:hidden"></iframe>
+
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
+
                                 </div>
                             </div>
                         </div>
@@ -682,8 +706,10 @@
         <script src="js/vue.min.js"></script>
         <script src="js/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
         <script src="js/confapi.js?32165444987 " data-nid="3531"></script>
         <script src="js/modernweb2018.js?362346234514334554987"></script>
+
 </body>
 
 </html>
