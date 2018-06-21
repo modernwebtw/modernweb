@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="game/flappy/style.css">
-    <link rel="stylesheet" href="game/sinuous/style.css">
-    <link rel="stylesheet" href="game/alien/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/setting.css">
-    <link rel="stylesheet" type="text/css" href="css/rwd.css">
-    <link rel="stylesheet" type="text/css" href="css/kv.css">
+    <link rel="stylesheet" href="game/flappy/style.css?00123477">
+    <link rel="stylesheet" href="game/sinuous/style.css?00123477">
+    <link rel="stylesheet" href="game/alien/style.css?00123477">
+    <link rel="stylesheet" href="css/main.css?00123477">
+    <link rel="stylesheet" type="text/css" href="css/setting.css?00123477">
+    <link rel="stylesheet" type="text/css" href="css/rwd.css?00123477">
+    <link rel="stylesheet" type="text/css" href="css/kv.css?00123477">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -433,6 +433,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
         <script src="js/confapi.js " data-nid="3531"></script>
         <script src="js/modernweb2018.js"></script>
+        <script type="text/javascript">
+            $("body").append("<a href='#top' class='gotop'><i class='fa fa-arrow-circle-up'></i></a>");
+            var topBtn = $('.gotop');         
+            topBtn.hide();  
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();  
+                } else {
+                    topBtn.fadeOut();
+                }
+            }); 
+            topBtn.click(function() { 
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+        </script>
 </body>
 
 </html>
