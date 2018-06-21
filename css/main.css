@@ -964,6 +964,22 @@ header {
         fill: #FFFFFF;
         text-decoration: none; }
 
+.gotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: #a692da;
+  padding: 3px 10px;
+  font-size: 3em;
+  border-radius: 0px;
+  -moz-border-radius: 3px;
+  line-height: 200%;
+  text-align: center;
+  opacity: 0.8;
+  z-index: 2000;
+  transition: all .3s ease; }
+
 .loading {
   position: fixed;
   left: 0;
@@ -1077,9 +1093,10 @@ section .title {
   .section--speaker .speaker__item .speaker__disc .btn {
     background: #321357;
     border: 1px solid #531d8d;
-    width: 120px;
+    width: 180px;
     float: right;
-    margin-top: 20px; }
+    margin-top: 20px;
+    padding: 12px; }
     @media (max-width: 767px) {
       .section--speaker .speaker__item .speaker__disc .btn {
         float: left;
@@ -1330,14 +1347,9 @@ section .title {
 .section--ticket .buy {
   background: #ffffff; }
 .section--ticket .tab-location {
-  color: #00afa8;
-  float: right;
+  color: #18cec3;
   font-size: 18px;
-  border: 2px solid #00afa8;
-  padding: 2px 5px; }
-  .section--ticket .tab-location:hover {
-    background: #00afa8;
-    color: #ffffff; }
+  text-align: center; }
 .section--ticket .ticket__item {
   display: table;
   color: #321357;
@@ -1941,6 +1953,11 @@ section .title {
         font-size: 20px;
         letter-spacing: 2px;
         border: 2px solid #444444; }
+        .section--event .event-nav__list a.btn--undo {
+          background: #444444;
+          border: 0px; }
+          .section--event .event-nav__list a.btn--undo img {
+            filter: brightness(0); }
         @media (max-width: 767px) {
           .section--event .event-nav__list a {
             padding: 16px 0;

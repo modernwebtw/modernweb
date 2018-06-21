@@ -1,3 +1,20 @@
+.gotop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    color: $font-color-pu3;
+    padding: 3px 10px;
+    font-size: 3em;
+    border-radius: 0px;
+    -moz-border-radius: 3px;
+    line-height: 200%;
+    text-align: center;
+    opacity: 0.8;
+    z-index: 2000;
+    transition: all .3s ease;
+}
+
 .loading {
     position: fixed;
     left: 0;
@@ -132,9 +149,10 @@ section .title {
             .btn {
                 background: $font-color-pu1;
                 border: 1px solid $font-color-pu2;
-                width: 120px;
+                width: 180px;
                 float: right;
                 margin-top: 20px;
+                padding: 12px;
                 @include media("<=767px") {
                     float: left;
                     width: 100%;
@@ -462,12 +480,9 @@ section .title {
         background: #ffffff;
     }
     .tab-location{ 
-    color: $font-color-green;
-    float: right;
+    color: #18cec3;
     font-size: 18px;
-    border: 2px solid $font-color-green;
-    padding: 2px 5px;
-    &:hover{ background: $font-color-green; color: #ffffff;}
+    text-align: center;
     }
     .ticket__item {
         display: table;

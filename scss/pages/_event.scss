@@ -90,6 +90,9 @@
                     font-size: 20px;
                     letter-spacing: 2px;
                     border: 2px solid #444444;
+                    &.btn--undo{background: #444444; border: 0px;
+                    	img{ filter: brightness(0);}
+            		}
                     @include media("<768px") {
                         padding: 16px 0;
                         width: 90%;
