@@ -21,7 +21,6 @@ body {
     position: relative;
     background-color: #18052D;
     font-family: "Open Sans", "Helvetica Neue", 微軟正黑體, Helvetica, Arial, sans-serif;
-<<<<<<< HEAD
 	color: #ddd;
 	font-size: 15px;
 	@include media("<=768px"){
@@ -59,133 +58,29 @@ ul li{ list-style: none;}
 .mat30{margin-top: 30px;}
 .mat20{margin-top: 20px;}
 .mab10{margin-bottom: 10px;}
-=======
-    color: #ddd;
-    font-size: 15px;
-    @include media("<=768px") {
-        min-height: 100%;
-    }
+.bg-color4 {
+    background: #aba1c4;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #fff;
-    margin: 20px 0 10px;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-h3 {
-    font-size: 30px;
-}
-
-h4 {
-    font-size: 24px;
-}
-
-h5 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-h6 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-@media screen and(max-width: 767px) {
-    h1 {
-        font-size: 34px;
-        margin-bottom: 20px;
-    }
-    h2 {
-        font-size: 28px;
-        margin: 1%;
-    }
-    h3 {
-        font-size: 24px;
-        margin: 1%;
-    }
-    h4 {
-        font-size: 20px;
-        margin: 1%;
-    }
-    h5 {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 1%;
-    }
-    h6 {
-        font-size: 16px;
-        font-weight: 600;
-        margin: 1%;
-    }
-    p {
-        font-size: 14px;
-    }
-}
-
-strong {
-    font-weight: 700;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6em;
-}
-
-p:last-child {
-    margin-bottom: 0px;
-}
-
-p {
-    color: #ddd;
-}
-
-ul {
-    list-style: none;
-    line-height: 1.9em;
-}
-
-ul li {
+.ul-check {
+    margin-left: 5px;
     list-style: none;
 }
 
-.ma__t30 {
-    margin-top: 30px;
+.ul-check>li {
+    display: inline-block;
+    margin-left: 22px;
+    word-break: keep-all;
 }
 
-.overflow-y {
-    overflow-y: visible;
+.ul-check>li:before {
+    content: "\f00c";
+    font-family: fontawesome;
+    position: absolute;
+    font-size: 12px;
+    margin-left: -15px;
 }
->>>>>>> e2033e1f42228e4c0c3aeb745814cf73c0c71eba
-
 .border-china{ border: 3px solid #da8027;}
 .border-group{ border: 3px solid $font-color-pu3;}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: $font-color-pu3;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: $font-color-pu1;
-}
 
 // .bg-animation{
 // 	animation: bg-animation 30s ease infinite;
@@ -193,6 +88,7 @@ ul li {
 a {
     transition: all .3s ease;
     color: #18cec3;
+    &:hover{color:#0f948c;text-decoration:none;}
 }
 
 button,
@@ -205,7 +101,25 @@ button,
         color: #ddd;
     }
 }
+.btn--default {
+    background: #fff;
+    border: 2px solid #531d8d;
+    margin-top: 20px;
+    min-width: 120px;
+    color: #531d8d;
+    display: inline-block;
+    width: 45%;
+    margin: 1%;
+    padding: 10px 0;
+    font-size: 18px;
+}
 
+.btn--default:focus,
+.btn--default:hover,
+.btn--default:active {
+    color: #fff;
+    background: #531d8d;
+}
 .inactivelink {
     pointer-events: none;
     cursor: default;
@@ -288,17 +202,31 @@ header {
     width: 100%;
     height: 90px;
     top: 0;
+    box-shadow: 0 0 16px #b8a3e4aa;
+    background-color: rgba(30, 7, 57, 0.8);
+    border-color: $bg-color2;
+    .navbar-inverse .navbar-nav { float: right;}
+    @include media("<=1024px") {
+        height: auto;
+    }
 }
 
-// ** nav
+// ** nav after06/20 menu bar is customized
 .navbar-inverse {
-    width: 100%;
-    background-color: rgba(30, 7, 57, .8);
-    border-color: $bg-color2;
-    box-shadow: 0 0 16px #b8a3e4aa;
+    height: 90px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    @include media("<=1024px") {
+        height: auto;
+    }
     @include media("<=767px") {
         position: absolute;
         background-color: rgb(30, 7, 57);
+        height:auto;
+        width: 100%;
+        padding: 0 15px;
     }
     .navbar-header {
         @include media("<=1200px", ">=768px") {
@@ -307,7 +235,6 @@ header {
         .navbar-toggle {
             border-radius: 0px;
             padding: 14px;
-            margin-top: 5%;
             border-color: $font-color-pu3;
             .icon-bar {
                 background-color: $font-color-pu4;
@@ -319,11 +246,12 @@ header {
     }
     .navbar-logobox {
         display: block;
-        padding: 3% 2% 3% 6%;
-        width: 50%;
-        @include media("<=1200px", ">=768px") {
-            width: 95%;
-            padding-top: 14%;
+        padding: 8px;
+        width: 220px;
+        margin: 7% 0 0 10%;
+        @include media("<=1200px") {
+            margin-top: 6px;
+            margin-left: 15px;
         }
         img {
             width: 100%;
@@ -333,18 +261,27 @@ header {
     .navbar-toggle:hover {
         background-color: $bg-color2;
     }
-    .navbar-nav li {
+    .navbar-nav{
+        margin-right:15px;
+        li {
         @include media("<=767px") {
             border-bottom: 1px solid $bg-color2;
             text-align: center;
-        }
-        a {
-            font-size: 16px;
-            color: $font-color-pu3;
-            line-height: 55px;
-            padding: 1.1em;
-            @include media("<=767px") {
-                padding: .3em;
+            }
+            a {
+                font-size: 16px;
+                color: $font-color-pu3;
+                line-height: 55px;
+                padding: 1.1em;
+                @include media("<=767px") {
+                    padding: .3em;
+                }
+            }
+            .dropdown-menu{
+                padding: 0px;
+                border-radius: 0;
+                left: calc(50% - 80px);
+                li{ border-bottom: 1px solid #eee;}
             }
         }
     }
@@ -363,7 +300,7 @@ header {
         }
     }
     .navbar-nav .dropdown-menu li a {
-        line-height: 10px;
+        line-height: 30px;
         padding: 10px 1em;
         text-align: center;
     }

@@ -24,34 +24,34 @@ var session_table_D1 = {
         '3590', // lunch
     ],
     "13:30": [
-        '3630',
         '3614',
-        '3604',
-        '3594'
+        '3630',
+        '3613',
+        '3606'
     ],
     "14:20": [
-        '3592',
         '3638',
-        '3591',
-        '3613'
+        '3594',
+        '3604',
+        '3608'
     ],
     "15:10": [
-        '3593',
         '3637',
-        '3610',
-        '3595'
+        '3592',
+        '3595',
+        '3610'
     ],
     "16:00": [
-        '3612',
         '3605',
-        '3600',
-        '3607'
+        '3612',
+        '3607',
+        '3601'
     ],
     "16:50": [
+        '3593',
         '3639',
-        '3601',
-        '3608',
-        '3641'
+        '3591',
+        '3600'
     ],
 }
 
@@ -75,45 +75,48 @@ var session_table_D2 = {
         '3620', // break
     ],
     "11:20": [
-        '3626',
-        '3624',
         '3627',
-        '3623'
+        '3623',
+        '3626',
+        '3625'
     ],
     "11:45": [
         '3621',
-        '3625',
         '3622',
+        '3624',
         '3648'
     ],
     "12:10": [
         '3628', // lunch
     ],
     "13:30": [
-        '3636',
         '3645',
+        '3636',
         '3629',
-        '3603'
+        '3609'
     ],
     "14:20": [
-        '3609',
-        '3611',
         '3644',
+        '3603',
+        '3641',
         '3640'
     ],
     "15:10": [
-        '3606',
+        '3617',
         '3602',
-        '3617'
+        '3611'
     ],
     "15:50": [
         '3634'
     ],
     "16:00": [
-        '3635'
+        '3685'
     ],
     "16:40": [
         '3653'
+    ],
+    "16:50": [
+        '3635'
     ],
 }
 
@@ -188,13 +191,18 @@ var modernweb2018 = new Vue({
         },
         showModal2: function(session) {
             this.Modal_Session = session;
-            if (!!session.speaker.length) {
+            if (!!session.summary.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
                 $('#tabSession').addClass('active');
                 $('#tabSpeaker').removeClass('active');
                 $('#sessionModalAgenda').addClass('active');
                 $('#sessionModalIntro').removeClass('active');
+            }
+            $('#tabSpeaker').hide();
+            if(!!session.speaker.length){
+                $('#tabSpeaker').show();
+
             }
         },
         showModal3: function(sponsor) {
