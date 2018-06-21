@@ -247,7 +247,8 @@ a, a:link, a:visited {
     transition: all .3s ease-in-out; }
   @media (min-width: 1024px) {
     .link-btn:hover, .link-btn:focus {
-      background-color: #8470c3; }
+      background-color: #8470c3; 
+    }
       .link-btn:hover .link-btn__word, .link-btn:focus .link-btn__word {
         opacity: 0;
         -webkit-transform: translateY(-44px);
