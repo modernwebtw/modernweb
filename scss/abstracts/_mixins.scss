@@ -1,3 +1,12 @@
+@mixin font-hover ($font-color, $hover-color: lighten($font-color,7%), $active-color: darken($font-color,7%) ) {
+    color: $font-color;
+    &:hover,&:focus {
+        color: $hover-color;
+    }
+    &:active {
+        color: $active-color;
+    }
+}
 // @mixin clearfix {
 //     &::after {
 //         content: '';
