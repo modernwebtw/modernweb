@@ -18,9 +18,10 @@ $(".menu__burger, .menu__mask").on('click', function() {
     $('body').toggleClass('is-hidden');
 });
 
-// scroll
-$('a[href^="#"]:not([href="#"]), #buy_ticket').click(function(e) {
+//scroll
+$('a[href^="#"]:not([href="#"], [href="#buy_ticket"], [href="#carousel-example-generic"] )').click(function(e) {
     var target = '#' + $(this).attr('href').split('#')[1];
+    console.log(target);
     goScroll(target);
     return false;
 });

@@ -375,3 +375,7 @@ iframe {
 section.section--speaker .ma__t30 {
     min-height: 353px;
 }
+
+.carousel-inner__q{
+    height: 160px;
+}
