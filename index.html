@@ -14,8 +14,9 @@
     <meta property="og:image:height" content="346" />
     <link rel="icon" type="image/png" href="img/favicon.ico?00779" sizes="16x16">
     <link rel="stylesheet" href="css/vendor/normalize.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min-3.3.7.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-3.3.7/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="game/flappy/style.css?32123452345165489765">
     <link rel="stylesheet" href="game/sinuous/style.css?32123452345165489765">
     <link rel="stylesheet" href="game/alien/style.css?32123452345165489765">
@@ -1477,11 +1478,11 @@
                             <div class='container carousel'>
                                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                     <!-- Indicators -->
-                                    <!-- <ol class="carousel-indicators">
+                                   <!--  <ol class="carousel-indicators">
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol> -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+                                </ol>
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner text-center" role="listbox">
                                         <div class="item active">
@@ -1566,14 +1567,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                                         <i class="fa fa-angle-left"></i>
                                         <span class="sr-only">Previous</span>
                                     </a>
                                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="sr-only">Next</span>
-                                    </a> -->
+                                    </a>
+
+<!--  -->
+
+
                                 </div>
                             </div>
                         </div>
@@ -1581,6 +1586,7 @@
                 </div>
             </div>
         </section>
+   
         <section class="section--workshop" id="workshop">
             <div class="container">
                 <div class="row">
@@ -2145,7 +2151,11 @@
         <!-- end_of_flappy -->
         </div>
         <script type="text/javascript" src="js/vendor/jquery-3.3.1.js"></script>
+          <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
         <script type="text/javascript" src="js/vendor/bootstrap-3.3.7.min.js"></script>
+          <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
         <script src="https://connect.facebook.net/zh_TW/all.js"></script>
         <script src="js/vue.min.js"></script>
         <script src="js/confapi.js?54987321" data-nid="3531"></script>
@@ -2153,33 +2163,10 @@
         <script src="js/modernweb2018.js?32123452345165489765"></script>
         <script src="game/alien/game.js?32123452345165489765"></script>
         <script src="game/sinuous/game.js?32123452345165489765"></script>
-        <!-- <script src="game/flappy/main.js"></script>     -->
+        <script src="game/flappy/main.js"></script>    
         <script src="js/app.js?32123452345165489765"></script>
         <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <script type="text/javascript">
-        $("body").append("<a href='#top' class='gotop'><i class='fa fa-arrow-circle-up'></i></a>");
-        var topBtn = $('.gotop');
-        topBtn.hide();
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                topBtn.fadeIn();
-            } else {
-                topBtn.fadeOut();
-            }
-        });
-        topBtn.click(function() {
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-            return false;
-        });
+      
         </script>
 </body>
 <!-- test -->
