@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/setting.css?312654687987">
     <link rel="stylesheet" type="text/css" href="css/rwd.css?312654687987">
     <link rel="stylesheet" type="text/css" href="css/kv.css?312654687987">
+    <link rel="stylesheet" href="css/agenda.css?21231237">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -133,7 +134,8 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['9:40']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -157,7 +159,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td  td-hover" v-for="sID in session_table_D1['10:30']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -181,7 +183,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D1['11:20']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -196,23 +198,23 @@
                                                 12:00 - 13:30
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Lunch (90 mins)
+                                                Lunch 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe hidden-xs">
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
 
-                                                <div class="agenda__t-track">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
+                                                <div class="agenda__t-track">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
+                                                <div class="agenda__t-track">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
+                                                <div class="agenda__t-track">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+                                                <div class="agenda__t-track">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
 
                                             </td>
                                         </tr>
@@ -225,7 +227,7 @@
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
 
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -240,7 +242,7 @@
                                                 13:55 - 14:20
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -250,7 +252,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['14:20']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -265,7 +267,7 @@
                                                 15:00 - 15:10
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -275,7 +277,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['15:10']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -290,7 +292,7 @@
                                                 15:50 - 16:00
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -300,7 +302,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['16:00']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -315,7 +317,7 @@
                                                 16:40 - 16:50
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -325,7 +327,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D1['16:50']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -370,7 +372,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['9:40']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -394,7 +396,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td td-hover" v-for="sID in session_table_D2['10:30']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -416,16 +418,16 @@
                                             <td class="agenda__table-td"></td>
                                             <td class="agenda__table-td">
 
-                                                <div class="agenda__t-track">Track E <i aria-hidden="true " class="fa fa-map-marker"></i> 101</div>
+                                                <div class="agenda__t-track">Track E <i aria-hidden="true " class="fa fa-map-marker"></i></div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track F <i aria-hidden="true " class="fa fa-map-marker"></i> 201</div>
+                                                <div class="agenda__t-track">Track F <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track G <i aria-hidden="true " class="fa fa-map-marker"></i> 202</div>
+                                                <div class="agenda__t-track">Track G <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                             </td>
                                             <td class="agenda__table-td">
-                                                <div class="agenda__t-track">Track H <i aria-hidden="true " class="fa fa-map-marker"></i> 403</div>
+                                                <div class="agenda__t-track">Track H <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
 
                                             </td>
                                         </tr>
@@ -436,7 +438,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['11:20']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -453,7 +455,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['11:45']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -468,7 +470,7 @@
                                                 12:10 - 13:30
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Lunch (90 mins)
+                                                Lunch 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -478,7 +480,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['13:30']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -493,7 +495,7 @@
                                                 14:10 - 14:20
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -503,7 +505,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['14:20']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -518,7 +520,7 @@
                                                 15:00 - 15:10
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -528,7 +530,7 @@
                                             <td class="agenda__table-td" v-for="sID in session_table_D2['15:10']">
                                                 <div class="agenda__t-class" @click="showModal2(Session[sID])"><span class="agenda__t-class-track">{{ Session[sID].track }}</span>
                                                     <div class="agenda__t-class-topic">
-                                                        {{ Session[sID].title }}
+                                                        <span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div v-for="speaker in Session[sID].speaker">
                                                         <a :href="'#s' + speaker.target_id">
@@ -543,7 +545,7 @@
                                                 15:50 - 16:00
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break 
                                             </td>
                                         </tr>
                                         <tr class="agenda__t-stripe">
@@ -552,7 +554,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['16:00']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
 
@@ -566,7 +568,7 @@
                                                 16:40 - 16:50
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
-                                                Break (10 mins)
+                                                Break
                                             </td>
                                         </tr>
                                          <tr class="agenda__t-stripe">
@@ -575,7 +577,7 @@
                                             </td>
                                             <td colspan="4" class="agenda__table-td" v-for="sID in session_table_D2['16:50']">
                                                 <div class="agenda__t-keynote" @click="showModal2(Session[sID])">
-                                                    <div class="agenda__t-keynote-topic">{{ Session[sID].title }}
+                                                    <div class="agenda__t-keynote-topic"><span v-if="Session[sID].language == '英文'" class="speaker-brief__agenda-type">EN</span>{{ Session[sID].title }}
                                                     </div>
                                                     <div class="agenda__t-keynote-name" v-for="speaker in Session[sID].speaker">
                                                         <div><img :src="speaker.avatar" alt=""> <span>{{ speaker.speaker}} </span> <span>  {{ speaker.company}} / {{ speaker.department }}{{ speaker.position }}</span></div>
@@ -586,7 +588,7 @@
                                         </tr>
                                         <tr class="agenda__t-rest">
                                             <td class="agenda__table-td">
-                                                16:40 - 17:00
+                                                17:30
                                             </td>
                                             <td colspan="4" class="agenda__table-td">
                                                 Farewell
