@@ -112,9 +112,9 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="visible-sm-down"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
-                            <li class="visible-sm-down"><a href="https://modernweb.tw/2016/index.html" target="_blank" class="visible-sm-up">回顧 2016</a></li>
-                            <li class="visible-sm-down"><a href="https://modernweb.tw/2015/index.html" target="_blank" class="visible-sm-up">回顧 2015</a></li>
+                            <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
+                            <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2016/index.html" target="_blank" class="visible-sm-up">回顧 2016</a></li>
+                            <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2015/index.html" target="_blank" class="visible-sm-up">回顧 2015</a></li>
                         </ul>
                     </div>
                     <!-- nav end -->
@@ -1481,7 +1481,7 @@
                 <div class="col-sm-12 col-xs-12">
                     <!-- <h3 class="title">焦點講師<span>Keynote Speakers</span></h3> -->
                     <div class="quote__Carouselbox">
-                        <div class='container carousel'>
+                        <div class="container carousel">
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
                                 <!-- <ol class="carousel-indicators">
@@ -1896,9 +1896,11 @@
                     <div class="col-sm-12">
                         <h3 class="title">主辦單位<span>Organizer</span></h3>
                         <div class="col- sm-12 org__logobox">
-                            <img src="img/ithome.svg" alt="" class="img-responsive sp-coner-link">
+                            <a href="" data-toggle="modal" data-target="#sponsor01">
+                                <img src="img/ithome.svg" alt="" class="img-responsive sp-coner-link">
+                            </a>
                         </div>
-                        <!-- Modal -->
+                        <!-- Modal sponsor -->
                         <div class="modal fade" id="sponsor01" tabindex="-1" role="dialog" aria-labelledby="sponsor01Label">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -1906,8 +1908,8 @@
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
                                     <div class="modal-body text-left row">
-                                        <div class="col-sm-6">
-                                            <img src="img/ithome.svg" class="img-responsive mt10 img-sponsor">
+                                        <div class="col-sm-8 col-sm-push-2">
+                                            <img src="img/ithome-blue.svg" class="img-responsive img-sponsor">
                                         </div>
                                         <div class="col-sm-12">
                                             <h5>iThome 自1997年成立至今，超過 20 年，是台灣最專業的企業 IT 媒體</h5>
@@ -1917,7 +1919,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal -->
+                        <!-- Modal sponsor -->
                     </div>
                 </div>
             </div>
@@ -1931,9 +1933,31 @@
                     <div class="col-sm-12 col-xs-12 spon__diam">
                         <h4>鑽石級</h4>
                         <div class="col-sm-12">
-                            <img src="img/logo-dia01.jpg" alt="" class="img-responsive logo-img sp-coner-link">
+                            <a href="" data-toggle="modal" data-target="#sponsor02">
+                                <img src="img/logo-dia01.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a>
                         </div>
                     </div>
+                    <!-- Modal sponsor -->
+                        <div class="modal fade" id="sponsor02" tabindex="-1" role="dialog" aria-labelledby="sponsor02Label">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body text-left row">
+                                        <div class="col-sm-8 col-sm-push-2">
+                                            <img src="img/logo-dia01.jpg" class="img-responsive img-sponsor">
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5>新加坡商鈦坦科技股份有限公司</h5>
+                                            <p>新加坡商鈦坦科技股份有限公司台灣分公司,電腦軟體服務業,您可以在鈦坦科技探索自己的職涯之路， 與我們一起學習成長， 並成為想像中的那個自己。新加坡商鈦坦科技股份有限公司台灣分公司,電腦軟體服務業,您可以在鈦坦科技探索自己的職涯之路， 與我們一起學習成長， 並成為想像中的那個自己。新加坡商鈦坦科技股份有限公司台灣分公司,電腦軟體服務業,您可以在鈦坦科技探索自己的職涯之路， 與我們一起學習成長， 並成為想像中的那個自己。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal sponsor -->
+
                     <!-- <div class="col-sm-12 col-xs-12 spon__wgold">
                     <h4>白金級</h4>
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
@@ -1948,9 +1972,11 @@
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                     <div class="col-sm-3 col-xs-6"><img src="img/logo.svg" alt="" class="img-responsive"></div>
                 </div> -->
-                    <div class="col-sm-12 col-xs-12 spon__silver" data-toggle="modal" data-target="#sponsor03">
+                    <div class="col-sm-12 col-xs-12 spon__silver">
                         <h4>銀級</h4>
-                        <div class="col-sm-12"><img src="img/logo-silver01.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                        <div class="col-sm-12">
+                            <a href=""><img src="img/logo-silver01.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1960,8 +1986,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="title">共同勸敗<!-- <span>Buy</span> --><br><br></h3>
-                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy01.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
-                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="img/logo-buy02.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><a href=""><img src="img/logo-buy01.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
+                        <div class="col-sm-4 col-sm-push-2 col-xs-12"><a href=""><img src="img/logo-buy02.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
                     </div>
                 </div>
             </div>
@@ -1972,13 +1998,13 @@
                     <div class="col-sm-12">
                         <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><img src="img/logo-hackmd.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                            <div class="org__logobox"><a href=""><img src="img/logo-hackmd.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><img src="img/logo-slack.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                            <div class="org__logobox"><a href=""><img src="img/logo-slack.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><img src="img/logo-ten.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                            <div class="org__logobox"><a href=""><img src="img/logo-ten.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
                         </div>
                     </div>
                 </div>
@@ -2213,6 +2239,12 @@
         return false;
     });
         </script>
+        <!-- <script type="text/javascript">
+            $('.carousel').carousel({
+                interval: 3000,
+
+            });
+        </script> -->
 </body>
 <!-- test -->
 

@@ -11,7 +11,7 @@
     line-height: 200%;
     text-align: center;
     opacity: 0.8;
-    z-index: 2000;
+    z-index: 998;
     transition: all .3s ease;
 }
 
@@ -671,18 +671,21 @@ section .title {
         img {
             display: block;
             margin: 1% auto;
-            max-width: 220px;
+            width: 300px;
+            padding: 30px;
         }
     }
 }
-
 .logo-img {
     width: 300px;
     display: block;
     margin: 10px auto;
     background: #fff;
 }
-
+.sp-coner-link{
+            min-height: 50px;
+            border: 1px solid $font-color-pu2;
+            }
 .section--spon {
     text-align: center;
     .spon__diam,

@@ -224,6 +224,17 @@
   .container .modal {
     left: none !important;
     right: none !important; } }
+.section--org .modal-content, .section--spon .modal-content, .section--buy .modal-content, .section--thx .modal-content {
+  background: #ffffff; }
+  .section--org .modal-content .modal-header, .section--spon .modal-content .modal-header, .section--buy .modal-content .modal-header, .section--thx .modal-content .modal-header {
+    border-bottom: 1px solid #eeeeee; }
+
+.section--org .img-sponsor:first-of-type {
+  padding: 1%;
+  margin: auto;
+  margin-bottom: 3%;
+  max-width: 250px; }
+
 /*
 0-600px Phone
 600-900px Tablet portrait
@@ -874,7 +885,8 @@ header {
       background-color: #1e0739;
       height: auto;
       width: 100%;
-      padding: 0 15px; } }
+      padding: 0 15px;
+      box-shadow: 0 0 16px #b8a3e4aa; } }
 @media (max-width: 1200px) and (min-width: 768px) {
   .navbar-inverse .navbar-header {
     width: 22%; } }
@@ -977,7 +989,7 @@ header {
   line-height: 200%;
   text-align: center;
   opacity: 0.8;
-  z-index: 2000;
+  z-index: 998;
   transition: all .3s ease; }
 
 .loading {
@@ -1508,13 +1520,18 @@ section .title {
 .section--org .org__logobox img {
   display: block;
   margin: 1% auto;
-  max-width: 220px; }
+  width: 300px;
+  padding: 30px; }
 
 .logo-img {
   width: 300px;
   display: block;
   margin: 10px auto;
   background: #fff; }
+
+.sp-coner-link {
+  min-height: 50px;
+  border: 1px solid #531d8d; }
 
 .section--spon {
   text-align: center; }
