@@ -162,7 +162,8 @@ var modernweb2018 = new Vue({
                 Diamond: this.filter(sponsor, 'rank', '鑽石級', true),
                 Platinum: this.filter(sponsor, 'rank', '白金級', true),
                 Gold: this.filter(sponsor, 'rank', '黃金級', true),
-                Silver: this.filter(sponsor, 'rank', '銀級', true)
+                Silver: this.filter(sponsor, 'rank', '銀級', true),
+                Promote: this.filter(sponsor, 'rank', '資安共同推廣單位', true),
             }
         },
         sortSessions: function() {
