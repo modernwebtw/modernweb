@@ -302,3 +302,10 @@ $font-color-pu1-hover: scale-color($font-color-pu3, $lightness: 32%);
         left: none!important; right:none !important;
     }
 }
+// modal
+// modal theme
+.section--org .modal-content, .section--spon .modal-content, .section--buy .modal-content, .section--thx .modal-content{
+    background: #ffffff;
+    .modal-header{ border-bottom: 1px solid #eeeeee;}
+}
+.section--org .img-sponsor:first-of-type{padding: 1%; margin: auto; margin-bottom: 3%; max-width: 250px;}

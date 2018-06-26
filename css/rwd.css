@@ -1,11 +1,3 @@
-/* --------------!!!! --------------
-   --------------!!!! --------------*/
-
-
-
-
-
-
 /* 議程表 */
 
 .agenda__t-keynote:hover {
@@ -166,10 +158,12 @@
     header .navbar-inverse .navbar-nav {
         float: none;
         width: 100%;
+        margin: 0;
+        overflow-y: visible;
     }
     /* .navbar-inverse .navbar-nav li{ width: 100%;padding-left: 2em;} */
     .navbar-inverse .navbar-nav li a {
-        padding: 1vh;
+        padding: 0.2vh;
     }
     .dropdown-menu.btn .caret {
         display: none;
