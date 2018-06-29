@@ -1959,7 +1959,6 @@
                     </div>
                     <div class="col-sm-12 col-xs-12 spon__silver">
                         <h4>銀級</h4>
-                        
                         <template v-for="(sponsor, index) in SponsorFilter.Silver">
                             <div class="col-sm-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
@@ -1997,26 +1996,26 @@
                             <div class="col-sm-4 col-sm-push-2 col-xs-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
                                     <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
-                                </div>
-                                <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
                                             </div>
-                                            <div class="modal-body text-left row">
-                                                <div class="col-sm-8 col-sm-push-2">
-                                                    <img :src="sponsor.logo" class="img-responsive img-sponsor">
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <h4>{{sponsor.alt_title}}</h4>
-                                                    <p v-html="sponsor.description"></p>
-                                                </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </template>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -2219,13 +2218,8 @@
         <script src="js/modernweb2018.js?32123452345165489765"></script>
         <script src="game/alien/game.js?32123452345165489765"></script>
         <script src="game/sinuous/game.js?32123452345165489765"></script>
-<<<<<<< HEAD
-        <script src="game/flappy/main.js"></script>    
-        <script src="js/app.js?321232625725725489765"></script>
-=======
         <script src="game/flappy/main.js"></script>
         <script src="js/app.js?32123452345165489765"></script>
->>>>>>> testing
         <script>
         </script>
         <script type="text/javascript">
