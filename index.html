@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="game/sinuous/style.css?32123452345165489765">
     <link rel="stylesheet" href="game/alien/style.css?32123452345165489765">
     <link rel="stylesheet" href="css/main.css?4123412342388">
-    <link rel="stylesheet" type="text/css" href="css/setting.css?312342344514">
+    <link rel="stylesheet" type="text/css" href="css/setting.css?334523464573483514">
     <link rel="stylesheet" type="text/css" href="css/rwd.css?31213423423488">
     <link rel="stylesheet" type="text/css" href="css/kv.css?12165275487467332">
     <!--[if lt IE 9]>
@@ -1374,7 +1374,7 @@
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
                                         <h4 class="timeline-title">一想到網站技術大會，就會想到 ModernWeb</h4>
-                                        <p>連續 3 年大受好評，2018 年 為期 2 天的會期，500 人與會，超過 20 場專業演講，精彩的議程內容，更多大師登場，前端、後端、架構，三大主題全面展開，來自中國的 Web 技術分享 - 特別策劃一天的中國技術日。還有滿滿的場邊活動，將再次打造全新的「心」感受。</p>
+                                        <p>連續 3 年大受好評，2018 年 為期 2 天的會期，500 人與會，超過 20 場專業演講，精彩的議程內容，更多大師登場，前端、後端、架構，三大主題全面展開，來自中國的 Web 技術分享。還有滿滿的場邊活動，將再次打造全新的「心」感受。</p>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
@@ -1959,7 +1959,6 @@
                     </div>
                     <div class="col-sm-12 col-xs-12 spon__silver">
                         <h4>銀級</h4>
-                        
                         <template v-for="(sponsor, index) in SponsorFilter.Silver">
                             <div class="col-sm-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
@@ -1997,26 +1996,26 @@
                             <div class="col-sm-4 col-sm-push-2 col-xs-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
                                     <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
-                                </div>
-                                <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
                                             </div>
-                                            <div class="modal-body text-left row">
-                                                <div class="col-sm-8 col-sm-push-2">
-                                                    <img :src="sponsor.logo" class="img-responsive img-sponsor">
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <h4>{{sponsor.alt_title}}</h4>
-                                                    <p v-html="sponsor.description"></p>
-                                                </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </template>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -2027,13 +2026,13 @@
                     <div class="col-sm-12">
                         <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><a href=""><img src="img/logo-hackmd.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
+                            <div class="org__logobox"><img src="img/logo-hackmd.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><a href=""><img src="img/logo-slack.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
+                            <div class="org__logobox"><img src="img/logo-slack.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="org__logobox"><a href=""><img src="img/logo-ten.jpg" alt="" class="img-responsive logo-img sp-coner-link"></a></div>
+                            <div class="org__logobox"><img src="img/logo-ten.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
                     </div>
                 </div>
