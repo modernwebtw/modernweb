@@ -1930,9 +1930,93 @@
                     <div class="col-sm-12 col-xs-12">
                         <h3 class="title">贊助廠商<span>Sponsors</span></h3>
                     </div>
+                    <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Coorganizer).length !== 0">
+                        <h4>天龍級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Coorganizer">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- diamond -->
                     <div class="col-sm-12 col-xs-12 spon__diam">
                         <h4>鑽石級</h4>
                         <template v-for="(sponsor, index) in SponsorFilter.Diamond">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- platinum -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Platinum).length !== 0">
+                        <h4>白金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Platinum">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- gold -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Gold).length !== 0">
+                        <h4>黃金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Gold">
                             <div class="col-sm-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
                                     <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
