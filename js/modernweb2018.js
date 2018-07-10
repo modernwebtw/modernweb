@@ -1,63 +1,124 @@
-var session_table = {
-
-    "09:00": [
-        '3382', // reception
+var session_table_D1 = {
+    "9:00": [
+        '3583', // 報到
     ],
-    "09:30": [
-        '3367', // opening welcome
+    "9:30": [
+        '3584', // Opening
     ],
-    "09:40": [
-        '3365' // Ali cloud
+    "9:40": [
+        '3585', // keynote1
     ],
     "10:20": [
-        '3366' // red hat
+        '3586', // break
     ],
-    "11:00": [
-        '3368' // break
+    "10:30": [
+        '3587', // keynote2
+    ],
+    "11:10": [
+        '3588', // break
     ],
     "11:20": [
-        '3369' // micro
+        '3647', // keynote3
     ],
     "12:00": [
-        '3546' // lunch
-    ],
-
-    "12:30": [
-        '3370' // lunch
+        '3590', // lunch
     ],
     "13:30": [
-        '3371', // track a 
-        '3372' //track b 
-    ],
-    "14:10": [
-        '3375' // break
+        '3614',
+        '3630',
+        '3613',
+        '3606'
     ],
     "14:20": [
-        '3376', // a: vmware
-        '3377', //b: microsoft
-    ],
-    "15:00": [
-        '3380' // break
+        '3638',
+        '3594',
+        '3604',
+        '3608'
     ],
     "15:10": [
-        '3373', // a: run 
-        '3378' //b: ibm
+        '3637',
+        '3592',
+        '3595',
+        '3610'
     ],
-    "15:35": [
-        '3505' // break
+    "16:00": [
+        '3605',
+        '3612',
+        '3607',
+        '3601'
     ],
-    "15:45": [
-        '3379', // a: deployment
-        '3383' //open
+    "16:50": [
+        '3593',
+        '3639',
+        '3591',
+        '3600'
     ],
-    "16:20": [
-        '3384', // a:
-        '3374' //prometheus 
-    ],
-    "16:45": [
-        '3385' // break
-    ],
+}
 
+var session_table_D2 = {
+    "9:00": [
+        '3615', // 報到
+    ],
+    "9:30": [
+        '3616', // Opening
+    ],
+    "9:40": [
+        '3589', // keynote4
+    ],
+    "10:20": [
+        '3618', // break
+    ],
+    "10:30": [
+        '3619', // keynote5
+    ],
+    "11:10": [
+        '3620', // break
+    ],
+    "11:20": [
+        '3627',
+        '3623',
+        '3626',
+        '3625'
+    ],
+    "11:45": [
+        '3621',
+        '3622',
+        '3624',
+        '3648'
+    ],
+    "12:10": [
+        '3628', // lunch
+    ],
+    "13:30": [
+        '3645',
+        '3636',
+        '3629',
+        '3602'
+    ],
+    "14:20": [
+        '3644',
+        '3603',
+        '3641',
+        '3640'
+    ],
+    "15:10": [
+        '3617',
+        '3743',
+        '3609',
+        '3611'
+    ],
+    "15:50": [
+        '3634'
+    ],
+    "16:00": [
+        '3685'
+    ],
+    "16:40": [
+        '3653'
+    ],
+    "16:50": [
+        '3635'
+    ],
 }
 
 var modernweb2018 = new Vue({
@@ -70,7 +131,8 @@ var modernweb2018 = new Vue({
             classroom: '',
             download_link: '',
         },
-        session_table: session_table,
+        session_table_D1: session_table_D1,
+        session_table_D2: session_table_D2,
         Speaker: {},
         Sponsor: {},
         Modal_Speaker: {},
@@ -101,7 +163,8 @@ var modernweb2018 = new Vue({
                 Diamond: this.filter(sponsor, 'rank', '鑽石級', true),
                 Platinum: this.filter(sponsor, 'rank', '白金級', true),
                 Gold: this.filter(sponsor, 'rank', '黃金級', true),
-                Silver: this.filter(sponsor, 'rank', '銀級', true)
+                Silver: this.filter(sponsor, 'rank', '銀級', true),
+                Promote: this.filter(sponsor, 'rank', '資安共同推廣單位', true),
             }
         },
         sortSessions: function() {
@@ -121,20 +184,33 @@ var modernweb2018 = new Vue({
         },
         showModal: function(speaker) {
             this.Modal_Speaker = speaker;
-            $('a[href="#speakerModalAgenda"]').tab('show');
+            $('a[href="#speakerModalIntro"]').tab('show');
             $('#speakerModal').modal('show');
-        },
-        showModal: function(sponsor) {
-            this.Modal_Sponsor = sponsor;
-            $('a[href="#sponsorModal"]').tab('show');
-            $('#sponsorModal').modal('show');
+            $('#tabSession').removeClass('active');
+            $('#tabSpeaker').addClass('active');
+            $('#speakerModalAgenda').removeClass('active');
+            $('#speakerModalIntro').addClass('active');
         },
         showModal2: function(session) {
             this.Modal_Session = session;
-            if (!!session.speaker.length) {
+            if (!!session.summary.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
+                $('#tabSession').addClass('active');
+                $('#tabSpeaker').removeClass('active');
+                $('#sessionModalAgenda').addClass('active');
+                $('#sessionModalIntro').removeClass('active');
             }
+            $('#tabSpeaker').hide();
+            if(!!session.speaker.length){
+                $('#tabSpeaker').show();
+
+            }
+        },
+        showModal3: function(sponsor) {
+            this.Modal_Sponsor = sponsor;
+            $('a[href="#sponsorModal"]').tab('show');
+            $('#sponsorModal').modal('show');
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');

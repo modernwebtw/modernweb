@@ -18,9 +18,10 @@ $(".menu__burger, .menu__mask").on('click', function() {
     $('body').toggleClass('is-hidden');
 });
 
-// scroll
-$('a[href^="#"]:not([href="#"]), #buy_ticket').click(function(e) {
+//scroll
+$('a[href^="#"]:not([href="#"], [href="#buy_ticket"], [href="#carousel-example-generic"] )').click(function(e) {
     var target = '#' + $(this).attr('href').split('#')[1];
+    console.log(target);
     goScroll(target);
     return false;
 });
@@ -242,19 +243,19 @@ $('#btn_flappy_start').click(function() {
     $('.header').hide();
     $('#game').hide();
     $('#flappy_bg').show();
-    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
+    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body").css({ 'height': '100%', 'width': '100%' });
     $('body').addClass('stopScroll');
 });
 
-$('#btn_flappy_continue').click(function() {
-    // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
-    $('.ta').hide();
-    $('.header').hide();
-    $('#game').hide();
-    $('#flappy_bg').show();
-    $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
-    $('body').addClass('stopScroll');
-});
+// $('#btn_flappy_continue').click(function() {
+//     // ga('send', 'event', 'CTA', 'click', "Continue MW17 Game");
+//     $('.ta').hide();
+//     $('.header').hide();
+//     $('#game').hide();
+//     $('#flappy_bg').show();
+//     $("<iframe />", { src: "game/flappy/index.html" }).appendTo("body");
+//     $('body').addClass('stopScroll');
+// });
 
 $('#btn_back3').click(function() {
     $('.ta').show();
@@ -269,6 +270,7 @@ $('#btn_flappy_back').click(function() {
     $('body').removeClass('stopScroll');
     $('.header').show();
     $('#flappy_bg').hide();
+    closeIFrame();
 });
 
 $('#btn_flappy_exit').click(function() {
@@ -281,8 +283,9 @@ $('#btn_flappy_exit').click(function() {
 
 function closeIFrame() {
     $('.ta').show();
-    $('#game_bg').hide();
-    $('#modal_flappy_over').modal('show');
+    $('body').removeClass('stopScroll');
+    $('.header').show();
+    $('#flappy_bg').hide();
     // console.log(window.frames['flappy'].final_score);
     $('iframe').remove();
 }
@@ -332,7 +335,8 @@ $('#btn_flappy_share_fb').click(function() {
     // ga('send', 'event', 'CTA', 'click', "Share MW17 Game");
     var score = $('#flappy_score').text();
     FB.init({
-        appId: '1293787864089459', //test FBid
+        // appId: '1293787864089459', //test FBid
+        appId: '1615126938703368',
         status: true,
         xfbml: true,
         version: 'v3.0' // or v2.6, v2.5, v2.4, v2.3

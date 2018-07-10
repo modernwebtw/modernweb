@@ -1,28 +1,75 @@
 <html>
-<head>
- <title>Flappy Bird</title>
-   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
 
- </head>
- <style>
- 
- </style> 
- <body>
-  <div id="flappy_bg"></div>
-     <div id="div1" class="fa"></div>
-<canvas id="myCanvas" width=1000 height=1000 style="background:url('img/bg2.png');  background-size: 100%; height: 95%; position: absolute; left: 0px; top: 0px;" > 
- 
- 
-</canvas>
+<head>
+    <title>Flappy Bird</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/setting.css">
+    <link rel="stylesheet" type="text/css" href="../../css/rwd.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+html {
+    overflow: hidden;
+}
+
+.game-modal .modal-dialog {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+</style>
+
+<body>
+    <div id="flappy_bg"></div>
+    <div id="div1" class="fa"></div>
+    <canvas id="myCanvas" width=1000 height=1000 style="background:url('img/bg2.png');  background-size: cover; height: 100%; position: absolute; left: 0px; top: 0px;">
+    </canvas>
     <h3> <i onclick="myFunction(this)" class=""></i></h3>
-<script type="text/javascript" src="main.js"></script>
+    <!-- modal_flappy_over -->
+    <div id="modal_flappy_over" class="modal fade game-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="game-flappy_modal__panel clearfix">
+                <div class="game-modal__monster">
+                    <img src="../../img/modal/modal_flappy_end_img.jpg">
+                </div>
+                <div class="game-modal__desc">
+                    <div class="game-modal__warning">Game Over</div>
+                    <p>本次作戰分數：</p>
+                    <div id="flappy_score" class="game-modal__score"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="game-modal__btn-group">
+                    <button id="btn_flappy_continue" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">繼續作戰</button>
+                    <button id="btn_flappy_share_fb" type="button" class="game-modal__btn game-modal__btn--line">分享戰績</button>
+                    <button id="btn_flappy_back" type="button" class="game-modal__btn game-modal__btn--line" data-dismiss="modal">返回基地</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal_flappy_over -->
+    <script type="text/javascript" src="../../js/vendor/jquery-3.3.1.js"></script>
+    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-3.3.7.min.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
+
 </html>
