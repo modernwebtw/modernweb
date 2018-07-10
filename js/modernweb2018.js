@@ -255,7 +255,7 @@ var modernweb2018 = new Vue({
                 for(var i in session){
                     if(!isDateInArray(session[i].start_Date, uniqueDates)){
                         uniqueDates.push(session[i].start_Date);
-                        sessionSortedByTime.push({date: session[i].start_Date,sessionOfSameTime: [session[i]]});
+                        sessionSortedByTime.push({date: session[i].start_Date,endDate: session[i].end_Date, sessionOfSameTime: [session[i]]});
                     }else{
                         for(var s = 0;s<sessionSortedByTime.length;s++){
                             if(session[i].start_Date.getTime() === sessionSortedByTime[s].date.getTime()){
