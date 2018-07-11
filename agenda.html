@@ -31,20 +31,19 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48349256-7"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-48349256-7');
+    gtag('config', 'UA-48349256-7');
     </script>
 </head>
 
 <body>
     <div id="modernweb2018">
-
         <div class="bg--content"></div>
         <header class="header">
             <nav class="container navbar navbar-inverse">
@@ -75,7 +74,7 @@
                             <div class="dropdown hidden-sm-down">
                                 <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
                                   <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
+                                <ul class="dropdown-menu">
                                     <li><a href="https://modernweb.tw/2017/index.html" target="_blank">2017</a></li>
                                     <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
                                     <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
@@ -95,13 +94,11 @@
                 <h2 class="title">議程表</h2>
             </div>
         </section>
-
-
         <!-- data! 偉い !  -->
         <section class="section--agenda">
             <template v-for="ss in sessionSortedByTime">
                 <!-- {{ss}} -->
-               <!--  <div class="row" >
+                <!--  <div class="row" >
                     <div class="col-sm-4">{{ss.date | time}} - {{ss.endDate | time}}</div>
                     <div  v-for="sss in ss.sessionOfSameTime" class="col-sm-8">{{sss.title}}
                         <div v-for="speaker in sss.speaker">
@@ -113,7 +110,7 @@
             </template>
         </section>
         <!-- end of data -->
-        <session>
+        <section>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -127,9 +124,10 @@
                                 <div class="col-sm-2 bs-session-header">時間</div>
                                 <div class="col-sm-10 bs-session-header">議程</div>
                             </div>
+                            <!-- bg-purple -->
                             <div class="row ">
                                 <div class="col-sm-2 bs-session-time bg-purple">09:00 - 09:30</div>
-                                <div class="col-sm-10 bs-session bg-purple">
+                                <div class="col-sm-10 bs-session bg-purple" data-toggle="modal" data-target="#02">
                                     <div class=" ">
                                         <div class="bs-session-content-rest">
                                             <div class="">Reception</div>
@@ -137,6 +135,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- end of purple -->
+                            <!-- bg-yellow -->
                             <div class="row ">
                                 <div class="col-sm-2 bs-session-time bg-yellow">09:30 - 09:40</div>
                                 <div class="col-sm-10 bs-session bg-yellow">
@@ -147,183 +147,281 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- end of yellow -->
+                            <!-- one track session -->
                             <div class="row">
                                 <div class="col-sm-2 bs-session-time">0930</div>
                                 <div class="col-sm-10 bs-session " data-toggle="modal" data-target="#01">
-                                    <div class="speaker-box speaker-box--keynote" >
+                                    <div class="speaker-box speaker-box--keynote">
                                         <div class="bs-session-content">
-                                            <div class="agenda__t-keynote-topic"><span class="speaker-brief__agenda-type">EN</span>
-                                                The layers
+                                            <div class="agenda__t-keynote-topic"><span class="speaker-brief__agenda-type">EN</span> The layers
                                             </div>
                                             <div class="agenda__t-keynote-name">
-
                                                 <div><img src="img/speaker01.jpg" alt="">
-                                                   <span>Jeremy Keith</span> 
-                                                   <span>An Irish web developer, author, and speaker</span></div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="modal fade speaker-modal" id="01" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
+                                                    <span>Jeremy Keith</span>
+                                                    <span>An Irish web developer, author, and speaker</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal -->
+                                <div class="modal fade speaker-modal" id="01" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                           <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-sm-12 col-xs-12 speaker-brief__top" >
-                                                <div class="col-xs-4">
-                                                    <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
-                                                </div>
-                                                <div class="col-xs-8">
-                                                    <div class="speaker-box__name">
-                                                        Bob
-                                                    </div>
-                                                    <div class="speaker-box__title">
-
-                                                      Google
-
-                                                        <br>
-                                                        Google good
-                                                    </div>
-                                                </div>
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             </div>
-                                            <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                <hr>
-                                                <ul class="list-inline" role="tablist">
-                                                    <li role="presentation" class="active" id="tabSession">
-                                                        <a class="tab" data-target="#sessionModalAgenda" aria-controls="#sessionModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
-                                                    </li>
-                                                    <li role="presentation" id="tabSpeaker">
-                                                        <a class="tab" data-target="#sessionModalIntro" aria-controls="#sessionModalIntro" role="tab" data-toggle="tab">講師簡介</a>
-                                                    </li>
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div role="tabpanel" id="sessionModalAgenda" class="tab-pane active">
-                                                        <div class="speaker-brief__agenda">
-                                                            <div class="speaker-brief__agenda-content overflow-y">
-                                                                <p><b class="h3"><big>
-                                                                    Hi
-                                                                </big></b></p>
-                                                                <p >
-                                                                    hihihi
-                                                                </p>
+                                            <div class="modal-body row">
+                                                <div class="col-sm-12 col-xs-12 speaker-brief__top">
+                                                    <div class="col-xs-4">
+                                                        <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                                    </div>
+                                                    <div class="col-xs-8">
+                                                        <div class="speaker-box__name">
+                                                            Bob
+                                                        </div>
+                                                        <div class="speaker-box__title">
+                                                            Google
+                                                            <br> Google good
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                                    <hr>
+                                                    <ul class="list-inline" role="tablist">
+                                                        <li role="presentation" class="active" id="tabSession">
+                                                            <a class="tab" data-target="#sessionModalAgenda" aria-controls="#sessionModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                                        </li>
+                                                        <li role="presentation" id="tabSpeaker">
+                                                            <a class="tab" data-target="#sessionModalIntro" aria-controls="#sessionModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div role="tabpanel" id="sessionModalAgenda" class="tab-pane active">
+                                                            <div class="speaker-brief__agenda">
+                                                                <div class="speaker-brief__agenda-content overflow-y">
+                                                                    <p><b class="h3"><big>
+                                                                Hi
+                                                            </big></b></p>
+                                                                    <p>
+                                                                        hihihi
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" id="sessionModalIntro" class="tab-pane">
+                                                            <div class="speaker-brief__intro overflow-y">
+                                                                <p>speaker profile</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div role="tabpanel" id="sessionModalIntro" class="tab-pane">
-                                                        <div class="speaker-brief__intro overflow-y" >
-                                                            <p>speaker profile</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of modal -->
+                            </div>
+                            <!-- end of one track session -->
+                            <!-- track header-->
+                            <div class="row ">
+                                <div class="col-sm-2 "></div>
+                                <div class="col-sm-10">
+                                    <div class="row ">
+                                        <div class="col-sm-3 bg-gray">
+                                            <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                        </div>
+                                        <div class="col-sm-3 ">
+                                            <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                        </div>
+                                        <div class="col-sm-3 bg-gray">
+                                            <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                        </div>
+                                        <div class="col-sm-3 ">
+                                            <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of track header -->
+                            <!-- four tracks session -->
+                            <div class="row ">
+                                <div class="col-sm-2 bs-session-time">1330</div>
+                                <div class="col-sm-10">
+                                    <div class="row ">
+                                        <div class="col-sm-3 bg-gray">
+                                            <div class="agenda__t-class">
+                                                <span class="agenda__t-class-track">track a </span>
+                                                <div class="agenda__t-class-topic">
+                                                    <span class="speaker-brief__agenda-type">EN</span> The layers
+                                                </div>
+                                                <div>
+                                                    <a>
+                                                        <div class="agenda__t-class-name">
+                                                            <img src="img/speaker01.jpg" alt="">
+                                                            <span>Jeremy Keith</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 ">
+                                            <div class="agenda__t-class">
+                                                <span class="agenda__t-class-track">track a </span>
+                                                <div class="agenda__t-class-topic">
+                                                    <span class="speaker-brief__agenda-type">EN</span> The layers
+                                                </div>
+                                                <div>
+                                                    <a>
+                                                        <div class="agenda__t-class-name">
+                                                            <img src="img/speaker01.jpg" alt="">
+                                                            <span>Jeremy Keith</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 bg-gray">
+                                            <div class="agenda__t-class">
+                                                <span class="agenda__t-class-track">track a </span>
+                                                <div class="agenda__t-class-topic">
+                                                    <span class="speaker-brief__agenda-type">EN</span> The layers
+                                                </div>
+                                                <div>
+                                                    <a>
+                                                        <div class="agenda__t-class-name">
+                                                            <img src="img/speaker01.jpg" alt="">
+                                                            <span>Jeremy Keith</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 ">
+                                            <div class="agenda__t-class">
+                                                <span class="agenda__t-class-track">track a </span>
+                                                <div class="agenda__t-class-topic">
+                                                    <span class="speaker-brief__agenda-type">EN</span> The layers
+                                                </div>
+                                                <div>
+                                                    <a>
+                                                        <div class="agenda__t-class-name">
+                                                            <img src="img/speaker01.jpg" alt="">
+                                                            <span>Jeremy Keith</span>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-sm-2 " ></div>
-                            <div class="col-sm-10">
-                                <div class="row ">
-                                    <div class="col-sm-3 bg-gray"  >
-                                        <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
-                                    </div>
-                                    <div class="col-sm-3 "  >
-                                        <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
-                                    </div>
-                                    <div class="col-sm-3 bg-gray"  >
-                                        <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
-                                    </div>
-                                    <div class="col-sm-3 "  >
-                                        <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-sm-2 bs-session-time" >1330</div>
-                            <div class="col-sm-10">
-                                <div class="row ">
-                                    <div class="col-sm-3 bg-gray">
-                                        <div class="agenda__t-class">
-                                            <span class="agenda__t-class-track">track a </span>
-                                            <div class="agenda__t-class-topic">
-                                                <span class="speaker-brief__agenda-type">EN</span>
-                                                The layers
-                                            </div>
-                                            <div>
-                                                <a >
-                                                    <div class="agenda__t-class-name">
-                                                        <img src="img/speaker01.jpg" alt="">
-                                                        <span>Jeremy Keith</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 ">
-                                        <div class="agenda__t-class">
-                                            <span class="agenda__t-class-track">track a </span>
-                                            <div class="agenda__t-class-topic">
-                                                <span class="speaker-brief__agenda-type">EN</span>
-                                                The layers
-                                            </div>
-                                            <div>
-                                                <a >
-                                                    <div class="agenda__t-class-name">
-                                                        <img src="img/speaker01.jpg" alt="">
-                                                        <span>Jeremy Keith</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 bg-gray">
-                                        <div class="agenda__t-class">
-                                            <span class="agenda__t-class-track">track a </span>
-                                            <div class="agenda__t-class-topic">
-                                                <span class="speaker-brief__agenda-type">EN</span>
-                                                The layers
-                                            </div>
-                                            <div>
-                                                <a >
-                                                    <div class="agenda__t-class-name">
-                                                        <img src="img/speaker01.jpg" alt="">
-                                                        <span>Jeremy Keith</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 ">
-                                        <div class="agenda__t-class">
-                                            <span class="agenda__t-class-track">track a </span>
-                                            <div class="agenda__t-class-topic">
-                                                <span class="speaker-brief__agenda-type">EN</span>
-                                                The layers
-                                            </div>
-                                            <div>
-                                                <a >
-                                                    <div class="agenda__t-class-name">
-                                                        <img src="img/speaker01.jpg" alt="">
-                                                        <span>Jeremy Keith</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- end of four tracks session -->
                         </div>
                     </div>
                 </div>
             </div>
-        </session>
-        <!-- ｏｌｄ -->
+            </secion>
+            <!-- end of new style -->
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h2 class="agenda__title">7/18 <span>Wed</span></h2>
+                                </div>
+                            </div>
+                            <div class="bs-session-container">
+                                <div class="row">
+                                    <div class="col-sm-2 bs-session-header">時間</div>
+                                    <div class="col-sm-10 bs-session-header">議程</div>
+                                </div>
+                                <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'18')">
+                                     <!-- one track session -->
+                                <div class="row" >
+                                    <div class="col-sm-2 bs-session-time">0930</div>
+                                    <div class="col-sm-10 bs-session " data-toggle="modal" data-target="#01">
+                                        <div class="speaker-box speaker-box--keynote">
+                                            <div class="bs-session-content">
+                                                <div class="agenda__t-keynote-topic"><span class="speaker-brief__agenda-type">EN</span> The layers
+                                                </div>
+                                                <div class="agenda__t-keynote-name">
+                                                    <div><img src="img/speaker01.jpg" alt="">
+                                                        <span>Jeremy Keith</span>
+                                                        <span>An Irish web developer, author, and speaker</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- modal -->
+                                    <div class="modal fade speaker-modal" id="01" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body row">
+                                                    <div class="col-sm-12 col-xs-12 speaker-brief__top">
+                                                        <div class="col-xs-4">
+                                                            <img src="img/speaker01.jpg" alt="" class="img-circle img-responsive">
+                                                        </div>
+                                                        <div class="col-xs-8">
+                                                            <div class="speaker-box__name">
+                                                                Bob
+                                                            </div>
+                                                            <div class="speaker-box__title">
+                                                                Google
+                                                                <br> Google good
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                                        <hr>
+                                                        <ul class="list-inline" role="tablist">
+                                                            <li role="presentation" class="active" id="tabSession">
+                                                                <a class="tab" data-target="#sessionModalAgenda" aria-controls="#sessionModalAgenda" role="tab" data-toggle="tab">議程介紹</a>
+                                                            </li>
+                                                            <li role="presentation" id="tabSpeaker">
+                                                                <a class="tab" data-target="#sessionModalIntro" aria-controls="#sessionModalIntro" role="tab" data-toggle="tab">講師簡介</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <div role="tabpanel" id="sessionModalAgenda" class="tab-pane active">
+                                                                <div class="speaker-brief__agenda">
+                                                                    <div class="speaker-brief__agenda-content overflow-y">
+                                                                        <p><b class="h3"><big>
+                                                                Hi
+                                                            </big></b></p>
+                                                                        <p>
+                                                                            hihihi
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" id="sessionModalIntro" class="tab-pane">
+                                                                <div class="speaker-brief__intro overflow-y">
+                                                                    <p>speaker profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of modal -->
+                                </div>
+                                <!-- end of one track session -->
 
+
+                                </template>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </div>
     <script type="text/javascript " src="js/vendor/jquery-3.3.1.js"></script>
     <script type="text/javascript " src="js/vendor/bootstrap-3.3.7.min.js"></script>
@@ -331,26 +429,24 @@
     <script src="js/vue.min.js"></script>
     <script src="js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-
     <script src="js/confapi.js?32165444987 " data-nid="3531"></script>
     <script src="js/modernweb2018.js?36231231231234554987"></script>
     <script type="text/javascript">
-        $("body").append("<a href='#top' class='gotop'><i class='fa fa-arrow-circle-up'></i></a>");
-        var topBtn = $('.gotop');         
-        topBtn.hide();  
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                topBtn.fadeIn();  
-            } else {
-                topBtn.fadeOut();
-            }
-        }); 
-        topBtn.click(function() { 
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-            return false;
-        });
+    $("body").append("<a href='#top' class='gotop'><i class='fa fa-arrow-circle-up'></i></a>");
+    var topBtn = $('.gotop');
+    topBtn.hide();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    topBtn.click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
     </script>
-
 </body>
 
 </html>

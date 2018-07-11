@@ -214,7 +214,14 @@ var modernweb2018 = new Vue({
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
-        }
+        },
+        findWhichDayOfEvent: function(dateObject,dayOfEvent){
+            if(dateObject.getDate() == dayOfEvent){
+                return true;
+            }else{
+                return false;
+            }
+        },
     },
     filters: {
         time: function(date) {
