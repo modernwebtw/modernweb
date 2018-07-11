@@ -191,7 +191,7 @@
                                 <div class="col-sm-10 bs-session-header">議程</div>
                             </div>
                             <!-- bg-purple -->
-                            <div class="row ">
+                            <div class="row bg-purple">
                                 <div class="col-sm-2 bs-session-time bg-purple">09:00 - 09:30</div>
                                 <div class="col-sm-10 bs-session bg-purple" data-toggle="modal" data-target="#02">
                                     <div class=" ">
@@ -203,7 +203,7 @@
                             </div>
                             <!-- end of purple -->
                             <!-- bg-yellow -->
-                            <div class="row ">
+                            <div class="row bg-yellow">
                                 <div class="col-sm-2 bs-session-time bg-yellow">09:30 - 09:40</div>
                                 <div class="col-sm-10 bs-session bg-yellow">
                                     <div class=" ">
@@ -215,7 +215,7 @@
                             </div>
                             <!-- end of yellow -->
                             <!-- one track session -->
-                            <div class="row">
+                            <div class="row bg-white">
                                 <div class="col-sm-2 bs-session-time">0930</div>
                                 <div class="col-sm-10 bs-session " data-toggle="modal" data-target="#01">
                                     <div class="speaker-box speaker-box--keynote">
@@ -233,20 +233,20 @@
                             </div>
                             <!-- end of one track session -->
                             <!-- track header-->
-                            <div class="row ">
+                            <div class="row bg-white">
                                 <div class="col-sm-2 "></div>
                                 <div class="col-sm-10">
                                     <div class="row ">
                                         <div class="col-sm-3 bg-gray">
                                             <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                         </div>
-                                        <div class="col-sm-3 ">
+                                        <div class="col-sm-3 bg-white">
                                             <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                         </div>
                                         <div class="col-sm-3 bg-gray">
                                             <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                         </div>
-                                        <div class="col-sm-3 ">
+                                        <div class="col-sm-3 bg-white">
                                             <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@
                             </div>
                             <!-- end of track header -->
                             <!-- four tracks session -->
-                            <div class="row ">
+                            <div class="row bg-white">
                                 <div class="col-sm-2 bs-session-time">1330</div>
                                 <div class="col-sm-10">
                                     <div class="row ">
@@ -349,15 +349,29 @@
                                 <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'18')">
                                     <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'keynote'">
                                         <!-- keynote -->
-                                        <div class="row">
+                                        <div class="row bg-white">
                                             <div class="col-sm-2 bs-session-time">{{ss.date | time}} - {{ss.endDate | time}}
                                             </div>
                                             <template v-for="sss in ss.sessionOfSameTime">
-                                                <template v-for="speaker in sss.speaker">
+                                                
+                                                <!-- for session without speaker -->
+                                                <template  v-if="sss.speaker.length == 0">
                                                     <div class="col-sm-10 bs-session" data-toggle="modal" :data-target="'#se' + sss.session_id">
                                                         <div class="speaker-box speaker-box--keynote">
                                                             <div class="bs-session-content">
-                                                                <div class="agenda__t-keynote-topic"><span class="speaker-brief__agenda-type">EN</span> {{sss.title}}
+                                                                <div class="agenda__t-keynote-topic">{{sss.title}} 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                                <!-- keynote session -->
+
+                                                <template v-else v-for="speaker in sss.speaker">
+                                                    <div class="col-sm-10 bs-session" data-toggle="modal" :data-target="'#se' + sss.session_id">
+                                                        <div class="speaker-box speaker-box--keynote">
+                                                            <div class="bs-session-content">
+                                                                <div class="agenda__t-keynote-topic"><span class="speaker-brief__agenda-type">EN</span> {{sss.title}} 
                                                                 </div>
                                                                 <div class="agenda__t-keynote-name">
                                                                     <div><img :src="speaker.avatar" alt="">
@@ -368,13 +382,26 @@
                                                         </div>
                                                     </div>
                                                 </template>
+                                                
                                             </template>
                                         </div>
                                         <!-- end of keynote-->
                                     </template>
                                     <!-- break -->
                                     <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'break'">
-                                        <div class="row">
+
+                                        <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
+                                            <div class="col-sm-2 bs-session-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
+                                            </div>
+                                            <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" data-toggle="modal" data-target="#01">
+                                                <div class=" ">
+                                                    <div class="bs-session-content-rest">
+                                                        <div class="">{{sss.title}}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div v-else class="row bg-purple">
                                             <div class="col-sm-2 bs-session-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
                                             </div>
                                             <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" data-toggle="modal" data-target="#01">

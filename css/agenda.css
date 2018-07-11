@@ -12,7 +12,7 @@
 
 
 .bs-session-container > .row{
-	background:#f9f9f9;
+	
 	border-bottom:1px #bababa solid;
 }
 
@@ -58,6 +58,9 @@
    
 
 }
+.bg-white{
+	background:#f9f9f9;
+}
 
 
 .bg-gray{
@@ -76,6 +79,9 @@
 }
 .bg-purple{
 	    background-color: #e6e1f5;
+}
+.bg-purple:parent{
+	background-color: #e6e1f5 !important;
 }
 
 .bs-session-header{
