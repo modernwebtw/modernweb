@@ -94,22 +94,7 @@
                 <h2 class="title">議程表</h2>
             </div>
         </section>
-        <!-- data! 偉い !  -->
-        <section class="section--agenda">
-            <template v-for="ss in sessionSortedByTime">
-                {{ss['sessionOfSameTime'][0]['session_type']}}
-                <div class="row">
-                    <div class="col-sm-4">{{ss.date | time}} - {{ss.endDate | time}}</div>
-                    <div v-for="sss in ss.sessionOfSameTime" class="col-sm-8">{{sss.title}}
-                        <div v-for="speaker in sss.speaker">
-                            {{ speaker.speaker }} / {{ speaker.company }}{{ speaker.department }}{{ speaker.department }}{{ speaker.position }}
-                            <div v-html="speaker.profile"></div>
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </section>
-        <!-- end of data -->
+        
         <!-- section modal -->
         <section>
             <template v-for="ss in sessionSortedByTime">
