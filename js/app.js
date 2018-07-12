@@ -9,6 +9,8 @@ var toggleScroll = function(boolean) {
         })
     }
 }
+//modal
+
 
 // mobile
 $(".menu__burger, .menu__mask").on('click', function() {

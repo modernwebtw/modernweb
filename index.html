@@ -1772,11 +1772,11 @@
                                 <h3>$7,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張 + ModernWeb 雙日入場票1張。適合尚未報名 ModernWeb，想一次報名 ModernWeb 及 Workshop 的您。（原價：8980）</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">尚未開賣</a>
-                            </div> -->
+                            
+
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">立即購票</a>
+                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <!-- workshop -->
@@ -1788,11 +1788,10 @@
                                 <h3>$5,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div> -->
+                           
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180015" target="_blank">立即購票</a>
+                               <!--  <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180015" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1803,11 +1802,10 @@
                                 <h3>$8,990</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div> -->
+                          
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="download/ModernWeb2018團體報名表.xlsx" target="_blank">立即購票</a>
+                                <!-- <a class="btn btn--buy" href="download/ModernWeb2018團體報名表.xlsx" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1818,9 +1816,9 @@
                                 <h3>$4,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票，填寫表單回傳報名。</div>
-                            <div class="col-sm-2 ticket__item__btn">
+                          <!--   <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-sm12 ticket__item">
                             <div class="col-sm-3 ticket__item__title">
@@ -1930,9 +1928,93 @@
                     <div class="col-sm-12 col-xs-12">
                         <h3 class="title">贊助廠商<span>Sponsors</span></h3>
                     </div>
+                    <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Coorganizer).length !== 0">
+                        <h4>天龍級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Coorganizer">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- diamond -->
                     <div class="col-sm-12 col-xs-12 spon__diam">
                         <h4>鑽石級</h4>
                         <template v-for="(sponsor, index) in SponsorFilter.Diamond">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- platinum -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Platinum).length !== 0">
+                        <h4>白金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Platinum">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- gold -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Gold).length !== 0">
+                        <h4>黃金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Gold">
                             <div class="col-sm-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
                                     <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
@@ -2245,6 +2327,7 @@
             });
         </script> -->
 </body>
+<!-- test -->
 <!-- test -->
 
 </html>

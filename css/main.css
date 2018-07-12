@@ -2110,7 +2110,7 @@ section .title {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -38%;
+    bottom: -5%;
     width: 200px;
     height: 200px;
     background: url("../img/event3.png") no-repeat;
@@ -2182,6 +2182,8 @@ section .title {
       .section--event .event2-img {
         float: none;
         margin-top: 20px; } }
+  .section--event .deco-tshirt {
+    max-width: 400px; }
   .section--event .event7-img {
     margin-top: 40px; }
     .section--event .event7-img img {
