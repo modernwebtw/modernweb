@@ -196,8 +196,8 @@ var modernweb2018 = new Vue({
             if (!!session.summary.length) {
                 $('a[href="#sessionModalAgenda"]').tab('show');
                 $('#sessionModal').modal('show');
-                $('#tabSession').addClass('active');
-                $('#tabSpeaker').removeClass('active');
+                $('.active.tabSession').addClass('active');
+                $('.active.tabSpeaker').removeClass('active');
                 $('#sessionModalAgenda').addClass('active');
                 $('#sessionModalIntro').removeClass('active');
             }
