@@ -154,7 +154,7 @@
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
                                         <div class="col-sm-2 bs-session-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" data-toggle="modal" data-target="#01">
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow">
                                             <div class=" ">
                                                 <div class="bs-session-content-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -165,7 +165,7 @@
                                     <div v-else class="row bg-purple">
                                         <div class="col-sm-2 bs-session-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" data-toggle="modal" data-target="#01">
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple">
                                             <div class=" ">
                                                 <div class="bs-session-content-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -180,7 +180,7 @@
                                     <div class="row bg-white">
                                         <div class="col-sm-2 "></div>
                                         <div class="col-sm-10">
-                                            <div class="row ">
+                                            <div class="row agenda-row">
                                                 <div class="col-sm-3 bg-gray">
                                                     <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                                 </div>
@@ -205,10 +205,10 @@
                                             {{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div class="col-sm-10">
-                                            <div class="row ">
+                                            <div class="row agenda-row">
                                                 <template v-for="sss in ss.sessionOfSameTime">
                                                     <template v-for="speaker in sss.speaker">
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bg-gray" v-if="sss.track == 'Track A'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bs-session-track bg-gray" v-if="sss.track == 'Track A'">
                                                             <div class="agenda__t-class">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -221,7 +221,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 " v-if="sss.track == 'Track B'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bs-session-track " v-if="sss.track == 'Track B'">
                                                             <div class="agenda__t-class">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -234,7 +234,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bg-gray" v-if="sss.track == 'Track C'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bs-session-track bg-gray" v-if="sss.track == 'Track C'">
                                                             <div class="agenda__t-class">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -247,7 +247,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3" v-if="sss.track == 'Track D'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bs-session-track" v-if="sss.track == 'Track D'">
                                                             <div class="agenda__t-class">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -332,7 +332,7 @@
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
                                         <div class="col-sm-2 bs-session-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" data-toggle="modal" data-target="#01">
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" >
                                             <div class=" ">
                                                 <div class="bs-session-content-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -343,7 +343,7 @@
                                     <div v-else class="row bg-purple">
                                         <div class="col-sm-2 bs-session-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" data-toggle="modal" data-target="#01">
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" >
                                             <div class=" ">
                                                 <div class="bs-session-content-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -353,22 +353,22 @@
                                     </div>
                                 </template>
                                 <!-- end of break -->
-                                <template v-if="ss['sessionOfSameTime'][0]['session_id'] == '3614'">
+                                <template v-if="ss['sessionOfSameTime'][0]['session_id'] == '3627'">
                                     <!-- track header-->
                                     <div class="row bg-white">
                                         <div class="col-sm-2 "></div>
                                         <div class="col-sm-10">
-                                            <div class="row ">
-                                                <div class="col-sm-3 bg-gray">
+                                            <div class="row agenda-row">
+                                                <div class="col-sm-3 bs-session-track bg-gray">
                                                     <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3 bg-white">
+                                                <div class="col-sm-3 bs-session-track bg-white">
                                                     <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3 bg-gray">
+                                                <div class="col-sm-3 bs-session-track bg-gray">
                                                     <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3 bg-white">
+                                                <div class="col-sm-3 bs-session-track bg-white">
                                                     <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
                                                 </div>
                                             </div>
@@ -383,7 +383,7 @@
                                             {{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div class="col-sm-10">
-                                            <div class="row ">
+                                            <div class="row agenda-row">
                                                 <template v-for="sss in ss.sessionOfSameTime">
                                                     <template v-for="speaker in sss.speaker">
                                                         <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3 bg-gray" v-if="sss.track == 'Track A'">
@@ -568,8 +568,6 @@
                                 </div>
                             </div>
                             <!-- end of modal -->
-
-                        
                     </tempalte>
                 </template>
             </template>

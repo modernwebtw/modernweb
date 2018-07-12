@@ -42,6 +42,9 @@
 .bs-session{
 	background: white;
 }
+div[data-toggle="modal"]:hover{
+	background: #fefdc0;
+}
 .agenda__t-keynote-topic{
 	font-size: 24px;
 }
