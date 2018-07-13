@@ -2120,20 +2120,20 @@ section .title {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -20%;
+    bottom: -40%;
     width: 200px;
     height: 200px;
-    background: url("../img/event4.png") no-repeat;
+    background: url("../img/event-simple-4.png") no-repeat;
     background-size: 100%;
     opacity: .5; }
   .section--event .deco-event5:after {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -35%;
+    bottom: -45%;
     width: 200px;
     height: 200px;
-    background: url("../img/event5.png") no-repeat;
+    background: url("../img/event-simple-5.png") no-repeat;
     background-size: 100%;
     opacity: .5; }
   .section--event .deco-event6:after {
