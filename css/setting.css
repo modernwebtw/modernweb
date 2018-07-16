@@ -434,3 +434,8 @@ font-size: 1.6em;
 .cursor-pointer{
      cursor: pointer;
 }
+
+#botton-gotop{
+    bottom: 60px;
+    right: 15px;
+}
