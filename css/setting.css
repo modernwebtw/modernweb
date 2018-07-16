@@ -390,10 +390,14 @@ section.section--speaker .ma__t30 {
     margin-top: 50px;
     margin-bottom: 200px;
 }
-
+@media (min-width: 992px){
+    .event-box{
+         max-width:22%;
+    }
+}
 .event-box{
     /*border:white 1px solid;*/
-    max-width:22%;
+   
     /*margin: 1%;*/
     margin:10px;
     padding:20px;
@@ -417,9 +421,16 @@ margin:0 auto;
     /*line-height: 80px;*/
     margin-bottom: 30px;
 }
+.event-box-content span{
+    color:#ead997;
+    font-size: 1.2em;
+}
 .session-download{
    /* background: #18052D;
     color:white;
     padding:5px;*/
-font-size: 1.2em;
+font-size: 1.6em;
+}
+.cursor-pointer{
+     cursor: pointer;
 }
