@@ -383,3 +383,43 @@ section.section--speaker .ma__t30 {
 .carousel-inner__q{
     height: 160px;
 }
+.modal h4{
+    color:purple;
+}
+.event-box-row{
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.event-box{
+    /*border:white 1px solid;*/
+    max-width:22%;
+    /*margin: 1%;*/
+    margin:10px;
+    padding:20px;
+    background: rgba(166,146,218,0.6);
+    border-radius: 3px;
+}
+.text-center{
+    text-align: center;
+}
+.event-box img{
+width:99%;
+display: block;
+margin:0 auto;
+}
+
+.event-box-content{
+    /*background: #331357;*/
+    /*opacity: 0.5;*/
+    height:80px;
+    font-size: 1.2em;
+    /*line-height: 80px;*/
+    margin-bottom: 30px;
+}
+.session-download{
+   /* background: #18052D;
+    color:white;
+    padding:5px;*/
+font-size: 1.2em;
+}

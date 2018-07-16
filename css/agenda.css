@@ -63,8 +63,12 @@ display: none;
 }
 div[data-toggle="modal"]:hover{
 	background: #fefdc0;
-	cursor: pointer;
 }
+div[data-toggle="modal"]{
+	cursor: pointer;
+	
+}
+
 .agenda__t-keynote-topic{
 	font-size: 24px;
 }
