@@ -383,3 +383,6 @@ section.section--speaker .ma__t30 {
 .carousel-inner__q{
     height: 160px;
 }
+.modal h4{
+    color:purple;
+}
