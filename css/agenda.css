@@ -21,8 +21,17 @@ display: none;
   flex-wrap: wrap;
 }
 .agenda-row.row > [class*='col-'] {
-  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
   flex-direction: column;
+}
+.agenda-row.container:before,
+.agenda-row.container:after,
+.agenda-row.row:before,
+.agenda-row.row:after {
+   content: normal; // IE doesn't support `initial`
 }
 
  }
