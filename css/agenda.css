@@ -98,7 +98,7 @@ div[data-toggle="modal"]{
      color: #666;
    
 }
-.bs-session-content-rest{
+.bs-agenda__row-session{
 	    padding: 12px 16px;
     font-size: 18px;
     color: #666;
@@ -115,7 +115,7 @@ div[data-toggle="modal"]{
 	background:#efefef;
 }
 
-.bs-session-time{
+.bs-agenda__row-time{
 	background: white;
 	    padding: 12px 16px;
     font-size: 18px;
@@ -132,7 +132,7 @@ div[data-toggle="modal"]{
 	background-color: #e6e1f5 !important;
 }
 
-.bs-session-header{
+.bs-agenda__row-head{
 	    padding: 12px 16px;
     font-size: 18px;
     text-align: center;

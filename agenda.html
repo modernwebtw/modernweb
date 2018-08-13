@@ -107,14 +107,14 @@
                         </div>
                         <div class="bs-session-container">
                             <div class="row">
-                                <div class="col-sm-2 bs-session-header">時間</div>
-                                <div class="col-sm-10 bs-session-header">議程</div>
+                                <div class="col-sm-2 bs-agenda__row-head">時間</div>
+                                <div class="col-sm-10 bs-agenda__row-head">議程</div>
                             </div>
                             <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'18')">
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'keynote'">
                                     <!-- keynote -->
                                     <div class="row bg-white">
-                                        <div class="col-sm-2 bs-session-time">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <template v-for="sss in ss.sessionOfSameTime">
                                             <!-- for session without speaker -->
@@ -166,22 +166,22 @@
                                 <!-- break -->
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'break'">
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
-                                        <div class="col-sm-2 bs-session-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" >
                                             <div class=" ">
-                                                <div class="bs-session-content-rest">
+                                                <div class="bs-agenda__row-session">
                                                     <div class="">{{sss.title}}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div v-else class="row bg-purple">
-                                        <div class="col-sm-2 bs-session-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" >
                                             <div class=" ">
-                                                <div class="bs-session-content-rest">
+                                                <div class="bs-agenda__row-session">
                                                     <div class="">{{sss.title}}</div>
                                                 </div>
                                             </div>
@@ -215,7 +215,7 @@
                                 <!-- four tracks -->
                                 <template v-if="ss.sessionOfSameTime.length !== 1">
                                     <div class="row bg-white">
-                                        <div class="col-sm-2 bs-session-time">
+                                        <div class="col-sm-2 bs-agenda__row-time">
                                             {{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div class="col-sm-10">
@@ -327,14 +327,14 @@
                         </div>
                         <div class="bs-session-container">
                             <div class="row">
-                                <div class="col-sm-2 bs-session-header">時間</div>
-                                <div class="col-sm-10 bs-session-header">議程</div>
+                                <div class="col-sm-2 bs-agenda__row-head">時間</div>
+                                <div class="col-sm-10 bs-agenda__row-head">議程</div>
                             </div>
                             <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'19')">
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'keynote'">
                                     <!-- keynote -->
                                     <div class="row bg-white">
-                                        <div class="col-sm-2 bs-session-time">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <template v-for="sss in ss.sessionOfSameTime">
                                             <!-- for session without speaker -->
@@ -386,22 +386,22 @@
                                 <!-- break -->
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'break'">
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
-                                        <div class="col-sm-2 bs-session-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" >
                                             <div class=" ">
-                                                <div class="bs-session-content-rest">
+                                                <div class="bs-agenda__row-session">
                                                     <div class="">{{sss.title}}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div v-else class="row bg-purple">
-                                        <div class="col-sm-2 bs-session-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
+                                        <div class="col-sm-2 bs-agenda__row-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" >
                                             <div class=" ">
-                                                <div class="bs-session-content-rest">
+                                                <div class="bs-agenda__row-session">
                                                     <div class="">{{sss.title}}</div>
                                                 </div>
                                             </div>
@@ -435,7 +435,7 @@
                                 <!-- four tracks -->
                                 <template v-if="ss.sessionOfSameTime.length !== 1">
                                     <div class="row bg-white">
-                                        <div class="col-sm-2 bs-session-time">
+                                        <div class="col-sm-2 bs-agenda__row-time">
                                             {{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
                                         <div class="col-sm-10">
