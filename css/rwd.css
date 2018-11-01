@@ -1,3 +1,33 @@
+/* 2019 preview */
+@media screen and (max-width: 1024px) {
+    .section--preview-kv__flight { display: none; }
+    #modernweb2018 .section--preview-kv__mini { display: none; }
+    #modernweb2018 .section--preview-kv { padding: 0; margin: 0; top: 12vh; z-index: 2;}
+    #modernweb2018 .section--preview-kv .star { display: none; }
+    #modernweb2018 .section--preview-kv .star .bg--star01 {  }
+    #modernweb2018 .section--preview-kv__mini { display: block; padding: 1% 3%; }
+    #modernweb2018 .section--preview-kv__mini:after { content: '';
+    background: url(../img/land-top.png) no-repeat;
+        width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 12vh;
+    left: 0;
+    background-size: cover;
+    z-index: -1;}
+    #modernweb2018 .section--preview-land:before { display: none; }
+    #modernweb2018 .section--preview-land { margin-top: 0px; }
+    #modernweb2018 .section--preview-land .land-bg { margin-top: 0px;}
+    #modernweb2018 .section--preview-land .land-bg .land-text-cover { display: none; }
+    #modernweb2018 .section--preview-land .land-bg .land-text-calc { margin-top: 8%; }
+}
+@media screen and (max-width: 550px) {
+    #modernweb2018 .section--preview-kv__mini:after { bottom: 22vh; }
+    #modernweb2018 .section--preview-land { margin-top: -10vh; }
+    #modernweb2018 .section--preview-land .land-bg .land-text-calc .calc-num { font-size: 45px; }
+}
+/* 2019 preview end
+
 /* 議程表 */
 
 .agenda__t-keynote:hover {

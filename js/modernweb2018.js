@@ -138,6 +138,7 @@ var modernweb2018 = new Vue({
         Modal_Speaker: {},
         Modal_Session: {},
         Modal_Sponsor: {},
+        SpeakerInner: {},
         Test: {},
         sessionSortedByTime: {}
     },
@@ -170,7 +171,11 @@ var modernweb2018 = new Vue({
         sortSessions: function() {
             var session = this.Session;
             return _.orderBy(session, 'session_start')
-        }
+        },
+        sortSpeaker: function() {
+            var speaker = this.Speaker;
+            return _.orderBy(speaker, 'target_id')
+        },
     },
     methods: {
         filter: function(data, field, value, boolean) {
@@ -202,7 +207,7 @@ var modernweb2018 = new Vue({
                 $('#sessionModalIntro').removeClass('active');
             }
             $('#tabSpeaker').hide();
-            if(!!session.speaker.length){
+            if (!!session.speaker.length) {
                 $('#tabSpeaker').show();
 
             }
@@ -215,12 +220,35 @@ var modernweb2018 = new Vue({
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
         },
-        findWhichDayOfEvent: function(dateObject,dayOfEvent){
-            if(dateObject.getDate() == dayOfEvent){
+        findWhichDayOfEvent: function(dateObject, dayOfEvent) {
+            if (dateObject.getDate() == dayOfEvent) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
+        },
+        loadSpeakerInner: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            if (!id) {
+                return false;
+            }
+            for (var i = 0; i < this.Speaker.length; i++) {
+                if (this.Speaker[i].target_id == id) {
+                    modernweb2018.SpeakerInner = this.Speaker[i];
+                    break;
+                }
+            }
+
+            var self = this;
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=3531').then(function(speaker) {
+                modernweb2018.Speaker = speaker;
+                for (var i = 0; i < modernweb2018.Speaker.length; i++) {
+                    if (modernweb2018.Speaker[i].target_id == id) {
+                        modernweb2018.SpeakerInner['profile'] = modernweb2018.Speaker[i]['profile'];
+                        break;
+                    }
+                }
+            })
         },
     },
     filters: {
@@ -255,28 +283,28 @@ var modernweb2018 = new Vue({
                 return false;
             }
 
-           function sortSessionByTime(){
-                var sessionSortedByTime =[];
+            function sortSessionByTime() {
+                var sessionSortedByTime = [];
                 var uniqueDates = [];
-                session =  _.orderBy(session, 'session_start');
-                for(var i in session){
-                    if(!isDateInArray(session[i].start_Date, uniqueDates)){
+                session = _.orderBy(session, 'session_start');
+                for (var i in session) {
+                    if (!isDateInArray(session[i].start_Date, uniqueDates)) {
                         uniqueDates.push(session[i].start_Date);
-                        sessionSortedByTime.push({date: session[i].start_Date,endDate: session[i].end_Date, sessionOfSameTime: [session[i]]});
-                    }else{
-                        for(var s = 0;s<sessionSortedByTime.length;s++){
-                            if(session[i].start_Date.getTime() === sessionSortedByTime[s].date.getTime()){
+                        sessionSortedByTime.push({ date: session[i].start_Date, endDate: session[i].end_Date, sessionOfSameTime: [session[i]] });
+                    } else {
+                        for (var s = 0; s < sessionSortedByTime.length; s++) {
+                            if (session[i].start_Date.getTime() === sessionSortedByTime[s].date.getTime()) {
                                 sessionSortedByTime[s].sessionOfSameTime.push(session[i]);
                             }
-                            if(sessionSortedByTime[s].sessionOfSameTime){
-                                sessionSortedByTime[s].sessionOfSameTime = _.orderBy(sessionSortedByTime[s].sessionOfSameTime, ['track'],['asc']);
+                            if (sessionSortedByTime[s].sessionOfSameTime) {
+                                sessionSortedByTime[s].sessionOfSameTime = _.orderBy(sessionSortedByTime[s].sessionOfSameTime, ['track'], ['asc']);
                             }
 
                         }
 
                     }
-                    
-                    
+
+
                 }
                 return sessionSortedByTime;
             }
@@ -293,6 +321,15 @@ var modernweb2018 = new Vue({
                     // $.getScript('js/app.js');
                 });
             });
+        });
+
+        confapi.getSpeakerWithSession().then(function(speaker) {
+            modernweb2018.Speaker = speaker;
+            // speaker 
+            var is_speaker_page = location.pathname.search(/speaker/igm) > -1;
+            if (!!is_speaker_page) {
+                modernweb2018.loadSpeakerInner();
+            }
         });
     }
 });

@@ -1,0 +1,146 @@
+
+.bs-session-track{
+	width:100%;
+}
+.horizontal-center{
+	width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 768px){
+
+.hidden-xs{
+display: none;
+}
+}
+
+ @media(min-width:768px){
+ 	.agenda-row.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.agenda-row.row > [class*='col-'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-direction: column;
+}
+.agenda-row.container:before,
+.agenda-row.container:after,
+.agenda-row.row:before,
+.agenda-row.row:after {
+   content: normal; // IE doesn't support `initial`
+}
+
+ }
+
+
+
+.text-center{
+	text-align: center;
+}
+.speaker-brief__agenda-type{
+	color:#00afa8;
+	font-size: 18px;
+	border:2px solid #00afa8;
+	margin:0 5px;
+	padding:  0 3px;
+	border-radius: 4px;
+}
+
+
+.bs-session-container > .row{
+	
+	border-bottom:1px #bababa solid;
+}
+
+.bs-session-track{
+	background: white;
+	padding: 12px 16px;
+}
+
+.bs-session-track-content{
+	padding:10px;
+	color:purple;
+	text-align: center;
+}
+
+.bs-session{
+	background: white;
+}
+div[data-toggle="modal"]:hover{
+	background: #fefdc0;
+}
+div[data-toggle="modal"]{
+	cursor: pointer;
+	
+}
+
+.agenda__t-keynote-topic{
+	font-size: 24px;
+}
+
+.bs-session-content{
+	    padding: 12px 16px;
+	    /*margin-bottom: 12px;*/
+	   
+	     color: #531d8d;
+	text-align: center;
+	
+
+}
+.bg-yellow .bs-session-content{
+	    padding: 12px 16px;
+	    margin:0;
+    font-size: 18px;
+     color: #666;
+   
+}
+.bs-agenda__row-rest{
+	    padding: 12px 16px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+   
+
+}
+.bg-white{
+	background:#f9f9f9;
+}
+
+
+.bg-gray{
+	background:#efefef;
+}
+
+.bs-agenda__row-time{
+	background: white;
+	    padding: 12px 16px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+.bg-yellow{
+	background:#feffc0;
+}
+.bg-purple{
+	    background-color: #e6e1f5;
+}
+.bg-purple:parent{
+	background-color: #e6e1f5 !important;
+}
+
+.bs-agenda__row-head{
+	    padding: 12px 16px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #331257;
+    color: #e2c8ff;
+}
+
+
+
+
