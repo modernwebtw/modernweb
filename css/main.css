@@ -2310,16 +2310,20 @@ section .title {
         position: relative;
         bottom: 120px;
         width: 38%; }
-        @media (max-width: 767px) {
-          #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:first-child {
-            -ms-transform: rotate(-3deg);
-            -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg); } }
-        @media (max-width: 767px) {
-          #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:last-child {
-            -ms-transform: rotate(-10deg);
-            -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg); } }
+        #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:first-child {
+          width: 450px; }
+          @media (max-width: 767px) {
+            #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:first-child {
+              -ms-transform: rotate(-3deg);
+              -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg); } }
+        #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:last-child {
+          width: 390px; }
+          @media (max-width: 767px) {
+            #modernweb2018 .section--preview-land .land-bg .land-text-cover .land-text:last-child {
+              -ms-transform: rotate(-10deg);
+              -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg); } }
     #modernweb2018 .section--preview-land .land-bg .land-text-calc {
       margin-top: 2%;
       margin-bottom: 2%; }
@@ -2375,6 +2379,20 @@ section .title {
     position: absolute;
     bottom: -390px;
     left: 0; }
+  #modernweb2018 .section--preview-speaker .title {
+    margin: 7% auto 2%;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 4px;
+    position: relative; }
+    #modernweb2018 .section--preview-speaker .title:before {
+      content: '';
+      background: url(../img/astronaut-thanks.svg) no-repeat;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 20px); }
   #modernweb2018 .section--preview-speaker .preview-speaker-box-cover {
     text-align: center; }
     @media (min-width: 768px) {
