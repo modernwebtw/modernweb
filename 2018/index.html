@@ -42,6 +42,24 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1057917687569856"
+  theme_color="#331257"
+  logged_in_greeting="嗨，我可以幫助你嗎？"
+  logged_out_greeting="嗨，我可以幫助你嗎？">
+</div>
     <div id="modernweb2018">
         <!-- loading animation -->
         <div class="loading" id="loading">
@@ -106,14 +124,12 @@
                                 <a class="btn dropdown-toggle hidden-sm-down" type="" data-toggle="dropdown">歷年回顧
                               <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="https://modernweb.tw/2018/index.html" target="_blank">2018</a></li>
                                     <li><a href="https://modernweb.tw/2017/index.html" target="_blank">2017</a></li>
                                     <li><a href="https://modernweb.tw/2016/index.html" target="_blank">2016</a></li>
                                     <li><a href="https://modernweb.tw/2015/index.html" target="_blank">2015</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2018/index.html" target="_blank" class="visible-sm-up">回顧 2018</a></li>
                         <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
                         <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2016/index.html" target="_blank" class="visible-sm-up">回顧 2016</a></li>
                         <li class="visible-sm-down dropdown-sm-li"><a href="https://modernweb.tw/2015/index.html" target="_blank" class="visible-sm-up">回顧 2015</a></li>
@@ -1655,7 +1671,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <a class="btn btn--default" href="#ticket--workshop">立即購票</a>
+                                            <a class="btn btn--default inactivelink" href="#ticket--workshop" target="_blank">售票截止</a>
                                             <a class="btn btn--default" data-toggle="modal" data-target="#work-more">瞭解更多</a>
                                             <!-- Modal -->
                                             <div class="modal fade speaker-modal" id="work-more" role="dialog" aria-labelledby="workmoreLabel">
@@ -1727,12 +1743,12 @@
                                 <p>雙日入場票1 張，限在學學生，報到時需攜帶學生證以供驗證。如資格不符或當日未攜帶學生證將不予入場。
                                     <br>（限額 30 名，售完為止）</p>
                             </div>
-                            <!--   <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div> -->
-                            <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180016" target="_blank">立即購票</a>
+                              <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">額滿完售</a>
                             </div>
+                          <!--   <div class="col-sm-2 ticket__item__btn">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180016" target="_blank">立即購票</a>
+                            </div> -->
                         </div>
                         <!-- workshop -->
                         <div class="col-sm12 ticket__item">
@@ -1744,11 +1760,9 @@
                                 <h3>$2,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張。適合早鳥期間已購票報名 ModernWeb 者，可獲得大會提供之特惠序號，享特惠價格報名。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="" target="_blank">尚未開賣</a>
-                            </div> -->
+                         
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180033" target="_blank">立即購票</a>
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">售票截止</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1759,11 +1773,10 @@
                                 <h3>$3,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張。 適合只想參加 Workshop 一日實戰工作坊的您。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180032" target="_blank">尚未開賣</a>
-                            </div> -->
+                            
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180032" target="_blank">立即購票</a>
+                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180032" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">售票截止</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1774,11 +1787,11 @@
                                 <h3>$7,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc"><span class="title-workshop">Workshop</span> 一日實戰票1張 + ModernWeb 雙日入場票1張。適合尚未報名 ModernWeb，想一次報名 ModernWeb 及 Workshop 的您。（原價：8980）</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">尚未開賣</a>
-                            </div> -->
+                            
+
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">立即購票</a>
+                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018workshop/class?p=20180034" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <!-- workshop -->
@@ -1790,11 +1803,10 @@
                                 <h3>$5,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 1 張。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div> -->
+                           
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180015" target="_blank">立即購票</a>
+                               <!--  <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180015" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1805,11 +1817,10 @@
                                 <h3>$8,990</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票 2 張，填寫表單回傳報名。</div>
-                            <!--  <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div> -->
+                          
                             <div class="col-sm-2 ticket__item__btn">
-                                <a class="btn btn--buy" href="download/ModernWeb2018團體報名表.xlsx" target="_blank">立即購票</a>
+                                <!-- <a class="btn btn--buy" href="download/ModernWeb2018團體報名表.xlsx" target="_blank">立即購票</a> -->
+                                <a class="btn btn--undo inactivelink" href="" target="_blank">額滿完售</a>
                             </div>
                         </div>
                         <div class="col-sm12 ticket__item">
@@ -1820,9 +1831,9 @@
                                 <h3>$4,490</h3>
                             </div>
                             <div class="col-sm-5 ticket__item__disc">雙日入場票，填寫表單回傳報名。</div>
-                            <div class="col-sm-2 ticket__item__btn">
+                          <!--   <div class="col-sm-2 ticket__item__btn">
                                 <a class="btn btn--undo inactivelink" href="https://ec.ithome.com.tw/modernweb2018/class?p=20180014" target="_blank">尚未開賣</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-sm12 ticket__item">
                             <div class="col-sm-3 ticket__item__title">
@@ -1932,9 +1943,93 @@
                     <div class="col-sm-12 col-xs-12">
                         <h3 class="title">贊助廠商<span>Sponsors</span></h3>
                     </div>
+                    <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Coorganizer).length !== 0">
+                        <h4>天龍級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Coorganizer">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- diamond -->
                     <div class="col-sm-12 col-xs-12 spon__diam">
                         <h4>鑽石級</h4>
                         <template v-for="(sponsor, index) in SponsorFilter.Diamond">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- platinum -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Platinum).length !== 0">
+                        <h4>白金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Platinum">
+                            <div class="col-sm-12">
+                                <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
+                                    <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
+                            </div>
+                            <div class="modal fade" :id="'sponsor'+sponsor.vendor_id" tabindex="-1" role="dialog" aria-labelledby="sponsor3494Label">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img :src="sponsor.logo" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>{{sponsor.alt_title}}</h4>
+                                                <p v-html="sponsor.description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- gold -->
+                     <div class="col-sm-12 col-xs-12 "  v-if="Object.keys(SponsorFilter.Gold).length !== 0">
+                        <h4>黃金級</h4>
+                        <template v-for="(sponsor, index) in SponsorFilter.Gold">
                             <div class="col-sm-12">
                                 <a href="" data-toggle="modal" :data-target="'#sponsor' + sponsor.vendor_id">
                                     <img :src="sponsor.logo" alt="" class="img-responsive logo-img sp-coner-link"></a>
@@ -2027,19 +2122,43 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="title">特別感謝<!-- <span>Buy</span> --><br><br></h3>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="org__logobox"><img src="img/logo-hackmd.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="org__logobox"><img src="img/logo-slack.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="org__logobox"><img src="img/logo-ten.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
                         </div>
+                        
+                        <div class="col-sm-3 cursor-pointer" data-toggle="modal" data-target="#modal-pugbot">
+                            <div class="org__logobox"><img src="img/pugbot.jpg" alt="" class="img-responsive logo-img sp-coner-link"></div>
+                        </div>
+                         <div class="modal fade " id="modal-pugbot" tabindex="-1" role="dialog" aria-labelledby="modal-pugbot">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body text-left row">
+                                            <div class="col-sm-8 col-sm-push-2">
+                                                <img src="img/pugbot.jpg" class="img-responsive img-sponsor">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4>Pugbot</h4>
+                                                <p> Pugbot 為新創訊息機器人開發團隊，為的是發掘更多訊息機器人使用上的可能性。我們提供專業的訊息機器人客製服務，可以應用在活動、產品、服務、店家行銷推廣。幫助客戶開發各種便利服務與功能，例如：智慧客服、購物商城、問卷、互動遊戲等等。未來，我們希望也可以將這些功能透過平台化的方式，開放給更多有想法的開發者，更快速且容易製作屬於自己的訊息機器人。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
+       
+
         <section class="section--footer">
             <div class="container">
                 <div class="row">
@@ -2225,7 +2344,7 @@
         <script>
         </script>
         <script type="text/javascript">
-        $("body").append("<a href='#top' class='gotop'><i class='fa fa-arrow-circle-up'></i></a>");
+        $("body").append("<a href='#top' class='gotop' id='botton-gotop' style='bottom: 60px;right: 15px;'><i class='fa fa-arrow-circle-up'></i></a>");
         var topBtn = $('.gotop');
         topBtn.hide();
         $(window).scroll(function() {
@@ -2247,6 +2366,7 @@
             });
         </script> -->
 </body>
+<!-- test -->
 <!-- test -->
 
 </html>
