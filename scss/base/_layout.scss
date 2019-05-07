@@ -19,15 +19,14 @@ html {
 body {
     min-height: 100vh;
     position: relative;
-    background-color: #18052D;
-    font-family: "Open Sans", "Helvetica Neue", 微軟正黑體, Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
 	color: #ddd;
 	font-size: 15px;
 	@include media("<=768px"){
 	min-height: 100%;
 	}
 }
-h1,h2,h3,h4,h5,h6{ color: #fff; margin: 20px 0 10px;}
+h1,h2,h3,h4,h5,h6{ color: $font-color; margin: 20px 0 10px;}
 h1 { font-size: 36px; margin-bottom: 40px; }
 h2 { font-size: 32px;}
 h3 { font-size: 30px;}
@@ -54,13 +53,13 @@ ul li{ list-style: none;}
 
 a {
     transition: all .3s ease;
-    color: #18cec3;
-    &:hover{color:#0f948c; text-decoration:none;}
+    color: $font-color-pu4;
+    &:hover{color: darken($font-color-pu4,20%); text-decoration:none;}
 }
 
 button,
 .btn {
-    color: #ddd;
+    color: $font-color;
     transition: all .3s ease;
     font-size: 16px;
     &:focus,
@@ -90,7 +89,7 @@ section {
             position: absolute;
             font-size: 30px;
             left: -.8%;
-            color: $font-color-pu3;
+            color: $font-color;
         }
     }
     &:last-of-type {
@@ -112,7 +111,7 @@ section {
         }
         span {
             font-size: 28px;
-            color: $font-color-green;
+            color: $font-color;
             display: block;
             margin: 10px auto 20px auto;
             letter-spacing: 2px;
@@ -125,16 +124,22 @@ nav {
     z-index: 999;
     position: fixed;
     width: 100%;
-    height: 90px;
-    top: 0;
-    box-shadow: 0 0 16px #b8a3e4aa;
-    background-color: rgba(30, 7, 57, 0.8);
-    border-color: $bg-color2;
+    height: 80px;
+    top: 0;    
+    border-radius: 1px;
     .navbar-inverse .navbar-nav { float: right;}
     @include media("<=1024px") {
         height: auto;
     }
 }
+
+.navbar--logo {
+    width: 160px;
+    &__logo {
+        width: 100%;
+    }
+}
+
 
 // 
 .gotop {

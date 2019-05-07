@@ -1,15 +1,15 @@
 // more lighter數字越大越亮
 $bg-color1: #22073e;
-$bg-color2: #331257;
+$bg-color2: #1926f8;
 $bg-color3: #d8d0e7;
 $bg-color4: #aba1c4; //purple with gray
 $bg-color5: #e6e1f5; //purple with gray lighting
 
-$font-color: #fff;
+$font-color: #333333;
 $font-color-pu1: #321357;
 $font-color-pu2: #531d8d;
 $font-color-pu3: #a692da;
-$font-color-pu4: #e2c8ff;
+$font-color-pu4: #a9e4fe;
 $font-color-green: #00afa8;
 
 // ticket
@@ -70,4 +70,9 @@ $dot09: $font-color-pu2;
     user-select: none;
     touch-action: manipulation;
     cursor: not-allowed;
+}
+
+
+.bg--blue-defult {
+    background-color: #1926f8;
 }
