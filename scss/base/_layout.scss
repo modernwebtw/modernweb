@@ -127,16 +127,29 @@ nav {
     height: 80px;
     top: 0;    
     border-radius: 1px;
+    background-color: #333333;
+    box-shadow: 0 0 5px #eeeeee;
     .navbar-inverse .navbar-nav { float: right;}
     @include media("<=1024px") {
         height: auto;
+    }
+    .navbar-toggler {
+        color: #ffffff;
+        font-size: 1.6em;
+        border: 1px solid #888888;
+        padding: 0.4em 0.6em;
     }
 }
 
 .navbar--logo {
     width: 160px;
-    &__logo {
+    display: none;
+    @include media("<991px"){
+        display: block;
+    }
+    &__img {
         width: 100%;
+        
     }
 }
 

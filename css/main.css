@@ -600,16 +600,27 @@ nav {
   width: 100%;
   height: 80px;
   top: 0;
-  border-radius: 1px; }
+  border-radius: 1px;
+  background-color: #333333;
+  box-shadow: 0 0 5px #eeeeee; }
   nav .navbar-inverse .navbar-nav {
     float: right; }
   @media (max-width: 1024px) {
     nav {
       height: auto; } }
+  nav .navbar-toggler {
+    color: #ffffff;
+    font-size: 1.6em;
+    border: 1px solid #888888;
+    padding: 0.4em 0.6em; }
 
 .navbar--logo {
-  width: 160px; }
-  .navbar--logo__logo {
+  width: 160px;
+  display: none; }
+  @media (max-width: 990px) {
+    .navbar--logo {
+      display: block; } }
+  .navbar--logo__img {
     width: 100%; }
 
 .gotop {
@@ -656,15 +667,16 @@ nav {
 .loading__logo svg {
   width: 100%; }
 
-.navbar-blue {
-  background-color: #1926f8;
-  border-color: #1926f8;
-  color: #ffffff; }
+@media (max-width: 991) {
+  .navbar-darken {
+    background-color: #00064a;
+    border-color: #00064a;
+    color: #ffffff; } }
 
 .home--kv {
   margin: 0;
-  min-height: 50vh;
-  top: 90px; }
+  min-height: 40vh;
+  top: 80px; }
   .home--kv--wrapper {
     position: relative; }
   .home--kv--bg--star--l {
@@ -699,9 +711,10 @@ nav {
     right: 15%; }
   .home--kv--logo {
     position: absolute;
-    top: 20%;
+    top: 40px;
     width: 50%;
-    left: 25%; }
+    left: 25%;
+    z-index: 5; }
 
 .home--wave {
   width: 100%;
