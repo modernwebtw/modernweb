@@ -1,6 +1,6 @@
 // navbar theme
 .navbar-darken {
-    @include media("<991") {
+    @include media("<991px") {
         // box-shadow: 0 0 16px #b8a3e4aa;
         background-color: #00064a;
         border-color: #00064a;
@@ -8,6 +8,12 @@
     }
 }
 
+.deco-title {
+    background: url('img/deco-title.svg') no-repeat;
+    background-size: cover;
+    max-width: 140px;
+    height: 48px;
+}
 
 
 .home--kv {
@@ -22,12 +28,14 @@
         top: 1em;
         width: 50%;
         left: 0;
+        z-index: -2;
     }
     &--bg--star--r {
         position: absolute;
         top: 1em;
         width: 100%;
         right: 0;
+        z-index: -2;
     }
     &--bg--planet--l {
         position: absolute;
@@ -41,7 +49,7 @@
         width: 10em;
         right: 0;
     }
-    &--deco--l--planet {
+    &--deco--planet--orange {
         position: absolute;
         top: 16em;
         width: 3em;
@@ -56,9 +64,25 @@
     &--logo {
         position: absolute;
         top: 40px;
-        width: 50%;
-        left: 25%;
+        width: 45%;
+        left: 27.5%;
         z-index: 5;
+    }
+    &--btn {
+        background-color: $font-color-pink;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        right: 22%;
+        top: 16em;
+        line-height: 5.5em;
+        color: #ffffff;
+        font-size: 20px;
+        display: block;
+        z-index: 10;
+        box-shadow: 5px 5px 2px darken($font-color-pink,20%);
+        &:hover, &:focus { background-color: lighten($font-color-pink,5%); color: #ffffff; transform: translate(2px,2px); box-shadow: 1px 1px 1px darken($font-color-pink,15%)}
     }
 }
 
@@ -72,15 +96,45 @@
         width: 70%;
         left: 15%;
         top: -60%;
+        z-index: -3;
     }
     &--bgwhite {
         position: relative;
+        z-index: -1;
+    }
+    &--planet--orange {
+        position: absolute;
+        top: -3em;
+        width: 30%;
+        right: -4em;
+        z-index: -3;
+        opacity: 0.9;
     }
     &--deco--r--astronaut {
         position: absolute;
         top: -50px;
         width: 10em;
-        right: 15%;
+        right: 10%;
+    }
+    &--deco--r--shadow {
+        position: absolute;
+        top: 120px;
+        width: 8em;
+        right: 10%;
+        opacity: 0.8;
+    }
+    &--l--rocket {
+        position: absolute;
+        width: 10%;
+        top: 2%;
+        left: 20%;
+        z-index: -2;
+    }
+    &--l--earth {
+        position: absolute;
+        width: 30%;
+        top: 10%;
+        z-index: -2;
     }
 }
 
@@ -88,6 +142,13 @@
     background-color: #ffffff;
     margin: 0;
 }
+
+
+
+
+
+
+
 
 .home--key {
     margin-top: 90px;

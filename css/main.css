@@ -453,7 +453,7 @@ body {
   min-height: 100vh;
   position: relative;
   font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
-  color: #ddd;
+  color: #333333;
   font-size: 15px; }
   @media (max-width: 768px) {
     body {
@@ -524,7 +524,7 @@ p:last-child {
   margin-bottom: 0px; }
 
 p {
-  color: #ddd; }
+  color: #333333; }
 
 ul {
   list-style: none;
@@ -536,8 +536,8 @@ ul li {
 a {
   transition: all .3s ease;
   color: #a9e4fe; }
-  a:hover {
-    color: #44c4fd;
+  a:focus, a:hover {
+    color: white;
     text-decoration: none; }
 
 button,
@@ -548,7 +548,7 @@ button,
   button:focus, buttonhover,
   .btn:focus,
   .btnhover {
-    color: #ddd; }
+    color: #333333; }
 
 section,
 header,
@@ -561,8 +561,7 @@ section {
   margin: 3% 0 4% 0; }
   @media (max-width: 767px) {
     section {
-      padding: 1.2% 0;
-      overflow: hidden; } }
+      padding: 1.2% 0; } }
   section .ul li {
     margin-bottom: 1em; }
     section .ul li:before {
@@ -600,9 +599,7 @@ nav {
   width: 100%;
   height: 80px;
   top: 0;
-  border-radius: 1px;
-  background-color: #333333;
-  box-shadow: 0 0 5px #eeeeee; }
+  border-radius: 1px; }
   nav .navbar-inverse .navbar-nav {
     float: right; }
   @media (max-width: 1024px) {
@@ -667,11 +664,17 @@ nav {
 .loading__logo svg {
   width: 100%; }
 
-@media (max-width: 991) {
+@media (max-width: 990px) {
   .navbar-darken {
     background-color: #00064a;
     border-color: #00064a;
     color: #ffffff; } }
+
+.deco-title {
+  background: url("img/deco-title.svg") no-repeat;
+  background-size: cover;
+  max-width: 140px;
+  height: 48px; }
 
 .home--kv {
   margin: 0;
@@ -683,12 +686,14 @@ nav {
     position: absolute;
     top: 1em;
     width: 50%;
-    left: 0; }
+    left: 0;
+    z-index: -2; }
   .home--kv--bg--star--r {
     position: absolute;
     top: 1em;
     width: 100%;
-    right: 0; }
+    right: 0;
+    z-index: -2; }
   .home--kv--bg--planet--l {
     position: absolute;
     top: 6em;
@@ -699,7 +704,7 @@ nav {
     top: 3em;
     width: 10em;
     right: 0; }
-  .home--kv--deco--l--planet {
+  .home--kv--deco--planet--orange {
     position: absolute;
     top: 16em;
     width: 3em;
@@ -712,9 +717,28 @@ nav {
   .home--kv--logo {
     position: absolute;
     top: 40px;
-    width: 50%;
-    left: 25%;
+    width: 45%;
+    left: 27.5%;
     z-index: 5; }
+  .home--kv--btn {
+    background-color: #e000a9;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 22%;
+    top: 16em;
+    line-height: 5.5em;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    z-index: 10;
+    box-shadow: 5px 5px 2px #7a005c; }
+    .home--kv--btn:hover, .home--kv--btn:focus {
+      background-color: #fa00bc;
+      color: #ffffff;
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 1px #94006f; }
 
 .home--wave {
   width: 100%;
@@ -725,14 +749,40 @@ nav {
     position: absolute;
     width: 70%;
     left: 15%;
-    top: -60%; }
+    top: -60%;
+    z-index: -3; }
   .home--wave--bgwhite {
-    position: relative; }
+    position: relative;
+    z-index: -1; }
+  .home--wave--planet--orange {
+    position: absolute;
+    top: -3em;
+    width: 30%;
+    right: -4em;
+    z-index: -3;
+    opacity: 0.9; }
   .home--wave--deco--r--astronaut {
     position: absolute;
     top: -50px;
     width: 10em;
-    right: 15%; }
+    right: 10%; }
+  .home--wave--deco--r--shadow {
+    position: absolute;
+    top: 120px;
+    width: 8em;
+    right: 10%;
+    opacity: 0.8; }
+  .home--wave--l--rocket {
+    position: absolute;
+    width: 10%;
+    top: 2%;
+    left: 20%;
+    z-index: -2; }
+  .home--wave--l--earth {
+    position: absolute;
+    width: 30%;
+    top: 10%;
+    z-index: -2; }
 
 .home--intro {
   background-color: #ffffff;

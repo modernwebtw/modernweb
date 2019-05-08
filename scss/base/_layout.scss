@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     position: relative;
     font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
-	color: #ddd;
+	color: $font-color;
 	font-size: 15px;
 	@include media("<=768px"){
 	min-height: 100%;
@@ -47,14 +47,14 @@ h6 { font-size: 20px; font-weight: 600;}
 strong { font-weight: 700; }
 p { font-size: 16px; line-height: 1.6em; }
 p:last-child { margin-bottom: 0px; }
-p { color: #ddd; }
+p { color: $font-color; }
 ul{list-style: none; line-height: 1.9em;}
 ul li{ list-style: none;}
 
 a {
     transition: all .3s ease;
     color: $font-color-pu4;
-    &:hover{color: darken($font-color-pu4,20%); text-decoration:none;}
+    &:focus, &:hover{color: lighten($font-color-pu4,20%); text-decoration:none;}
 }
 
 button,
@@ -64,7 +64,7 @@ button,
     font-size: 16px;
     &:focus,
     &hover {
-        color: #ddd;
+        color: $font-color;
     }
 }
 
@@ -80,7 +80,6 @@ section {
     margin: 3% 0 4% 0;
     @include media("<=767px") {
         padding: 1.2% 0;
-        overflow: hidden;
     }
     .ul li {
         margin-bottom: 1em;
@@ -127,8 +126,8 @@ nav {
     height: 80px;
     top: 0;    
     border-radius: 1px;
-    background-color: #333333;
-    box-shadow: 0 0 5px #eeeeee;
+    // background-color: #333333;
+    // box-shadow: 0 0 5px #eeeeee;
     .navbar-inverse .navbar-nav { float: right;}
     @include media("<=1024px") {
         height: auto;
