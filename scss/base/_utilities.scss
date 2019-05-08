@@ -75,4 +75,10 @@ $dot09: $font-color-pu2;
 
 .bg--blue-defult {
     background-color: #1926f8;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#694cca+0,1425f8+54,17bcf5+94 */
+background: #694cca; /* Old browsers */
+background: -moz-linear-gradient(left, #694cca 0%, #1425f8 54%, #17bcf5 94%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #694cca 0%,#1425f8 54%,#17bcf5 94%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #694cca 0%,#1425f8 54%,#17bcf5 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#694cca', endColorstr='#17bcf5',GradientType=1 ); /* IE6-9 */
 }

@@ -40,7 +40,18 @@
   cursor: not-allowed; }
 
 .bg--blue-defult {
-  background-color: #1926f8; }
+  background-color: #1926f8;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#694cca+0,1425f8+54,17bcf5+94 */
+  background: #694cca;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #694cca 0%, #1425f8 54%, #17bcf5 94%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #694cca 0%, #1425f8 54%, #17bcf5 94%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #694cca 0%, #1425f8 54%, #17bcf5 94%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#694cca', endColorstr='#17bcf5',GradientType=1 );
+  /* IE6-9 */ }
 
 /*
 0-600px Phone
@@ -655,43 +666,64 @@ nav {
   min-height: 50vh;
   top: 90px; }
   .home--kv--wrapper {
-    position: relative;
-    top: 5%; }
+    position: relative; }
   .home--kv--bg--star--l {
     position: absolute;
-    top: 5%;
+    top: 1em;
     width: 50%;
     left: 0; }
   .home--kv--bg--star--r {
     position: absolute;
-    top: 5%;
+    top: 1em;
     width: 100%;
     right: 0; }
   .home--kv--bg--planet--l {
     position: absolute;
-    top: 5%;
-    width: 10em;
-    left: 0; }
+    top: 6em;
+    width: 5em;
+    left: 4em; }
   .home--kv--bg--planet--r {
     position: absolute;
-    top: 5%;
+    top: 3em;
     width: 10em;
     right: 0; }
   .home--kv--deco--l--planet {
     position: absolute;
-    top: 5%;
-    width: 10em;
-    left: 0; }
+    top: 16em;
+    width: 3em;
+    left: 4em; }
   .home--kv--deco--r--astronaut {
     position: absolute;
-    top: 5%;
+    top: -50px;
     width: 10em;
-    right: 0; }
+    right: 15%; }
   .home--kv--logo {
     position: absolute;
     top: 20%;
-    width: 60%;
-    left: 20%; }
+    width: 50%;
+    left: 25%; }
+
+.home--wave {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0; }
+  .home--wave--darkhole {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: -60%; }
+  .home--wave--bgwhite {
+    position: relative; }
+  .home--wave--deco--r--astronaut {
+    position: absolute;
+    top: -50px;
+    width: 10em;
+    right: 15%; }
+
+.home--intro {
+  background-color: #ffffff;
+  margin: 0; }
 
 .home--key {
   margin-top: 90px; }
