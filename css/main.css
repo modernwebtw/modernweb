@@ -111,6 +111,23 @@ ORDER:base+typography > general layout + grid>page layout >components
   80% {
     transform: translate3d(10px, 0, 0);
     transform: rotate(-10deg); } }
+@keyframes float-top {
+  100% {
+    transform: translate3d(0, 20px, 0); } }
+@keyframes scale-shadow {
+  100% {
+    transform: scale(0.6) translate(0, 80px);
+    opacity: 0.9; } }
+@keyframes wave {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-1800px, 0); } }
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -25px, 0); }
+  50% {
+    transform: translate3d(0, 5px, 0); } }
 @-webkit-keyframes rotate-right {
   from {
     -webkit-transform: rotate(0deg); }
@@ -518,7 +535,7 @@ strong {
 
 p {
   font-size: 16px;
-  line-height: 1.6em; }
+  line-height: 1.6; }
 
 p:last-child {
   margin-bottom: 0px; }
@@ -528,7 +545,7 @@ p {
 
 ul {
   list-style: none;
-  line-height: 1.9em; }
+  line-height: 1.9; }
 
 ul li {
   list-style: none; }
@@ -687,13 +704,15 @@ nav {
     top: 1em;
     width: 50%;
     left: 0;
-    z-index: -2; }
+    z-index: -2;
+    animation: float-star01 60s infinite; }
   .home--kv--bg--star--r {
     position: absolute;
     top: 1em;
     width: 100%;
     right: 0;
-    z-index: -2; }
+    z-index: -2;
+    animation: float-star02 50s infinite; }
   .home--kv--bg--planet--l {
     position: absolute;
     top: 6em;
@@ -709,11 +728,6 @@ nav {
     top: 16em;
     width: 3em;
     left: 4em; }
-  .home--kv--deco--r--astronaut {
-    position: absolute;
-    top: -50px;
-    width: 10em;
-    right: 15%; }
   .home--kv--logo {
     position: absolute;
     top: 40px;
@@ -744,16 +758,34 @@ nav {
   width: 100%;
   position: relative;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  height: 50vh; }
   .home--wave--darkhole {
     position: absolute;
     width: 70%;
     left: 15%;
     top: -60%;
     z-index: -3; }
+  .home--wave--bg--wrapper {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 240px;
+    left: 0;
+    background-color: #ffffff; }
   .home--wave--bgwhite {
-    position: relative;
-    z-index: -1; }
+    position: absolute;
+    background: url("../img/wave.svg") repeat-x;
+    width: 6400px;
+    height: 170px;
+    top: -170px;
+    z-index: -1;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0); }
+  .home--wave--bggray {
+    top: -165px;
+    background: url("../img/wave-gray.svg") repeat-x;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite; }
   .home--wave--planet--orange {
     position: absolute;
     top: -3em;
@@ -763,15 +795,18 @@ nav {
     opacity: 0.9; }
   .home--wave--deco--r--astronaut {
     position: absolute;
-    top: -50px;
+    top: -20px;
     width: 10em;
-    right: 10%; }
+    right: 10%;
+    animation: float-top 5s alternate infinite; }
   .home--wave--deco--r--shadow {
     position: absolute;
-    top: 120px;
+    top: 170px;
     width: 8em;
     right: 10%;
-    opacity: 0.8; }
+    opacity: 0.6;
+    z-index: 1;
+    animation: scale-shadow 5s alternate infinite; }
   .home--wave--l--rocket {
     position: absolute;
     width: 10%;
@@ -786,7 +821,13 @@ nav {
 
 .home--intro {
   background-color: #ffffff;
-  margin: 0; }
+  margin: 0;
+  padding: 1% 0 5%;
+  top: 0; }
+
+.home--cfs {
+  background-color: #ffffff;
+  margin-top: 0; }
 
 .home--key {
   margin-top: 90px; }
@@ -1611,9 +1652,6 @@ nav {
   top: 13%;
   right: 5%; }
 
-@keyframes float-top {
-  100% {
-    transform: translate3d(0, 20px, 0); } }
 .section--event {
   margin: 4% 0 20%; }
   @media (max-width: 767px) {

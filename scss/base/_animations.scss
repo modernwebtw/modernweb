@@ -49,6 +49,39 @@
   }
 }
 
+@keyframes float-top {
+    100% {
+        transform: translate3d(0, 20px, 0);
+    }
+}
+
+@keyframes scale-shadow {
+    100% {
+        transform: scale(0.6) translate(0, 80px);
+        opacity: 0.9;
+    }
+}
+
+
+@keyframes wave {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-1800px, 0);
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+
 
 @-webkit-keyframes rotate-right {
     from {

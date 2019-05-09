@@ -29,6 +29,7 @@
         width: 50%;
         left: 0;
         z-index: -2;
+        animation: float-star01 60s infinite;
     }
     &--bg--star--r {
         position: absolute;
@@ -36,6 +37,7 @@
         width: 100%;
         right: 0;
         z-index: -2;
+        animation: float-star02 50s infinite;
     }
     &--bg--planet--l {
         position: absolute;
@@ -54,12 +56,6 @@
         top: 16em;
         width: 3em;
         left: 4em;
-    }
-    &--deco--r--astronaut {
-        position: absolute;
-        top: -50px;
-        width: 10em;
-        right: 15%;
     }
     &--logo {
         position: absolute;
@@ -91,6 +87,7 @@
     position: relative;
     padding: 0;
     margin: 0;
+    height: 50vh;
     &--darkhole {
         position: absolute;
         width: 70%;
@@ -98,9 +95,31 @@
         top: -60%;
         z-index: -3;
     }
+    &--bg--wrapper {
+        height: 80px;
+        width:100%;
+        position:absolute;
+        top: 240px;
+        left:0;
+        background-color: #ffffff;
+    }
     &--bgwhite {
-        position: relative;
+        position: absolute;
+        background: url('../img/wave.svg') repeat-x;
+        width: 6400px;
+        height: 170px;
+        top: -170px;
         z-index: -1;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        // animation-direction:alternate;
+        // -webkit-animation-direction:alternate;
+        transform: translate3d(0, 0, 0);
+    }
+    &--bggray {
+        top: -165px;
+        background: url('../img/wave-gray.svg') repeat-x;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+
     }
     &--planet--orange {
         position: absolute;
@@ -112,16 +131,19 @@
     }
     &--deco--r--astronaut {
         position: absolute;
-        top: -50px;
+        top: -20px;
         width: 10em;
         right: 10%;
+        animation: float-top 5s alternate infinite;
     }
     &--deco--r--shadow {
         position: absolute;
-        top: 120px;
+        top: 170px;
         width: 8em;
         right: 10%;
-        opacity: 0.8;
+        opacity: 0.6;
+        z-index: 1;
+        animation: scale-shadow 5s alternate infinite;
     }
     &--l--rocket {
         position: absolute;
@@ -136,12 +158,49 @@
         top: 10%;
         z-index: -2;
     }
+
+    // .ocean { 
+    //   height: 5%;
+    //   width:100%;
+    //   position:absolute;
+    //   bottom:0;
+    //   left:0;
+    //   background: #015871;
+    // }
+
+    // .wave {
+    //   background: url('../img/wave.svg') repeat-x; 
+    //   position: absolute;
+    //   top: -198px;
+    //   width: 6400px;
+    //   height: 198px;
+    //   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    //   transform: translate3d(0, 0, 0);
+    // }
+
+    // .wave:nth-of-type(2) {
+    //   top: -175px;
+    //   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    //   opacity: 1;
+    // }
 }
 
 .home--intro {
     background-color: #ffffff;
     margin: 0;
+    padding: 1% 0 5%;
+    top: 0;
 }
+
+.home--cfs {
+    background-color: #ffffff;
+    margin-top: 0; 
+}
+
+
+
+
+
 
 
 
