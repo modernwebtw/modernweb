@@ -94,29 +94,6 @@ section {
     &:last-of-type {
         margin-bottom: 0;
     }
-    .title {
-    font-size: 32px;
-    margin: 0 auto;
-    text-align: center;
-    letter-spacing: 4px;
-        &:before {
-            content: '';
-            background: url('../img/deco-title.svg') no-repeat;
-            width: 28px;
-            height: 28px;
-            position: absolute;
-            top: -45px;
-            left: calc(50% - 15px);
-        }
-        span {
-            font-size: 28px;
-            color: $font-color;
-            display: block;
-            margin: 10px auto 20px auto;
-            letter-spacing: 2px;
-            font-weight: 200;
-        }
-    }
 }
 
 nav {

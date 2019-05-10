@@ -5,7 +5,7 @@ $bg-color3: #d8d0e7;
 $bg-color4: #aba1c4; //purple with gray
 $bg-color5: #e6e1f5; //purple with gray lighting
 
-$font-color: #333333;
+
 $font-color-pu1: #321357;
 $font-color-pu2: #531d8d;
 $font-color-pu3: #a692da;
@@ -13,18 +13,10 @@ $font-color-pu4: #a9e4fe;
 $font-color-green: #00afa8;
 
 // 
+
+$font-color: #333333;
 $font-color-pink: #e000a9;
 
-// ticket
-$dot01: #5cd1d0;
-$dot02: #4688da;
-$dot03: #c17bac;
-$dot04: #ba4455;
-$dot05: #8199ba;
-$dot06: #ba7a5b;
-$dot07: #f4e895;
-$dot08: #377254;
-$dot09: $font-color-pu2;
 
 
 
@@ -85,3 +77,70 @@ background: -webkit-linear-gradient(left, #694cca 0%,#1425f8 54%,#17bcf5 94%); /
 background: linear-gradient(to right, #694cca 0%,#1425f8 54%,#17bcf5 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#694cca', endColorstr='#17bcf5',GradientType=1 ); /* IE6-9 */
 }
+
+
+
+// ************* 2019 theme *************** //
+.navbar-darken {
+    @include media("<991px") {
+        // box-shadow: 0 0 16px #b8a3e4aa;
+        background-color: #00064a;
+        border-color: #00064a;
+        color: #ffffff;
+    }
+}
+
+.deco-title {
+    text-align: center;
+    &:before {
+        content: '';
+        background: url('../img/deco-title.svg') no-repeat;
+        background-size: cover;
+        width: 140px;
+        height: 48px;
+        position: absolute;
+        top: -58px;
+        left: calc(50% - 70px);
+    }
+}
+
+.deco-sub-title {
+    text-align: center;
+    margin-top: 9vh;
+    font-size: 28px;
+    position: relative;
+    &:before {
+        content: '';
+        background: url('../img/deco-sub-title.svg') no-repeat;
+        background-size: cover;
+        width: 52px;
+        height: 25px;
+        position: absolute;
+        top: -35px;
+        left: calc(50% - 26px);
+    }
+}
+
+.title {
+    font-size: 32px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 4px;
+        span {
+            font-size: 28px;
+            color: $font-color;
+            display: block;
+            margin: 10px auto 20px auto;
+            letter-spacing: 2px;
+            font-weight: 200;
+        }
+    }
+
+.btn-line {
+    color: $font-color-pink;
+    border: 3px solid $font-color-pink;
+    background-color: transparent;
+    &:hover, &:focus { color: #ffffff; background-color: $font-color-pink;}
+}
+
+// ************* 2019 theme *************** //
