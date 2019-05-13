@@ -984,12 +984,25 @@ nav {
 .footer {
   position: relative;
   padding-top: 200px;
-  background-color: #22073e; }
+  background-color: #22073e;
+  overflow: hidden; }
   .footer--logo {
     border-bottom: 1px solid #aaa;
     padding-bottom: 2em;
     margin-bottom: 2em; }
     .footer--logo img {
       max-width: 40%; }
+  .footer--deco--star {
+    position: absolute;
+    width: 50%;
+    left: 2%; }
+  .footer--deco--planet {
+    position: absolute;
+    width: 10%;
+    left: 3%; }
+  .footer--deco--alien {
+    position: absolute;
+    width: 10%;
+    right: 3%; }
 
 /*# sourceMappingURL=main.css.map */
