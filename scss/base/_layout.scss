@@ -61,7 +61,6 @@ button,
 .btn {
     color: $font-color;
     transition: all .3s ease;
-    font-size: 16px;
     &:focus,
     &hover {
         color: $font-color;
@@ -115,6 +114,9 @@ nav {
         border: 1px solid #888888;
         padding: 0.4em 0.6em;
     }
+}
+.navbar-darken {
+    background-color: $font-color-dark-blue;
 }
 
 .navbar--logo {

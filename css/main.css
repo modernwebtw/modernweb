@@ -123,6 +123,9 @@ ORDER:base+typography > general layout + grid>page layout >components
     color: #ffffff;
     background-color: #e000a9; }
 
+.btn-lg {
+  padding: 1em 3em; }
+
 .bg-animation {
   animation: bg-animation 30s ease infinite; }
 
@@ -533,8 +536,7 @@ a {
 button,
 .btn {
   color: #333333;
-  transition: all .3s ease;
-  font-size: 16px; }
+  transition: all .3s ease; }
   button:focus, buttonhover,
   .btn:focus,
   .btnhover {
@@ -580,6 +582,9 @@ nav {
     font-size: 1.6em;
     border: 1px solid #888888;
     padding: 0.4em 0.6em; }
+
+.navbar-darken {
+  background-color: #531d8d; }
 
 .navbar--logo {
   width: 160px;
@@ -636,7 +641,7 @@ nav {
 
 .home--kv {
   margin: 0;
-  min-height: 70vh;
+  min-height: 60vh;
   top: 80px; }
   .home--kv--wrapper {
     position: relative; }
@@ -674,6 +679,7 @@ nav {
     top: 40px;
     width: 45%;
     left: 27.5%;
+    filter: drop-shadow(0 0 0.75rem #531d8d);
     z-index: 5; }
   .home--kv--btn {
     background-color: #e000a9;
@@ -700,7 +706,7 @@ nav {
   position: relative;
   padding: 0;
   margin: 0;
-  min-height: 250px; }
+  min-height: 280px; }
   .home--wave--darkhole {
     position: absolute;
     width: 70%;
@@ -708,29 +714,30 @@ nav {
     top: -60%;
     z-index: -3; }
   .home--wave--bg--wrapper {
-    height: 80px;
+    height: 300px;
     width: 100%;
     position: absolute;
-    top: 240px;
+    top: 260px;
     left: 0;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    transform: rotate(-6deg); }
   .home--wave--bgwhite {
     position: absolute;
     background: url("../img/wave.svg") repeat-x;
     width: 6400px;
     height: 185px;
-    top: -178px;
+    top: -184px;
     z-index: -1;
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0); }
-  .home--wave--bgwhite:nth-of-type(2) {
-    top: -175px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-    opacity: 1; }
-  .home--wave--bggray {
-    top: -165px;
-    background: url("../img/wave-gray.svg") repeat-x;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 10s ease -1.25s infinite; }
+    .home--wave--bgwhite:after {
+      content: '';
+      background-color: #ffffff;
+      width: calc(100% + 50px);
+      height: 200px;
+      position: absolute;
+      bottom: -200px;
+      right: -50px; }
   .home--wave--planet--orange {
     position: absolute;
     top: -3em;
@@ -743,6 +750,7 @@ nav {
     top: -20px;
     width: 10em;
     right: 10%;
+    z-index: 1;
     animation: float-top 5s alternate infinite; }
   .home--wave--deco--r--shadow {
     position: absolute;
@@ -767,55 +775,58 @@ nav {
 .home--intro {
   background-color: #ffffff;
   margin: 0;
+  margin-bottom: -1px;
   padding: 1% 0 5%;
   top: 0;
   min-height: 60vh; }
-  .home--intro--left--bg {
-    background: url("../img/home--intro--bg.png") no-repeat;
-    background-size: 100%;
-    width: 100%;
-    min-height: 60vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-    @media (max-width: 575px) {
-      .home--intro--left--bg {
-        display: none; } }
-    .home--intro--left--bg--planet {
+  .home--intro--left {
+    z-index: 2; }
+    .home--intro--left--bg {
+      background: url("../img/home--intro--bg.png") no-repeat;
+      background-size: 100%;
+      width: 100%;
+      min-height: 60vh;
       position: absolute;
-      z-index: 1;
-      width: 13%;
-      left: 10%;
-      bottom: 3%;
-      animation: float-top 5s alternate infinite; }
+      top: 0;
+      left: 0;
+      z-index: 1; }
       @media (max-width: 575px) {
-        .home--intro--left--bg--planet {
-          display: none;
-          animation-play-state: paused; } }
-    .home--intro--left--bg--planet2 {
+        .home--intro--left--bg {
+          display: none; } }
+      .home--intro--left--bg--planet {
+        position: absolute;
+        z-index: 1;
+        width: 13%;
+        left: 10%;
+        bottom: 3%;
+        animation: float-top 5s alternate infinite; }
+        @media (max-width: 575px) {
+          .home--intro--left--bg--planet {
+            display: none;
+            animation-play-state: paused; } }
+      .home--intro--left--bg--planet2 {
+        position: absolute;
+        z-index: 1;
+        top: 60%;
+        left: 55%;
+        width: 10%;
+        animation: float-top 5s alternate infinite; }
+        @media (max-width: 575px) {
+          .home--intro--left--bg--planet2 {
+            display: none;
+            animation-play-state: paused; } }
+    .home--intro--left--cover {
+      background: url("../img/home--intro--cover.svg") no-repeat;
+      background-size: 100%;
       position: absolute;
-      z-index: 1;
-      top: 60%;
-      left: 55%;
-      width: 10%;
-      animation: float-top 5s alternate infinite; }
+      top: -1px;
+      left: 0;
+      width: 100%;
+      height: 60vh;
+      z-index: 3; }
       @media (max-width: 575px) {
-        .home--intro--left--bg--planet2 {
-          display: none;
-          animation-play-state: paused; } }
-  .home--intro--left--cover {
-    background: url("../img/home--intro--cover.svg") no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60vh;
-    z-index: 3; }
-    @media (max-width: 575px) {
-      .home--intro--left--cover {
-        display: none; } }
+        .home--intro--left--cover {
+          display: none; } }
   .home--intro--right {
     position: relative;
     z-index: 4; }

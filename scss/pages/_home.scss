@@ -1,6 +1,6 @@
 .home--kv {
     margin: 0;
-    min-height: 70vh;
+    min-height: 60vh;
     top: 80px;
 
     &--wrapper {
@@ -51,6 +51,7 @@
         top: 40px;
         width: 45%;
         left: 27.5%;
+        filter: drop-shadow(0 0 0.75rem $font-color-dark-blue);
         z-index: 5;
     }
 
@@ -84,7 +85,7 @@
     position: relative;
     padding: 0;
     margin: 0;
-    min-height: 250px;
+    min-height: 280px;
 
     &--darkhole {
         position: absolute;
@@ -95,12 +96,13 @@
     }
 
     &--bg--wrapper {
-        height: 80px;
+        height: 300px;
         width: 100%;
         position: absolute;
-        top: 240px;
+        top: 260px;
         left: 0;
         background-color: #ffffff;
+        transform: rotate(-6deg);
     }
 
     &--bgwhite {
@@ -108,25 +110,21 @@
         background: url('../img/wave.svg') repeat-x;
         width: 6400px;
         height: 185px;
-        top: -178px;
+        top: -184px;
         z-index: -1;
         animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
         // animation-direction:alternate;
         // -webkit-animation-direction:alternate;
         transform: translate3d(0, 0, 0);
-    }
-
-    &--bgwhite:nth-of-type(2) {
-        top: -175px;
-        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-        opacity: 1;
-    }
-
-    &--bggray {
-        top: -165px;
-        background: url('../img/wave-gray.svg') repeat-x;
-        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 10s ease -1.25s infinite;
-
+        &:after {
+            content:'';
+            background-color: #ffffff;
+            width: calc(100% + 50px);
+            height: 200px;
+            position: absolute;
+            bottom: -200px;
+            right: -50px;
+        }
     }
 
     &--planet--orange {
@@ -143,6 +141,7 @@
         top: -20px;
         width: 10em;
         right: 10%;
+        z-index: 1;
         animation: float-top 5s alternate infinite;
     }
 
@@ -170,40 +169,17 @@
         top: 10%;
         z-index: -2;
     }
-
-    // .ocean { 
-    //   height: 5%;
-    //   width:100%;
-    //   position:absolute;
-    //   bottom:0;
-    //   left:0;
-    //   background: #015871;
-    // }
-
-    // .wave {
-    //   background: url('../img/wave.svg') repeat-x; 
-    //   position: absolute;
-    //   top: -198px;
-    //   width: 6400px;
-    //   height: 198px;
-    //   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-    //   transform: translate3d(0, 0, 0);
-    // }
-
-    // .wave:nth-of-type(2) {
-    //   top: -175px;
-    //   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-    //   opacity: 1;
-    // }
 }
 
 .home--intro {
     background-color: #ffffff;
     margin: 0;
+    margin-bottom: -1px;
     padding: 1% 0 5%;
     top: 0;
     min-height: 60vh;
     &--left{
+        z-index: 2;
         &--bg {
             // background: #694cca;
             // background: -moz-linear-gradient(left, #8300aa 0%, #342ac8 46%, #342a64 94%);
@@ -249,7 +225,7 @@
             background: url('../img/home--intro--cover.svg') no-repeat;
             background-size: 100%;
             position: absolute;
-            top: 0;
+            top: -1px;
             left: 0;
             width: 100%;
             height: 60vh;
@@ -278,7 +254,6 @@
             font-size: 3em;
             font-weight: 500;
             border-bottom: 3px solid $font-color-pink;
-
             span {
                 font-size: 30px;
             }

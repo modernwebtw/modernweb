@@ -7,9 +7,16 @@ $bg-color5: #e6e1f5; //purple with gray lighting
 
 
 $font-color-pu1: #321357;
-$font-color-pu2: #531d8d;
+
+//use this dark blue 
+$font-color-dark-blue: #531d8d;
+
+// xx
 $font-color-pu3: #a692da;
+
+// light blue
 $font-color-pu4: #a9e4fe;
+
 $font-color-green: #00afa8;
 
 // 
@@ -42,11 +49,11 @@ $font-color-pink: #e000a9;
 }
 
 .btn-txt {
-    color: $font-color-pu2;
+    color: $font-color-dark-blue;
 }
 
 .btn--buy {
-    background: $font-color-pu2;
+    background: $font-color-dark-blue;
     color: #fff !important;
 }
 
@@ -141,6 +148,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#694cca', end
     border: 3px solid $font-color-pink;
     background-color: transparent;
     &:hover, &:focus { color: #ffffff; background-color: $font-color-pink;}
+}
+
+.btn-lg {
+    padding: 1em 3em;
 }
 
 // ************* 2019 theme *************** //
