@@ -1,5 +1,3 @@
-// TweenMax.to(".")
-
 $(document).ready(function() {
 
     //window and animation items
