@@ -118,7 +118,7 @@ $(function() {
 
 var confapi = (function() {
     // config
-    var Domain = 'http://confapi.ithome.com.tw';
+    var Domain = 'https://confapi.ithome.com.tw';
 
     var NID = '699';
 

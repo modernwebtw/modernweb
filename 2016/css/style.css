@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
 html,
 body {
     height: 100%;
@@ -310,6 +311,7 @@ h2 {
     #tubular-container {
         display: none;
     }
+
     #header {
         height: auto;
     }
@@ -330,6 +332,7 @@ h2 {
     margin-top: 1%;
     font-weight: bold;
     font-family: '微軟正黑體', '新細明體', Ariel, Helvetica, sans-serif;
+
     @media (max-width: $bp-s) {
         font-size: 2rem;
     }
@@ -340,6 +343,7 @@ h2 {
     font-size: 2rem;
     margin: 2% 0% 1% 0%;
     font-family: '微軟正黑體', '新細明體', Ariel, Helvetica, sans-serif;
+
     @media (max-width: $bp-s) {
         font-size: 1.5rem;
     }
@@ -361,19 +365,23 @@ h2 {
     background-size: cover;
     padding-top: 50px;
     text-shadow: 0px 0px 8px #000000;
+
     h1 {
         font-size: 3rem;
         margin: 0 0 1rem;
         font-family: '微軟正黑體', '新細明體', Ariel, Helvetica, sans-serif;
+
         @media (max-width: $bp-s) {
             font-size: 2rem;
         }
     }
+
     h2 {
         font-weight: 300;
         font-size: 1.5rem;
         margin: 0 0 1rem;
         font-family: '微軟正黑體', '新細明體', Ariel, Helvetica, sans-serif;
+
         @media (max-width: $bp-s) {
             font-size: 1.5rem;
         }
@@ -511,26 +519,26 @@ h2 {
 /*----top-area----*/
 
 #top-area .cfp {
-  text-align: center;
-  font-size: 1.2em;
+    text-align: center;
+    font-size: 1.2em;
 }
+
 #top-area .cta {
-  font-size: 2em; 
-  margin: 30px auto;
-  width: 300px;
-  padding: 15px;
-  border: 2px dashed #fff;
+    font-size: 2em;
+    margin: 30px auto;
+    width: 300px;
+    padding: 15px;
+    border: 2px dashed #fff;
 
 }
 
-#top-area .cta.finished
-{
-   color: #ccc;
+#top-area .cta.finished {
+    color: #ccc;
 }
 
 
 #top-area,
-{
+    {
     background-color: #e4e4e4;
     position: relative;
 }
@@ -1115,6 +1123,7 @@ p.china-speakers {
 .signup_form {
     background-color: #efefef;
 }
+
 .singup_content {
     z-index: 1;
     background-color: #F1B81F;
@@ -1123,6 +1132,7 @@ p.china-speakers {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
 .singup_content iframe {
     position: absolute;
     top: 0;
@@ -1130,21 +1140,26 @@ p.china-speakers {
     width: 100%;
     height: 100%;
 }
+
 #register {
     background-color: #d9a720
 }
+
 .form-group {
     margin-top: 10px;
 }
+
 #register h3 {
     font-size: 19px;
     line-height: 45px;
     color: #191816;
     font-weight: bold;
 }
+
 hr {
     border: 1px dashed #cccccc;
 }
+
 .singup-tab-title {
     background-color: #b9be08;
 }
@@ -1155,97 +1170,119 @@ hr {
 #signup-area {
     background-color: #efefef;
 }
+
 #signup .form-group {
     margin-top: 10px;
     margin-right: 0px;
 }
+
 #signup .choosedays {
     padding-bottom: 20px;
     font-size: 18px;
     color: #070B81;
 }
+
 #signup .padding10 {
     padding-bottom: 10px;
 }
+
 #signup .require {
     color: red;
     margin-right: 5px;
 }
+
 #signup thead {
     background-color: #ddd;
 }
+
 #signup .table-bordered>tbody {
     background-color: #fff;
 }
+
 #signup th,
 #signup td {
     text-align: center;
     vertical-align: top;
 }
+
 #signup .table-bordered>thead>tr>th {
     background-color: #C2E9F7;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
     padding: 10px 0;
 }
+
 #signup .table-bordered>thead>tr>th.linetop {
     border-top: transparent;
 }
+
 #signup .table-bordered>tbody>tr>td {
     padding: 15px;
 }
+
 #signup .table-bordered>tbody>tr>td.track {
     background-color: #D9DBDB;
     line-height: 1.7;
     font-weight: bold;
 }
+
 #signup .bold-title {
     color: #83002c;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.6;
 }
+
 #signup .selcou {
     color: #000;
     background-color: transparent;
     line-height: 1.7;
 }
+
 #signup .selcou.active {
     color: #fff;
     background-color: #2286C2;
 }
+
 #signup .selcou .fa-check-square-o,
 #signup .selcou.active .fa-square-o {
     display: none;
 }
+
 #signup .selcou.active .fa-check-square-o {
     display: block;
 }
+
 #signup .selcou:hover {
     cursor: pointer;
     color: #fff !important;
     background-color: rgba(34, 134, 194, 0.4);
 }
+
 #signup .selcou.disabled {
     color: #B2B2B2;
     background-color: #F9F5F5;
 }
+
 #signup .selcou.disabled:hover {
     cursor: not-allowed;
     color: #B2B2B2;
     background-color: #F9F5F5;
 }
+
 #signup .selcou.active .bold-title,
 #signup .selcou.active .f-gray {
     color: #fff;
     background-color: #2286C2;
 }
+
 #signup .selcou:hover .bold-title,
 #signup .selcou.active .f-gray {
     cursor: pointer;
     color: #fff;
     background-color: #2286C2;
 }
+
 #signup label.radio-inline {
     text-align: inherit;
     margin: inherit;
@@ -1260,9 +1297,11 @@ hr {
     margin-top: 10px;
     margin-bottom: 100px;
 }
+
 #signup .selcou {
     position: relative;
 }
+
 #signup .fa {
     position: absolute;
     left: 2px;
@@ -1270,12 +1309,15 @@ hr {
     font-size: 24px;
     color: #ECF0F1;
 }
+
 .keynote-bg {
     background-color: #f7efd8;
 }
+
 .speaker-box2 {
     margin: auto 0;
 }
+
 .btn-signup {
     box-shadow: 5px 5px 5px #333;
     font-size: 20px;
@@ -1287,38 +1329,46 @@ hr {
 #agenda table {
     text-align: center;
 }
+
 .key-background {
     background-color: #f97d39;
     color: #fff;
 }
+
 .rest-background {
     background-color: #489bc0;
 }
+
 .key-group,
 .break-group {
     color: #fff;
 }
+
 .key-title {
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 10px;
 }
+
 .track {
     color: #555;
     background-color: #a2e2fe;
 }
+
 .track-title {
     font-size: 18px;
     font-weight: bold;
     color: #056894;
     padding-bottom: 10px;
 }
+
 .track-title-og {
     font-size: 18px;
     font-weight: bold;
     color: #444;
     padding-bottom: 10px;
 }
+
 .time-gray {
     background-color: #4eafda;
     color: #fff;
@@ -1331,22 +1381,27 @@ hr {
     background-color: #f7f6ef;
     padding: 3% 0%;
 }
+
 #sponsors h3,
-{
+    {
     font-weight: bold;
     color: #333;
 }
+
 #sponsors h4 {
     color: #555;
 }
+
 #sponsors a {
     color: #837f67;
     font-size: 13px;
 }
+
 #sponsors p {
     font-size: 15px;
     line-height: 1.5;
 }
+
 #dia h2,
 #spe-trackA h2,
 #spe-trackB h2,
@@ -1363,10 +1418,12 @@ hr {
     padding: 10px 0px;
     line-height: 0.9;
 }
+
 .spe-track {
     font-size: 25px;
     line-height: 50px;
 }
+
 #pla h2 {
     display: inline-block;
     border-top: 2px solid #b19c7b;
@@ -1377,6 +1434,7 @@ hr {
     padding: 10px 0px;
     line-height: 0.9;
 }
+
 #gold h2,
 #spe-key h2 {
     display: inline-block;
@@ -1388,6 +1446,7 @@ hr {
     padding: 10px 0px;
     line-height: 0.9;
 }
+
 #silver h2 {
     display: inline-block;
     border-top: 2px solid #7b7b7b;
@@ -1398,21 +1457,25 @@ hr {
     padding: 10px 0px;
     line-height: 0.9;
 }
+
 .sponsor-group {
     margin: 3% 0;
 }
+
 .sponsor-pic {
     background-color: #ffffff;
     border-radius: 100% 0% 100% 100%;
     padding: 60px 25px;
     box-shadow: -3px 3px 5px #8b8a81;
 }
+
 .sponsor-infobox {
     background-color: #e5e7ea;
     border-top: 2px solid #fff;
     padding: 1% 5%;
     min-height: 253px;
 }
+
 #dia:hover,
 #pla:hover,
 #gold:hover,
@@ -1424,12 +1487,13 @@ hr {
 
 /* all -160px (menu width) */
 @media (max-width: 320px) {
+
     .title-large-w h2,
     .title-large-c h2,
     .title-large-r h2 {
         font-size: 25px;
     }
-    
+
     .title-large-w h2::before,
     .title-large-w h2::after,
     .title-large-c h2::before,
@@ -1439,6 +1503,7 @@ hr {
         display: none;
     }
 }
+
 @media (max-width: 767px) {
     .speakers-name {
         background-color: #ffffff;
@@ -1450,32 +1515,33 @@ hr {
         min-height: 80px;
         left: 5%;
     }
-    
+
     .speakers-bg-cicle {
         min-width: 200px;
         min-height: 200px;
         padding-bottom: 4%;
     }
-    
+
     .title-large-w h2,
     .title-large-c h2,
     .title-large-r h2 {
         font-size: 35px;
     }
 }
+
 @media (max-width: 1024px) {
     .keyspeaker--textgroup p {
         font-size: 16px;
     }
-    
+
     .footer-contec-info p {
         font-size: 14px;
     }
-    
+
     .footer-contec-info h3 {
         font-size: 20px;
     }
-    
+
     .footer-contec-info::before {
         content: "";
         position: absolute;
@@ -1487,20 +1553,22 @@ hr {
         z-index: 1;
     }
 }
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
+
 @media (min-width: 992px) {
     .container {
         width: 832px;
     }
-    
+
     #ppt .container {
         width: 90%;
     }
-    
+
     .logo-top {
         z-index: 10;
         position: absolute;
@@ -1508,11 +1576,12 @@ hr {
         padding: 0;
     }
 }
+
 @media (min-width: 1250px) {
     .container {
         width: 1200px;
     }
-    
+
     .logo-top {
         z-index: 10;
         position: absolute;
@@ -1520,6 +1589,7 @@ hr {
         padding: 0;
     }
 }
+
 @media (min-width: 1600px) {
     .logo-top {
         z-index: 10;
@@ -1528,6 +1598,7 @@ hr {
         padding: 0;
     }
 }
+
 @media (min-width: 1800px) {
     .logo-top {
         z-index: 10;
@@ -1536,6 +1607,7 @@ hr {
         padding: 0;
     }
 }
+
 [v-cloak] {
     display: none;
 }
