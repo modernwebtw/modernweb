@@ -270,7 +270,7 @@
     }
 }
 
-/* timer */
+/* CFS timer */
 #timer {
     text-align: center;
     position: relative;
@@ -285,13 +285,67 @@
     border-radius: 20px;
 }
 
-#timer .timer-sub span {
-    // font-size: 18px;
-    // margin-left: 5px;
+#timer .timer-sub span { }
+/* end CFS timer */
+
+// .home--reason {
+//     background-color: $font-color-dark-blue;
+// }
+
+
+
+
+.home--reason {
+    background-color: $font-color-dark-blue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    z-index: 2;
+    .title, .sub-title, .title-desc {
+        color: #ffffff;
+        text-align: center;
+    }
+    p { color: #ffffff;}
+    &--wrapper {}
+    &--lead {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 0.8;
+        list-style: none;
+        font-size: 2em;
+        margin-bottom: 2.2em;
+        .num {
+                font-size: 180px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-style: italic;
+                color: #ffffff;
+                display: inline-block;
+                margin: 10px;
+        }
+    }
+    &--disc {
+            padding-bottom: 40px;
+            display: block;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            margin-bottom: -2em;
+            &-p {
+                font-size: 1.3em;
+            }
+            
+    }
+    &--star {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        left: -4em;
+        filter: drop-shadow(0 0 0.75rem #f4d9a8);
+        z-index: -1;
+            }
 }
-
-/* end timer */
-
 
 .home--history {
     background-color: #ffffff;
@@ -305,11 +359,8 @@
     .timeline {
         width: 100%;
         position: relative;
-
         &-nav {
             &__item {
-                width: auto;
-                height: auto;
                 text-align: center;
                 opacity: 0.5;
                 background: transparent;
@@ -321,7 +372,6 @@
                 font-weight: 400;
                 outline: none;
                 cursor: pointer;
-
                 &::before {
                     content: "";
                     position: absolute;
@@ -334,25 +384,20 @@
                     background-color: #afc9f6;
                     transition: .2s;
                 }
-
                 &.slick-current {
                     color: $orange;
                     opacity: 1;
-
                     &::before {
                         background-color: $orange;
                     }
                 }
             }
         }
-
         &-slider {
             height: 100%;
         }
-
         .slick-list {
             height: 100%;
-
             @media (min-width: 1080px) {
                 padding: 0 180px !important;
             }
@@ -369,10 +414,10 @@
             outline: none;
             background-size: auto 400px, cover;
             background-position: top;
-            margin: 0 24px;
-            width: 80%;
+            margin: 10px 20px;
+            height: 100%;
+            min-height: 300px;
             z-index: 1;
-
             &:after {
                 content: "";
                 position: absolute;
@@ -443,6 +488,8 @@
         }
     }
 }
+
+
 
 .home--quote {
     background-color: #ffffff;

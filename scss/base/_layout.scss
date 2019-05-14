@@ -53,8 +53,8 @@ ul li{ list-style: none;}
 
 a {
     transition: all .3s ease;
-    color: $font-color-pu4;
-    &:focus, &:hover{color: lighten($font-color-pu4,20%); text-decoration:none;}
+    color: $font-color-light-blue;
+    &:focus, &:hover{color: lighten($font-color-light-blue,20%); text-decoration:none;}
 }
 
 button,
@@ -142,7 +142,7 @@ nav {
     position: fixed;
     bottom: 20px;
     right: 10px;
-    color: $font-color-pu3;
+    color: $font-color-light-blue;
     padding: 3px 10px;
     font-size: 3em;
     border-radius: 0px;
@@ -185,3 +185,4 @@ nav {
 .loading__logo svg {
     width: 100%
 }
+
