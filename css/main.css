@@ -34,10 +34,10 @@ ORDER:base+typography > general layout + grid>page layout >components
   background: #531d8d; }
 
 .btn-txt {
-  color: #531d8d; }
+  color: #19195e; }
 
 .btn--buy {
-  background: #531d8d;
+  background: #19195e;
   color: #fff !important; }
 
 .btn--stop {
@@ -584,7 +584,7 @@ nav {
     padding: 0.4em 0.6em; }
 
 .navbar-darken {
-  background-color: #531d8d; }
+  background-color: #19195e; }
 
 .navbar--logo {
   width: 160px;
@@ -679,7 +679,7 @@ nav {
     top: 40px;
     width: 45%;
     left: 27.5%;
-    filter: drop-shadow(0 0 0.75rem #531d8d);
+    filter: drop-shadow(0 0 0.75rem #19195e);
     z-index: 5; }
   .home--kv--btn {
     background-color: #e000a9;
@@ -984,25 +984,59 @@ nav {
 .footer {
   position: relative;
   padding-top: 200px;
+  padding-bottom: 2%;
   background-color: #22073e;
   overflow: hidden; }
   .footer--logo {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #9494e2;
     padding-bottom: 2em;
     margin-bottom: 2em; }
     .footer--logo img {
-      max-width: 40%; }
-  .footer--deco--star {
+      max-width: 22em; }
+  .footer--deco--star--l {
     position: absolute;
     width: 50%;
-    left: 2%; }
+    left: 2%;
+    opacity: .7; }
+  .footer--deco--star--r {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 8%;
+    transform: scale(-1, 1); }
+  .footer--deco--shine--l {
+    position: absolute;
+    width: 30%;
+    left: 6%;
+    bottom: 3%;
+    opacity: .7; }
+  .footer--deco--shine--r {
+    position: absolute;
+    width: 30%;
+    right: 6%;
+    bottom: 3%;
+    opacity: .7;
+    transform: scale(-1, 1); }
   .footer--deco--planet {
     position: absolute;
-    width: 10%;
-    left: 3%; }
+    width: 35%;
+    left: 1%;
+    top: 15%;
+    opacity: .7; }
   .footer--deco--alien {
     position: absolute;
-    width: 10%;
-    right: 3%; }
+    width: 7%;
+    right: 5%;
+    bottom: 40%;
+    opacity: .9; }
+  .footer--desc--li {
+    color: #bcbced; }
+    .footer--desc--li a {
+      color: #bcbced; }
+      .footer--desc--li a:hover, .footer--desc--li a:active, .footer--desc--li a:focus {
+        color: white; }
+  @media (max-width: 767px) {
+    .footer--fbshare {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

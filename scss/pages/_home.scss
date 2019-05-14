@@ -464,35 +464,74 @@
 .footer {
     position: relative;
     padding-top: 200px;
+    padding-bottom: 2%;
     background-color: $bg-color1;
     overflow: hidden;
     &--logo {
-        border-bottom: 1px solid #aaa;
+        border-bottom: 1px solid lighten($font-color-dark-blue,50%);
         padding-bottom: 2em;
         margin-bottom: 2em;
 
         img {
-            max-width: 40%;
+            max-width: 22em;
         }
     }
-    &--deco--star {
+    &--deco--star--l {
         position: absolute;
         width: 50%;
         left: 2%;
+        opacity: .7;
+    }
+    &--deco--star--r {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: 8%;
+        transform: scale(-1,1);
+    }
+    &--deco--shine--l {
+        position: absolute;
+        width: 30%;
+        left: 6%;
+        bottom: 3%;
+        opacity: .7;
+    }
+    &--deco--shine--r {
+        position: absolute;
+        width: 30%;
+        right: 6%;
+        bottom: 3%;
+        opacity: .7;
+        transform: scale(-1,1);
     }
     &--deco--planet {
         position: absolute;
-        width: 10%;
-        left: 3%;
+        width: 35%;
+        left: 1%;
+        top: 15%;
+        opacity: .7;
     }
     &--deco--alien {
         position: absolute;
-        width: 10%;
-        right: 3%;
+        width: 7%;
+        right: 5%;
+        bottom: 40%;
+        opacity: .9;
     }
     &--desc {
         &--li {
-            a {}
+            color: lighten($font-color-dark-blue, 60%);
+            a {
+                color: lighten($font-color-dark-blue, 60%);
+                &:hover ,&:active ,&:focus {
+                    color: lighten($font-color-dark-blue, 80%);
+                }
+            }
+        }
+    }
+    &--fbshare {
+        @include media('<768px'){
+            display: none;
         }
     }
 }
