@@ -744,6 +744,19 @@ nav {
 .bg--blue-defult {
   background-color: #1926f8; }
 
+.title {
+  font-size: 32px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 4px; }
+  .title span {
+    font-size: 28px;
+    color: #333333;
+    display: block;
+    margin: 10px auto 20px auto;
+    letter-spacing: 2px;
+    font-weight: 200; }
+
 @media (max-width: 990px) {
   .navbar-darken {
     background-color: #00064a;
@@ -751,10 +764,25 @@ nav {
     color: #ffffff; } }
 
 .deco-title {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .deco-title:before {
     content: '';
     background: url("../img/deco-title.svg") no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 48px;
+    position: absolute;
+    top: -58px;
+    left: calc(50% - 70px); }
+
+.deco-title-dk {
+  text-align: center;
+  margin-top: 50px;
+  position: relative; }
+  .deco-title-dk:before {
+    content: '';
+    background: url("../img/deco-title-dk.svg") no-repeat;
     background-size: cover;
     width: 140px;
     height: 48px;
@@ -776,19 +804,6 @@ nav {
     position: absolute;
     top: -35px;
     left: calc(50% - 26px); }
-
-.title {
-  font-size: 32px;
-  margin: 0 auto;
-  text-align: center;
-  letter-spacing: 4px; }
-  .title span {
-    font-size: 28px;
-    color: #333333;
-    display: block;
-    margin: 10px auto 20px auto;
-    letter-spacing: 2px;
-    font-weight: 200; }
 
 .btn-line {
   color: #e000a9;
@@ -997,6 +1012,7 @@ nav {
   background-color: #ffffff;
   margin: 0;
   padding-top: 5%;
+  padding-bottom: 5%;
   z-index: 3; }
   .home--cfs--item {
     text-align: center; }
@@ -1028,15 +1044,40 @@ nav {
 /* end CFS timer */
 .home--reason {
   background-color: #19195e;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
   color: #ffffff;
   z-index: 2; }
+  .home--reason--bg--star {
+    background: url("../img/footer-bg-star.svg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .home--reason--sign1 {
+    position: absolute;
+    width: 8%;
+    top: 1%;
+    left: 3%; }
+  .home--reason--sign2 {
+    position: absolute;
+    width: 10%;
+    left: 10%;
+    top: 10%; }
+  .home--reason--sign3 {
+    position: absolute;
+    width: 10%;
+    right: 3%;
+    top: 4%; }
   .home--reason .title, .home--reason .sub-title, .home--reason .title-desc {
     color: #ffffff;
     text-align: center; }
   .home--reason p {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 1.4em; }
   .home--reason--lead {
     display: block;
     margin: 0;
@@ -1051,7 +1092,7 @@ nav {
       font-style: italic;
       color: #ffffff;
       display: inline-block;
-      margin: 10px; }
+      margin: 10px 0; }
   .home--reason--disc {
     padding-bottom: 40px;
     display: block;
@@ -1063,12 +1104,15 @@ nav {
       font-size: 1.3em; }
   .home--reason--star {
     position: absolute;
-    width: 100%;
+    width: 150%;
     height: 60px;
-    bottom: 0;
-    left: -4em;
+    bottom: -30%;
+    left: -50%;
     filter: drop-shadow(0 0 0.75rem #f4d9a8);
     z-index: -1; }
+    .home--reason--star.second {
+      right: -50%;
+      left: 0; }
 
 .home--history {
   background-color: #ffffff;

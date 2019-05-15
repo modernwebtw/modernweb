@@ -268,6 +268,22 @@
 
 
 // ************* 2019 theme *************** //
+
+
+.title {
+    font-size: 32px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 4px;
+        span {
+            font-size: 28px;
+            color: $font-color;
+            display: block;
+            margin: 10px auto 20px auto;
+            letter-spacing: 2px;
+            font-weight: 200;
+        }
+}
 .navbar-darken {
     @include media("<991px") {
         // box-shadow: 0 0 16px #b8a3e4aa;
@@ -279,9 +295,26 @@
 
 .deco-title {
     text-align: center;
+    position: relative;
     &:before {
         content: '';
         background: url('../img/deco-title.svg') no-repeat;
+        background-size: cover;
+        width: 140px;
+        height: 48px;
+        position: absolute;
+        top: -58px;
+        left: calc(50% - 70px);
+    }
+}
+
+.deco-title-dk {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    &:before {
+        content: '';
+        background: url('../img/deco-title-dk.svg') no-repeat;
         background-size: cover;
         width: 140px;
         height: 48px;
@@ -307,22 +340,6 @@
         left: calc(50% - 26px);
     }
 }
-
-.title {
-    font-size: 32px;
-    margin: 0 auto;
-    text-align: center;
-    letter-spacing: 4px;
-        span {
-            font-size: 28px;
-            color: $font-color;
-            display: block;
-            margin: 10px auto 20px auto;
-            letter-spacing: 2px;
-            font-weight: 200;
-        }
-    }
-
 .btn-line {
     color: $font-color-pink;
     border: 3px solid $font-color-pink;
