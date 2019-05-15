@@ -336,7 +336,8 @@ body {
   position: relative;
   font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
   color: #333333;
-  font-size: 15px; }
+  font-size: 15px;
+  overflow: hidden; }
   @media (max-width: 768px) {
     body {
       min-height: 100%; } }
@@ -836,6 +837,20 @@ nav {
     right: 0;
     z-index: -2;
     animation: float-star02 50s infinite; }
+  .home--kv--bg--deco1 {
+    position: absolute;
+    width: 80%;
+    right: -40%;
+    top: -200px;
+    z-index: -3;
+    opacity: 0.9; }
+  .home--kv--bg--deco2 {
+    position: absolute;
+    width: 90%;
+    left: -50%;
+    top: -300px;
+    z-index: -3;
+    opacity: 0.8; }
   .home--kv--bg--planet--l {
     position: absolute;
     top: 6em;
@@ -886,9 +901,9 @@ nav {
   min-height: 280px; }
   .home--wave--darkhole {
     position: absolute;
-    width: 70%;
-    left: 15%;
-    top: -60%;
+    width: 100%;
+    left: 5%;
+    top: -120%;
     z-index: -3; }
   .home--wave--bg--wrapper {
     height: 300px;
@@ -1116,7 +1131,9 @@ nav {
 
 .home--history {
   background-color: #ffffff;
-  margin: 0; }
+  margin: 0;
+  padding-top: 7%;
+  padding-bottom: 5%; }
   .home--history .timeline {
     width: 100%;
     position: relative; }
@@ -1143,12 +1160,7 @@ nav {
         border-radius: 100%;
         background-color: #afc9f6;
         transition: .2s; }
-      .home--history .timeline-nav__item.slick-current {
-        color: #ff9900;
-        opacity: 1; }
-        .home--history .timeline-nav__item.slick-current::before {
-          background-color: #ff9900; }
-    .home--history .timeline-slider {
+    .home--history .timeline-sliderbox {
       height: 100%; }
     .home--history .timeline .slick-list {
       height: 100%; }
@@ -1159,14 +1171,10 @@ nav {
       height: 100%; }
     .home--history .timeline-slide {
       position: relative;
-      overflow: hidden;
-      background-repeat: no-repeat;
       outline: none;
-      background-size: auto 400px, cover;
-      background-position: top;
       margin: 10px 20px;
       height: 100%;
-      min-height: 300px;
+      max-height: 300px;
       z-index: 1; }
       .home--history .timeline-slide:after {
         content: "";
@@ -1175,7 +1183,7 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 52, 113, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
         z-index: 2; }
       .home--history .timeline-slide__content {
         z-index: 5;
@@ -1195,14 +1203,14 @@ nav {
       z-index: 5;
       font-size: 35px;
       color: #ffffff;
-      background: #ff9900;
+      background: orange;
       padding: 15px 26px;
       transition: opacity 1.2s;
       position: absolute;
-      right: 0;
+      left: 0;
       opacity: 0; }
     .home--history .timeline-title {
-      color: #ff9900;
+      color: orange;
       font-size: 26px;
       line-height: 30px;
       font-weight: 400; }
@@ -1211,15 +1219,21 @@ nav {
       line-height: 28px;
       color: #666666; }
     .home--history .timeline .slick-current:after {
-      background-color: rgba(0, 52, 113, 0); }
+      background-color: rgba(255, 0, 0, 0); }
     .home--history .timeline .slick-current .timeline-year {
       opacity: 1; }
     .home--history .timeline .slick-current .timeline-slide__content {
       opacity: 1; }
 
 .home--quote {
-  background-color: #ffffff;
-  margin: 0; }
+  background: #ffffff url("../img/quote-bg-circle.svg") no-repeat center center;
+  background-size: 50%;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+  .home--quote .title {
+    font-size: 3em;
+    color: #19195e; }
   .home--quote:before {
     content: '';
     position: absolute;
@@ -1229,6 +1243,22 @@ nav {
     background: url("../img/footer-wave.svg") no-repeat bottom;
     background-size: cover;
     z-index: 10; }
+  .home--quote p {
+    font-size: 1.3em; }
+  .home--quote .carousel-item {
+    width: 70%;
+    left: 15%;
+    padding: 5% 2%; }
+  .home--quote .carousel-indicators {
+    bottom: -10%; }
+    .home--quote .carousel-indicators li {
+      background-color: #19195e; }
+  .home--quote .carousel-control-prev .fa-chevron-left {
+    font-size: 3em;
+    color: #333333; }
+  .home--quote .carousel-control-next .fa-chevron-right {
+    font-size: 3em;
+    color: #333333; }
 
 .footer {
   position: relative;

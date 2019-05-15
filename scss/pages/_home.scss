@@ -24,7 +24,22 @@
         z-index: -2;
         animation: float-star02 50s infinite;
     }
-
+    &--bg--deco1 {
+        position: absolute;
+        width: 80%;
+        right: -40%;
+        top: -200px;
+        z-index: -3;
+        opacity: 0.9;
+    }
+    &--bg--deco2 {
+        position: absolute;
+        width: 90%;
+        left: -50%;
+        top: -300px;
+        z-index: -3;
+        opacity: 0.8;
+    }
     &--bg--planet--l {
         position: absolute;
         top: 6em;
@@ -89,12 +104,11 @@
 
     &--darkhole {
         position: absolute;
-        width: 70%;
-        left: 15%;
-        top: -60%;
+        width: 100%;
+        left: 5%;
+        top: -120%;
         z-index: -3;
     }
-
     &--bg--wrapper {
         height: 300px;
         width: 100%;
@@ -362,8 +376,7 @@
             margin-bottom: -2em;
             &-p {
                 font-size: 1.3em;
-            }
-            
+            }            
     }
     &--star {
         position: absolute;
@@ -383,12 +396,8 @@
 .home--history {
     background-color: #ffffff;
     margin: 0;
-    $white: #fff;
-    $black: #000;
-    $primary: #003471;
-    $gray: #616161;
-    $orange: #ff9900;
-
+    padding-top: 7%;
+    padding-bottom: 5%;
     .timeline {
         width: 100%;
         position: relative;
@@ -417,16 +426,9 @@
                     background-color: #afc9f6;
                     transition: .2s;
                 }
-                &.slick-current {
-                    color: $orange;
-                    opacity: 1;
-                    &::before {
-                        background-color: $orange;
-                    }
-                }
             }
         }
-        &-slider {
+        &-sliderbox {
             height: 100%;
         }
         .slick-list {
@@ -442,14 +444,10 @@
 
         &-slide {
             position: relative;
-            overflow: hidden;
-            background-repeat: no-repeat;
             outline: none;
-            background-size: auto 400px, cover;
-            background-position: top;
             margin: 10px 20px;
             height: 100%;
-            min-height: 300px;
+            max-height: 300px;
             z-index: 1;
             &:after {
                 content: "";
@@ -458,7 +456,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($primary, .8);
+                background-color: rgba(#ffffff, .8);
                 z-index: 2;
             }
 
@@ -473,10 +471,8 @@
                 padding: 40px;
                 opacity: 0;
                 transition: opacity 1s;
-
                 @media (max-width: 500px) {
                     width: 100%;
-                    // transform: translate(-50%, 0px);
                 }
             }
         }
@@ -485,16 +481,16 @@
             z-index: 5;
             font-size: 35px;
             color: #ffffff;
-            background: $orange;
+            background: orange;
             padding: 15px 26px;
             transition: opacity 1.2s;
             position: absolute;
-            right: 0;
+            left: 0;
             opacity: 0;
         }
 
         &-title {
-            color: $orange;
+            color: orange;
             font-size: 26px;
             line-height: 30px;
             font-weight: 400;
@@ -508,7 +504,7 @@
 
         .slick-current {
             &:after {
-                background-color: rgba($primary, 0);
+                background-color: rgba(#ff0000, 0);
             }
 
             .timeline-year {
@@ -525,9 +521,15 @@
 
 
 .home--quote {
-    background-color: #ffffff;
+    background: #ffffff url('../img/quote-bg-circle.svg') no-repeat center center;
+    background-size: 50%;
     margin: 0;
-
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .title {
+        font-size: 3em;
+        color: $font-color-dark-blue;
+    }
     &:before {
         content: '';
         position: absolute;
@@ -537,6 +539,27 @@
         background: url('../img/footer-wave.svg') no-repeat bottom;
         background-size: cover;
         z-index: 10;
+    }
+    p { font-size: 1.3em;}
+    .carousel-item {
+        width: 70%;
+        left: 15%;
+        padding: 5% 2%;
+    }
+    .carousel-indicators {
+        bottom: -10%;
+        li {
+            background-color: $font-color-dark-blue;
+        }
+    } 
+    .carousel-control-prev .fa-chevron-left {
+        font-size: 3em;
+        color: #333333;
+
+    }
+    .carousel-control-next .fa-chevron-right {
+        font-size: 3em;
+        color: #333333;
     }
 }
 
