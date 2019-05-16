@@ -104,6 +104,7 @@ nav {
     top: 0;    
     border-radius: 1px;
     transition: background .2s ease;
+    background: #000;
     .navbar-inverse .navbar-nav { float: right;}
     @include media("<=1024px") {
         height: auto;
