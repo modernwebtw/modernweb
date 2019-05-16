@@ -262,53 +262,58 @@
                         <span>Give me Five</span>
                 </h3>
                 <div class="timeline">
-                    <div class="timeline-nav">
+                    <!-- <div class="timeline-nav">
                         <div class="timeline-nav__item">2015</div>
                         <div class="timeline-nav__item">2016</div>
                         <div class="timeline-nav__item">2017</div>
                         <div class="timeline-nav__item">2018</div>
-                        <!-- <div class="timeline-nav__item">2019</div> -->
-                    </div>
+                        <div class="timeline-nav__item">2019</div>
+                    </div> -->
                     <div class="timeline-wrapper">
                         <div class="timeline-sliderbox">
                             <div class="timeline-slide" data-year="2015">
                                 <img src="img/years-2015.jpg" alt="" class="img-fluid">
-                                <span class="timeline-year">2015 <span>May</span></span>
-                                <div class="timeline-slide__content">
-                                    <!-- <h4 class="timeline-title"> </h4> -->
-                                    <p class="timeline-text">首次在台舉辦，超過600人報名。兩大重量級大師 JavaScript 之父、PHP 之父，磅礡登場！</p>
+                                <div class="">
+                                    <span class="timeline-year">2015 <span>May</span></span>
+                                    <div class="timeline-slide__content">
+                                        <p class="timeline-text">首次在台舉辦，超過600人報名。兩大重量級大師 JavaScript 之父、PHP 之父，磅礡登場！</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="timeline-slide" data-year="2016">
                                 <img src="img/years-2016.jpg" alt="" class="img-fluid">
-                                <span class="timeline-year">2016 <span>Aug</span></span>
-                                <div class="timeline-slide__content">
-                                    <!-- <h4 class="timeline-title"> </h4> -->
-                                    <p class="timeline-text">中國 Web 技術日首次登場，廣邀中國專家登台。台灣 Web 開發者年度票選，再參加期待度最高的研討會。</p>
+                                <div class="">
+                                    <span class="timeline-year">2016 <span>Aug</span></span>
+                                    <div class="timeline-slide__content">
+                                        <p class="timeline-text">中國 Web 技術日首次登場，廣邀中國專家登台。台灣 Web 開發者年度票選，再參加期待度最高的研討會。</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="timeline-slide" data-year="2017">
                                 <img src="img/years-2017.jpg" alt="" class="img-fluid">
-                                <span class="timeline-year">2017 <span>Jul</span></span>
-                                <div class="timeline-slide__content">
-                                    <!-- <h4 class="timeline-title"> </h4> -->
-                                    <p class="timeline-text">連續二天，超過 30場精彩議程，來自世界各地的大師， Google、Slack、騰訊 …. 最多國際大師的場域。</p>
+                                <div class="">
+                                    <span class="timeline-year">2017 <span>Jul</span></span>
+                                    <div class="timeline-slide__content">
+                                        <p class="timeline-text">連續二天，超過 30場精彩議程，來自世界各地的大師， Google、Slack、騰訊 …. 最多國際大師的場域。</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="timeline-slide" data-year="2018">
                                 <img src="img/years-2018.jpg" alt="" class="img-fluid">
-                                <span class="timeline-year">2018 <span>Jul</span></span>
-                                <div class="timeline-slide__content">
-                                    <!-- <h4 class="timeline-title"> </h4> -->
-                                    <p class="timeline-text">世界級技術叢書作者 Jeremy Keith 首次來台 ，與會人數直逼 700 人，門票供不應求，100% 出席率。</p>
+                                <div class="">
+                                    <span class="timeline-year">2018 <span>Jul</span></span>
+                                    <div class="timeline-slide__content">
+                                        <p class="timeline-text">世界級技術叢書作者 Jeremy Keith 首次來台 ，與會人數直逼 700 人，門票供不應求，100% 出席率。</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="timeline-slide" data-year="2019">
                                 <img src="img/years-2018.jpg" alt="" class="img-fluid">
-                                <span class="timeline-year">2019 <span>Aug</span></span>
-                                <div class="timeline-slide__content">
-                                    <!-- <h4 class="timeline-title"> </h4> -->
-                                    <p class="timeline-text">登上 TICC 臺北國際會議中心，規模再擴大，即將掀起 ModernWeb 摩登浪潮。</p>
+                                <div class="">
+                                    <span class="timeline-year">2019 <span>Aug</span></span>
+                                    <div class="timeline-slide__content">
+                                        <p class="timeline-text">登上 TICC 臺北國際會議中心，規模再擴大，即將掀起 ModernWeb 摩登浪潮。</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -394,40 +399,40 @@
 <script type="text/javascript">
 // 我們５歲了
 $(function() {
-    $('.timeline-nav').slick({
-        slidesToShow: 12,
-        slidesToScroll: 1,
-        asNavFor: '.timeline-sliderbox',
-        centerMode: false,
-        focusOnSelect: true,
-        mobileFirst: true,
-        arrows: false,
-        infinite: false,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 8,
-                }
-            },
-            {
-                breakpoint: 0,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
-                }
-            }
-        ]
-    });
+    // $('.timeline-nav').slick({
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+    //     asNavFor: '.timeline-sliderbox',
+    //     centerMode: false,
+    //     focusOnSelect: false,
+    //     mobileFirst: true,
+    //     arrows: true,
+    //     infinite: false,
+    //     responsive: [{
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 8,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 0,
+    //             settings: {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 2,
+    //             }
+    //         }
+    //     ]
+    // });
 
     $('.timeline-sliderbox').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        asNavFor: '.timeline-nav',
+        arrows: true,
         centerMode: true,
         cssEase: 'ease',
         edgeFriction: 0.5,
         mobileFirst: true,
+        autoplay: true,
         speed: 500,
         responsive: [{
                 breakpoint: 0,
@@ -438,7 +443,7 @@ $(function() {
             {
                 breakpoint: 768,
                 settings: {
-                    centerMode: true
+                    centerMode: true,
                 }
             }
         ]

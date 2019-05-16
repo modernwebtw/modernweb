@@ -444,11 +444,12 @@
 .home--history {
     background-color: #ffffff;
     margin: 0;
-    padding-top: 7%;
-    padding-bottom: 5%;
+    padding-top: 10%;
+    padding-bottom: 14%;
     .timeline {
         width: 100%;
         position: relative;
+        padding: 5% 2% 15%;
         &-nav {
             &__item {
                 text-align: center;
@@ -476,11 +477,46 @@
                 }
             }
         }
+        .slick-prev.slick-arrow { position: absolute; left: 0; top: 50%;z-index: 99;
+            &:before {
+                content: "<";
+    position: absolute;
+    top: -50%;
+    right: -35%;
+    font-family: "Font Awesome 5 Free";
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    border-radius: 50%;
+    line-height: 3;
+    border: 2px solid #aaa;
+                
+            }
+        }
+        .slick-next.slick-arrow { position: absolute; right: 0; top: 50%;z-index: 99;
+            &:before {
+                content: ">";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    font-family: "Font Awesome 5 Free";
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    border-radius: 50%;
+    line-height: 3;
+    border: 2px solid #aaa;
+    
+            }
+        }
         &-sliderbox {
             height: 100%;
         }
         .slick-list {
             height: 100%;
+            overflow: visible;
             @media (min-width: 1080px) {
                 padding: 0 180px !important;
             }
@@ -497,28 +533,21 @@
             height: 100%;
             max-height: 300px;
             z-index: 1;
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(#ffffff, .8);
-                z-index: 2;
+            img {
+                max-height: 300px;
+                display: block;
+                position: relative;
+                margin: auto;
             }
-
             &__content {
-                z-index: 5;
-                position: absolute;
-                top: 220px;
+                position: relative;
                 background: #ffffff;
                 width: 80%;
                 left: 50%;
                 transform: translate(-50%, 0px);
-                padding: 40px;
+                padding: 20px;
                 opacity: 0;
-                transition: opacity 1s;
+                transition: opacity 0.3s;
                 @media (max-width: 500px) {
                     width: 100%;
                 }
@@ -526,15 +555,16 @@
         }
 
         &-year {
-            z-index: 5;
             font-size: 35px;
-            color: #ffffff;
-            background: orange;
-            padding: 15px 26px;
-            transition: opacity 1.2s;
-            position: absolute;
+            color: $font-color-light-blue;
+            padding: 5px;
+            transition: opacity 0.3s;
+            position: relative;
             left: 0;
             opacity: 0;
+            span {
+                font-size: 60%;
+            }
         }
 
         &-title {
@@ -572,7 +602,7 @@
     background: #ffffff url('../img/quote-bg-circle.svg') no-repeat center center;
     background-size: 50%;
     margin: 0;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 5%;
     .title {
         font-size: 3em;
