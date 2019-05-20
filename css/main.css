@@ -993,7 +993,7 @@ nav {
   background-size: 100%;
   margin: 0;
   margin-bottom: -1px;
-  padding: 1% 0 14%;
+  padding: 1% 0 15%;
   top: 0; }
   @media (max-width: 1199px) {
     .home--intro {
@@ -1247,9 +1247,15 @@ nav {
         transition: .2s; }
     .home--history .timeline .slick-prev.slick-arrow {
       position: absolute;
-      left: 0;
+      left: -4%;
       top: 50%;
       z-index: 99; }
+      @media (max-width: 991px) {
+        .home--history .timeline .slick-prev.slick-arrow {
+          top: 30%; } }
+      @media (max-width: 479px) {
+        .home--history .timeline .slick-prev.slick-arrow {
+          top: 20%; } }
       .home--history .timeline .slick-prev.slick-arrow:before {
         content: "<";
         position: absolute;
@@ -1262,12 +1268,25 @@ nav {
         font-size: 2em;
         border-radius: 50%;
         line-height: 3;
-        border: 2px solid #aaa; }
+        border: 2px solid #aaa;
+        color: #aaaaaa; }
+        @media (max-width: 479px) {
+          .home--history .timeline .slick-prev.slick-arrow:before {
+            width: 80px;
+            height: 80px;
+            line-height: 2.5;
+            right: -20%; } }
     .home--history .timeline .slick-next.slick-arrow {
       position: absolute;
       right: 0;
       top: 50%;
       z-index: 99; }
+      @media (max-width: 991px) {
+        .home--history .timeline .slick-next.slick-arrow {
+          top: 30%; } }
+      @media (max-width: 479px) {
+        .home--history .timeline .slick-next.slick-arrow {
+          top: 20%; } }
       .home--history .timeline .slick-next.slick-arrow:before {
         content: ">";
         position: absolute;
@@ -1280,7 +1299,13 @@ nav {
         font-size: 2em;
         border-radius: 50%;
         line-height: 3;
-        border: 2px solid #aaa; }
+        border: 2px solid #aaa;
+        color: #aaaaaa; }
+        @media (max-width: 479px) {
+          .home--history .timeline .slick-next.slick-arrow:before {
+            width: 80px;
+            height: 80px;
+            line-height: 2.5; } }
     .home--history .timeline-sliderbox {
       height: 100%; }
     .home--history .timeline .slick-list {

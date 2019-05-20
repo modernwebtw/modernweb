@@ -210,7 +210,7 @@
     background-size: 100%;
     margin: 0;
     margin-bottom: -1px;
-    padding: 1% 0 14%;
+    padding: 1% 0 15%;
     top: 0;
     @include media('<1200px'){
         background: #ffffff;
@@ -516,7 +516,13 @@
                 }
             }
         }
-        .slick-prev.slick-arrow { position: absolute; left: 0; top: 50%;z-index: 99;
+        .slick-prev.slick-arrow { position: absolute; left: -4%; top: 50%;z-index: 99;
+        @include media('<992px'){
+            top: 30%;
+        }
+        @include media('<480px'){
+            top: 20%;
+        }
             &:before {
                 content: "<";
                 position: absolute;
@@ -529,10 +535,23 @@
                 font-size: 2em;
                 border-radius: 50%;
                 line-height: 3;
-                border: 2px solid #aaa;                
+                border: 2px solid #aaa;
+                color: #aaaaaa;
+                @include media('<480px'){
+                    width: 80px;
+                    height: 80px;
+                    line-height: 2.5;
+                    right: -20%;
+                }
             }
         }
         .slick-next.slick-arrow { position: absolute; right: 0; top: 50%;z-index: 99;
+        @include media('<992px'){
+            top: 30%;
+        }
+        @include media('<480px'){
+            top: 20%;
+        }
             &:before {
                 content: ">";
                 position: absolute;
@@ -546,6 +565,12 @@
                 border-radius: 50%;
                 line-height: 3;
                 border: 2px solid #aaa;
+                color: #aaaaaa;
+                @include media('<480px'){
+                    width: 80px;
+                    height: 80px;
+                    line-height: 2.5;
+                }
             }
         }
         &-sliderbox {
