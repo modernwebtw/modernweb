@@ -492,6 +492,9 @@ nav {
       nav .nav-item {
         max-width: 100%; } }
 
+.navbar-nav .nav-link {
+  animation: background .2s ease; }
+
 .navbar-darken {
   background-color: #19195e; }
 
@@ -1117,7 +1120,8 @@ nav {
     content: '';
     position: absolute;
     bottom: -198px;
-    width: 100%;
+    width: 101%;
+    left: -0.5%;
     height: 198px;
     background: url("../img/footer-wave.svg") no-repeat bottom;
     background-size: cover;

@@ -124,6 +124,9 @@ nav {
         }
     }
 }
+.navbar-nav .nav-link {
+    animation: background .2s ease;
+}
 .navbar-darken {
     background-color: $font-color-dark-blue;
 }
