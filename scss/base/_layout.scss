@@ -23,8 +23,10 @@ body {
 	color: $font-color;
 	font-size: 15px;
     overflow: hidden;
+    background-color: #1926f8;
 	@include media("<=768px"){
 	min-height: 100%;
+    background-color: #ffffff;
 	}
 }
 h1,h2,h3,h4,h5,h6{ color: $font-color; margin: 20px 0 10px;}
@@ -115,6 +117,12 @@ nav {
         border: 1px solid #888888;
         padding: 0.4em 0.6em;
     }
+    .nav-item {
+        max-width: 100px;
+        @include media("<992px"){
+            max-width: 100%;
+        }
+    }
 }
 .navbar-darken {
     background-color: $font-color-dark-blue;
@@ -123,7 +131,7 @@ nav {
 .navbar--logo {
     width: 160px;
     display: none;
-    @include media("<991px"){
+    @include media("<992px"){
         display: block;
     }
     &__img {

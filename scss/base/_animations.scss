@@ -1,5 +1,20 @@
+// footer alien
+.bounce1 {
+    animation: bounce-alien 3s linear infinite;
+    -webkit-animation: bounce-alien 3s linear infinite;
+}
+@keyframes bounce-alien {
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+    
+}
+
+-webkit-
 .bg-animation {
     animation: bg-animation 30s ease infinite;
+    -webkit-animation: bg-animation 30s ease infinite;
 }
 
 @keyframes bg-animation {

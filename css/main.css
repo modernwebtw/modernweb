@@ -15,8 +15,18 @@ $breakpoint argument choices:
 
 ORDER:base+typography > general layout + grid>page layout >components
 */
+.bounce1 {
+  animation: bounce-alien 3s linear infinite;
+  -webkit-animation: bounce-alien 3s linear infinite; }
+
+@keyframes bounce-alien {
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); } }
+-webkit-
 .bg-animation {
-  animation: bg-animation 30s ease infinite; }
+  animation: bg-animation 30s ease infinite;
+  -webkit-animation: bg-animation 30s ease infinite; }
 
 @keyframes bg-animation {
   0% {
@@ -337,10 +347,12 @@ body {
   font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
   color: #333333;
   font-size: 15px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #1926f8; }
   @media (max-width: 768px) {
     body {
-      min-height: 100%; } }
+      min-height: 100%;
+      background-color: #ffffff; } }
 
 h1, h2, h3, h4, h5, h6 {
   color: #333333;
@@ -474,6 +486,11 @@ nav {
     font-size: 1.6em;
     border: 1px solid #888888;
     padding: 0.4em 0.6em; }
+  nav .nav-item {
+    max-width: 100px; }
+    @media (max-width: 991px) {
+      nav .nav-item {
+        max-width: 100%; } }
 
 .navbar-darken {
   background-color: #19195e; }
@@ -481,7 +498,7 @@ nav {
 .navbar--logo {
   width: 160px;
   display: none; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .navbar--logo {
       display: block; } }
   .navbar--logo__img {
@@ -743,9 +760,6 @@ nav {
   touch-action: manipulation;
   cursor: not-allowed; }
 
-.bg--blue-defult {
-  background-color: #1926f8; }
-
 .title {
   font-size: 32px;
   margin: 0 auto;
@@ -820,13 +834,16 @@ nav {
 
 .home--kv {
   margin: 0;
-  min-height: 60vh;
-  top: 80px; }
+  min-height: 50vh;
+  top: 80px;
+  font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif; }
   @media (max-width: 767px) {
     .home--kv {
-      height: 25vh;
+      height: auto;
       background-color: #ffffff;
-      top: 50px; } }
+      top: 50px;
+      min-height: 0;
+      padding-bottom: 70px; } }
   .home--kv--wrapper {
     position: relative; }
     @media (max-width: 767px) {
@@ -837,6 +854,14 @@ nav {
     @media (max-width: 767px) {
       .home--kv--mini {
         display: block; } }
+    .home--kv--mini--bg {
+      position: relative; }
+    .home--kv--mini--logo {
+      filter: drop-shadow(0 0 5px black);
+      position: absolute;
+      top: 10%;
+      width: 60%;
+      left: 20%; }
   .home--kv--bg--star--l {
     position: absolute;
     top: 1em;
@@ -911,8 +936,10 @@ nav {
         width: 90%;
         height: 60px;
         border-radius: 10px;
-        right: 5%;
-        line-height: 2.2; } }
+        right: -5%;
+        line-height: 2.2;
+        position: relative;
+        top: -10px; } }
 
 .home--wave {
   width: 100%;
@@ -975,7 +1002,7 @@ nav {
     right: 10%;
     opacity: 0.6;
     z-index: 1;
-    animation: scale-shadow 5s alternate infinite; }
+    animation: scale-shadow 10s alternate infinite; }
   .home--wave--l--rocket {
     position: absolute;
     width: 10%;
@@ -1083,18 +1110,9 @@ nav {
 .home--cfs {
   background-color: #ffffff;
   margin: 0;
-  padding-top: 5%;
+  padding-top: 80px;
   padding-bottom: 5%;
   z-index: 3; }
-@media (min-width: 769px) and (max-width: 1199px) {
-  .home--cfs:before {
-    content: '';
-    background-color: #fff;
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    top: -18%; } }
-
   .home--cfs--item {
     text-align: center; }
     .home--cfs--item--top {
@@ -1108,7 +1126,8 @@ nav {
       line-height: 1.35; }
   .home--cfs--calculate {
     text-align: center;
-    margin: 20px auto; }
+    margin: 20px auto;
+    margin-top: 6%; }
 
 /* CFS timer */
 #timer {
@@ -1467,6 +1486,9 @@ nav {
     right: 5%;
     bottom: 40%;
     opacity: .9; }
+    .footer--deco--alien:hover {
+      animation: bounce-alien 3s linear infinite;
+      -webkit-animation: bounce-alien 3s linear infinite; }
   .footer--desc--li {
     color: #bcbced; }
     .footer--desc--li a {

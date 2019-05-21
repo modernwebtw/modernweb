@@ -4,7 +4,7 @@ setInterval(function() {
 
 function makeTimer() {
 
-    var endTime = new Date("May 15, 2019 09:00:00 PDT");
+    var endTime = new Date("Jun 14, 2019 12:00:00 PDT");
     var endTime = (Date.parse(endTime)) / 1000;
 
     var now = new Date();
@@ -32,8 +32,8 @@ function makeTimer() {
     }
 
     $("#days").html(days + "<span>  天</span>");
-    $("#hours").html(hours + "<span>時</span>");
-    $("#minutes").html(minutes + "<span>分</span>");
-    $("#seconds").html(seconds + "<span>秒</span>");
+    $("#hours").html(hours + "<span> 時</span>");
+    $("#minutes").html(minutes + "<span> 分</span>");
+    $("#seconds").html(seconds + "<span> 秒</span>");
 
 }
