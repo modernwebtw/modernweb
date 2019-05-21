@@ -1,0 +1,64 @@
+.content--kv {
+    margin: 0;
+    position: relative;
+    padding: 0;
+    overflow-x: hidden;
+    @include media("<768px") { margin-top: 60px;}
+    &--wrapper {
+        position: relative;
+        background-image: url(../img/content-kv.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    width: 100%;
+    }
+    .kv-head {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    padding: 10% 0;
+    @include media("<768px") {padding: 10% 0;}
+        .title {
+            color: #ffffff;
+            text-shadow: 0 0 5px #000;
+            span {
+                 color: #ffffff;
+            }
+        }
+    }
+
+    &--logo {
+        position: absolute;
+        top: 40px;
+        width: 45%;
+        left: 27.5%;
+        filter: drop-shadow(0 0 0.75rem $font-color-dark-blue);
+        z-index: 5;
+    }
+
+    &--btn {
+        background-color: $font-color-pink;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        right: 22%;
+        top: 16em;
+        line-height: 5.5em;
+        color: #ffffff;
+        font-size: 20px;
+        display: block;
+        z-index: 10;
+        box-shadow: 5px 5px 2px darken($font-color-pink, 20%);
+
+        &:hover,
+        &:focus {
+            background-color: lighten($font-color-pink, 5%);
+            color: #ffffff;
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 1px darken($font-color-pink, 15%)
+        }
+    }
+
+}
