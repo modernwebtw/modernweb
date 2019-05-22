@@ -35,24 +35,23 @@ ORDER:base+typography > general layout + grid>page layout >components
     transform: translateZ(0); } }
 @keyframes bounce {
   0%,20%,to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translateZ(0);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translateZ(0); }
-  40% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(5px, -30px, 0);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(5px, -30px, 0); }
-  70% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -15px, 0);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -15px, 0); }
+    transform: translate3d(0, -15px, 10%); }
+  70% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); }
   90% {
-    -webkit-transform: translate3d(3px, -4px, 0);
-    transform: translate3d(3px, -4px, 0); } }
--webkit-
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateZ(0); } }
+@keyframes twinkling {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -1000px 5000px; } }
 .bg-animation {
   animation: bg-animation 30s ease infinite;
   -webkit-animation: bg-animation 30s ease infinite; }
@@ -892,7 +891,8 @@ nav {
   margin: 0;
   min-height: 58vh;
   top: 80px;
-  font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
+  background: url("../img/bg-twinkle2.png") repeat; }
   @media (max-width: 767px) {
     .home--kv {
       height: auto;
@@ -1179,6 +1179,10 @@ nav {
     background: url("../img/footer-wave.svg") no-repeat bottom;
     background-size: cover;
     z-index: 10; }
+    @media (max-width: 991px) {
+      .home--cfs:before {
+        bottom: -98px;
+        height: 98px; } }
   .home--cfs--item {
     text-align: center; }
     .home--cfs--item--top {
@@ -1508,8 +1512,11 @@ nav {
   position: relative;
   padding-top: 200px;
   padding-bottom: 2%;
-  background-color: #040a74;
+  background: #040a74 url("../img/bg-twinkle.png") repeat 100% 100%;
   overflow: hidden; }
+  @media (max-width: 991px) {
+    .footer {
+      padding-top: 120px; } }
   .footer--logo {
     border-bottom: 1px solid #9494e2;
     padding-bottom: 2em;

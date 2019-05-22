@@ -35,33 +35,47 @@
 
 @keyframes bounce {
     0%,20%,to {
+        -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+        -webkit-transform: translate3d(0,-15px,0);
+        animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+        transform: translate3d(0,-15px,10%)
+    }
+
+    // 40% {
+    //     -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    //     -webkit-transform: translate3d(0,-30px,0);
+    //     animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    //     transform: translate3d(0,-30px,0)
+    // }
+
+    70% {
+        
+        -webkit-transform: translate3d(0,-4px,0);
+        transform: translate3d(0,-4px,0)
+    }
+
+    90% {
+        
         -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
         -webkit-transform: translateZ(0);
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
         transform: translateZ(0)
     }
+}
 
-    40% {
-        -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-        -webkit-transform: translate3d(5px,-30px,0);
-        animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-        transform: translate3d(5px,-30px,0)
+// .twinkling {
+//     animation: twinkling 200s linear infinite;
+// }
+
+@keyframes twinkling {
+    0% {
+        background-position: 0 0;
     }
-
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-        -webkit-transform: translate3d(0,-15px,0);
-        animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-        transform: translate3d(0,-15px,0)
-    }
-
-    90% {
-        -webkit-transform: translate3d(3px,-4px,0);
-        transform: translate3d(3px,-4px,0)
+    100% {
+        background-position: -1000px 5000px;
     }
 }
 
--webkit-
 .bg-animation {
     animation: bg-animation 30s ease infinite;
     -webkit-animation: bg-animation 30s ease infinite;
