@@ -15,14 +15,43 @@ $breakpoint argument choices:
 
 ORDER:base+typography > general layout + grid>page layout >components
 */
-.bounce1 {
-  animation: bounce-alien 3s linear infinite;
-  -webkit-animation: bounce-alien 3s linear infinite; }
+.bounce {
+  animation: bounce 3s linear infinite;
+  -webkit-animation: bounce 3s linear infinite; }
 
-@keyframes bounce-alien {
-  100% {
+@-webkit-keyframes bounce {
+  0%,20%,to {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 10%); }
+  70% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); }
+  90% {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); } }
+    -webkit-transform: translateZ(0);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateZ(0); } }
+@keyframes bounce {
+  0%,20%,to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateZ(0); }
+  40% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(5px, -30px, 0);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(5px, -30px, 0); }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    -webkit-transform: translate3d(3px, -4px, 0);
+    transform: translate3d(3px, -4px, 0); } }
 -webkit-
 .bg-animation {
   animation: bg-animation 30s ease infinite;
@@ -475,12 +504,20 @@ nav {
   top: 0;
   border-radius: 1px;
   transition: background .2s ease; }
-  nav .navbar-inverse .navbar-nav {
-    float: right; }
   @media (max-width: 1024px) {
     nav {
-      background: #000;
       height: auto; } }
+  @media (min-width: 993px) {
+    nav .navbar-nav .dropdown-menu {
+      left: -.5rem;
+      min-width: 100%; }
+    nav .navbar-nav .dropdown-menu .dropdown-item {
+      padding: 0.45rem 1.5rem; } }
+  @media (max-width: 991px) {
+    nav .nav-fill .nav-item {
+      width: 100%; } }
+  nav .navbar-inverse .navbar-nav {
+    float: right; }
   nav .navbar-toggler {
     color: #ffffff;
     font-size: 1.6em;
@@ -498,6 +535,25 @@ nav {
 .navbar-darken {
   background-color: #19195e; }
 
+.fixed-top {
+  background-color: #1926f8; }
+  @media (max-width: 991px) {
+    .fixed-top {
+      background-color: #040a74; } }
+
+.navbar--logo {
+  display: none;
+  transition: all .3s ease; }
+
+.menu--scroll {
+  background-color: #1926f8;
+  box-shadow: 0px 3px 8px #1926f8; }
+  @media (max-width: 991px) {
+    .menu--scroll {
+      background-color: #040a74; } }
+  .menu--scroll .navbar--logo {
+    display: inline-block; }
+
 .navbar--logo {
   width: 160px;
   display: none; }
@@ -506,9 +562,6 @@ nav {
       display: block; } }
   .navbar--logo__img {
     width: 100%; }
-
-.menu--scroll {
-  background-color: #19195e; }
 
 .gotop {
   display: none;
@@ -870,7 +923,7 @@ nav {
     top: 1em;
     width: 70%;
     left: 0;
-    z-index: 2;
+    z-index: -3;
     animation: float-star01 60s infinite; }
   .home--kv--bg--star--r {
     position: absolute;
@@ -1455,7 +1508,7 @@ nav {
   position: relative;
   padding-top: 200px;
   padding-bottom: 2%;
-  background-color: #22073e;
+  background-color: #040a74;
   overflow: hidden; }
   .footer--logo {
     border-bottom: 1px solid #9494e2;
@@ -1467,13 +1520,18 @@ nav {
     position: absolute;
     width: 50%;
     left: 2%;
-    opacity: .7; }
+    opacity: .7;
+    animation: float-star01 60s infinite; }
   .footer--deco--star--r {
     position: absolute;
     width: 50%;
     right: 0;
     top: 8%;
-    transform: scale(-1, 1); }
+    transform: scale(-1, 1);
+    animation: float-star02 50s infinite; }
+    @media (max-width: 991px) {
+      .footer--deco--star--r {
+        animation-play-state: paused; } }
   .footer--deco--shine--l {
     position: absolute;
     width: 30%;
@@ -1492,16 +1550,18 @@ nav {
     width: 35%;
     left: 1%;
     top: 15%;
-    opacity: .7; }
+    opacity: .7;
+    animation: float-star01 80s infinite; }
+    @media (max-width: 991px) {
+      .footer--deco--planet {
+        animation-play-state: paused; } }
   .footer--deco--alien {
     position: absolute;
     width: 7%;
     right: 5%;
     bottom: 40%;
-    opacity: .9; }
-    .footer--deco--alien:hover {
-      animation: bounce-alien 3s linear infinite;
-      -webkit-animation: bounce-alien 3s linear infinite; }
+    opacity: .9;
+    z-index: 99; }
   .footer--desc--li {
     color: #bcbced; }
     .footer--desc--li a {
