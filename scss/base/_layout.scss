@@ -23,7 +23,7 @@ body {
 	color: $font-color;
 	font-size: 15px;
     overflow: hidden;
-    background-color: #1926f8;
+    background-color: $bg-blue;
 	@include media("<=768px"){
 	min-height: 100%;
     background-color: #ffffff;
@@ -106,11 +106,17 @@ nav {
     top: 0;    
     border-radius: 1px;
     transition: background .2s ease;
-    .navbar-inverse .navbar-nav { float: right;}
     @include media("<=1024px") {
-        background: #000;
         height: auto;
     }
+    @include media(">992px") {
+        .navbar-nav .dropdown-menu { left: -.5rem; min-width: 100%;}
+        .navbar-nav .dropdown-menu .dropdown-item { padding: 0.45rem 1.5rem;}
+    }
+    @include media("<992px") {
+        .nav-fill .nav-item { width: 100%;}
+    }
+    .navbar-inverse .navbar-nav { float: right;}
     .navbar-toggler {
         color: #ffffff;
         font-size: 1.6em;
@@ -130,6 +136,23 @@ nav {
 .navbar-darken {
     background-color: $font-color-dark-blue;
 }
+.fixed-top { 
+    background-color: $bg-blue;
+    @include media("<992px"){
+        background-color: darken($bg-blue,30%);
+    }
+}
+.navbar--logo { display: none; transition: all .3s ease;}
+
+// scroll menu
+.menu--scroll{
+    background-color: $bg-blue;
+    box-shadow: 0px 3px 8px #1926f8;
+    @include media("<992px"){
+        background-color: darken($bg-blue,30%);
+    }
+    .navbar--logo { display: inline-block;}
+}
 
 .navbar--logo {
     width: 160px;
@@ -142,12 +165,6 @@ nav {
         
     }
 }
-
-// scroll menu
-.menu--scroll{
-    background-color: $font-color-dark-blue;
-}
-
 
 // 
 .gotop {
