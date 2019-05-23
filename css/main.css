@@ -1283,7 +1283,7 @@ nav {
     .home--reason--disc-p {
       font-size: 1.3em; }
   .home--reason--star {
-    position: absolute;
+    position: relative;
     width: 150%;
     height: 60px;
     bottom: -30%;
