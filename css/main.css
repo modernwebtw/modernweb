@@ -534,11 +534,9 @@ nav {
 .navbar-darken {
   background-color: #19195e; }
 
-.fixed-top {
-  background-color: #1926f8; }
-  @media (max-width: 991px) {
-    .fixed-top {
-      background-color: #040a74; } }
+@media (max-width: 991px) {
+  .fixed-top {
+    background-color: #040a74; } }
 
 .navbar--logo {
   display: none;
@@ -546,7 +544,7 @@ nav {
 
 .menu--scroll {
   background-color: #1926f8;
-  box-shadow: 0px 3px 8px #1926f8; }
+  box-shadow: 0px 3px 8px #040a74; }
   @media (max-width: 991px) {
     .menu--scroll {
       background-color: #040a74; } }
@@ -1072,11 +1070,11 @@ nav {
     z-index: -2; }
 
 .home--intro {
-  background: url("../img/home--intro--bg.png") no-repeat;
-  background-size: 100%;
+  background: url("../img/home--intro--bg.png") no-repeat top left;
+  background-size: 99%;
   margin: 0;
   margin-bottom: -1px;
-  padding: 1% 0 16%;
+  padding: 1% 0 12%;
   top: 0; }
   @media (max-width: 1459px) {
     .home--intro {
@@ -1090,7 +1088,8 @@ nav {
     width: 100%;
     height: 200px;
     position: absolute;
-    bottom: -50px; }
+    bottom: -50px;
+    z-index: -1; }
   .home--intro--left {
     z-index: 2; }
     .home--intro--left--bg {
@@ -1107,7 +1106,7 @@ nav {
         z-index: 1;
         width: 13%;
         left: 10%;
-        bottom: 3%;
+        top: 45%;
         animation: float-top 5s alternate infinite; }
         @media (max-width: 1365px) {
           .home--intro--left--bg--planet {
@@ -1126,7 +1125,7 @@ nav {
             animation-play-state: paused; } }
     .home--intro--left--cover {
       background: url("../img/home--intro--cover.svg") no-repeat;
-      background-size: 100%;
+      background-size: 101%;
       position: absolute;
       top: -1px;
       left: 0;
@@ -1236,7 +1235,7 @@ nav {
     font-size: 1.4em; }
   @media (max-width: 767px) {
     .home--reason--wrapper {
-      margin: 14% 1%; } }
+      margin: 3% 1%; } }
   .home--reason--lead {
     display: block;
     margin: 0;
@@ -1247,7 +1246,7 @@ nav {
     margin-bottom: 2.2em; }
     @media (max-width: 767px) {
       .home--reason--lead {
-        font-size: 2em;
+        font-size: 1.6em;
         margin-bottom: 0.5em; } }
     .home--reason--lead .num {
       font-size: 180px;
@@ -1256,7 +1255,7 @@ nav {
       color: #ffffff;
       display: inline-block;
       margin: 10px 0; }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .home--reason--lead .num {
           font-size: 4em; } }
   .home--reason--disc {
@@ -1279,10 +1278,11 @@ nav {
     .home--reason--star.second {
       right: -50%;
       left: 0; }
-      @media (max-width: 479px) {
+      @media (max-width: 767px) {
         .home--reason--star.second {
-          right: 0; } }
-    @media (max-width: 479px) {
+          right: 0;
+          width: 100%; } }
+    @media (max-width: 767px) {
       .home--reason--star {
         bottom: -18%;
         width: 100%;
@@ -1327,15 +1327,49 @@ nav {
           border-radius: 100%;
           background-color: #19195e;
           transition: .2s; }
-    .home--history .timeline .slick-next, .home--history .timeline .slick-prev {
-      font-size: inherit;
-      z-index: 9;
-      right: 0;
-      top: 30%; }
-    .home--history .timeline .slick-next:before, .home--history .timeline .slick-prev:before {
-      font-size: 60px;
-      text-shadow: 0 0 8px #333; }
+    .home--history .timeline .slick-control {
+      position: absolute;
+      top: 30%;
+      width: 70%;
+      left: 15%;
+      font-size: 4em; }
+      @media (max-width: 767px) {
+        .home--history .timeline .slick-control {
+          width: 100%;
+          left: 0; } }
+      .home--history .timeline .slick-control .prev {
+        display: inline-block;
+        opacity: .5;
+        transition: all .3s ease;
+        text-shadow: 0px 0px 10px #FFF; }
+        .home--history .timeline .slick-control .prev:hover, .home--history .timeline .slick-control .prev:focus {
+          opacity: 1; }
+      .home--history .timeline .slick-control .next {
+        display: inline-block;
+        float: right;
+        opacity: .5;
+        transition: all .3s ease;
+        text-shadow: 0px 0px 10px #FFF; }
+        .home--history .timeline .slick-control .next:hover, .home--history .timeline .slick-control .next:focus {
+          opacity: 1; }
+      .home--history .timeline .slick-control .quote-slick-next {
+        display: inline-block;
+        float: right;
+        opacity: .5;
+        transition: all .3s ease;
+        text-shadow: 0px 0px 10px #FFF; }
+        .home--history .timeline .slick-control .quote-slick-next:hover, .home--history .timeline .slick-control .quote-slick-next:focus {
+          opacity: 1; }
+      .home--history .timeline .slick-control .quote-slick-prev {
+        display: inline-block;
+        opacity: .5;
+        transition: all .3s ease;
+        text-shadow: 0px 0px 10px #FFF; }
+        .home--history .timeline .slick-control .quote-slick-prev:hover, .home--history .timeline .slick-control .quote-slick-prev:focus {
+          opacity: 1; }
     .home--history .timeline-sliderbox {
+      height: 100%; }
+    .home--history .timeline-sliderbox-quote {
       height: 100%; }
     .home--history .timeline .slick-list {
       height: 100%;
@@ -1364,7 +1398,6 @@ nav {
         border-bottom-right-radius: 50% 70%; }
       .home--history .timeline-slide__content {
         position: relative;
-        background: #ffffff;
         width: 90%;
         left: 50%;
         transform: translate(-50%, 0px);
@@ -1374,6 +1407,8 @@ nav {
         @media (max-width: 500px) {
           .home--history .timeline-slide__content {
             width: 100%; } }
+        .home--history .timeline-slide__content h3, .home--history .timeline-slide__content p {
+          color: #333333; }
     .home--history .timeline-year {
       font-size: 3.5em;
       font-weight: 500;
@@ -1437,21 +1472,14 @@ nav {
   .home--quote .title {
     font-size: 3em;
     color: #19195e; }
-  .home--quote:before {
-    content: '';
-    position: absolute;
-    bottom: -198px;
-    width: 100%;
-    height: 198px;
-    background: url("../img/footer-wave.svg") no-repeat bottom;
-    background-size: cover;
-    z-index: 10; }
   .home--quote p {
     font-size: 1.3em; }
   .home--quote .carousel-item {
     width: 70%;
     left: 15%;
     padding: 5% 2%; }
+    .home--quote .carousel-item h3 {
+      line-height: 1.6em; }
   .home--quote .carousel-indicators {
     bottom: -10%; }
     .home--quote .carousel-indicators li {
