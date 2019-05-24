@@ -1,15 +1,16 @@
 .content--kv {
     margin: 0;
-    position: relative;
     padding: 0;
+    position: relative;
     overflow-x: hidden;
-    @include media("<768px") { margin-top: 60px;}
-    &--wrapper {
-        position: relative;
-        background-image: url(../img/content-kv.png);
+    background-image: url(../img/content-kv.svg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
+    min-height: 55vh;
+    @include media("<768px") { margin-top: 60px;}
+    &--wrapper {
+        position: relative;
     width: 100%;
     }
     .kv-head {

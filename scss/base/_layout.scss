@@ -23,7 +23,6 @@ body {
 	color: $font-color;
 	font-size: 15px;
     overflow: hidden;
-    background-color: $bg-blue;
 	@include media("<=768px"){
 	min-height: 100%;
     background-color: #ffffff;
@@ -140,17 +139,18 @@ nav {
     // background-color: $bg-blue;
     @include media("<992px"){
         background-color: darken($bg-blue,30%);
+        min-height: 65px;
     }
 }
 .navbar--logo { display: none; transition: all .3s ease;}
 
 // scroll menu
 .menu--scroll{
-    background-color: $bg-blue;
+    background-color: darken($bg-blue,30%);
     box-shadow: 0px 3px 8px darken($bg-blue,30%);
-    @include media("<992px"){
-        background-color: darken($bg-blue,30%);
-    }
+    // @include media("<992px"){
+    //     background-color: darken($bg-blue,30%);
+    // }
     .navbar--logo { display: inline-block;}
 }
 

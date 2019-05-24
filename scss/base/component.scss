@@ -79,7 +79,7 @@
     }
     .timeline-item:not(.period):hover .timeline-marker:before {
         background: transparent;
-        border: 3px solid $font-color-dark-blue;
+        border: 3px solid $font-color-light-blue;
     }
 
     /*----- TIMELINE CONTENT -----*/
@@ -237,11 +237,11 @@
 }
 
 .btn-txt {
-    color: $font-color-dark-blue;
+    color: $font-color-light-blue;
 }
 
 .btn--buy {
-    background: $font-color-dark-blue;
+    background: lighten($font-color-light-blue,10%);
     color: #fff !important;
 }
 
@@ -347,6 +347,10 @@
 
 .btn-lg {
     padding: 1em 3em;
+}
+
+.bg--blue--default {
+    background-color: $bg-blue;
 }
 
 // ************* 2019 theme *************** //

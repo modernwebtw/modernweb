@@ -17,7 +17,7 @@
 
 .tickets .ul-float li img {
     width: 46px;
-    background-color: #6cf9ff;
+    background-color: lighten($font-color-light-blue,10%);
     border-radius: 6px;
     padding: 4px 3px;
     margin: 5px 10px 10px 5px;
@@ -58,7 +58,7 @@
 }
 
 /* .tickets .ul-float li .no {
-    background-color: #6cf9ff;
+    background-color: lighten($font-color-light-blue,10%);
 } */
 
 .tickets .ul-float li .no:after {
@@ -75,7 +75,7 @@
 }
 
 .tickets .btn--buy {
-    color: #6cf9ff;
+    color: lighten($font-color-light-blue,10%);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -176,7 +176,7 @@
 .tickets .ticket__item-left {
     display: block;
     float: left;
-    background: #183133;
+    background: lighten($font-color-light-blue,10%);
     width: 159px;
     height: 100px;
     border-top-left-radius: 10px;
@@ -206,7 +206,7 @@
 .tickets .ticket__item-disc {
     display: block;
     float: left;
-    background: #183133;
+    background: lighten($font-color-light-blue,10%);
     width: 310px;
     height: 100px;
     padding: 8px 4px 0px 0;
@@ -250,7 +250,7 @@
 .tickets .ticket__item-right {
     display: block;
     float: left;
-    background: #6cf9ff;
+    background: lighten($font-color-light-blue,10%);
     /* width: 159px; */
     height: 100px;
     border-bottom-right-radius: 10px;
@@ -264,7 +264,7 @@
 .tickets .ticket__item-right-normal {
     display: block;
     float: left;
-    background: #1b3033;
+    background: lighten($font-color-light-blue,10%);
     /* width: 159px; */
     height: 100px;
     border-bottom-right-radius: 10px;
@@ -284,7 +284,7 @@
 }
 
 .tickets .ticket__item-right:hover {
-    background: #6cf9f3;
+    background: lighten($font-color-light-blue,10%);
 }
 
 
@@ -311,7 +311,7 @@
     line-height: 1.4em;
     color: #004348;
     word-break: keep-all;
-    /* text-shadow: 4px 4px 0px #5ef58a; */
+    /* text-shadow: 4px 4px 0px $bg-blue; */
 }
 
 .tickets .ticket__item-right-btn .en {
@@ -330,9 +330,9 @@
 
 }
 
-.tickets .ticket__item-right-normal h5 {
-    color: #fff;
-}
+// .tickets .ticket__item-right-normal h5 {
+//     color: #fff;
+// }
 
 .tickets .ticket__item-dotted {
     display: block;
@@ -341,11 +341,11 @@
     width: 2px;
     height: 100px;
     border-bottom: 2px solid #25a7a2;
-    border-right: 3px dashed #1b3033;
+    border-right: 3px dashed lighten($font-color-light-blue,10%);
 }
 
 .tickets .ticket__item h3 {
-    color: #6cf9f3;
+    color: $font-color-dark-blue;
     padding: 0;
     margin: 0;
     font-size: 18px;
@@ -398,8 +398,8 @@
     animation: tearoff 1s both;
     transform-origin: 0 100%;
     z-index: 99;
-    text-shadow: 4px 4px 0px #5ef58a;
-    border-left: 3px dashed #1b3033;
+    text-shadow: 4px 4px 0px #ffffff;
+    border-left: 3px dashed lighten($font-color-light-blue,10%);
     box-shadow: 0 0 10px #aaa;
     /* animation-direction: alternate; */
 }
