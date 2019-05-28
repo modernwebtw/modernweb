@@ -1613,8 +1613,9 @@ nav {
     .content--kv .kv-head .title {
       color: #ffffff;
       text-shadow: 0 0 5px #000; }
-      .content--kv .kv-head .title span {
-        color: #ffffff; }
+    .content--kv .kv-head .sub-title {
+      color: #ffffff;
+      text-shadow: 0 0 5px #000; }
   .content--kv--logo {
     position: absolute;
     top: 40px;

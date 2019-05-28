@@ -19,13 +19,14 @@
     width: 100%;
     color: #ffffff;
     padding: 10% 0;
-    @include media("<768px") {padding: 10% 0;}
+        @include media("<768px") {padding: 10% 0;}
         .title {
             color: #ffffff;
             text-shadow: 0 0 5px #000;
-            span {
-                 color: #ffffff;
-            }
+        }
+        .sub-title {
+            color: #ffffff;
+            text-shadow: 0 0 5px #000;
         }
     }
 
