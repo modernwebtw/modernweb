@@ -237,7 +237,7 @@
 }
 
 .btn-txt {
-    color: $font-color-light-blue;
+    color: lighten($font-color-light-blue,10%);
 }
 
 .btn--buy {
@@ -273,6 +273,9 @@
     margin: 0 auto;
     text-align: center;
     letter-spacing: 4px;
+    @include media("<992px") {
+        font-size: 28px;
+    }
         span {
             font-size: 28px;
             color: $font-color;
@@ -280,10 +283,13 @@
             margin: 10px auto 20px auto;
             letter-spacing: 2px;
             font-weight: 200;
+            @include media("<992px") {
+                font-size: 20px;
+            }
         }
 }
 .navbar-darken {
-    @include media("<991px") {
+    @include media("<92px") {
         // box-shadow: 0 0 16px #b8a3e4aa;
         background-color: #00064a;
         border-color: #00064a;

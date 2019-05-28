@@ -789,7 +789,7 @@ nav {
   background: #531d8d; }
 
 .btn-txt {
-  color: #a9e4fe; }
+  color: #dbf4ff; }
 
 .btn--buy {
   background: #dbf4ff;
@@ -815,6 +815,9 @@ nav {
   margin: 0 auto;
   text-align: center;
   letter-spacing: 4px; }
+  @media (max-width: 991px) {
+    .title {
+      font-size: 28px; } }
   .title span {
     font-size: 28px;
     color: #333333;
@@ -822,8 +825,11 @@ nav {
     margin: 10px auto 20px auto;
     letter-spacing: 2px;
     font-weight: 200; }
+    @media (max-width: 991px) {
+      .title span {
+        font-size: 20px; } }
 
-@media (max-width: 990px) {
+@media (max-width: 91px) {
   .navbar-darken {
     background-color: #00064a;
     border-color: #00064a;
@@ -1585,45 +1591,43 @@ nav {
     .footer--fbshare {
       display: none; } }
 
-.content--kv {
+.content.content--kv {
   margin: 0;
   padding: 0;
   position: relative;
   overflow-x: hidden;
+  background-color: #1926f8;
   background-image: url(../img/content-kv.svg);
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100%;
-  min-height: 55vh; }
+  background-position: center bottom;
+  background-size: 101%; }
+  @media (max-width: 991px) {
+    .content.content--kv {
+      background-size: cover;
+      background-color: #ffffff; } }
   @media (max-width: 767px) {
-    .content--kv {
-      margin-top: 60px; } }
-  .content--kv--wrapper {
+    .content.content--kv {
+      background-size: 101%;
+      background-color: #1926f8;
+      border: none; } }
+  .content.content--kv:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -1px;
+    left: 0; }
+  .content.content--kv--wrapper {
     position: relative;
     width: 100%; }
-  .content--kv .kv-head {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    color: #ffffff;
-    padding: 10% 0; }
-    @media (max-width: 767px) {
-      .content--kv .kv-head {
-        padding: 10% 0; } }
-    .content--kv .kv-head .title {
-      color: #ffffff;
-      text-shadow: 0 0 5px #000; }
-    .content--kv .kv-head .sub-title {
-      color: #ffffff;
-      text-shadow: 0 0 5px #000; }
-  .content--kv--logo {
+  .content.content--kv--logo {
     position: absolute;
     top: 40px;
     width: 45%;
     left: 27.5%;
     filter: drop-shadow(0 0 0.75rem #19195e);
     z-index: 5; }
-  .content--kv--btn {
+  .content.content--kv--btn {
     background-color: #e000a9;
     border-radius: 50%;
     width: 120px;
@@ -1637,11 +1641,30 @@ nav {
     display: block;
     z-index: 10;
     box-shadow: 5px 5px 2px #7a005c; }
-    .content--kv--btn:hover, .content--kv--btn:focus {
+    .content.content--kv--btn:hover, .content.content--kv--btn:focus {
       background-color: #fa00bc;
       color: #ffffff;
       transform: translate(2px, 2px);
       box-shadow: 1px 1px 1px #94006f; }
+  .content.content--kv .kv-head {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    padding: 12% 0 14%; }
+    @media (max-width: 1299px) {
+      .content.content--kv .kv-head {
+        padding: 15% 0 10%; } }
+    @media (max-width: 767px) {
+      .content.content--kv .kv-head {
+        padding: 22% 0 10%;
+        min-height: 24vh; } }
+    .content.content--kv .kv-head .title {
+      color: #ffffff;
+      text-shadow: 0 0 5px #000; }
+    .content.content--kv .kv-head .sub-title {
+      color: #ffffff;
+      text-shadow: 0 0 5px #000; }
 
 /* 內容頁 tickets */
 .tickets .ul-float {
@@ -1958,5 +1981,10 @@ nav {
     animation-play-state: paused;
     border-left: 0px; } }
 /* 內容頁 tickets end */
+.tickets-notes .title {
+  margin: 2% auto; }
+.tickets-notes ol {
+  margin-left: 5%;
+  line-height: 1.6; }
 
 /*# sourceMappingURL=main.css.map */

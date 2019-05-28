@@ -413,6 +413,12 @@
 
 /* 內容頁 tickets end */
 
-.ticket {
-
+.tickets-notes {
+    .title {
+        margin: 2% auto; 
+    }
+    ol {
+            margin-left: 5%;
+            line-height: 1.6;
+    }
 }
