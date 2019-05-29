@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css?01">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -62,10 +62,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
                             <div class="dropdown-menu text-center">
-                              <a class="dropdown-item" href="https://modernweb.tw/2018/index.html" target="_blank">2018</a>
-                              <a class="dropdown-item" href="https://modernweb.tw/2017/index.html" target="_blank">2017</a>
-                              <a class="dropdown-item" href="https://modernweb.tw/2016/index.html" target="_blank">2016</a>
-                              <a class="dropdown-item" href="https://modernweb.tw/2015/index.html" target="_blank">2015</a>
+                                <a class="dropdown-item" href="https://modernweb.tw/2018/index.html" target="_blank">2018</a>
+                                <a class="dropdown-item" href="https://modernweb.tw/2017/index.html" target="_blank">2017</a>
+                                <a class="dropdown-item" href="https://modernweb.tw/2016/index.html" target="_blank">2016</a>
+                                <a class="dropdown-item" href="https://modernweb.tw/2015/index.html" target="_blank">2015</a>
                             </div>
                         </li>
                     </ul>
@@ -84,14 +84,14 @@
         </section>
         <section class="content tickets">
             <div class="container">
-                <div class="row">                  
+                <div class="row">
                     <!-- ticket -->
                     <div class="col-12">
                         <div class="ticket__item">
                             <div class="ticket__item-left">
                                 <div class="col-sm-12 ticket__item__title">
                                     <h3 class="dot dot01">早鳥優惠票
-                                            </h3>
+                                    </h3>
                                     <h3 class="ticket__item__price"><span class="nt">NT.</span>4,500 /人</h3>
                                 </div>
                             </div>
@@ -100,13 +100,15 @@
                                 <p>售票時間 ~ 06/30(日) 23:59</p>
                             </div>
                             <div class="ticket__item-dotted"></div>
-                            <div class="ticket__item-right">
+                            <div class="ticket__item-right" data-show-until="2019-07-01">
                                 <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190016" target="_blank">
                                     <div class="col-sm-12 ticket__item-right-btn">
                                         <h5>立即購票</h5>
                                     </div>
                                 </a>
-                                <!-- <h5>尚未開賣</h5> -->
+                            </div>
+                            <div class="ticket__item-right normal" data-hide-until="2019-07-01">
+                                <h5>購票截止</h5>
                             </div>
                             <!-- 手機版 放日期 -->
                             <div class="ticket__item-disc-s">
@@ -115,14 +117,13 @@
                         </div>
                     </div>
                     <!-- ticket end -->
-
                     <!-- ticket -->
                     <div class="col-12">
                         <div class="ticket__item">
                             <div class="ticket__item-left">
                                 <div class="col-sm-12 ticket__item__title">
                                     <h3 class="dot dot01">
-                                            夏日驚喜票</h3>
+                                        夏日驚喜票</h3>
                                     <h3 class="ticket__item__price"><span class="nt">NT.</span>5,000<span> /人</span></h3>
                                 </div>
                             </div>
@@ -131,13 +132,18 @@
                                 <p>售票時間 07/01(一) ~ 07/31(三) 23:59</p>
                             </div>
                             <div class="ticket__item-dotted"></div>
-                            <div class="ticket__item-right normal">
-                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190017" target="_blank">
+                            <div class="ticket__item-right" data-hide-until="2019-07-01">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190016" target="_blank">
                                     <div class="col-sm-12 ticket__item-right-btn">
                                         <h5>立即購票</h5>
                                     </div>
-                                </a> -->
+                                </a>
+                            </div>
+                            <div class="ticket__item-right normal" data-show-until="2019-07-01">
                                 <h5>尚未開賣</h5>
+                            </div>
+                            <div class="ticket__item-right normal" data-hide-until="2019-08-01">
+                                <h5>購票截止</h5>
                             </div>
                             <!-- 手機版 放日期 -->
                             <div class="ticket__item-disc-s">
@@ -146,14 +152,13 @@
                         </div>
                     </div>
                     <!-- ticket end -->
-
                     <!-- ticket -->
                     <div class="col-12">
                         <div class="ticket__item">
                             <div class="ticket__item-left">
                                 <div class="col-sm-12 ticket__item__title">
                                     <h3 class="dot dot01">最終機會票
-                                            </h3>
+                                    </h3>
                                     <h3 class="ticket__item__price"><span class="nt">NT.</span>5,500 /人</h3>
                                 </div>
                             </div>
@@ -162,13 +167,18 @@
                                 <p>售票時間 08/01(四) ~ 08/21(三) 12:00</p>
                             </div>
                             <div class="ticket__item-dotted"></div>
-                            <div class="ticket__item-right normal">
-                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190018" target="_blank">
+                            <div class="ticket__item-right" data-hide-until="2019-08-01">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190016" target="_blank">
                                     <div class="col-sm-12 ticket__item-right-btn">
                                         <h5>立即購票</h5>
                                     </div>
-                                </a> -->
-                                    <h5>尚未開賣</h5>
+                                </a>
+                            </div>
+                            <div class="ticket__item-right normal" data-show-until="2019-07-31">
+                                <h5>尚未開賣</h5>
+                            </div>
+                            <div class="ticket__item-right normal" data-hide-until="2019-08-22">
+                                <h5>購票截止</h5>
                             </div>
                             <!-- 手機版 放日期 -->
                             <div class="ticket__item-disc-s">
@@ -177,14 +187,13 @@
                         </div>
                     </div>
                     <!-- ticket end -->
-
                     <!-- ticket -->
                     <div class="col-12">
                         <div class="ticket__item">
                             <div class="ticket__item-left">
                                 <div class="col-sm-12 ticket__item__title">
                                     <h3 class="dot dot01">結伴同行票
-                                            </h3>
+                                    </h3>
                                     <h3 class="ticket__item__price"><span class="nt">NT.</span>4,800 /人</h3>
                                 </div>
                             </div>
@@ -193,13 +202,18 @@
                                 <p>售票時間 07/01(一) ~ 08/21(三) 12:00</p>
                             </div>
                             <div class="ticket__item-dotted"></div>
-                            <div class="ticket__item-right normal">
-                                <!-- <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190019" target="_blank">
+                            <div class="ticket__item-right" data-hide-until="2019-07-01">
+                                <a class="btn btn--buy" href="https://ec.ithome.com.tw/modernweb2019/class?p=20190016" target="_blank">
                                     <div class="col-sm-12 ticket__item-right-btn">
                                         <h5>立即購票</h5>
                                     </div>
-                                </a> -->
+                                </a>
+                            </div>
+                            <div class="ticket__item-right normal" data-show-until="2019-07-01">
                                 <h5>尚未開賣</h5>
+                            </div>
+                            <div class="ticket__item-right normal" data-hide-until="2019-08-22">
+                                <h5>購票截止</h5>
                             </div>
                             <!-- 手機版 放日期 -->
                             <div class="ticket__item-disc-s">
@@ -208,14 +222,13 @@
                         </div>
                     </div>
                     <!-- ticket end -->
-
                     <!-- ticket -->
                     <div class="col-12">
                         <div class="ticket__item">
                             <div class="ticket__item-left">
                                 <div class="col-sm-12 ticket__item__title">
                                     <h3 class="dot dot01">現場一般票
-                                            </h3>
+                                    </h3>
                                     <h3 class="ticket__item__price"><span class="nt">NT.</span>12,000 /人</h3>
                                 </div>
                             </div>
@@ -226,9 +239,9 @@
                             <div class="ticket__item-dotted"></div>
                             <div class="ticket__item-right-normal">
                                 <!-- <a class="btn btn--buy btn--undo" href="#" target="_blank"> -->
-                                    <div class="col-sm-12 ticket__item-right-btn">
-                                        <h5>現場購票</h5>
-                                    </div>
+                                <div class="col-sm-12 ticket__item-right-btn">
+                                    <h5>現場購票</h5>
+                                </div>
                                 <!-- </a> -->
                                 <!-- <div class="" style="margin-left: 10px; width:60%;">
                                             <h5>
@@ -243,7 +256,6 @@
                         </div>
                     </div>
                     <!-- ticket end -->
-
                 </div>
             </div>
         </section>
@@ -255,7 +267,8 @@
                         <ol>
                             <li>完成繳費始報名成功，大會收到您所交付之款項後將以<span class="highlight">電話通知</span>或 <span class="highlight">E-mail</span> 方式確認您完成報名手續。</li>
                             <li>發票將於<span class="highlight">活動當日</span>報到時發給。</li>
-                            <li>退費辦法：報名後至活動日的十天前提出申請，退費將酌收該次活動報名金額 20%</li><li>之手續費；在活動日前九天至前一天提出申請，退票將酌收該次活動報名金額50%之手續費。活動當天及或活動結束後，恕無法接受申請辦理退費。依據您所使用 的付款金流工具，其產生之額外手續費亦由報名者自行負擔，申請退費手續完成後，iThome將於 30 天內將您所繳付之報名費用扣除上述退費相關手續費後執行退款，iThome統一以支票退款。申請方式請以E-mail方式提出，並來電與服務人員確認後始 完成申請退費手續。例如：1月5日報名2月15日舉辦之活動，若完成報名後至2月5日間因故提出退費申請，將酌收該次活動報名金額 20% 之手續費；2月6日至2月14日間因故提出退費申請，將酌收該次活動報名金額 50% 之手續費。</li>
+                            <li>退費辦法：報名後至活動日的十天前提出申請，退費將酌收該次活動報名金額 20%</li>
+                            <li>之手續費；在活動日前九天至前一天提出申請，退票將酌收該次活動報名金額50%之手續費。活動當天及或活動結束後，恕無法接受申請辦理退費。依據您所使用 的付款金流工具，其產生之額外手續費亦由報名者自行負擔，申請退費手續完成後，iThome將於 30 天內將您所繳付之報名費用扣除上述退費相關手續費後執行退款，iThome統一以支票退款。申請方式請以E-mail方式提出，並來電與服務人員確認後始 完成申請退費手續。例如：1月5日報名2月15日舉辦之活動，若完成報名後至2月5日間因故提出退費申請，將酌收該次活動報名金額 20% 之手續費；2月6日至2月14日間因故提出退費申請，將酌收該次活動報名金額 50% 之手續費。</li>
                             <li>報名費用皆已<span class="highlight">含稅</span>，並<span class="highlight">含午餐</span>。</li>
                             <li>主辦單位保留審核報名資格及拒絕已完成報名者參加活動之權利。</li>
                         </ol>
@@ -303,5 +316,6 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/easytimer.js"></script>
 
 </html>
