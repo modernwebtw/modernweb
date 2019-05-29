@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     var $menu_target = (function() {
         return checkHasElm([
-            '#home--wave'
+            '#nav'
         ]);
     }());
 

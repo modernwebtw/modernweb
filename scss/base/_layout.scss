@@ -23,7 +23,6 @@ body {
 	color: $font-color;
 	font-size: 15px;
     overflow: hidden;
-    background-color: $bg-blue;
 	@include media("<=768px"){
 	min-height: 100%;
     background-color: #ffffff;
@@ -137,20 +136,21 @@ nav {
     background-color: $font-color-dark-blue;
 }
 .fixed-top { 
-    background-color: $bg-blue;
+    // background-color: $bg-blue;
     @include media("<992px"){
         background-color: darken($bg-blue,30%);
+        min-height: 65px;
     }
 }
 .navbar--logo { display: none; transition: all .3s ease;}
 
 // scroll menu
 .menu--scroll{
-    background-color: $bg-blue;
-    box-shadow: 0px 3px 8px #1926f8;
-    @include media("<992px"){
-        background-color: darken($bg-blue,30%);
-    }
+    background-color: darken($bg-blue,30%);
+    box-shadow: 0px 3px 8px darken($bg-blue,30%);
+    // @include media("<992px"){
+    //     background-color: darken($bg-blue,30%);
+    // }
     .navbar--logo { display: inline-block;}
 }
 
@@ -193,7 +193,7 @@ nav {
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $bg-color2;
+    background-color: $bg-blue;
     z-index: 9999;
     opacity: 1;
     -webkit-transition: .5s linear;
