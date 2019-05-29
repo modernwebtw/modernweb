@@ -792,20 +792,19 @@ nav {
   color: #dbf4ff; }
 
 .btn--buy {
-  background: #dbf4ff;
   color: #fff !important; }
 
 .btn--stop {
-  background: #aba1c4;
+  background: #1926f8;
   color: #fff !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
 
 .btn--undo {
-  background: #d8d0e7;
-  border: 1px solid #aba1c4;
-  color: #aba1c4 !important;
+  background: #1926f8;
+  border: 1px solid #1926f8;
+  color: #1926f8 !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
@@ -1878,13 +1877,28 @@ nav {
   border-bottom: 2px solid #19195e;
   border-top: 1px solid rgba(92, 132, 154, 0.3);
   padding: 0 25px 0 0;
-  position: relative; }
+  position: relative;
+  width: 145px; }
+  .tickets .ticket__item-right h5 {
+    margin: 32% auto;
+    margin-left: 24%;
+    line-height: 1.4em;
+    color: #004348;
+    word-break: keep-all; }
+  .tickets .ticket__item-right.normal {
+    background: #dadada; }
+    .tickets .ticket__item-right.normal:hover, .tickets .ticket__item-right.normal:focus {
+      animation-play-state: paused;
+      background: #dadada;
+      box-shadow: none;
+      text-shadow: none;
+      border-left: 0; }
 
 .tickets .ticket__item-right-normal {
   display: block;
   float: left;
   background: #dadada;
-  /* width: 159px; */
+  width: 145px;
   height: 100px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -1914,16 +1928,15 @@ nav {
     box-shadow: -3px 0px 0px #333;
 } */
 .tickets .ticket__item-right-btn {
-  margin-left: 13%;
   /* width: 80px; */
   /* letter-spacing: 2px; */ }
 
 .tickets .ticket__item-right-btn h5 {
   margin: 32% auto;
+  margin-left: 13%;
   line-height: 1.4em;
   color: #004348;
-  word-break: keep-all;
-  /* text-shadow: 4px 4px 0px $bg-blue; */ }
+  word-break: keep-all; }
 
 .tickets .ticket__item-right-btn .en {
   font-size: 16px;
@@ -1948,7 +1961,10 @@ nav {
   color: #19195e;
   padding: 0;
   margin: 0;
-  font-size: 18px; }
+  font-size: 20px; }
+  @media (max-width: 1023px) {
+    .tickets .ticket__item h3 {
+      font-size: 18px; } }
 
 .tickets .ticket__item .ticket__item__price {
   padding: 0;
@@ -1992,11 +2008,14 @@ nav {
   .tickets .ticket__item-right:hover {
     animation-play-state: paused;
     border-left: 0px; } }
-/* 內容頁 tickets end */
 .tickets-notes .title {
   margin: 2% auto; }
 .tickets-notes ol {
   margin-left: 5%;
   line-height: 1.6; }
+.tickets-notes .highlight {
+  color: #000fb9; }
+
+/* 內容頁 tickets end */
 
 /*# sourceMappingURL=main.css.map */

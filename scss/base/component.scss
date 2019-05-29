@@ -241,12 +241,12 @@
 }
 
 .btn--buy {
-    background: lighten($font-color-light-blue,10%);
+    // background: lighten($font-color-light-blue,10%);
     color: #fff !important;
 }
 
 .btn--stop {
-    background: $bg-color4;
+    background: $bg-blue;
     color: #fff !important;
     user-select: none;
     touch-action: manipulation;
@@ -254,9 +254,9 @@
 }
 
 .btn--undo {
-    background: $bg-color3;
-    border: 1px solid $bg-color4;
-    color: $bg-color4 !important;
+    background: $bg-blue;
+    border: 1px solid $bg-blue;
+    color: $bg-blue !important;
     user-select: none;
     touch-action: manipulation;
     cursor: not-allowed;
