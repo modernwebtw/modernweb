@@ -181,7 +181,7 @@
     height: 100px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border-bottom: 2px solid #25a7a2;
+    border-bottom: 2px solid $font-color-dark-blue;
     padding: 10px 15px;
 }
 
@@ -210,7 +210,7 @@
     width: 310px;
     height: 100px;
     padding: 8px 4px 0px 0;
-    border-bottom: 2px solid #25a7a2;
+    border-bottom: 2px solid $font-color-dark-blue;
 }
 
 .tickets .ticket__item-disc p {
@@ -255,7 +255,7 @@
     height: 100px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: 2px solid #25a7a2;
+    border-bottom: 2px solid $font-color-dark-blue;
     border-top: 1px solid rgba(92, 132, 154, 0.3);
     padding: 0 25px 0 0;
     position: relative;
@@ -269,7 +269,7 @@
     height: 100px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: 2px solid #25a7a2;
+    border-bottom: 2px solid $font-color-dark-blue;
     border-top: 1px solid rgba(92, 132, 154, 0.3);
     padding: 0 25px 0 0;
     position: relative;
@@ -337,10 +337,10 @@
 .tickets .ticket__item-dotted {
     display: block;
     float: left;
-    background: #25a7a2;
+    background: $font-color-dark-blue;
     width: 2px;
     height: 100px;
-    border-bottom: 2px solid #25a7a2;
+    border-bottom: 2px solid $font-color-dark-blue;
     border-right: 3px dashed lighten($font-color-light-blue,10%);
 }
 
