@@ -2008,6 +2008,61 @@ nav {
 .tickets-notes .highlight {
   color: #000fb9; }
 
+.tickets .ticket__item__together {
+  border: 3px solid #ff14c5;
+  border-radius: 10px;
+  max-width: 827px;
+  margin: 60px auto 4%;
+  padding: 15px;
+  min-height: 100px; }
+  @media (max-width: 1399px) {
+    .tickets .ticket__item__together {
+      max-width: 627px; } }
+  @media (max-width: 767px) {
+    .tickets .ticket__item__together {
+      margin: 2%;
+      margin-top: 40px;
+      max-width: 96%; } }
+  .tickets .ticket__item__together__title {
+    position: absolute;
+    left: calc(50% - 230px);
+    top: -40px;
+    background-color: #ffffff;
+    padding: 0 15px 10px; }
+    @media (max-width: 480px) {
+      .tickets .ticket__item__together__title {
+        position: relative;
+        left: 5%;
+        top: 0;
+        padding: 0 10px;
+        width: 90%; } }
+    .tickets .ticket__item__together__title h3 {
+      color: #ff14c5;
+      line-height: 1em;
+      font-size: 24px;
+      margin-left: 0;
+      font-weight: 400; }
+      @media (max-width: 480px) {
+        .tickets .ticket__item__together__title h3 {
+          font-size: 18px;
+          line-height: 1.3em; } }
+  .tickets .ticket__item__together__left {
+    font-size: 16px; }
+  .tickets .ticket__item__together__right-btn {
+    margin: 2% 0;
+    margin-top: 15px;
+    border: 3px solid #ff47d2;
+    border-radius: 10px;
+    transition: all .3s linear; }
+    .tickets .ticket__item__together__right-btn:hover, .tickets .ticket__item__together__right-btn:focus {
+      background-color: #ff47d2; }
+      .tickets .ticket__item__together__right-btn:hover h5, .tickets .ticket__item__together__right-btn:focus h5 {
+        color: #ffffff; }
+    .tickets .ticket__item__together__right-btn h5 {
+      line-height: 1.4;
+      margin: 10px;
+      transition: all .3s linear; }
+
 /* 內容頁 tickets end */
 
 /*# sourceMappingURL=main.css.map */
