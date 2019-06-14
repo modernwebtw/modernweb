@@ -920,10 +920,10 @@ nav {
       top: 50px; } }
   @media (max-width: 639px) {
     .home--kv {
-      min-height: 55vh; } }
+      min-height: 57vh; } }
   @media (max-width: 479px) {
     .home--kv {
-      min-height: 45vh; } }
+      min-height: 52vh; } }
   .home--kv--wrapper {
     position: relative; }
     @media (max-width: 767px) {
