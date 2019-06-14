@@ -363,6 +363,11 @@
     }
 }
 
+.mt50-xs {
+    @include media('<768px'){
+        margin-top: 50px;
+    }
+}
 .home--cfs {
     background-color: #ffffff;
     margin: 0;
