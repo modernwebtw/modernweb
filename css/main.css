@@ -911,12 +911,19 @@ nav {
 
 .home--kv {
   margin: 0;
+  min-height: 58vh;
   top: 80px;
   font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
   background: url("../img/bg-twinkle2.png") repeat; }
   @media (max-width: 767px) {
     .home--kv {
       top: 50px; } }
+  @media (max-width: 639px) {
+    .home--kv {
+      min-height: 57vh; } }
+  @media (max-width: 479px) {
+    .home--kv {
+      min-height: 52vh; } }
   .home--kv--wrapper {
     position: relative; }
     @media (max-width: 767px) {
@@ -1015,7 +1022,7 @@ nav {
         right: -5%;
         line-height: 2.2;
         position: relative;
-        top: -30px; } }
+        top: -10px; } }
 
 .home--wave {
   width: 100%;
