@@ -351,6 +351,14 @@
     &:hover, &:focus { color: #ffffff; background-color: $font-color-pink;}
 }
 
+.btn-disabled {
+    cursor: not-allowed;
+    color: #ffffff;
+    background-color: #555555;
+    border: 3px solid #555555;
+    &:hover, &:focus { color: #ffffff;}
+}
+
 .btn-lg {
     padding: 1em 3em;
 }

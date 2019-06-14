@@ -884,6 +884,14 @@ nav {
     color: #ffffff;
     background-color: #e000a9; }
 
+.btn-disabled {
+  cursor: not-allowed;
+  color: #ffffff;
+  background-color: #555555;
+  border: 3px solid #555555; }
+  .btn-disabled:hover, .btn-disabled:focus {
+    color: #ffffff; }
+
 .btn-lg {
   padding: 1em 3em; }
 
