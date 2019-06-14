@@ -1190,6 +1190,10 @@ nav {
       .home--intro--right {
         margin-bottom: 0; } }
 
+@media (max-width: 767px) {
+  .mt50-xs {
+    margin-top: 50px; } }
+
 .home--cfs {
   background-color: #ffffff;
   margin: 0;
