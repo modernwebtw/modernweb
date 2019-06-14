@@ -20,10 +20,10 @@
         top: 50px;
     }
     @include media('<640px') {
-        min-height: 55vh;
+        min-height: 57vh;
     }
     @include media('<480px') {
-        min-height: 45vh;
+        min-height: 52vh;
     }
     // &:after {
     //     content: '';
