@@ -535,7 +535,7 @@ nav {
 
 @media (max-width: 991px) {
   .fixed-top {
-    background-color: #040a74;
+    background-color: #0a0d45;
     min-height: 65px; } }
 
 .navbar--logo {
@@ -543,8 +543,8 @@ nav {
   transition: all .3s ease; }
 
 .menu--scroll {
-  background-color: #040a74;
-  box-shadow: 0px 3px 8px #040a74; }
+  background-color: #0a0d45;
+  box-shadow: 0px 3px 8px #0a0d45; }
   .menu--scroll .navbar--logo {
     display: inline-block; }
 
@@ -581,7 +581,7 @@ nav {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #1926f8;
+  background-color: #1c26cc;
   z-index: 9999;
   opacity: 1;
   -webkit-transition: .5s linear;
@@ -795,16 +795,16 @@ nav {
   color: #fff !important; }
 
 .btn--stop {
-  background: #1926f8;
+  background: #1c26cc;
   color: #fff !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
 
 .btn--undo {
-  background: #1926f8;
-  border: 1px solid #1926f8;
-  color: #1926f8 !important;
+  background: #1c26cc;
+  border: 1px solid #1c26cc;
+  color: #1c26cc !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
@@ -896,10 +896,10 @@ nav {
   padding: 1em 3em; }
 
 .bg--blue--default {
-  background-color: #1926f8; }
+  background-color: #1c26cc; }
 
 .home--top--bg {
-  background-color: #1926f8;
+  background-color: #1c26cc;
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -1488,7 +1488,6 @@ nav {
   padding-top: 10%;
   padding-bottom: 5%; }
   .home--quote .title {
-    font-size: 3em;
     color: #19195e; }
   .home--quote p {
     font-size: 1.3em; }
@@ -1509,11 +1508,33 @@ nav {
     font-size: 3em;
     color: #333333; }
 
+.logowall .logowall--host {
+  margin: 2% 0; }
+  .logowall .logowall--host a {
+    display: block;
+    border: 1px solid #ededed;
+    padding: 15px;
+    margin: 15px;
+    transition: .3s linear; }
+    .logowall .logowall--host a:hover, .logowall .logowall--host a:focus {
+      border: 1px solid #e000a9; }
+.logowall .logowall--img {
+  min-height: 100px;
+  width: 300px; }
+.logowall .modal-content {
+  padding-bottom: 20px; }
+  .logowall .modal-content .close {
+    font-size: 2.5rem;
+    padding: .5rem 1rem; }
+  .logowall .modal-content .logowall--img {
+    margin: 15px;
+    max-width: 300px; }
+
 .footer {
   position: relative;
   padding-top: 200px;
   padding-bottom: 2%;
-  background: #040a74 url("../img/bg-twinkle.png") repeat 100% 100%;
+  background: #0a0d45 url("../img/bg-twinkle.png") repeat 100% 100%;
   overflow: hidden; }
   @media (max-width: 991px) {
     .footer {
@@ -1598,7 +1619,7 @@ nav {
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: #1926f8;
+  background-color: #1c26cc;
   background-image: url(../img/content-kv.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -1610,7 +1631,7 @@ nav {
   @media (max-width: 767px) {
     .content.content--kv {
       background-size: 101%;
-      background-color: #1926f8;
+      background-color: #1c26cc;
       border: none; } }
   .content.content--kv:after {
     content: '';

@@ -762,7 +762,7 @@
     padding-top: 10%;
     padding-bottom: 5%;
     .title {
-        font-size: 3em;
+        // font-size: 3em;
         color: $font-color-dark-blue;
     }
     p { font-size: 1.3em;}
@@ -790,6 +790,33 @@
         color: #333333;
     }
 }
+
+
+.logowall {
+    .logowall--host { margin: 2% 0;
+        a { 
+            display: block;
+            border: 1px solid #ededed;
+            padding: 15px;
+            margin: 15px;
+            transition: .3s linear;
+            &:hover, &:focus { border: 1px solid $font-color-pink; }
+        }
+    }
+    .logowall-title {}
+    .logowall--img { min-height: 100px; width: 300px;}
+
+    // lightbox modal
+    .modal-content {
+        padding-bottom: 20px;
+        .close { 
+            font-size: 2.5rem;
+            padding: .5rem 1rem;
+        }
+        .logowall--img { margin: 15px; max-width: 300px;}
+    }
+}
+
 
 
 .footer {
