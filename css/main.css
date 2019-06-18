@@ -258,7 +258,7 @@ ORDER:base+typography > general layout + grid>page layout >components
 .loading__dot {
   position: absolute;
   top: 120%;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -393,7 +393,8 @@ h2 {
   font-size: 32px; }
 
 h3 {
-  font-size: 30px; }
+  font-size: 30px;
+  line-height: 1.3; }
 
 h4 {
   font-size: 24px; }
@@ -483,13 +484,16 @@ section {
   @media (max-width: 767px) {
     section {
       padding: 1.2% 0; } }
+  section .ul {
+    padding-left: 18px; }
   section .ul li {
     margin-bottom: 1em; }
     section .ul li:before {
       content: '•';
       position: absolute;
-      font-size: 30px;
-      left: -.8%;
+      font-size: 20px;
+      left: 18px;
+      line-height: 1.4;
       color: #333333; }
   section:last-of-type {
     margin-bottom: 0; }
@@ -535,7 +539,7 @@ nav {
 
 @media (max-width: 991px) {
   .fixed-top {
-    background-color: #040a74;
+    background-color: #0a0d45;
     min-height: 65px; } }
 
 .navbar--logo {
@@ -543,8 +547,7 @@ nav {
   transition: all .3s ease; }
 
 .menu--scroll {
-  background-color: #040a74;
-  box-shadow: 0px 3px 8px #040a74; }
+  background-color: #0a0d45; }
   .menu--scroll .navbar--logo {
     display: inline-block; }
 
@@ -581,7 +584,7 @@ nav {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #1926f8;
+  background-color: #1c26cc;
   z-index: 9999;
   opacity: 1;
   -webkit-transition: .5s linear;
@@ -795,16 +798,16 @@ nav {
   color: #fff !important; }
 
 .btn--stop {
-  background: #1926f8;
+  background: #1c26cc;
   color: #fff !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
 
 .btn--undo {
-  background: #1926f8;
-  border: 1px solid #1926f8;
-  color: #1926f8 !important;
+  background: #1c26cc;
+  border: 1px solid #1c26cc;
+  color: #1c26cc !important;
   user-select: none;
   touch-action: manipulation;
   cursor: not-allowed; }
@@ -896,10 +899,10 @@ nav {
   padding: 1em 3em; }
 
 .bg--blue--default {
-  background-color: #1926f8; }
+  background-color: #1c26cc; }
 
 .home--top--bg {
-  background-color: #1926f8;
+  background-color: #1c26cc;
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -950,15 +953,24 @@ nav {
     top: 1em;
     width: 70%;
     left: 0;
-    z-index: -3;
+    z-index: -4;
     animation: float-star01 60s infinite; }
   .home--kv--bg--star--r {
     position: absolute;
-    top: 1em;
-    width: 100%;
+    top: 0;
+    width: 80%;
     right: 0;
-    z-index: -2;
+    z-index: -4;
     animation: float-star02 50s infinite; }
+  .home--kv--bg--cloud {
+    background: url("../img/bg-twinkling.png") repeat;
+    width: 104%;
+    height: 600px;
+    left: 0;
+    top: -80px;
+    position: absolute;
+    z-index: -3;
+    animation: float-star01 15s alternate infinite; }
   .home--kv--bg--deco1 {
     position: absolute;
     width: 80%;
@@ -1099,11 +1111,9 @@ nav {
     z-index: -2; }
 
 .home--intro {
-  background: url("../img/home--intro--bg.png") no-repeat top left;
-  background-size: 99%;
   margin: 0;
   margin-bottom: -1px;
-  padding: 1% 0 20%;
+  padding: 1% 0 16%;
   top: 0; }
   @media (max-width: 1459px) {
     .home--intro {
@@ -1111,13 +1121,6 @@ nav {
   @media (max-width: 1365px) {
     .home--intro {
       background: #ffffff; } }
-  .home--intro:after {
-    content: '';
-    background-color: #fff;
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    bottom: -50px; }
   .home--intro--left {
     z-index: 2; }
     .home--intro--left--bg {
@@ -1126,31 +1129,26 @@ nav {
       top: 0;
       left: 0;
       z-index: 1; }
-      @media (max-width: 1365px) {
-        .home--intro--left--bg {
-          display: none; } }
       .home--intro--left--bg--planet {
         position: absolute;
         z-index: 1;
-        width: 13%;
-        left: 10%;
-        top: 45%;
-        animation: float-top 5s alternate infinite; }
-        @media (max-width: 1365px) {
+        width: 16%;
+        left: 114px;
+        bottom: -108px;
+        opacity: 0.8; }
+        @media (max-width: 1729px) {
           .home--intro--left--bg--planet {
-            display: none;
-            animation-play-state: paused; } }
+            display: none; } }
       .home--intro--left--bg--planet2 {
         position: absolute;
         z-index: 1;
-        top: 60%;
-        left: 55%;
-        width: 10%;
-        animation: float-top 5s alternate infinite; }
-        @media (max-width: 575px) {
+        top: 89%;
+        left: -9%;
+        width: 5%;
+        opacity: 0.8; }
+        @media (max-width: 1729px) {
           .home--intro--left--bg--planet2 {
-            display: none;
-            animation-play-state: paused; } }
+            display: none; } }
     .home--intro--left--cover {
       background: url("../img/home--intro--cover.svg") no-repeat;
       background-size: 101%;
@@ -1170,25 +1168,14 @@ nav {
         top: -1px;
         left: 0;
         width: 100%;
-        height: 60vh;
-        z-index: 4;
-        display: none; }
-        @media (max-width: 1365px) {
-          .home--intro--left--cover--mini {
-            display: block; } }
+        height: 100vh; }
         @media (max-width: 991px) {
           .home--intro--left--cover--mini {
             opacity: 0.2; } }
   .home--intro--right {
     position: relative;
     z-index: 4;
-    margin-bottom: 15vh; }
-    @media (max-width: 1199px) {
-      .home--intro--right {
-        margin-bottom: 8vh; } }
-    @media (max-width: 767px) {
-      .home--intro--right {
-        margin-bottom: 0; } }
+    margin-top: 100px; }
 
 @media (max-width: 767px) {
   .mt50-xs {
@@ -1488,7 +1475,6 @@ nav {
   padding-top: 10%;
   padding-bottom: 5%; }
   .home--quote .title {
-    font-size: 3em;
     color: #19195e; }
   .home--quote p {
     font-size: 1.3em; }
@@ -1509,11 +1495,33 @@ nav {
     font-size: 3em;
     color: #333333; }
 
+.logowall .logowall--host {
+  margin: 2% 0; }
+  .logowall .logowall--host a {
+    display: block;
+    border: 1px solid #ededed;
+    padding: 15px;
+    margin: 15px;
+    transition: .3s linear; }
+    .logowall .logowall--host a:hover, .logowall .logowall--host a:focus {
+      border: 1px solid #e000a9; }
+.logowall .logowall--img {
+  min-height: 100px;
+  width: 300px; }
+.logowall .modal-content {
+  padding-bottom: 20px; }
+  .logowall .modal-content .close {
+    font-size: 2.5rem;
+    padding: .5rem 1rem; }
+  .logowall .modal-content .logowall--img {
+    margin: 15px;
+    max-width: 300px; }
+
 .footer {
   position: relative;
   padding-top: 200px;
   padding-bottom: 2%;
-  background: #040a74 url("../img/bg-twinkle.png") repeat 100% 100%;
+  background: #0a0d45 url("../img/bg-twinkle.png") repeat 100% 100%;
   overflow: hidden; }
   @media (max-width: 991px) {
     .footer {
@@ -1598,7 +1606,7 @@ nav {
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: #1926f8;
+  background-color: #1c26cc;
   background-image: url(../img/content-kv.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -1610,7 +1618,7 @@ nav {
   @media (max-width: 767px) {
     .content.content--kv {
       background-size: 101%;
-      background-color: #1926f8;
+      background-color: #1c26cc;
       border: none; } }
   .content.content--kv:after {
     content: '';

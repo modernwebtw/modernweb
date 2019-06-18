@@ -1,3 +1,6 @@
+// 
+
+
 // footer alien
 .bounce {
     animation: bounce 3s linear infinite;
@@ -10,14 +13,6 @@
         animation-timing-function: cubic-bezier(.755,.05,.855,.06);
         transform: translate3d(0,-15px,10%)
     }
-
-    // 40% {
-    //     -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-    //     -webkit-transform: translate3d(0,-30px,0);
-    //     animation-timing-function: cubic-bezier(.755,.05,.855,.06);
-    //     transform: translate3d(0,-30px,0)
-    // }
-
     70% {
         
         -webkit-transform: translate3d(0,-4px,0);
@@ -404,7 +399,7 @@
 .loading__dot {
     position: absolute;
     top: 120%;
-    left: 50%;
+    left: 40%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -488,7 +483,9 @@
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s
 }
-
+// loading end
+// 
+// 
 // fly-in effect
 
 .fly-in {
@@ -535,5 +532,3 @@
 }
 
 
-
-// loading end
