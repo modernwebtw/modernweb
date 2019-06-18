@@ -544,8 +544,7 @@ nav {
   transition: all .3s ease; }
 
 .menu--scroll {
-  background-color: #0a0d45;
-  box-shadow: 0px 3px 8px #0a0d45; }
+  background-color: #0a0d45; }
   .menu--scroll .navbar--logo {
     display: inline-block; }
 
@@ -951,15 +950,25 @@ nav {
     top: 1em;
     width: 70%;
     left: 0;
-    z-index: -3;
+    z-index: -4;
     animation: float-star01 60s infinite; }
   .home--kv--bg--star--r {
     position: absolute;
-    top: 1em;
-    width: 100%;
+    top: 0;
+    width: 80%;
     right: 0;
-    z-index: -2;
+    z-index: -4;
     animation: float-star02 50s infinite; }
+  .home--kv--bg--cloud {
+    background: url("../img/bg-twinkling.png") repeat;
+    width: 104%;
+    height: 600px;
+    left: 0;
+    top: -80px;
+    position: absolute;
+    z-index: -3;
+    opacity: .9;
+    animation: float-star01 10s alternate infinite; }
   .home--kv--bg--deco1 {
     position: absolute;
     width: 80%;
@@ -1125,7 +1134,7 @@ nav {
         left: 114px;
         bottom: -108px;
         opacity: 0.8; }
-        @media (max-width: 1365px) {
+        @media (max-width: 1729px) {
           .home--intro--left--bg--planet {
             display: none; } }
       .home--intro--left--bg--planet2 {
@@ -1135,7 +1144,7 @@ nav {
         left: -9%;
         width: 5%;
         opacity: 0.8; }
-        @media (max-width: 575px) {
+        @media (max-width: 1729px) {
           .home--intro--left--bg--planet2 {
             display: none; } }
     .home--intro--left--cover {

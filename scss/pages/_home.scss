@@ -59,17 +59,28 @@
         top: 1em;
         width: 70%;
         left: 0;
-        z-index: -3;
+        z-index: -4;
         animation: float-star01 60s infinite;
     }
 
     &--bg--star--r {
         position: absolute;
-        top: 1em;
-        width: 100%;
+        top: 0;
+        width: 80%;
         right: 0;
-        z-index: -2;
+        z-index: -4;
         animation: float-star02 50s infinite;
+    }
+    &--bg--cloud {
+        background: url('../img/bg-twinkling.png') repeat;
+        width: 104%;
+        height: 600px;
+        left: 0;
+        top: -80px;
+        position: absolute;
+        z-index: -3;
+        opacity: .9;
+        animation: float-star01 10s alternate infinite;
     }
     &--bg--deco1 {
         position: absolute;
@@ -100,14 +111,12 @@
         width: 10em;
         right: 0;
     }
-
     &--deco--planet--orange {
         position: absolute;
         top: 16em;
         width: 3em;
         left: 4em;
     }
-
     &--logo {
         position: absolute;
         top: 40px;
@@ -281,7 +290,7 @@
                 left: 114px;
                 bottom: -108px;
                 opacity: 0.8;
-                @include media('<1366px'){
+                @include media('<1730px'){
                     display: none;
                 }
             }
@@ -292,7 +301,7 @@
                 left: -9%;
                 width: 5%;
                 opacity: 0.8;
-                @include media('<576px'){
+                @include media('<1730px'){
                     display: none;
                 }
             }
