@@ -1171,7 +1171,11 @@ nav {
         height: 100vh; }
         @media (max-width: 991px) {
           .home--intro--left--cover--mini {
-            opacity: 0.2; } }
+            opacity: 0.15; } }
+        @media (max-width: 666px) {
+          .home--intro--left--cover--mini {
+            opacity: 0.1;
+            background-size: cover; } }
   .home--intro--right {
     position: relative;
     z-index: 4;
