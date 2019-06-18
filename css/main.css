@@ -967,8 +967,7 @@ nav {
     top: -80px;
     position: absolute;
     z-index: -3;
-    opacity: .9;
-    animation: float-star01 10s alternate infinite; }
+    animation: float-star01 15s alternate infinite; }
   .home--kv--bg--deco1 {
     position: absolute;
     width: 80%;
