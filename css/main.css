@@ -923,10 +923,10 @@ nav {
       top: 50px; } }
   @media (max-width: 639px) {
     .home--kv {
-      min-height: 57vh; } }
+      min-height: 45vh; } }
   @media (max-width: 479px) {
     .home--kv {
-      min-height: 52vh; } }
+      min-height: 40vh; } }
   .home--kv--wrapper {
     position: relative; }
     @media (max-width: 767px) {
@@ -1539,7 +1539,8 @@ nav {
     @media (max-width: 991px) {
       .footer:after {
         bottom: -98px;
-        height: 98px; } }
+        height: 110px;
+        top: -10px; } }
   .footer--logo {
     border-bottom: 1px solid #9494e2;
     padding-bottom: 2em;
