@@ -484,13 +484,16 @@ section {
   @media (max-width: 767px) {
     section {
       padding: 1.2% 0; } }
+  section .ul {
+    padding-left: 18px; }
   section .ul li {
     margin-bottom: 1em; }
     section .ul li:before {
       content: '•';
       position: absolute;
-      font-size: 30px;
-      left: -.8%;
+      font-size: 20px;
+      left: 18px;
+      line-height: 1.4;
       color: #333333; }
   section:last-of-type {
     margin-bottom: 0; }
