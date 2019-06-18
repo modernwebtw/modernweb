@@ -20,10 +20,10 @@
         top: 50px;
     }
     @include media('<640px') {
-        min-height: 57vh;
+        min-height: 45vh;
     }
     @include media('<480px') {
-        min-height: 52vh;
+        min-height: 40vh;
     }
     // &:after {
     //     content: '';
@@ -815,7 +815,8 @@
         z-index: 10;
         @include media('<992px'){
             bottom: -98px;
-            height: 98px;
+            height: 110px;
+            top: -10px;
         }
     }
     &--logo {
