@@ -258,7 +258,7 @@ ORDER:base+typography > general layout + grid>page layout >components
 .loading__dot {
   position: absolute;
   top: 120%;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
