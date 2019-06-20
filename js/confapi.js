@@ -3,7 +3,7 @@ var confapi = confapi || (function() {
     var Domain = 'https://confapi.ithome.com.tw';
     var currentData = document.currentScript || {};
     currentData = currentData.dataset || {};
-    var NID = currentData.nid || 5931;
+    var NID = currentData.nid || 6270;
     var LOG = currentData.log || false;
     var CACHE = {};
     // private method

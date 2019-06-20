@@ -778,6 +778,7 @@
             border: 1px solid #ededed;
             padding: 15px;
             margin: 15px;
+            flex: 0 0 330px;
             transition: .3s linear;
             &:hover, &:focus { border: 1px solid $font-color-pink; }
         }

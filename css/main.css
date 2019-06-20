@@ -1506,6 +1506,7 @@ nav {
     border: 1px solid #ededed;
     padding: 15px;
     margin: 15px;
+    flex: 0 0 330px;
     transition: .3s linear; }
     .logowall .logowall--host a:hover, .logowall .logowall--host a:focus {
       border: 1px solid #e000a9; }
