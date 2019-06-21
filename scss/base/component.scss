@@ -300,6 +300,7 @@
 .deco-title {
     text-align: center;
     position: relative;
+    color: $font-color-dark-blue;
     &:before {
         content: '';
         background: url('../img/deco-title.svg') no-repeat;
@@ -366,5 +367,9 @@
 .bg--blue--default {
     background-color: $bg-blue;
 }
+
+.mt10 { margin-top: 10px;}
+.mt20 { margin-top: 20px;}
+.mt30 { margin-top: 30px;}
 
 // ************* 2019 theme *************** //

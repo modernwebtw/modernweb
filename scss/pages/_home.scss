@@ -740,10 +740,6 @@
     margin: 0;
     padding-top: 10%;
     padding-bottom: 5%;
-    .title {
-        // font-size: 3em;
-        color: $font-color-dark-blue;
-    }
     p { font-size: 1.3em;}
     .carousel-item {
         width: 70%;
@@ -797,6 +793,57 @@
 }
 
 
+.home--speaker--cn {
+    .speaker--cn--sub--title {
+            margin-top: 5px;
+            padding: 15px;
+        h4 {}
+        .title {text-align: left; margin-top: 10px;}
+        .sub-title { font-size: 18px;}
+    }
+    .speaker--cn--producer {
+        padding: 15px;
+        &--img { border: 3px solid $bg-blue; border-radius: 50%; max-width: 140px;}
+        &--desc {
+            &--name { margin-bottom: 5px; font-weight: 500;}
+            &--sub {}
+        }
+    }
+    .speaker--cn--item {
+        padding: 15px;
+        text-align: center;
+        &--img { 
+            // 舊的 border: 4px solid $bg-blue; max-width: 220px;
+            
+            //   #Pseudo-Elements >> https://css-tricks.com/animating-border/
+            //   position: relative;
+            //   margin: 0.5em;
+            //   border: 5px solid transparent;
+            //   background: $bg-blue;
+            //   border-radius: 50%;
+            //   &:after {
+            //   content: '';
+            //   display: block;
+            //   position: absolute;
+            //   top: 0; right: 0; bottom: 0; left: 0;
+            //   border: 10px solid #FC5185;
+            //   margin: -15px;
+            //   z-index: -1;
+            //   transition: transform 0.6s linear;
+            //   transform: scale(0.97, 0.93);
+            // }
+            // &:hover::after { transform: scale(1,1); }
+        }
+        &--desc {
+            &--title { 
+            }
+            &--name { margin-bottom: 5px; font-weight: 500;}
+            &--sub {}
+        }
+    }
+}
+
+.home--speaker {}
 
 .footer {
     position: relative;

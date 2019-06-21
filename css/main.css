@@ -839,7 +839,8 @@ nav {
 
 .deco-title {
   text-align: center;
-  position: relative; }
+  position: relative;
+  color: #19195e; }
   .deco-title:before {
     content: '';
     background: url("../img/deco-title.svg") no-repeat;
@@ -900,6 +901,15 @@ nav {
 
 .bg--blue--default {
   background-color: #1c26cc; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt30 {
+  margin-top: 30px; }
 
 .home--top--bg {
   background-color: #1c26cc;
@@ -1478,8 +1488,6 @@ nav {
   margin: 0;
   padding-top: 10%;
   padding-bottom: 5%; }
-  .home--quote .title {
-    color: #19195e; }
   .home--quote p {
     font-size: 1.3em; }
   .home--quote .carousel-item {
@@ -1520,6 +1528,30 @@ nav {
   .logowall .modal-content .logowall--img {
     margin: 15px;
     max-width: 300px; }
+
+.home--speaker--cn .speaker--cn--sub--title {
+  margin-top: 5px;
+  padding: 15px; }
+  .home--speaker--cn .speaker--cn--sub--title .title {
+    text-align: left;
+    margin-top: 10px; }
+  .home--speaker--cn .speaker--cn--sub--title .sub-title {
+    font-size: 18px; }
+.home--speaker--cn .speaker--cn--producer {
+  padding: 15px; }
+  .home--speaker--cn .speaker--cn--producer--img {
+    border: 3px solid #1c26cc;
+    border-radius: 50%;
+    max-width: 140px; }
+  .home--speaker--cn .speaker--cn--producer--desc--name {
+    margin-bottom: 5px;
+    font-weight: 500; }
+.home--speaker--cn .speaker--cn--item {
+  padding: 15px;
+  text-align: center; }
+  .home--speaker--cn .speaker--cn--item--desc--name {
+    margin-bottom: 5px;
+    font-weight: 500; }
 
 .footer {
   position: relative;
