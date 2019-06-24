@@ -467,9 +467,10 @@
     border: 3px solid lighten($font-color-pink,10%);
     border-radius: 10px;
     max-width: 827px;
-    margin: 60px auto 4%;
+    margin: 2% auto 4%;
     padding: 15px;
     min-height: 100px;
+    padding-top: 40px;
     @include media('<1400px'){
         max-width: 627px;
     }
@@ -477,11 +478,12 @@
         margin: 2%;
         margin-top: 40px;
         max-width: 96%;
+        padding-top: 15px;
     }
     &__title {
         position: absolute;
         left: calc(50% - 230px);
-        top: -40px;
+        top: -50px;
         background-color: #ffffff;
         padding: 0 15px 10px;
         @include media('<=480px'){
@@ -493,7 +495,7 @@
         }
         h3 {
             color: lighten($font-color-pink,10%);
-            line-height: 1em;
+            line-height: 1.3em;
             font-size: 24px;
             margin-left: 0;
             font-weight: 400;
@@ -528,5 +530,18 @@
     }
 }
 
+// 企業團購票
+.tickets .ticket__item__corporate {
+    margin: 1% auto 4%;
+    @include media('<=768px'){
+        margin-top: 8%;
+    }
+    &__title {
+        left: calc(50% - 80px);
+        @include media('<=480px'){
+            left: 5%;
+        }
+    }
+}
 
-/* 內容頁 tickets end  */
+/* 內容頁 tickets end */
