@@ -803,6 +803,8 @@
     }
     .speaker--cn--producer {
         padding: 15px;
+        background: #f3f3f3;
+        border-radius: 20px;
         &--img { border: 3px solid $bg-blue; border-radius: 50%; max-width: 140px;}
         &--desc {
             &--name { margin-bottom: 5px; font-weight: 500;}
@@ -812,27 +814,13 @@
     .speaker--cn--item {
         padding: 15px;
         text-align: center;
+        max-width: 300px;
         &--img { 
-            // 舊的 border: 4px solid $bg-blue; max-width: 220px;
-            
-            //   #Pseudo-Elements >> https://css-tricks.com/animating-border/
-            //   position: relative;
-            //   margin: 0.5em;
-            //   border: 5px solid transparent;
-            //   background: $bg-blue;
-            //   border-radius: 50%;
-            //   &:after {
-            //   content: '';
-            //   display: block;
-            //   position: absolute;
-            //   top: 0; right: 0; bottom: 0; left: 0;
-            //   border: 10px solid #FC5185;
-            //   margin: -15px;
-            //   z-index: -1;
-            //   transition: transform 0.6s linear;
-            //   transform: scale(0.97, 0.93);
-            // }
-            // &:hover::after { transform: scale(1,1); }
+            position: relative;
+            margin: 0.5em;
+            border: 3px solid transparent;
+            background: #1c26cc;
+            border-radius: 50%;
         }
         &--desc {
             &--title { 
@@ -843,7 +831,29 @@
     }
 }
 
-.home--speaker {}
+.home--speaker {
+    .speaker--item {
+        display: flex;
+        justify-content: center;
+        @include media('<576px'){
+            flex-direction: column;
+        }
+        &--img {
+            text-align: center;
+            overflow: hidden;
+            margin: 0 2%;
+            max-width: 300px;
+            img { 
+                border: 3px solid #1c26cc;
+                border-radius: 50%;
+            }
+        }
+        &--desc--name {}
+        &--desc--sub {}
+        &--desc--btn { }
+        
+    }
+}
 
 .footer {
     position: relative;

@@ -1538,7 +1538,9 @@ nav {
   .home--speaker--cn .speaker--cn--sub--title .sub-title {
     font-size: 18px; }
 .home--speaker--cn .speaker--cn--producer {
-  padding: 15px; }
+  padding: 15px;
+  background: #f3f3f3;
+  border-radius: 20px; }
   .home--speaker--cn .speaker--cn--producer--img {
     border: 3px solid #1c26cc;
     border-radius: 50%;
@@ -1548,10 +1550,32 @@ nav {
     font-weight: 500; }
 .home--speaker--cn .speaker--cn--item {
   padding: 15px;
-  text-align: center; }
+  text-align: center;
+  max-width: 300px; }
+  .home--speaker--cn .speaker--cn--item--img {
+    position: relative;
+    margin: 0.5em;
+    border: 3px solid transparent;
+    background: #1c26cc;
+    border-radius: 50%; }
   .home--speaker--cn .speaker--cn--item--desc--name {
     margin-bottom: 5px;
     font-weight: 500; }
+
+.home--speaker .speaker--item {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 575px) {
+    .home--speaker .speaker--item {
+      flex-direction: column; } }
+  .home--speaker .speaker--item--img {
+    text-align: center;
+    overflow: hidden;
+    margin: 0 2%;
+    max-width: 300px; }
+    .home--speaker .speaker--item--img img {
+      border: 3px solid #1c26cc;
+      border-radius: 50%; }
 
 .footer {
   position: relative;
