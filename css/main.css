@@ -902,6 +902,9 @@ nav {
 .bg--blue--default {
   background-color: #1c26cc; }
 
+.highlight {
+  color: #000fb9; }
+
 .mt10 {
   margin-top: 10px; }
 
@@ -1514,6 +1517,7 @@ nav {
     border: 1px solid #ededed;
     padding: 15px;
     margin: 15px;
+    flex: 0 0 330px;
     transition: .3s linear; }
     .logowall .logowall--host a:hover, .logowall .logowall--host a:focus {
       border: 1px solid #e000a9; }
@@ -2093,9 +2097,10 @@ nav {
   border: 3px solid #ff14c5;
   border-radius: 10px;
   max-width: 827px;
-  margin: 60px auto 4%;
+  margin: 2% auto 4%;
   padding: 15px;
-  min-height: 100px; }
+  min-height: 100px;
+  padding-top: 40px; }
   @media (max-width: 1399px) {
     .tickets .ticket__item__together {
       max-width: 627px; } }
@@ -2103,11 +2108,12 @@ nav {
     .tickets .ticket__item__together {
       margin: 2%;
       margin-top: 40px;
-      max-width: 96%; } }
+      max-width: 96%;
+      padding-top: 15px; } }
   .tickets .ticket__item__together__title {
     position: absolute;
     left: calc(50% - 230px);
-    top: -40px;
+    top: -50px;
     background-color: #ffffff;
     padding: 0 15px 10px; }
     @media (max-width: 480px) {
@@ -2119,7 +2125,7 @@ nav {
         width: 90%; } }
     .tickets .ticket__item__together__title h3 {
       color: #ff14c5;
-      line-height: 1em;
+      line-height: 1.3em;
       font-size: 24px;
       margin-left: 0;
       font-weight: 400; }
@@ -2144,6 +2150,17 @@ nav {
       margin: 10px;
       transition: all .3s linear; }
 
-/* 內容頁 tickets end  */
+.tickets .ticket__item__corporate {
+  margin: 1% auto 4%; }
+  @media (max-width: 768px) {
+    .tickets .ticket__item__corporate {
+      margin-top: 8%; } }
+  .tickets .ticket__item__corporate__title {
+    left: calc(50% - 80px); }
+    @media (max-width: 480px) {
+      .tickets .ticket__item__corporate__title {
+        left: 5%; } }
+
+/* 內容頁 tickets end */
 
 /*# sourceMappingURL=main.css.map */
