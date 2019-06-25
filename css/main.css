@@ -1726,8 +1726,21 @@ nav {
         .home--speaker .speaker--item--desc--name:hover i {
           transform: translateX(10px); }
       .home--speaker .speaker--item--desc--name.workshop:before {
-        content: 'workshop';
+        content: 'Workshop';
         background-color: #689243;
+        text-align: center;
+        padding: 6px;
+        font-size: 16px;
+        letter-spacing: .5px;
+        width: 100px;
+        left: -30px;
+        top: -20px;
+        /* transform: rotate(-20deg); */
+        position: absolute;
+        border-radius: 10px; }
+      .home--speaker .speaker--item--desc--name.session:before {
+        content: 'Session';
+        background-color: #aaaaaa;
         text-align: center;
         padding: 6px;
         font-size: 16px;

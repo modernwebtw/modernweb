@@ -996,8 +996,22 @@
                     i {transform: translateX(10px);}
                 }
                 &.workshop:before {
-                    content:'workshop';
+                    content:'Workshop';
                     background-color: $bg-workshop;
+                    text-align: center;
+                    padding: 6px;
+                    font-size: 16px;
+                    letter-spacing: .5px;
+                    width: 100px;
+                    left: -30px;
+                    top: -20px;
+                    /* transform: rotate(-20deg); */
+                    position: absolute;
+                    border-radius: 10px;
+                }
+                &.session:before {
+                    content:'Session';
+                    background-color: $bg-session;
                     text-align: center;
                     padding: 6px;
                     font-size: 16px;
