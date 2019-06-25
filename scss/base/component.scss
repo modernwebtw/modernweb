@@ -275,6 +275,7 @@
     letter-spacing: 4px;
     @include media("<992px") {
         font-size: 28px;
+        letter-spacing: 2px;
     }
         span {
             font-size: 28px;
@@ -373,4 +374,6 @@
 .mt30 { margin-top: 30px;}
 
 .highlight { color: $font-color-md-blue;}
+
+.flex-column-sm{ @include media('<1024px'){flex-direction: column;} }
 // ************* 2019 theme *************** //

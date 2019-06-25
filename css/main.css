@@ -479,11 +479,11 @@ footer {
   position: relative; }
 
 section {
-  padding: 1.2% 1% 1.2% 0%;
+  padding: 1.2% 1% 80px 0%;
   margin: 3% 0 4% 0; }
   @media (max-width: 767px) {
     section {
-      padding: 1.2% 0; } }
+      padding: 60px 0 1.2% 0; } }
   section .ul {
     padding-left: 18px; }
   section .ul li {
@@ -819,7 +819,8 @@ nav {
   letter-spacing: 4px; }
   @media (max-width: 991px) {
     .title {
-      font-size: 28px; } }
+      font-size: 28px;
+      letter-spacing: 2px; } }
   .title span {
     font-size: 28px;
     color: #333333;
@@ -902,9 +903,6 @@ nav {
 .bg--blue--default {
   background-color: #1c26cc; }
 
-.highlight {
-  color: #000fb9; }
-
 .mt10 {
   margin-top: 10px; }
 
@@ -913,6 +911,13 @@ nav {
 
 .mt30 {
   margin-top: 30px; }
+
+.highlight {
+  color: #000fb9; }
+
+@media (max-width: 1023px) {
+  .flex-column-sm {
+    flex-direction: column; } }
 
 .home--top--bg {
   background-color: #1c26cc;
@@ -929,11 +934,13 @@ nav {
   margin: 0;
   min-height: 58vh;
   top: 80px;
+  padding-top: 0;
   font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
   background: url("../img/bg-twinkle2.png") repeat; }
   @media (max-width: 767px) {
     .home--kv {
-      top: 50px; } }
+      top: 50px;
+      padding-top: 0; } }
   @media (max-width: 639px) {
     .home--kv {
       min-height: 45vh; } }
@@ -1538,7 +1545,7 @@ nav {
   padding: 15px; }
   .home--speaker--cn .speaker--cn--sub--title .title {
     text-align: left;
-    margin-top: 10px; }
+    margin: 10px; }
   .home--speaker--cn .speaker--cn--sub--title .sub-title {
     font-size: 18px; }
 .home--speaker--cn .speaker--cn--producer {
@@ -1546,12 +1553,18 @@ nav {
   background: #f3f3f3;
   border-radius: 20px; }
   .home--speaker--cn .speaker--cn--producer--img {
-    border: 3px solid #1c26cc;
+    border: 5px solid #de9372;
     border-radius: 50%;
     max-width: 140px; }
-  .home--speaker--cn .speaker--cn--producer--desc--name {
-    margin-bottom: 5px;
-    font-weight: 500; }
+  .home--speaker--cn .speaker--cn--producer--desc {
+    position: relative; }
+    @media (max-width: 1023px) {
+      .home--speaker--cn .speaker--cn--producer--desc {
+        text-align: center; } }
+    .home--speaker--cn .speaker--cn--producer--desc--name {
+      margin-bottom: 5px;
+      font-weight: 500;
+      word-break: break-all; }
 .home--speaker--cn .speaker--cn--item {
   padding: 15px;
   text-align: center;
@@ -1559,27 +1572,172 @@ nav {
   .home--speaker--cn .speaker--cn--item--img {
     position: relative;
     margin: 0.5em;
-    border: 3px solid transparent;
-    background: #1c26cc;
-    border-radius: 50%; }
-  .home--speaker--cn .speaker--cn--item--desc--name {
-    margin-bottom: 5px;
-    font-weight: 500; }
-
-.home--speaker .speaker--item {
-  display: flex;
-  justify-content: center; }
-  @media (max-width: 575px) {
-    .home--speaker .speaker--item {
-      flex-direction: column; } }
-  .home--speaker .speaker--item--img {
-    text-align: center;
+    padding: 0px;
+    border: 10px solid transparent;
+    background: #de9372;
+    border-radius: 50%;
     overflow: hidden;
-    margin: 0 2%;
-    max-width: 300px; }
-    .home--speaker .speaker--item--img img {
-      border: 3px solid #1c26cc;
-      border-radius: 50%; }
+    transition: 0.3s ease; }
+    .home--speaker--cn .speaker--cn--item--img:hover {
+      border-width: 3px; }
+  .home--speaker--cn .speaker--cn--item--desc {
+    position: relative;
+    margin-top: 48px; }
+    .home--speaker--cn .speaker--cn--item--desc--name {
+      margin-bottom: 5px;
+      font-weight: 500;
+      background: #d47349;
+      padding: 10px;
+      border-radius: 10px;
+      position: absolute;
+      width: 90%;
+      bottom: 48px;
+      left: 5%;
+      color: #ffffff;
+      border: 5px solid #de9372;
+      border-top: 5px solid #f1d2c5;
+      border-bottom: 5px solid #7f3c1e; }
+
+.home--keynote--a {
+  display: block; }
+.home--keynote .keynote--item {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 3%;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s ease; }
+  @media (max-width: 575px) {
+    .home--keynote .keynote--item {
+      flex-direction: column;
+      background-color: #f3f3f3; } }
+  .home--keynote .keynote--item:hover {
+    cursor: pointer;
+    background: #ebf9ff; }
+    .home--keynote .keynote--item:hover .keynote--item--desc--btn i {
+      transform: translateX(5px); }
+  .home--keynote .keynote--item--img {
+    position: relative;
+    margin: 0.5em;
+    padding: 10px;
+    background: #1c26cc url("../img/bg-planet--l.svg") no-repeat center 100%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    flex-basis: 300px;
+    overflow: hidden; }
+    @media (max-width: 575px) {
+      .home--keynote .keynote--item--img {
+        margin: 0.5em auto; } }
+    .home--keynote .keynote--item--img img {
+      border-radius: 50%;
+      border: 10px solid transparent;
+      transition: 0.3s ease; }
+      .home--keynote .keynote--item--img img:hover {
+        border-width: 3px; }
+  .home--keynote .keynote--item--tag {
+    display: block;
+    margin: 10px 0;
+    font-weight: 500;
+    background: #ffaf5a;
+    padding: 6px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff; }
+  .home--keynote .keynote--item--desc--name {
+    margin-left: 3%;
+    word-break: break-all; }
+  .home--keynote .keynote--item--desc--sub {
+    margin-left: 3%; }
+  .home--keynote .keynote--item--desc--btn i {
+    width: 50px;
+    height: 50px;
+    line-height: 24px;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    border: 3px solid #333333;
+    padding: 10px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    transform: translateX(0); }
+
+.home--speaker--a {
+  display: block; }
+  .home--speaker--a:hover .speaker--item--img {
+    border-width: 3px; }
+  .home--speaker--a:hover .speaker--item--desc--name {
+    background: #5b65cf;
+    word-break: break-all; }
+.home--speaker .speaker--sub--title {
+  margin-top: 5px;
+  padding: 15px; }
+  .home--speaker .speaker--sub--title .title {
+    text-align: left;
+    margin-top: 10px; }
+  .home--speaker .speaker--sub--title .sub-title {
+    font-size: 18px; }
+.home--speaker .speaker--item {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  max-width: 300px; }
+  .home--speaker .speaker--item--img {
+    position: relative;
+    margin: 0.5em;
+    padding: 0px;
+    border: 10px solid transparent;
+    background: #5b65cf;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer; }
+    .home--speaker .speaker--item--img:hover {
+      border-width: 3px; }
+  .home--speaker .speaker--item--desc {
+    position: relative;
+    margin-top: 48px; }
+    .home--speaker .speaker--item--desc--name {
+      margin-bottom: 5px;
+      font-weight: 500;
+      background: #3844bf;
+      padding: 10px;
+      border-radius: 10px;
+      position: absolute;
+      width: 90%;
+      bottom: 48px;
+      left: 5%;
+      color: #ffffff;
+      word-break: break-all;
+      border: 5px solid #5b65cf;
+      border-top: 5px solid #aaafe6;
+      border-bottom: 5px solid #1b215c;
+      transition: 0.3s ease; }
+      .home--speaker .speaker--item--desc--name i {
+        transform: translateX(0); }
+      .home--speaker .speaker--item--desc--name:hover {
+        cursor: pointer;
+        background: #2c3698;
+        border: 5px solid #2c3698; }
+        .home--speaker .speaker--item--desc--name:hover i {
+          transform: translateX(10px); }
+      .home--speaker .speaker--item--desc--name.workshop:before {
+        content: 'workshop';
+        background-color: #689243;
+        text-align: center;
+        padding: 6px;
+        font-size: 16px;
+        letter-spacing: .5px;
+        width: 100px;
+        left: -30px;
+        top: -20px;
+        /* transform: rotate(-20deg); */
+        position: absolute;
+        border-radius: 10px; }
 
 .footer {
   position: relative;

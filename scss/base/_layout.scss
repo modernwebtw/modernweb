@@ -77,10 +77,10 @@ footer {
 }
 
 section {
-    padding: 1.2% 1% 1.2% 0%;
+    padding: 1.2% 1% 80px 0%;
     margin: 3% 0 4% 0;
     @include media("<=767px") {
-        padding: 1.2% 0;
+        padding: 60px 0 1.2% 0;
     }
     .ul { padding-left: 18px;}
     .ul li {
