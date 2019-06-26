@@ -458,9 +458,9 @@ ul li {
 
 a {
   transition: all .3s ease;
-  color: #a9e4fe; }
+  color: #1c26cc; }
   a:focus, a:hover {
-    color: white;
+    color: #646cea;
     text-decoration: none; }
 
 button,
@@ -530,6 +530,12 @@ nav {
     @media (max-width: 991px) {
       nav .nav-item {
         max-width: 100%; } }
+  nav a {
+    transition: all .3s ease;
+    color: #a9e4fe; }
+    nav a:focus, nav a:hover {
+      color: white;
+      text-decoration: none; }
 
 .navbar-nav .nav-link {
   animation: background .2s ease; }
@@ -1757,7 +1763,8 @@ nav {
   padding-top: 200px;
   padding-bottom: 2%;
   background: #0a0d45 url("../img/bg-twinkle.png") repeat 100% 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
   @media (max-width: 991px) {
     .footer {
       padding-top: 120px; } }
@@ -2333,5 +2340,80 @@ nav {
         left: 5%; } }
 
 /* 內容頁 tickets end */
+.speakers {
+  padding: 0;
+  margin: 0 0 300px 0;
+  position: relative;
+  width: 100%; }
+  .speakers:before {
+    content: '';
+    width: 100%;
+    background: #0a0d45;
+    height: 200px;
+    position: absolute;
+    top: 0; }
+  .speakers--banner {
+    overflow: hidden; }
+    .speakers--banner img {
+      position: relative;
+      margin-top: 80px;
+      display: block; }
+  .speakers--item {
+    padding: 2% 15px 1% 15px;
+    position: relative;
+    width: 100%;
+    margin-bottom: -1%; }
+    .speakers--item--head {
+      text-align: center; }
+      .speakers--item--head h3 {
+        margin: 20px 0 10px; }
+    .speakers--item--content {
+      text-align: left;
+      padding: 0 20px 20px;
+      font-size: 18px; }
+    .speakers--item--download {
+      width: 100%; }
+      @media (max-width: 768px) {
+        .speakers--item--download {
+          flex-direction: column; } }
+      .speakers--item--download--btn {
+        padding: 15px 0;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        border: 0px;
+        margin: 1% 0 1% 2%;
+        border-radius: 10px;
+        background-color: #1c26cc;
+        transition: .3s ease; }
+        .speakers--item--download--btn:hover, .speakers--item--download--btn:focus, .speakers--item--download--btn:active, .speakers--item--download--btn:visited {
+          background-color: #3741e4;
+          color: #ffffff;
+          opacity: 0.9; }
+    .speakers--item--intro {
+      padding: 1.5%;
+      margin: 5% 0 3% 5px;
+      background-color: #eeeeee;
+      border-radius: 20px; }
+      @media (max-width: 768px) {
+        .speakers--item--intro {
+          justify-content: center; } }
+      .speakers--item--intro--avatar {
+        overflow: hidden;
+        max-width: 250px;
+        text-align: center; }
+        .speakers--item--intro--avatar img {
+          border-radius: 50%;
+          display: inline-block;
+          width: 90%; }
+      .speakers--item--intro--desc {
+        padding: 10px; }
+        .speakers--item--intro--desc--name {
+          font-size: 28px; }
+          @media (max-width: 768px) {
+            .speakers--item--intro--desc--name {
+              text-align: center; } }
+        .speakers--item--intro--desc--p {
+          font-size: 18px; }
 
 /*# sourceMappingURL=main.css.map */

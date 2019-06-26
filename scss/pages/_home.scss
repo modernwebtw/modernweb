@@ -1036,6 +1036,7 @@
     padding-bottom: 2%;
     background: darken($bg-blue,30%)  url('../img/bg-twinkle.png') repeat 100% 100%;
     overflow: hidden;
+    width: 100%;
     @include media('<992px'){
         padding-top: 120px;
     }
