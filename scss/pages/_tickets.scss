@@ -471,8 +471,9 @@
     padding: 15px;
     min-height: 100px;
     padding-top: 40px;
-    @include media('<1400px'){
+    @include media('<1400px','>=480px'){
         max-width: 627px;
+        margin-bottom: 6%;
     }
     @include media('<768px'){
         margin: 2%;

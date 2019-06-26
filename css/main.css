@@ -2045,9 +2045,11 @@ nav {
   padding: 15px;
   min-height: 100px;
   padding-top: 40px; }
-  @media (max-width: 1399px) {
-    .tickets .ticket__item__together {
-      max-width: 627px; } }
+@media (max-width: 1399px) and (min-width: 480px) {
+  .tickets .ticket__item__together {
+    max-width: 627px;
+    margin-bottom: 6%; } }
+
   @media (max-width: 767px) {
     .tickets .ticket__item__together {
       margin: 2%;
