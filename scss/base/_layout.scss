@@ -55,8 +55,8 @@ ul li{ list-style: none;}
 
 a {
     transition: all .3s ease;
-    color: $font-color-light-blue;
-    &:focus, &:hover{color: lighten($font-color-light-blue,20%); text-decoration:none;}
+    color: $font-link-color;
+    &:focus, &:hover{color: lighten($font-link-color,20%); text-decoration:none;}
 }
 
 button,
@@ -77,10 +77,10 @@ footer {
 }
 
 section {
-    padding: 1.2% 1% 1.2% 0%;
+    padding: 1.2% 1% 80px 0%;
     margin: 3% 0 4% 0;
     @include media("<=767px") {
-        padding: 1.2% 0;
+        padding: 60px 0 1.2% 0;
     }
     .ul { padding-left: 18px;}
     .ul li {
@@ -129,6 +129,12 @@ nav {
         @include media("<992px"){
             max-width: 100%;
         }
+    }
+
+    a {
+        transition: all .3s ease;
+        color: $font-color-light-blue;
+        &:focus, &:hover{color: lighten($font-color-light-blue,20%); text-decoration:none;}
     }
 }
 .navbar-nav .nav-link {
