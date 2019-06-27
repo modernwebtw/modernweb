@@ -1,0 +1,4 @@
+- 2019命名全部都是以"--"連接
+- 首頁 = home
+- sliders show pluin: https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css
+- 使用bootstap 4
