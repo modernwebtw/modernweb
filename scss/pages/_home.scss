@@ -908,6 +908,11 @@
 
 // KEYNOTE
 .home--keynote {
+    @include media('>992px'){
+        background-color: #ffffff;
+        padding-top: 120px;
+        margin-top: -120px;
+    }
     &--a {display: block;}
     .keynote--item {
         display: flex;
