@@ -661,8 +661,8 @@
                 <h3 class="title deco-title">ModernWeb'19
                 </h3>
                 <h4 class="logowall-title text-center">主辦單位</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Host">
-                    <div class="col-sm-4 col-12 logowall--host d-flex justify-content-center">
+                <div class="row justify-content-center text-center">
+                    <div class="col-sm-4 col-12 logowall--host d-flex justify-content-center" v-for="sponsor in SponsorFilter.Host">
                         <a href="#" class="" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                             <img :src="sponsor.logo" alt="" class="img-fluid align-items-center logowall--img">
                         </a>
@@ -688,9 +688,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Diamond.length > 0">鑽石級</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Diamond">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Diamond.length > 0">鑽石級</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Diamond">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -718,9 +718,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Platinum.length > 0">白金級</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Platinum">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Platinum.length > 0">白金級</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Platinum">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -748,9 +748,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Gold.length > 0">黃金級</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Gold">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Gold.length > 0">黃金級</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Gold">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -778,9 +778,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Silver.length > 0">銀級</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Silver">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Silver.length > 0">銀級</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Silver">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -808,9 +808,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Bronze.length > 0">銅級</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Bronze">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Bronze.length > 0">銅級</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Bronze">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -838,9 +838,39 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Special.length > 0">企業團購</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Enterprise">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Enterprise.length > 0">企業團購</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Enterprise">
+                        <div class="row justify-content-center">
+                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                                <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
+                            </a>
+                        </div> -->
+                        <!-- Modal -->
+                        <!-- <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class=" ">
+                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
+                                        </div>
+                                        <h5>{{sponsor.alt_title}}</h5>
+                                        <div v-html="sponsor.description"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Modal -->
+                    </div>
+                </div>
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Promo.length > 0">共同推廣</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Promo">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -868,39 +898,9 @@
                         <!-- Modal -->
                     </div>
                 </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Promo.length > 0">共同推廣</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Promo">
-                    <div class="col-12 logowall--host">
-                        <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
-                                <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                            </a>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                    </div>
-                </div>
-                <h4 class="logowall-title text-center" v-if="!!SponsorFilter.Special.length > 0">特別感謝</h4>
-                <div class="row justify-content-center text-center" v-for="sponsor in SponsorFilter.Special">
-                    <div class="col-12 logowall--host">
+                <h4 class="logowall-title text-center" v-if="SponsorFilter.Special.length > 0">特別感謝</h4>
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Special">
                         <div class="row justify-content-center">
                             <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
@@ -973,7 +973,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js"></script>
+<script type="text/javascript" src="js/modernweb2019.js?0627"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/timeCountdown.js"></script>
 <script type="text/javascript">

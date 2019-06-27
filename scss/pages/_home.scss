@@ -820,11 +820,19 @@
             margin: 15px;
             flex: 0 0 330px;
             transition: .3s linear;
-            &:hover, &:focus { border: 1px solid $font-color-pink; }
+            color: $bg-blue;
+            &:hover, &:focus { border: 1px solid $font-color-pink; opacity: .8; }
+            @include media('<=1200px'){
+                flex: 0 0 1;
+            }
         }
     }
     .logowall-title {}
-    .logowall--img { min-height: 100px; width: 300px;}
+    .logowall--img { min-height: 100px; width: 300px;
+        @include media('<=1200px'){
+                width: 100%;
+            }
+    }
 
     // lightbox modal
     .modal-content {

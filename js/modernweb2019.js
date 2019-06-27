@@ -40,7 +40,7 @@ var modernweb2019 = new Vue({
                 Gold: this.filter(sponsor, 'rank', '黃金級', true),
                 Silver: this.filter(sponsor, 'rank', '銀級', true),
                 Bronze: this.filter(sponsor, 'rank', '銅級', true),
-                Entprise: this.filter(sponsor, 'rank', 'F級', true),
+                Enterprise: this.filter(sponsor, 'rank', 'F級', true),
                 Promo: this.filter(sponsor, 'rank', '資安共同推廣單位', true),
                 Special: this.filter(sponsor, 'rank', 'G級', true)
             }
