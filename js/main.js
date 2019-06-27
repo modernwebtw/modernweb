@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    // loading
+    $("#loading").hide();
 
     //window and animation items
     var animation_elements = $.find('.fly-in');
@@ -56,7 +58,7 @@ $(document).ready(function() {
 
     var $menu_target = (function() {
         return checkHasElm([
-            '#home--wave'
+            '#nav'
         ]);
     }());
 

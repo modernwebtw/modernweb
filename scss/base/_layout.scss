@@ -23,7 +23,6 @@ body {
 	color: $font-color;
 	font-size: 15px;
     overflow: hidden;
-    background-color: $bg-blue;
 	@include media("<=768px"){
 	min-height: 100%;
     background-color: #ffffff;
@@ -32,7 +31,7 @@ body {
 h1,h2,h3,h4,h5,h6{ color: $font-color; margin: 20px 0 10px;}
 h1 { font-size: 36px; margin-bottom: 40px; }
 h2 { font-size: 32px;}
-h3 { font-size: 30px;}
+h3 { font-size: 30px; line-height: 1.3;}
 h4 { font-size: 24px;}
 h5 { font-size: 22px; font-weight: 600;}
 h6 { font-size: 20px; font-weight: 600;}
@@ -83,13 +82,15 @@ section {
     @include media("<=767px") {
         padding: 1.2% 0;
     }
+    .ul { padding-left: 18px;}
     .ul li {
         margin-bottom: 1em;
         &:before {
             content: '•';
             position: absolute;
-            font-size: 30px;
-            left: -.8%;
+            font-size: 20px;
+            left: 18px;
+            line-height: 1.4;
             color: $font-color;
         }
     }
@@ -137,20 +138,21 @@ nav {
     background-color: $font-color-dark-blue;
 }
 .fixed-top { 
-    background-color: $bg-blue;
+    // background-color: $bg-blue;
     @include media("<992px"){
         background-color: darken($bg-blue,30%);
+        min-height: 65px;
     }
 }
 .navbar--logo { display: none; transition: all .3s ease;}
 
 // scroll menu
 .menu--scroll{
-    background-color: $bg-blue;
-    box-shadow: 0px 3px 8px #1926f8;
-    @include media("<992px"){
-        background-color: darken($bg-blue,30%);
-    }
+    background-color: darken($bg-blue,30%);
+    // box-shadow: 0px 3px 8px darken($bg-blue,30%);
+    // @include media("<992px"){
+    //     background-color: darken($bg-blue,30%);
+    // }
     .navbar--logo { display: inline-block;}
 }
 
@@ -193,7 +195,7 @@ nav {
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $bg-color2;
+    background-color: $bg-blue;
     z-index: 9999;
     opacity: 1;
     -webkit-transition: .5s linear;
