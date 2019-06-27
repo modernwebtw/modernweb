@@ -1513,9 +1513,15 @@ nav {
     transition: .3s linear; }
     .logowall .logowall--host a:hover, .logowall .logowall--host a:focus {
       border: 1px solid #e000a9; }
+    @media (max-width: 1200px) {
+      .logowall .logowall--host a {
+        flex: 0 0 1; } }
 .logowall .logowall--img {
   min-height: 100px;
   width: 300px; }
+  @media (max-width: 1200px) {
+    .logowall .logowall--img {
+      width: 100%; } }
 .logowall .modal-content {
   padding-bottom: 20px; }
   .logowall .modal-content .close {
