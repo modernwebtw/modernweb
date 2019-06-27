@@ -847,7 +847,8 @@ nav {
 .deco-title {
   text-align: center;
   position: relative;
-  color: #19195e; }
+  color: #19195e;
+  margin: 10px auto 20px; }
   .deco-title:before {
     content: '';
     background: url("../img/deco-title.svg") no-repeat;
@@ -1522,6 +1523,52 @@ nav {
   .home--quote .carousel-control-next .fa-chevron-right {
     font-size: 3em;
     color: #333333; }
+
+.home--exposed .exposed--link {
+  display: block;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: .3s ease; }
+  .home--exposed .exposed--link:hover {
+    box-shadow: 0 0 5px #cccccc; }
+.home--exposed .exposed--box {
+  margin-bottom: 3%;
+  min-height: 310px; }
+  @media (max-width: 768px) {
+    .home--exposed .exposed--box {
+      margin-bottom: 6%; } }
+  .home--exposed .exposed--box .title {
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 20px;
+    letter-spacing: 0; }
+.home--exposed .exposed--img {
+  overflow: hidden;
+  box-shadow: 0 0 3px #d6d6d6;
+  margin-bottom: 15px;
+  max-width: 320px; }
+  @media (max-width: 768px) {
+    .home--exposed .exposed--img {
+      max-width: 90%;
+      margin: 15px auto; } }
+  .home--exposed .exposed--img img {
+    width: 100%;
+    transition: .3s ease; }
+    .home--exposed .exposed--img img:hover {
+      transform: scale(1.06); }
+.home--exposed .exposed--desc {
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+  height: 75px;
+  margin: 10px auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  color: #000000; }
 
 .logowall .logowall--host {
   margin: 2% 0; }

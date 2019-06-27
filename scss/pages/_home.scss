@@ -768,6 +768,47 @@
     }
 }
 
+// ModernWeb in Taiwan
+.home--exposed {
+    .exposed--link{ 
+        display: block; 
+        padding: 10px 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: .3s ease;
+        &:hover { box-shadow: 0 0 5px #cccccc; }
+    }
+    .exposed--box { margin-bottom: 3%; min-height: 310px;
+        @include media('<=768px'){margin-bottom:6%; }
+        .title { text-align: center; line-height: 1.4em; font-size: 20px; letter-spacing: 0;}
+    }
+    .exposed--img {
+        overflow: hidden;
+        box-shadow: 0 0 3px #d6d6d6;
+        margin-bottom: 15px;
+        max-width: 320px;
+        @include media('<=768px'){ max-width: 90%; margin: 15px auto;}
+        img {
+            width: 100%;
+            transition: .3s ease;
+            &:hover { transform: scale(1.06);}
+        }
+    }
+    .exposed--desc {
+        display: block;
+        display: -webkit-box;
+        max-width: 400px;
+        height: 75px;
+        margin: 10px auto;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        color: #000000;
+    }
+}
+
 
 .logowall {
 
