@@ -2392,19 +2392,19 @@ nav {
   margin: 0 0 300px 0;
   position: relative;
   width: 100%; }
-  .speakers:before {
-    content: '';
-    width: 100%;
-    background: #0a0d45;
-    height: 200px;
-    position: absolute;
-    top: 0; }
   .speakers--banner {
     overflow: hidden; }
     .speakers--banner img {
       position: relative;
       margin-top: 80px;
       display: block; }
+    .speakers--banner:before {
+      content: '';
+      width: 100%;
+      background: #0a0d45;
+      height: 200px;
+      position: absolute;
+      top: 0; }
   .speakers--item {
     padding: 2% 15px 1% 15px;
     position: relative;

@@ -24,20 +24,21 @@
 	margin: 0 0 300px 0;
 	position: relative;
 	width: 100%;
-	&:before {
-		content:'';
-		width: 100%;
-		background: darken($bg-blue,30%);
-		height: 200px;
-		position: absolute;
-		top: 0;
-	}
+	
 	&--banner {
 		overflow: hidden;
 		img {
 			position: relative;
 			margin-top: 80px;
 			display: block;
+		}
+		&:before {
+		content:'';
+		width: 100%;
+		background: darken($bg-blue,30%);
+		height: 200px;
+		position: absolute;
+		top: 0;
 		}
 	}
 	&--item {
