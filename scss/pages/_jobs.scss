@@ -10,6 +10,8 @@
         background-color: #eeeeee;
         margin: 3% 0 2%;
         border-radius: 10px;
+        justify-content: center;
+        -ms-flex-pack: center;
         &--brand {
             border-radius: 10px;
             text-align: center;
@@ -20,9 +22,13 @@
             background-color: #ffffff;
             padding: 10px 15px;
             margin: 15px;
+            border-radius: 10px;
             &--title { 
                 &--main { color: inherit;}
                 &--sub { color: inherit; margin: 10px 0 20px;}
+            }
+            &--list {
+                margin-top: 4%;
             }
         }
 	}

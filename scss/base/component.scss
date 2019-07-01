@@ -354,6 +354,13 @@
     &:hover, &:focus { color: #ffffff; background-color: $font-color-pink;}
 }
 
+.btn-line-gray {
+    color: #909090;
+    border: 3px solid #909090;
+    background-color: transparent;
+    &:hover, &:focus { color: #ffffff; background-color: #909090;}
+}
+
 .btn-disabled {
     cursor: not-allowed;
     color: #ffffff;

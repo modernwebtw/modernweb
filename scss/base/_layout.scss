@@ -125,7 +125,7 @@ nav {
         padding: 0.4em 0.6em;
     }
     .nav-item {
-        max-width: 100px;
+        max-width: 110px;
         @include media("<992px"){
             max-width: 100%;
         }
