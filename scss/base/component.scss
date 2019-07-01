@@ -275,6 +275,7 @@
     letter-spacing: 4px;
     @include media("<992px") {
         font-size: 28px;
+        letter-spacing: 2px;
     }
         span {
             font-size: 28px;
@@ -300,6 +301,8 @@
 .deco-title {
     text-align: center;
     position: relative;
+    color: $font-color-dark-blue;
+    margin: 10px auto 20px;
     &:before {
         content: '';
         background: url('../img/deco-title.svg') no-repeat;
@@ -367,5 +370,11 @@
     background-color: $bg-blue;
 }
 
+.mt10 { margin-top: 10px;}
+.mt20 { margin-top: 20px;}
+.mt30 { margin-top: 30px;}
+
 .highlight { color: $font-color-md-blue;}
+
+.flex-column-sm{ @include media('<1024px'){flex-direction: column;} }
 // ************* 2019 theme *************** //

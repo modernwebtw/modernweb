@@ -14,10 +14,12 @@
     margin: 0;
     min-height: 58vh;
     top: 80px;
+    padding-top: 0;
     font-family: "Open Sans", "Helvetica Neue", "微軟正黑體", Helvetica, Arial, sans-serif;
     background:url('../img/bg-twinkle2.png') repeat;
     @include media('<768px') {
         top: 50px;
+        padding-top: 0;
     }
     @include media('<640px') {
         min-height: 45vh;
@@ -740,10 +742,6 @@
     margin: 0;
     padding-top: 10%;
     padding-bottom: 5%;
-    .title {
-        // font-size: 3em;
-        color: $font-color-dark-blue;
-    }
     p { font-size: 1.3em;}
     .carousel-item {
         width: 70%;
@@ -770,8 +768,50 @@
     }
 }
 
+// ModernWeb in Taiwan
+.home--exposed {
+    .exposed--link{ 
+        display: block; 
+        padding: 10px 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: .3s ease;
+        &:hover { box-shadow: 0 0 5px #cccccc; }
+    }
+    .exposed--box { margin-bottom: 3%; min-height: 310px;
+        @include media('<=768px'){margin-bottom:6%; }
+        .title { text-align: center; line-height: 1.4em; font-size: 20px; letter-spacing: 0;}
+    }
+    .exposed--img {
+        overflow: hidden;
+        box-shadow: 0 0 3px #d6d6d6;
+        margin-bottom: 15px;
+        max-width: 320px;
+        @include media('<=768px'){ max-width: 90%; margin: 15px auto;}
+        img {
+            width: 100%;
+            transition: .3s ease;
+            &:hover { transform: scale(1.06);}
+        }
+    }
+    .exposed--desc {
+        display: block;
+        display: -webkit-box;
+        max-width: 400px;
+        height: 75px;
+        margin: 10px auto;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        color: #000000;
+    }
+}
+
 
 .logowall {
+
     .logowall--host { margin: 2% 0;
         a { 
             display: block;
@@ -805,6 +845,243 @@
     }
 }
 
+// 中國講師
+.home--speaker--cn {
+    .speaker--cn--sub--title {
+            margin-top: 5px;
+            padding: 15px;
+        h4 {}
+        .title {text-align: left; margin: 10px; }
+        .sub-title { font-size: 18px;}
+    }
+    .speaker--cn--producer {
+        padding: 15px;
+        background: #f3f3f3;
+        border-radius: 20px;
+        &--img { border: 5px solid lighten($bg-china,10%); border-radius: 50%; max-width: 140px;}
+        &--desc {
+            position: relative;
+            @include media('<1024px'){text-align: center;}
+            &--name { margin-bottom: 5px; font-weight: 500;word-break: break-all;}
+            &--sub {}
+        }
+    }
+    .speaker--cn--item {
+        padding: 15px;
+        text-align: center;
+        max-width: 300px;
+        &--img { 
+            position: relative;
+            margin: 0.5em;
+            padding: 0px;
+            border: 10px solid transparent;
+            background: lighten($bg-china,10%);
+            border-radius: 50%;
+            overflow: hidden;
+            transition: 0.3s ease;
+            &:hover { border-width: 3px;}
+        }
+        &--desc {
+            position: relative;
+            margin-top: 48px;
+            &--title { 
+            }
+            &--name {
+                margin-bottom: 5px;
+                font-weight: 500;
+                background: $bg-china;
+                padding: 10px;
+                border-radius: 10px;
+                position: absolute;
+                width: 90%;
+                bottom: 48px;
+                left: 5%;
+                color: #ffffff;
+                border: 5px solid lighten($bg-china,10%);
+                border-top: 5px solid lighten($bg-china,30%);
+                border-bottom: 5px solid darken($bg-china,25%);
+            }
+            &--sub {}
+        }
+    }
+}
+
+// KEYNOTE
+.home--keynote {
+    @include media('>992px'){
+        background-color: #ffffff;
+        padding-top: 120px;
+        margin-top: -120px;
+    }
+    &--a {display: block;}
+    .keynote--item {
+        display: flex;
+        justify-content: center;
+        margin: 5% 0 3%;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 0.3s ease;
+        @include media('<576px'){
+            flex-direction: column;
+            background-color: #f3f3f3;
+        }
+        &:hover { 
+            cursor: pointer;
+            background: #ebf9ff;
+            .keynote--item--desc--btn i {
+                transform: translateX(5px);
+            }
+        }
+        
+        &--img {
+            position: relative;
+            margin: 0.5em;
+            padding: 10px;
+            background: $bg-blue url('../img/bg-planet--l.svg') no-repeat center 100%;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            max-width: 300px;
+            flex-basis: 300px;
+            overflow: hidden;
+            @include media('<576px'){
+            margin: 0.5em auto;
+            }
+            img { 
+                border-radius: 50%;
+                border: 10px solid transparent;
+                transition: 0.3s ease;
+                &:hover { border-width: 3px;}
+            }
+        } // &--img end
+        &--tag {
+            display: block;
+            margin: 10px 0;
+            font-weight: 500;
+            background: $bg-caramel;
+            padding: 6px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            }
+        &--desc--name { margin-left: 3%; word-break: break-all;}
+        &--desc--sub { margin-left: 3%;}
+        &--desc--btn i {
+            width: 50px;
+            height: 50px;
+            line-height: 24px;
+            background: #ffffff;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            border: 3px solid $font-color;
+            padding: 10px;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            transform: translateX(0);
+        }
+        
+    }
+}
+
+// 講師
+.home--speaker{
+    &--a {
+        display: block;
+        &:hover {
+            // 與下面class重複
+            .speaker--item--img {border-width: 3px;}
+            .speaker--item--desc--name {background: lighten($bg-speaker,10%); word-break: break-all;}
+        }
+    }
+
+    .speaker--sub--title {
+            margin-top: 5px;
+            padding: 15px;
+        h4 {}
+        .title {text-align: left; margin-top: 10px;}
+        .sub-title { font-size: 18px;}
+    }
+    .speaker--item {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        max-width: 300px;
+        &--img { 
+            position: relative;
+            margin: 0.5em;
+            padding: 0px;
+            border: 10px solid transparent;
+            background: lighten($bg-speaker,10%);
+            border-radius: 50%;
+            overflow: hidden;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &:hover { border-width: 3px;}
+        }
+        &--desc {
+            position: relative;
+            margin-top: 48px;
+            &--title { 
+            }
+            &--name {
+                margin-bottom: 5px;
+                font-weight: 500;
+                background: $bg-speaker;
+                padding: 10px;
+                border-radius: 10px;
+                position: absolute;
+                width: 90%;
+                bottom: 48px;
+                left: 5%;
+                color: #ffffff;
+                word-break: break-all;
+                border: 5px solid lighten($bg-speaker,10%);
+                border-top: 5px solid lighten($bg-speaker,30%);
+                border-bottom: 5px solid darken($bg-speaker,25%);
+                transition: 0.3s ease;
+                i {transform: translateX(0);}
+                &:hover { 
+                    cursor: pointer;
+                    background: darken($bg-speaker,10%);
+                    border: 5px solid darken($bg-speaker,10%);
+                    i {transform: translateX(10px);}
+                }
+                &.workshop:before {
+                    content:'Workshop';
+                    background-color: $bg-workshop;
+                    text-align: center;
+                    padding: 6px;
+                    font-size: 16px;
+                    letter-spacing: .5px;
+                    width: 100px;
+                    left: -30px;
+                    top: -20px;
+                    /* transform: rotate(-20deg); */
+                    position: absolute;
+                    border-radius: 10px;
+                }
+                &.session:before {
+                    content:'Session';
+                    background-color: $bg-session;
+                    text-align: center;
+                    padding: 6px;
+                    font-size: 16px;
+                    letter-spacing: .5px;
+                    width: 100px;
+                    left: -30px;
+                    top: -20px;
+                    /* transform: rotate(-20deg); */
+                    position: absolute;
+                    border-radius: 10px;
+                }
+            }
+            &--sub {}
+        }
+    }
+}
 
 
 .footer {
@@ -813,6 +1090,7 @@
     padding-bottom: 2%;
     background: darken($bg-blue,30%)  url('../img/bg-twinkle.png') repeat 100% 100%;
     overflow: hidden;
+    width: 100%;
     @include media('<992px'){
         padding-top: 120px;
     }
