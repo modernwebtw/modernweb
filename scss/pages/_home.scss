@@ -861,7 +861,7 @@
         margin: 5px 15px 5px;
         &--img { border: 5px solid lighten($bg-china,10%); border-radius: 50%; max-width: 140px;}
         &--desc {
-            position: relative;
+            position: absolute;
             @include media('<1024px'){text-align: center;}
             &--name { margin-bottom: 5px; font-weight: 500;word-break: break-all;}
             &--sub {}
@@ -884,7 +884,7 @@
         }
         &--desc {
             position: relative;
-            margin-top: 48px;
+            top: -40px;
             &--title { 
             }
             &--name {
@@ -893,16 +893,17 @@
                 background: $bg-china;
                 padding: 10px;
                 border-radius: 10px;
-                position: absolute;
+                position: relative;
                 width: 90%;
-                bottom: 48px;
                 left: 5%;
                 color: #ffffff;
                 border: 5px solid lighten($bg-china,10%);
                 border-top: 5px solid lighten($bg-china,30%);
                 border-bottom: 5px solid darken($bg-china,25%);
             }
-            &--sub {}
+            &--sub {
+                position: relative;
+            }
         }
     }
 }
