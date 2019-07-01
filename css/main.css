@@ -526,7 +526,7 @@ nav {
     border: 1px solid #888888;
     padding: 0.4em 0.6em; }
   nav .nav-item {
-    max-width: 100px; }
+    max-width: 110px; }
     @media (max-width: 991px) {
       nav .nav-item {
         max-width: 100%; } }
@@ -895,6 +895,14 @@ nav {
   .btn-line:hover, .btn-line:focus {
     color: #ffffff;
     background-color: #e000a9; }
+
+.btn-line-gray {
+  color: #909090;
+  border: 3px solid #909090;
+  background-color: transparent; }
+  .btn-line-gray:hover, .btn-line-gray:focus {
+    color: #ffffff;
+    background-color: #909090; }
 
 .btn-disabled {
   cursor: not-allowed;
@@ -1612,7 +1620,8 @@ nav {
 .home--speaker--cn .speaker--cn--producer {
   padding: 15px;
   background: #f3f3f3;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin: 5px 15px 5px; }
   .home--speaker--cn .speaker--cn--producer--img {
     border: 5px solid #de9372;
     border-radius: 50%;
@@ -2508,7 +2517,9 @@ nav {
   .jobs--item {
     background-color: #eeeeee;
     margin: 3% 0 2%;
-    border-radius: 10px; }
+    border-radius: 10px;
+    justify-content: center;
+    -ms-flex-pack: center; }
     .jobs--item--brand {
       border-radius: 10px;
       text-align: center;
@@ -2519,11 +2530,14 @@ nav {
     .jobs--item--content {
       background-color: #ffffff;
       padding: 10px 15px;
-      margin: 15px; }
+      margin: 15px;
+      border-radius: 10px; }
       .jobs--item--content--title--main {
         color: inherit; }
       .jobs--item--content--title--sub {
         color: inherit;
         margin: 10px 0 20px; }
+      .jobs--item--content--list {
+        margin-top: 4%; }
 
 /*# sourceMappingURL=main.css.map */
