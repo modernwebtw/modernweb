@@ -86,7 +86,21 @@
                 text-shadow: 0 0 5px #000;
             }
         }
-
     }
-    
+    &.content--kv--s {
+        margin: -1px;
+        background-image: url(../img/content-kv-s.svg);
+        background-color: $bg-blue;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100%;
+        margin-top: -80px;
+        height: 280px;
+        @include media('<992px'){
+            margin-top: 65px;
+            height: 165px;
+            background-position: top;
+            background-size: cover;
+        }
+    }
 }
