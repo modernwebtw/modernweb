@@ -1,0 +1,29 @@
+// job 贊助商與徵才 ModernWeb in Taiwan 結構
+
+
+.jobs {
+	padding: 0;
+	margin: 0 0 300px 0;
+	position: relative;
+	width: 100%;
+	&--item {
+        background-color: #eeeeee;
+        margin: 3% 0 2%;
+        border-radius: 10px;
+        &--brand {
+            border-radius: 10px;
+            text-align: center;
+            margin: 15px;
+            img { background-color: #ffffff; border-radius: 10px;}
+        }
+        &--content {
+            background-color: #ffffff;
+            padding: 10px 15px;
+            margin: 15px;
+            &--title { 
+                &--main { color: inherit;}
+                &--sub { color: inherit; margin: 10px 0 20px;}
+            }
+        }
+	}
+}

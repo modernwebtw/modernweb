@@ -27,6 +27,7 @@
 	
 	&--banner {
 		overflow: hidden;
+		background-color: darken($bg-blue,30%);
 		img {
 			position: relative;
 			margin-top: 80px;
@@ -35,10 +36,15 @@
 		&:before {
 		content:'';
 		width: 100%;
-		background: darken($bg-blue,30%);
-		height: 200px;
+		background: darken($bg-blue,30%) url(../img/content-kv-ban.svg) no-repeat;
+		background-size: cover;
+		height: 3px;
 		position: absolute;
-		top: 0;
+		top: 80px;
+		z-index: 1;
+		@include media('<992px'){
+			top: 77px;
+		}
 		}
 	}
 	&--item {
@@ -68,8 +74,9 @@
 				margin: 1% 0 1% 2%;
 				border-radius: 10px;
 				background-color: $bg-blue;
+				opacity: 0.9;
 				transition: .3s ease;
-				&:hover ,&:focus, &:active, &:visited { background-color: lighten($bg-blue,10%); color:#ffffff; opacity: 0.9;}
+				&:hover ,&:focus, &:active, &:visited { background-color: lighten($bg-blue,10%); color:#ffffff;opacity: 1;}
 			}
 		}
 		&--intro {

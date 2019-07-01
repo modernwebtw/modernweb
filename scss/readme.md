@@ -2,3 +2,4 @@
 - 首頁 = home
 - sliders show pluin: https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css
 - 使用bootstap 4
+- Navibar 往下滾，到id="nav"時，改變logo、背景，記得每頁都要加id="nav"。
