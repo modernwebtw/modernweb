@@ -254,6 +254,11 @@ var modernweb2019 = new Vue({
                 modernweb2019.JobList = joblist;
             })
 
+            var is_speaker_page = location.pathname.search(/speakers/igm) > -1;
+            if (!!is_speaker_page) {
+                modernweb2019.loadSpeakerInner();
+            }
+
             var is_sponsor_page = location.pathname.search(/jobs/igm) > -1;
             if (!!is_sponsor_page) {
                 modernweb2019.loadSponsorInner();

@@ -220,7 +220,7 @@
                 <h3 class="title deco-title">KEYNOTES</h3>
                 <div class="row">
                     <div class="col-12" v-for="speaker in SpeakerFilter.featured">
-                        <a :href="'speaker.html#s' + speaker.target_id" class="home--keynote--a">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="home--keynote--a">
                             <div class="keynote--item">
                                 <div class="col-12 col-sm-6 keynote--item--img">
                                     <img :src="speaker.avatar" alt="" class="img-fluid">
@@ -440,7 +440,7 @@
                 <div class="row speaker--cn--row justify-content-center mt30">
                     <!-- 出品人 -->
                     <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6278'">
-                        <a :href="'speaker.html#s' + speaker.target_id">
+                        <a :href="'speakers.html#s' + speaker.target_id">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
@@ -450,7 +450,7 @@
                         </a>
                     </div>
                     <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6271'">
-                        <a :href="'speaker.html#s' + speaker.target_id">
+                        <a :href="'speakers.html#s' + speaker.target_id">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
@@ -462,7 +462,7 @@
                 </div>
                 <div class="row speaker--cn--row justify-content-center">
                     <div class="col-md-3 col-xs-12 speaker--cn--item" v-for="speaker in SpeakerFilter.china">
-                        <a :href="'speaker.html#s' + speaker.target_id">
+                        <a :href="'speakers.html#s' + speaker.target_id">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--item--img">
                             <div class="speaker--cn--item--desc">
                                 <h4 class="speaker--cn--item--desc--name">{{ speaker.speaker }}</h4>
@@ -478,7 +478,7 @@
                 <h3 class="title deco-title text-center">講者陣容</h3>
                 <div class="row speaker--row justify-content-center">
                     <div class="col-md-3 col-xs-12 speaker--item home-speaker--a" v-for="speaker in SpeakerFilter.normal">
-                        <a :href="'speaker.html#s' + speaker.target_id">
+                        <a :href="'speakers.html#s' + speaker.target_id">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--item--img">
                             <div class="speaker--item--desc">
                                 <h4 class="speaker--item--desc--name session">{{ speaker.speaker }}
