@@ -859,12 +859,13 @@
         background: #f3f3f3;
         border-radius: 20px;
         margin: 5px 15px 5px;
-        &--img { border: 5px solid lighten($bg-china,10%); border-radius: 50%; max-width: 140px;}
+        &--a { }
+        &--img { border: 5px solid lighten($bg-china,10%); border-radius: 50%; height: 150px; width: 150px; flex:0 0 150px; margin: auto;}
         &--desc {
-            position: absolute;
+            position: relative;
             @include media('<1024px'){text-align: center;}
             &--name { margin-bottom: 5px; font-weight: 500;word-break: break-all;}
-            &--sub {}
+            &--sub {margin-top: 10px;}
         }
     }
     .speaker--cn--item {
@@ -903,6 +904,7 @@
             }
             &--sub {
                 position: relative;
+                margin-top: 10px;
             }
         }
     }
@@ -1025,7 +1027,7 @@
         }
         &--desc {
             position: relative;
-            margin-top: 48px;
+            top: -40px;
             &--title { 
             }
             &--name {
@@ -1034,9 +1036,8 @@
                 background: $bg-speaker;
                 padding: 10px;
                 border-radius: 10px;
-                position: absolute;
+                position: relative;
                 width: 90%;
-                bottom: 48px;
                 left: 5%;
                 color: #ffffff;
                 word-break: break-all;
@@ -1080,7 +1081,9 @@
                     border-radius: 10px;
                 }
             }
-            &--sub {}
+            &--sub {
+                margin-top: 10px;
+            }
         }
     }
 }
