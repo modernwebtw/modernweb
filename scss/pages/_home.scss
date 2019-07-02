@@ -300,13 +300,11 @@
 .home--intro {
     margin: 0;
     margin-bottom: -1px;
-    padding: 1% 0 16%;
+    padding: 1% 0 15%;
     top: 0;
-
     @include media('<1460px') {
         padding-bottom: 10%;
     }
-
     @include media('<1366px') {
         background: #ffffff;
     }
@@ -593,8 +591,8 @@
 .home--history {
     background-color: #ffffff;
     margin: 0;
-    padding-top: 10%;
-    padding-bottom: 5%;
+    padding-top: 4%;
+    padding-bottom: 2%;
 
     @include media('<768px') {
         padding-top: 80px;
@@ -840,8 +838,6 @@
     background: #ffffff url('../img/quote-bg-circle.svg') no-repeat center center;
     background-size: 50%;
     margin: 0;
-    padding-top: 10%;
-    padding-bottom: 5%;
 
     p {
         font-size: 1.3em;
@@ -1104,14 +1100,12 @@
 .home--keynote {
     @include media('>992px') {
         background-color: #ffffff;
-        padding-top: 120px;
-        margin-top: -80px;
-    }
-    @include media('>=1300px') {
-        margin-top: 0px;
+        padding-top: 10px;
     }
     &--a {
         display: block;
+        color: $font-color !important;
+        font-size: 16px;
     }
 
     .keynote--item {
@@ -1202,6 +1196,7 @@
         &--desc--summary {}
         &--desc--profile { width: 100%; position: relative; max-height: 132px; overflow: hidden;
             font-size: 1.07em; line-height: 1.6; background-color: #ffffff; padding: 10px; border-radius: 10px;
+            border-left: 5px solid #dddddd;
             p {font-size: 1.07em; line-height: 1.6; margin-bottom: 1.172em;}
             :before {
                 content:'';
@@ -1227,7 +1222,6 @@
 .home--speaker {
     &--a {
         display: block;
-
         &:hover {
 
             // 與下面class重複
@@ -1353,7 +1347,14 @@
         }
     }
 }
-
+.more-title {
+    background-color: #cccccc;
+    padding: 15px;
+    border-radius: 10px;
+    color: $bg-speaker;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
 
 .footer {
     position: relative;
