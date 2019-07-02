@@ -1682,7 +1682,10 @@ nav {
   .home--keynote {
     background-color: #ffffff;
     padding-top: 120px;
-    margin-top: -120px; } }
+    margin-top: -80px; } }
+@media (min-width: 1300px) {
+  .home--keynote {
+    margin-top: 0px; } }
 .home--keynote--a {
   display: block; }
 .home--keynote .keynote--item {
