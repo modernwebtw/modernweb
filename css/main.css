@@ -2463,6 +2463,17 @@ nav {
     position: relative;
     width: 100%;
     margin-bottom: -1%; }
+    .speakers--item--tag {
+      display: block;
+      margin: 10px 0;
+      font-weight: 500;
+      background: #ffaf5a;
+      padding: 6px;
+      border-radius: 10px;
+      width: 100px;
+      text-align: center;
+      font-size: 18px;
+      color: #ffffff; }
     .speakers--item--head {
       text-align: center; }
       .speakers--item--head h3 {

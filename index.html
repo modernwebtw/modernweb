@@ -226,8 +226,9 @@
                                     <img :src="speaker.avatar" alt="" class="img-fluid">
                                 </div>
                                 <div class="col-12 col-sm-6 keynote--item--desc">
+                                    <span class="keynote--item--tag">Keynote</span>
                                     <template v-for="session in speaker.session">
-                                        <h3 class=""><span class="keynote--item--tag">Keynote</span> {{ session.title }}</h3>
+                                        <h3 class=""> {{ session.title }}</h3>
                                         <div v-html="session.summary"></div>
                                     </template>
                                     <h4 class="keynote--item--desc--name">{{ speaker.speaker }}</h4>
@@ -236,6 +237,7 @@
                                         <i class="fas fa-arrow-right"></i>
                                     </span>
                                 </div>
+                                <!-- *****加講師介紹******2019.0702 -->
                             </div>
                         </a>
                     </div>
