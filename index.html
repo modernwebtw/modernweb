@@ -215,74 +215,25 @@
                 </div>
             </div>
         </section>
-
         <section class="home--keynote" id="keynotes">
             <div class="container">
                 <h3 class="title deco-title">KEYNOTES</h3>
                 <div class="row">
-                    <div class="col-12">
-                        <a href="#?" class="home--keynote--a">
+                    <div class="col-12" v-for="speaker in SpeakerFilter.featured">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="home--keynote--a">
                             <div class="keynote--item">
                                 <div class="col-12 col-sm-6 keynote--item--img">
-                                    <img src="img/speaker-00.jpg" alt="" class="img-fluid">
+                                    <img :src="speaker.avatar" alt="" class="img-fluid">
                                 </div>
                                 <div class="col-12 col-sm-6 keynote--item--desc">
-                                    <h3 class=""><span class="keynote--item--tag">Keynote</span> How We Ended Up With Electron</h3>
-                                    <p class="">JavaScript has taken over your desktop. How did we get here? Why do developers – even those who know native development quite well – choose web technologies?
-                                    In this keynote, Felix will take stock of where JavaScript is on the desktop today, how we got here, and where technologies like Electron might be going in the future.  </p>
-                                    <h4 class="keynote--item--desc--name">Felix Rieseberg</h4>
-                                    <p class="keynote--item--desc--sub">Slack Software Engineer</p>
-                                    <span class="btn keynote--item--desc--btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#?" class="home--keynote--a">
-                            <div class="keynote--item">
-                                <div class="col-12 col-sm-6 keynote--item--img">
-                                    <img src="img/speaker-00.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="col-12 col-sm-6 keynote--item--desc">
-                                    <h3 class=""><span class="keynote--item--tag">Keynote</span> How We Ended Up With Electron</h3>
-                                    <p class="">JavaScript has taken over your desktop. How did we get here? Why do developers – even those who know native development quite well – choose web technologies?
-                                    In this keynote, Felix will take stock of where JavaScript is on the desktop today, how we got here, and where technologies like Electron might be going in the future.  </p>
-                                    <h4 class="keynote--item--desc--name">Felix Rieseberg</h4>
-                                    <p class="keynote--item--desc--sub">Slack Software Engineer</p>
-                                    <span class="btn keynote--item--desc--btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#?" class="home--keynote--a">
-                            <div class="keynote--item">
-                                <div class="col-12 col-sm-6 keynote--item--img">
-                                    <img src="img/speaker-00.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="col-12 col-sm-6 keynote--item--desc">
-                                    <h3 class=""><span class="keynote--item--tag">Keynote</span> How We Ended Up With Electron</h3>
-                                    <p class="">JavaScript has taken over your desktop. How did we get here? Why do developers – even those who know native development quite well – choose web technologies?
-                                    In this keynote, Felix will take stock of where JavaScript is on the desktop today, how we got here, and where technologies like Electron might be going in the future.  </p>
-                                    <h4 class="keynote--item--desc--name">Felix Rieseberg</h4>
-                                    <p class="keynote--item--desc--sub">Slack Software Engineer</p>
-                                    <span class="btn keynote--item--desc--btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#?" class="home--keynote--a">
-                            <div class="keynote--item">
-                                <div class="col-12 col-sm-6 keynote--item--img">
-                                    <img src="img/speaker-00.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="col-12 col-sm-6 keynote--item--desc">
-                                    <h3 class=""><span class="keynote--item--tag">Keynote</span> How We Ended Up With Electron</h3>
-                                    <p class="">JavaScript has taken over your desktop. How did we get here? Why do developers – even those who know native development quite well – choose web technologies?
-                                    In this keynote, Felix will take stock of where JavaScript is on the desktop today, how we got here, and where technologies like Electron might be going in the future.  </p>
-                                    <h4 class="keynote--item--desc--name">Felix Rieseberg</h4>
-                                    <p class="keynote--item--desc--sub">Slack Software Engineer</p>
+                                    <span class="keynote--item--tag">Keynote</span>
+                                    <template v-for="session in speaker.session">
+                                        <h3 class=""> {{ session.title }}</h3>
+                                        <div v-html="session.summary"></div>
+                                    </template>
+                                    <h4 class="keynote--item--desc--name">{{ speaker.speaker }}</h4>
+                                    <p class="keynote--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                    <div v-html="speaker.profile"></div>
                                     <span class="btn keynote--item--desc--btn">
                                         <i class="fas fa-arrow-right"></i>
                                     </span>
@@ -293,7 +244,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="home--reason" id="home--reason">
             <div class="home--reason--bg--star"></div>
             <img src="img/reason-sign-1.svg" alt="" class="home--reason--sign1">
@@ -359,7 +309,6 @@
                 </div>
             </div>
         </section>
-
         <section class="home--history">
             <div class="container">
                 <h3 class="title deco-title">我們 5 歲了
@@ -483,193 +432,96 @@
                 </div>
             </div>
         </section>
-
         <section class="home--speaker--cn" id="speakersChina">
             <div class="container">
                 <h3 class="title deco-title text-center">中國技術團</h3>
-                    <div class="col speaker--cn--sub--title text-center">
-                        <h4 class="title text-center">大規模實戰商場萃取出的 Web 實戰經驗！</h4>
-                        <h5 class="sub-title text-center">2019 中國技術團，持續邀請中國重量級 Web 公司帶來技術與實戰經驗分享。</h5>
-                    </div>
+                <div class="col speaker--cn--sub--title text-center">
+                    <h4 class="title text-center">大規模實戰商場萃取出的 Web 實戰經驗！</h4>
+                    <h5 class="sub-title text-center">2019 中國技術團，持續邀請中國重量級 Web 公司帶來技術與實戰經驗分享。</h5>
+                </div>
                 <div class="row speaker--cn--row justify-content-center mt30">
-                    
-
                     <!-- 出品人 -->
-                    <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--producer--img">
-                        <div class="col speaker--cn--producer--desc d-flex flex-column">
-                            <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
-                            <p class="speaker--cn--producer--desc--name">趙錦江</p>
-                            <p class="speaker--cn--producer--desc--sub">公司 & 職稱</p>
-                        </div>
+                    <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6278'">
+                        <a :href="'speaker.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
+                            <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
+                            <div class="col speaker--cn--producer--desc d-flex flex-column">
+                                <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
+                                <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
+                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--producer--img">
-                        <div class="col speaker--cn--producer--desc d-flex flex-column">
-                            <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
-                            <p class="speaker--cn--producer--desc--name">惠新宸</p>
-                            <p class="speaker--cn--producer--desc--sub">公司 & 職稱</p>
-                        </div>
+                    <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6271'">
+                        <a :href="'speaker.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
+                            <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
+                            <div class="col speaker--cn--producer--desc d-flex flex-column">
+                                <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
+                                <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
+                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row speaker--cn--row justify-content-center">
-                    <div class="col speaker--cn--item">
-                        <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--item--img">
-                        <div class="speaker--cn--item--desc">
-                            <h4 class="speaker--cn--item--desc--name">dtdrt</h4>
-                            <p class="speaker--cn--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                        </div>
-                    </div>
-                    <div class="col speaker--cn--item">
-                        <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--item--img">
-                        <div class="speaker--cn--item--desc">
-                            <h4 class="speaker--cn--item--desc--name">dtdrt</h4>
-                            <p class="speaker--cn--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                        </div>
-                    </div>
-                    <div class="col speaker--cn--item">
-                        <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--item--img">
-                        <div class="speaker--cn--item--desc">
-                            <h4 class="speaker--cn--item--desc--name">dtdrt</h4>
-                            <p class="speaker--cn--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                        </div>
-                    </div>
-                    <div class="col speaker--cn--item">
-                        <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--cn--item--img">
-                        <div class="speaker--cn--item--desc">
-                            <h4 class="speaker--cn--item--desc--name">dtdrt</h4>
-                            <p class="speaker--cn--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                        </div>
+                    <div class="col-md-3 col-xs-12 speaker--cn--item" v-for="speaker in SpeakerFilter.china">
+                        <a :href="'speakers.html#s' + speaker.target_id">
+                            <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--item--img">
+                            <div class="speaker--cn--item--desc">
+                                <h4 class="speaker--cn--item--desc--name">{{ speaker.speaker }}</h4>
+                                <p class="speaker--cn--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        
         <section class="home--speaker">
             <div class="container">
                 <h3 class="title deco-title text-center">講者陣容</h3>
                 <div class="row speaker--row justify-content-center">
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
+                    <div class="col-md-3 col-xs-12 speaker--item home-speaker--a" v-for="speaker in SpeakerFilter.normal">
+                        <a :href="'speakers.html#s' + speaker.target_id">
+                            <img :src="speaker.avatar" alt="" class="img-fluid speaker--item--img">
                             <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name session">dtdrt
+                                <h4 class="speaker--item--desc--name session">{{ speaker.speaker }}
                                     <i class="fas fa-arrow-right"></i>
                                 </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
+                                <p class="speaker--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
                             </div>
                         </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name session">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name session">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name session">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
+                    </div>
                 </div>
-
                 <!-- workshop -->
-                <div class="row speaker--row justify-content-center">
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name workshop">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name workshop">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name workshop">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                        <a class="col speaker--item home-speaker--a">
-                            <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
-                            <div class="speaker--item--desc">
-                                <h4 class="speaker--item--desc--name workshop">dtdrt
-                                    <i class="fas fa-arrow-right"></i>
-                                </h4>
-                                <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
-                            </div>
-                        </a>
-                </div>
+                <!-- <div class="row speaker--row justify-content-center">
+                    <a class="col speaker--item home-speaker--a">
+                        <img src="img/speaker-00.jpg" alt="" class="img-fluid speaker--item--img">
+                        <div class="speaker--item--desc">
+                            <h4 class="speaker--item--desc--name workshop">dtdrt
+                                <i class="fas fa-arrow-right"></i>
+                            </h4>
+                            <p class="speaker--item--desc--sub">fdhtftjuftjfyjyjygkgykgy</p>
+                        </div>
+                    </a>
+                </div> -->
             </div>
         </section>
-
-        <section class="home--exposed">
+        <section class="home--exposed" v-if="SponsorFilter.Enterprise.length > 0">
             <div class="container">
                 <h3 class="title deco-title text-center">ModernWeb in Taiwan</h3>
                 <div class="row">
-                    <div class="col-md-4 col-12 exposed--box">
-                        <a href="#?" class="exposed--link">
+                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in SponsorFilter.Enterprise">
+                        <a :href="'jobs.html#s' + sponsor.vendor_id" class="exposed--link">
                             <div class="exposed--img">
-                                <img src="img/logo-hackmd.jpg" alt="" class="img-fluid">
+                                <img :src="sponsor.logo" alt="" class="img-fluid">
                             </div>
-                            <h4 class="title">hackmd</h4>
-                            <div class="exposed--desc">
-                                <p>hackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmd</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-12 exposed--box">
-                        <a href="#?" class="exposed--link">
-                            <div class="exposed--img">
-                                <img src="img/logo-hackmd.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h4 class="title">hackmd</h4>
-                            <div class="exposed--desc">
-                                <p>hackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmd</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-12 exposed--box">
-                        <a href="#?" class="exposed--link">
-                            <div class="exposed--img">
-                                <img src="img/logo-hackmd.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h4 class="title">hackmd</h4>
-                            <div class="exposed--desc">
-                                <p>hackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmdhackmd</p>
+                            <h4 class="title">{{ sponsor.title }}</h4>
+                            <div class="exposed--desc" v-html="sponsor.description">
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="logowall">
             <div class="container">
                 <h3 class="title deco-title">ModernWeb'19
@@ -677,269 +529,89 @@
                 <h4 class="logowall-title text-center">主辦單位</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-sm-4 col-12 logowall--host d-flex justify-content-center" v-for="sponsor in SponsorFilter.Host">
-                        <a href="#" class="" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                        <a :href="'jobs.html#s' + sponsor.vendor_id" class="">
                             <img :src="sponsor.logo" alt="" class="img-fluid align-items-center logowall--img">
                         </a>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Diamond.length > 0">鑽石級</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Diamond">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Platinum.length > 0">白金級</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Platinum">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Gold.length > 0">黃金級</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Gold">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Silver.length > 0">銀級</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Silver">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Bronze.length > 0">銅級</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Bronze">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Enterprise.length > 0">企業團購</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Enterprise">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
-                        </div> -->
-                        <!-- Modal -->
-                        <!-- <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Modal -->
+                        </div>
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Promo.length > 0">共同推廣</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Promo">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 <h4 class="logowall-title text-center" v-if="SponsorFilter.Special.length > 0">特別感謝</h4>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4 col-12 logowall--host" v-for="sponsor in SponsorFilter.Special">
                         <div class="row justify-content-center">
-                            <a href="#" class="col" data-toggle="modal" :data-target="'#s' + sponsor.vendor_id">
+                            <a :href="'jobs.html#s' + sponsor.vendor_id" class="col">
                                 <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
                             </a>
                         </div>
-                        <!-- Modal -->
-                        <div class="modal fade" :id="'s' + sponsor.vendor_id" tabindex="-1" role="dialog" :aria-labelledby="'s' + sponsor.vendor_id" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class=" ">
-                                            <img :src="sponsor.logo" alt="" class="img-fluid logowall--img">
-                                        </div>
-                                        <h5>{{sponsor.alt_title}}</h5>
-                                        <div v-html="sponsor.description"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
                     </div>
                 </div>
             </div>
@@ -987,7 +659,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js?0627"></script>
+<script type="text/javascript" src="js/modernweb2019.js?0701"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/timeCountdown.js"></script>
 <script type="text/javascript">

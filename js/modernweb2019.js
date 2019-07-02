@@ -10,11 +10,9 @@ var modernweb2019 = new Vue({
         },
         Speaker: {},
         Sponsor: {},
-        Modal_Speaker: {},
-        Modal_Session: {},
-        Modal_Sponsor: {},
-        Test: {},
-        sessionSortedByTime: {}
+        SpeakerInner: {},
+        sessionSortedByTime: {},
+        JobList: []
     },
     computed: {
         ModalData: function() {
@@ -60,35 +58,49 @@ var modernweb2019 = new Vue({
                 }
             });
         },
-        showModal: function(speaker) {
-            this.Modal_Speaker = speaker;
-            $('a[href="#speakerModalIntro"]').tab('show');
-            $('#speakerModal').modal('show');
-            $('#tabSession').removeClass('active');
-            $('#tabSpeaker').addClass('active');
-            $('#speakerModalAgenda').removeClass('active');
-            $('#speakerModalIntro').addClass('active');
-        },
-        showModal2: function(session) {
-            this.Modal_Session = session;
-            if (!!session.summary.length) {
-                $('a[href="#sessionModalAgenda"]').tab('show');
-                $('#sessionModal').modal('show');
-                $('.active.tabSession').addClass('active');
-                $('.active.tabSpeaker').removeClass('active');
-                $('#sessionModalAgenda').addClass('active');
-                $('#sessionModalIntro').removeClass('active');
+        ConvertEmptyArrayToString: function(rowData, arrayKey) {
+            for (var i = 0; i < arrayKey.length; i++) {
+                var key = arrayKey[i];
+                rowData[key] = (rowData[key].length === 0) ? '' : rowData[key];
             }
-            $('#tabSpeaker').hide();
-            if (!!session.speaker.length) {
-                $('#tabSpeaker').show();
+            return rowData;
+        },
+        loadSpeakerInner: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            if (!id) {
+                return false;
+            }
+            for (var i = 0; i < this.Speaker.length; i++) {
+                if (this.Speaker[i].target_id == id) {
+                    modernweb2019.SpeakerInner = this.Speaker[i];
+                    break;
+                }
+            }
 
-            }
+            var self = this;
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=6270').then(function(speaker) {
+                modernweb2019.Speaker = speaker;
+                for (var i = 0; i < modernweb2019.Speaker.length; i++) {
+                    if (modernweb2019.Speaker[i].target_id == id) {
+                        modernweb2019.SpeakerInner['profile'] = modernweb2019.Speaker[i]['profile'];
+                        break;
+                    }
+                }
+            })
         },
-        showModal3: function(sponsor) {
-            this.Modal_Sponsor = sponsor;
-            $('a[href="#sponsorModal"]').tab('show');
-            $('#sponsorModal').modal('show');
+        shareSpeakerInner: function() {
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': location.href,
+                        'og:title': this.SpeakerInner['speaker'],
+                        'og:description': this.SpeakerInner['profile'],
+                        'og:image': this.SpeakerInner['avatar']
+                    }
+                })
+            }, function(response) {});
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
@@ -159,11 +171,40 @@ var modernweb2019 = new Vue({
                 return sessionSortedByTime;
             }
 
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?confid=6344&callback=?').then(function(joblist) {
+                $.map(joblist, function(jobs) {
+                    $.map(sponsor, function(_sponsor) {
+                        if (_sponsor.vendor_id == jobs.sponsor) {
+                            jobs['name'] = _sponsor.title;
+                            jobs['screen_name'] = _sponsor.alt_title;
+                            jobs['sponsor_english_title'] = _sponsor.english_title;
+                        }
+                    });
+                });
+                modernweb2019.JobList = joblist;
+            })
+
+            var is_speaker_page = location.pathname.search(/speakers/igm) > -1;
+            if (!!is_speaker_page) {
+                modernweb2019.loadSpeakerInner();
+            }
 
             modernweb2019.$nextTick(function() {
                 $('button[data-toggle="modal"]').click(function(e) {
                     e.preventDefault();
                 });
+
+                function goScroll(target) {
+                    var $target = $(target);
+                    var target_top = $target.offset().top;
+                    var header_height = ($('html').width() <= 768) ? 0 : $('nav').height();
+                    var sTop = target_top - header_height;
+                    $('html, body').stop().animate({
+                        scrollTop: sTop
+                    }, 500);
+                }
+
+                location.hash && goScroll(location.hash);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     // $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
