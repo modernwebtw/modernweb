@@ -1105,9 +1105,11 @@
     @include media('>992px') {
         background-color: #ffffff;
         padding-top: 120px;
-        margin-top: -120px;
+        margin-top: -80px;
     }
-
+    @include media('>=1300px') {
+        margin-top: 0px;
+    }
     &--a {
         display: block;
     }
