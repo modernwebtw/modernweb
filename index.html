@@ -218,6 +218,7 @@
         <section class="home--keynote" id="keynotes">
             <div class="container">
                 <h3 class="title deco-title">KEYNOTES</h3>
+                <h4 class="sub-title text-center more-title">更多講者即將揭曉</h4>
                 <div class="row">
                     <div class="col-12" v-for="speaker in SpeakerFilter.featured">
                         <a :href="'speakers.html#s' + speaker.target_id" class="home--keynote--a">
@@ -480,6 +481,7 @@
         <section class="home--speaker">
             <div class="container">
                 <h3 class="title deco-title text-center">講者陣容</h3>
+                <h4 class="sub-title text-center more-title">更多講者即將揭曉</h4>
                 <div class="row speaker--row justify-content-center">
                     <div class="col-md-3 col-xs-12 speaker--item home-speaker--a" v-for="speaker in SpeakerFilter.normal">
                         <a :href="'speakers.html#s' + speaker.target_id">
