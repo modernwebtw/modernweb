@@ -2562,9 +2562,11 @@ nav {
   margin: 0 0 300px 0;
   position: relative;
   width: 100%; }
+  .jobs .title {
+    margin-top: 2%; }
   .jobs--item {
     background-color: #eeeeee;
-    margin: 3% 0 2%;
+    margin: 2% 0;
     border-radius: 10px;
     justify-content: center;
     -ms-flex-pack: center; }

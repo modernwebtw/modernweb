@@ -89,6 +89,7 @@
         <section class="content jobs">
             <div class="container">
                 <!-- 主辦單位 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Host.length > 0">主辦單位</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Host">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -134,6 +135,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 鑽石 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Diamond.length > 0">鑽石級</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Diamond">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -179,6 +181,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 白金 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Platinum.length > 0">白金級</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Platinum">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -224,6 +227,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 黃金 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Gold.length > 0">黃金級</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Gold">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -269,6 +273,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 銀 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Silver.length > 0">銀級</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Silver">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -314,6 +319,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 銅 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Bronze.length > 0">銅級</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Bronze">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -359,6 +365,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 企業贊助 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Enterprise.length > 0">企業贊助</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Enterprise">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -404,6 +411,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 共同推廣 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Promo.length > 0">共同推廣</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Promo">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
@@ -449,6 +457,7 @@
                     <!-- jobs item -->
                 </div>
                 <!-- 特別感謝 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Special.length > 0">特別感謝</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Special">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
