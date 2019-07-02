@@ -235,7 +235,7 @@
                                     <p class="keynote--item--desc--sub">{{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</p>
                                     <div v-html="speaker.profile" class="keynote--item--desc--profile"></div>
                                     <div class="btn keynote--item--desc--btn">
-                                        <i class="fas fa-arrow-right"></i>
+                                        <!-- <i class="fas fa-arrow-right"></i> -->
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@
                 <div class="row speaker--cn--row justify-content-center mt30">
                     <!-- 出品人 -->
                     <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6278'">
-                        <a :href="'speaker.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
@@ -453,7 +453,7 @@
                         </a>
                     </div>
                     <div class="col-md-5 col-10 d-flex align-items-center speaker--cn--producer flex-column-sm" v-for="speaker in Speaker" v-if="speaker.target_id === '6271'">
-                        <a :href="'speaker.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="flex-column-sm row speaker--cn--producer--a">
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--producer--img">
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
@@ -486,7 +486,7 @@
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--item--img">
                             <div class="speaker--item--desc">
                                 <h4 class="speaker--item--desc--name session">{{ speaker.speaker }}
-                                    <i class="fas fa-arrow-right"></i>
+                                    <!-- <i class="fas fa-arrow-right"></i> -->
                                 </h4>
                                 <p class="speaker--item--desc--sub">{{ speaker.company }}
                                     <br>{{ speaker.department }}{{ speaker.position }}</p>
