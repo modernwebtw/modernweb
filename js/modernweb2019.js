@@ -10,11 +10,10 @@ var modernweb2019 = new Vue({
         },
         Speaker: {},
         Sponsor: {},
-        Modal_Speaker: {},
-        Modal_Session: {},
-        Modal_Sponsor: {},
-        Test: {},
-        sessionSortedByTime: {}
+        SpeakerInner: {},
+        SponsorInner: {},
+        sessionSortedByTime: {},
+        JobList: []
     },
     computed: {
         ModalData: function() {
@@ -60,35 +59,118 @@ var modernweb2019 = new Vue({
                 }
             });
         },
-        showModal: function(speaker) {
-            this.Modal_Speaker = speaker;
-            $('a[href="#speakerModalIntro"]').tab('show');
-            $('#speakerModal').modal('show');
-            $('#tabSession').removeClass('active');
-            $('#tabSpeaker').addClass('active');
-            $('#speakerModalAgenda').removeClass('active');
-            $('#speakerModalIntro').addClass('active');
-        },
-        showModal2: function(session) {
-            this.Modal_Session = session;
-            if (!!session.summary.length) {
-                $('a[href="#sessionModalAgenda"]').tab('show');
-                $('#sessionModal').modal('show');
-                $('.active.tabSession').addClass('active');
-                $('.active.tabSpeaker').removeClass('active');
-                $('#sessionModalAgenda').addClass('active');
-                $('#sessionModalIntro').removeClass('active');
+        ConvertEmptyArrayToString: function(rowData, arrayKey) {
+            for (var i = 0; i < arrayKey.length; i++) {
+                var key = arrayKey[i];
+                rowData[key] = (rowData[key].length === 0) ? '' : rowData[key];
             }
-            $('#tabSpeaker').hide();
-            if (!!session.speaker.length) {
-                $('#tabSpeaker').show();
+            return rowData;
+        },
+        loadSpeakerInner: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            if (!id) {
+                return false;
+            }
+            for (var i = 0; i < this.Speaker.length; i++) {
+                if (this.Speaker[i].target_id == id) {
+                    modernweb2019.SpeakerInner = this.Speaker[i];
+                    break;
+                }
+            }
 
+            var self = this;
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=6270').then(function(speaker) {
+                modernweb2019.Speaker = speaker;
+                for (var i = 0; i < modernweb2019.Speaker.length; i++) {
+                    if (modernweb2019.Speaker[i].target_id == id) {
+                        modernweb2019.SpeakerInner['profile'] = modernweb2019.Speaker[i]['profile'];
+                        break;
+                    }
+                }
+            })
+        },
+        loadSponsorInner: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            if (!id) {
+                return false;
+            }
+            var sponsor = false;
+            for (var i = 0; i < this.Sponsor.length; i++) {
+                if (this.Sponsor[i].vendor_id == id) {
+                    sponsor = this.Sponsor[i];
+                    break;
+                }
+            }
+            if (!!sponsor) {
+                var api_url = function(type) {
+                    return 'https://confapi.ithome.com.tw/api/v1.3/' + type + '.jsonp?callback=?&nid=' + id;
+                }
+                $.when(
+                    $.getJSON(api_url('products')),
+                    $.getJSON(api_url('whitepapers')),
+                    $.getJSON(api_url('videos')),
+                    $.getJSON(api_url('event_photos')),
+                    $.getJSON(api_url('solutions')),
+                    $.getJSON(api_url('banners'))
+                ).then(function(products, whitepapers, videos, event_photos, solutions, banners) {
+                    // whitepapers description
+                    whitepapers[0] = $(whitepapers[0]).map(function(index, whitepaper) {
+                        return modernweb2019.ConvertEmptyArrayToString(whitepaper, [
+                            'description'
+                        ]);
+                    }).get();
+                    // videos description
+                    videos[0] = $(videos[0]).map(function(index, video) {
+                        return modernweb2019.ConvertEmptyArrayToString(video, [
+                            'description'
+                        ]);
+                    }).get();
+                    // ================================
+                    sponsor['products'] = products[0];
+                    sponsor['whitepapers'] = whitepapers[0];
+                    sponsor['videos'] = videos[0];
+                    sponsor['event_photos'] = event_photos[0];
+                    sponsor['solutions'] = solutions[0];
+                    sponsor['banners'] = banners[0];
+                    modernweb2019.SponsorInner = sponsor;
+                    modernweb2019.$nextTick(function() {
+                        location.hash && (function(id) {
+                            var scrollTop = $(id).offset().top;
+                            $('html, body').scrollTop(scrollTop);
+                        }(location.hash));
+                    });
+                });
+            } else {
+                modernweb2019.SponsorInner = sponsor;
             }
         },
-        showModal3: function(sponsor) {
-            this.Modal_Sponsor = sponsor;
-            $('a[href="#sponsorModal"]').tab('show');
-            $('#sponsorModal').modal('show');
+        shareSpeakerInner: function() {
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': location.href,
+                        'og:title': this.SpeakerInner['speaker'],
+                        'og:description': this.SpeakerInner['profile'],
+                        'og:image': this.SpeakerInner['avatar']
+                    }
+                })
+            }, function(response) {});
+        },
+        shareSponsorInner: function() {
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': location.href,
+                        'og:title': this.SponsorInner['title'],
+                        'og:description': this.SponsorInner['description'],
+                        'og:image': this.SponsorInner['logo']
+                    }
+                })
+            }, function(response) {});
         },
         arcToSpan: function(str) {
             return str.replace(/\(/igm, '<span>(').replace(/\)/igm, ')</span>');
@@ -157,6 +239,29 @@ var modernweb2019 = new Vue({
 
                 }
                 return sessionSortedByTime;
+            }
+
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/job-list?confid=6344&callback=?').then(function(joblist) {
+                $.map(joblist, function(jobs) {
+                    $.map(sponsor, function(_sponsor) {
+                        if (_sponsor.vendor_id == jobs.sponsor) {
+                            jobs['name'] = _sponsor.title;
+                            jobs['screen_name'] = _sponsor.alt_title;
+                            jobs['sponsor_english_title'] = _sponsor.english_title;
+                        }
+                    });
+                });
+                modernweb2019.JobList = joblist;
+            })
+
+            var is_speaker_page = location.pathname.search(/speakers/igm) > -1;
+            if (!!is_speaker_page) {
+                modernweb2019.loadSpeakerInner();
+            }
+
+            var is_sponsor_page = location.pathname.search(/jobs/igm) > -1;
+            if (!!is_sponsor_page) {
+                modernweb2019.loadSponsorInner();
             }
 
 
