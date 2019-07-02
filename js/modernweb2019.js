@@ -11,7 +11,6 @@ var modernweb2019 = new Vue({
         Speaker: {},
         Sponsor: {},
         SpeakerInner: {},
-        SponsorInner: {},
         sessionSortedByTime: {},
         JobList: []
     },
@@ -89,61 +88,6 @@ var modernweb2019 = new Vue({
                 }
             })
         },
-        loadSponsorInner: function() {
-            var id = location.hash.replace(/#s/igm, '');
-            if (!id) {
-                return false;
-            }
-            var sponsor = false;
-            for (var i = 0; i < this.Sponsor.length; i++) {
-                if (this.Sponsor[i].vendor_id == id) {
-                    sponsor = this.Sponsor[i];
-                    break;
-                }
-            }
-            if (!!sponsor) {
-                var api_url = function(type) {
-                    return 'https://confapi.ithome.com.tw/api/v1.3/' + type + '.jsonp?callback=?&nid=' + id;
-                }
-                $.when(
-                    $.getJSON(api_url('products')),
-                    $.getJSON(api_url('whitepapers')),
-                    $.getJSON(api_url('videos')),
-                    $.getJSON(api_url('event_photos')),
-                    $.getJSON(api_url('solutions')),
-                    $.getJSON(api_url('banners'))
-                ).then(function(products, whitepapers, videos, event_photos, solutions, banners) {
-                    // whitepapers description
-                    whitepapers[0] = $(whitepapers[0]).map(function(index, whitepaper) {
-                        return modernweb2019.ConvertEmptyArrayToString(whitepaper, [
-                            'description'
-                        ]);
-                    }).get();
-                    // videos description
-                    videos[0] = $(videos[0]).map(function(index, video) {
-                        return modernweb2019.ConvertEmptyArrayToString(video, [
-                            'description'
-                        ]);
-                    }).get();
-                    // ================================
-                    sponsor['products'] = products[0];
-                    sponsor['whitepapers'] = whitepapers[0];
-                    sponsor['videos'] = videos[0];
-                    sponsor['event_photos'] = event_photos[0];
-                    sponsor['solutions'] = solutions[0];
-                    sponsor['banners'] = banners[0];
-                    modernweb2019.SponsorInner = sponsor;
-                    modernweb2019.$nextTick(function() {
-                        location.hash && (function(id) {
-                            var scrollTop = $(id).offset().top;
-                            $('html, body').scrollTop(scrollTop);
-                        }(location.hash));
-                    });
-                });
-            } else {
-                modernweb2019.SponsorInner = sponsor;
-            }
-        },
         shareSpeakerInner: function() {
             FB.ui({
                 method: 'share_open_graph',
@@ -154,20 +98,6 @@ var modernweb2019 = new Vue({
                         'og:title': this.SpeakerInner['speaker'],
                         'og:description': this.SpeakerInner['profile'],
                         'og:image': this.SpeakerInner['avatar']
-                    }
-                })
-            }, function(response) {});
-        },
-        shareSponsorInner: function() {
-            FB.ui({
-                method: 'share_open_graph',
-                action_type: 'og.likes',
-                action_properties: JSON.stringify({
-                    object: {
-                        'og:url': location.href,
-                        'og:title': this.SponsorInner['title'],
-                        'og:description': this.SponsorInner['description'],
-                        'og:image': this.SponsorInner['logo']
                     }
                 })
             }, function(response) {});
@@ -259,16 +189,22 @@ var modernweb2019 = new Vue({
                 modernweb2019.loadSpeakerInner();
             }
 
-            var is_sponsor_page = location.pathname.search(/jobs/igm) > -1;
-            if (!!is_sponsor_page) {
-                modernweb2019.loadSponsorInner();
-            }
-
-
             modernweb2019.$nextTick(function() {
                 $('button[data-toggle="modal"]').click(function(e) {
                     e.preventDefault();
                 });
+
+                function goScroll(target) {
+                    var $target = $(target);
+                    var target_top = $target.offset().top;
+                    var header_height = ($('html').width() <= 768) ? 0 : $('nav').height();
+                    var sTop = target_top - header_height;
+                    $('html, body').stop().animate({
+                        scrollTop: sTop
+                    }, 500);
+                }
+
+                location.hash && goScroll(location.hash);
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     // $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
