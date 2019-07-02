@@ -229,14 +229,14 @@
                                     <span class="keynote--item--tag">Keynote</span>
                                     <template v-for="session in speaker.session">
                                         <h3 class=""> {{ session.title }}</h3>
-                                        <div v-html="session.summary"></div>
+                                        <div v-html="session.summary" class="keynote--item--desc--summary"></div>
                                     </template>
                                     <h4 class="keynote--item--desc--name">{{ speaker.speaker }}</h4>
-                                    <p class="keynote--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
-                                    <div v-html="speaker.profile"></div>
-                                    <span class="btn keynote--item--desc--btn">
+                                    <p class="keynote--item--desc--sub">{{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</p>
+                                    <div v-html="speaker.profile" class="keynote--item--desc--profile"></div>
+                                    <div class="btn keynote--item--desc--btn">
                                         <i class="fas fa-arrow-right"></i>
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -447,7 +447,8 @@
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
                                 <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
-                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}
+                                     {{ speaker.department }}{{ speaker.position }}</p>
                             </div>
                         </a>
                     </div>
@@ -457,7 +458,7 @@
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
                                 <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
-                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
                             </div>
                         </a>
                     </div>
@@ -468,7 +469,8 @@
                             <img :src="speaker.avatar" alt="" class="img-fluid speaker--cn--item--img">
                             <div class="speaker--cn--item--desc">
                                 <h4 class="speaker--cn--item--desc--name">{{ speaker.speaker }}</h4>
-                                <p class="speaker--cn--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                <p class="speaker--cn--item--desc--sub">{{ speaker.company }}
+                                    <br>{{ speaker.department }}{{ speaker.position }}</p>
                             </div>
                         </a>
                     </div>
@@ -486,7 +488,8 @@
                                 <h4 class="speaker--item--desc--name session">{{ speaker.speaker }}
                                     <i class="fas fa-arrow-right"></i>
                                 </h4>
-                                <p class="speaker--item--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                <p class="speaker--item--desc--sub">{{ speaker.company }}
+                                    <br>{{ speaker.department }}{{ speaker.position }}</p>
                             </div>
                         </a>
                     </div>
