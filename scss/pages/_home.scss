@@ -1040,10 +1040,10 @@
                 font-weight: 500;
                 word-break: break-all;
             }
-
             &--sub {
-                margin-top: 10px;
+                margin: 10px 0;
             }
+            &--session { }
         }
     }
 
@@ -1325,25 +1325,26 @@
                     border-radius: 10px;
                 }
 
-                &.session:before {
-                    content: 'Session';
-                    background-color: $bg-session;
-                    text-align: center;
-                    padding: 6px;
-                    font-size: 16px;
-                    letter-spacing: .5px;
-                    width: 100px;
-                    left: -30px;
-                    top: -20px;
-                    /* transform: rotate(-20deg); */
-                    position: absolute;
-                    border-radius: 10px;
-                }
+                // &.session:before {
+                //     content: 'Session';
+                //     background-color: $bg-session;
+                //     text-align: center;
+                //     padding: 6px;
+                //     font-size: 16px;
+                //     letter-spacing: .5px;
+                //     width: 100px;
+                //     left: -30px;
+                //     top: -20px;
+                //     /* transform: rotate(-20deg); */
+                //     position: absolute;
+                //     border-radius: 10px;
+                // }
             }
 
             &--sub {
-                margin-top: 10px;
+                margin: 10px 0;
             }
+            &--session { }
         }
     }
 }
