@@ -2541,7 +2541,19 @@ nav {
         .speakers--item--intro--avatar img {
           border-radius: 50%;
           display: inline-block;
-          width: 90%; }
+          width: 90%;
+          box-shadow: 0px 3px 5px #929292; }
+        .speakers--item--intro--avatar--keynote {
+          position: relative;
+          margin: 0.5em;
+          padding: 10px;
+          background: #1c26cc url(../img/bg-planet--l.svg) no-repeat center 100%;
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+          max-width: 300px;
+          flex-basis: 300px;
+          overflow: hidden; }
       .speakers--item--intro--desc {
         padding: 10px; }
         .speakers--item--intro--desc--name {
