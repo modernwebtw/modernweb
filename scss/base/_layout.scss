@@ -77,8 +77,8 @@ footer {
 }
 
 section {
-    padding: 1.2% 1% 80px 0%;
-    margin: 3% 0 4% 0;
+    padding: 1.2% 1% 2% 0%;
+    margin: 1.5% 0;
     @include media("<=767px") {
         padding: 60px 0 1.2% 0;
     }
@@ -125,7 +125,7 @@ nav {
         padding: 0.4em 0.6em;
     }
     .nav-item {
-        max-width: 100px;
+        max-width: 110px;
         @include media("<992px"){
             max-width: 100%;
         }

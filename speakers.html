@@ -41,7 +41,7 @@
 
 <body class="theme-bg-color">
     <!-- #modernWeb2019 -->
-    <div id="modernWeb2019">
+    <div id="modernweb2019">
         <!-- loading animation -->
         <!-- <div class="loading" id="loading">
         </div> -->
@@ -59,6 +59,9 @@
                     <ul class="navbar-nav text-uppercase ml-auto nav-fill w-100 justify-content-end align-items-center">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="tickets.html">報名購票</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">Keynotes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講師</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jobs.html">贊助商與徵才</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="policy.html">行為守則</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
@@ -74,45 +77,39 @@
             </div>
         </nav>
         <!-- end Navigation -->
-
         <!-- 會前、會中banner -->
-        <section class="content content--kv" id="nav">
-            <div class="content--kv--wrapper">
-                <div class="kv-head">
-                    <h1 class="title deco-title-dk">講師</h1>
-                    <h3 class="sub-title">Speakers</h3>
-                </div>
-            </div>
+        <section class="content content--kv content--kv--s" id="nav">
         </section>
-
-        <section class="content speakers">
-
+        <section class="content speakers" id="nav">
             <!-- 會後講師banner -->
             <!-- <div class="speakers--banner">
                 <img src="img/speaker00-b.jpg" class="img-fluid">
             </div> -->
+            <h3 class="title deco-title text-center">議程與講師</h3>
             <div class="speakers--item">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-8 col-12 speakers--item--head">
-                            <!-- 議程標題 -->
-                            <h3 class="">The Layers Of The Web</h3>
-                        </div>
-                        <div class="col-md-8 col-12 speakers--item--content">
-                            Do you ever get overwhelmed by the ever-changing nature of web design and development? Exhausting, isn't it? How are you supposed to know which technologies and tools you should invest your time in? Will they stick around or will you just have to relearn everything in another few months? Join Jeremy as he takes a tour of the past, present, and future of working on the web. From the building blocks of HTML, CSS, and JavaScript through to frameworks and libraries right up to the latest and greatest Progressive Web Apps, this talk will examine our collective assumptions with a critical eye. By learning from the past, we can make sensible design decisions today to build the web of tomorrow.
-                        </div>
-                        <div class="col-md-8 col-12 row speakers--item--download">
-                            <a href="#?" class="col btn btn-default speakers--item--download--btn">簡報下載</a>
-                            <a href="#?" class="col btn btn-default speakers--item--download--btn">議程共筆</a>
-                        </div>
-                        <div class="col-md-8 col-12 row speakers--item--intro">
+                        <template v-for="session in SpeakerInner.session">
+                            <div class="col-md-8 col-12 speakers--item--head">
+                                <!-- 議程標題 -->
+                                <h3 class=""><span class="badge badge-pill keynote--item--tag" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
+                            </div>
+                            <div class="col-md-8 col-12 speakers--item--content" v-html="session.summary">
+                            </div>
+                            <div class="col-md-8 col-12 row speakers--item--download">
+                                <a :href="session.download_link" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link">簡報下載</a>
+                                <a :href="session.download_link_title" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link_title">議程共筆</a>
+                            </div>
+                        </template>
+                        <div class=" col-md-8 col-12 row speakers--item--intro">
                             <div class="col-md-4 col-12 speakers--item--intro--avatar">
-                                <img src="img/speaker-00.jpg" alt="" class="img-fluid">
+                                <img :src="SpeakerInner.avatar" alt="" class="img-fluid">
                             </div>
                             <div class="col-md-8 col-12 speakers--item--intro--desc">
-                                <div class="speakers--item--intro--desc--name">Jeremy Keith</div>
-                                <div class="speakers--item--intro--desc--p">
-                                    <p>Jeremy Keith lives in Brighton, England where he makes websites with the splendid design agency <a href="https://clearleft.com/">Clearleft</a>. You may know him from such books as <a href="https://domscripting.com/">DOM Scripting</a>, <a href="https://bulletproofajax.com/">Bulletproof Ajax</a>, <a href="https://html5forwebdesigners.com/">HTML5 For Web Designers</a>, <a href="https://resilientwebdesign.com/">Resilient Web Design</a>, and, most recently, <a href="https://abookapart.com/products/going-offline">Going Offline</a>.</p>
+                                <div class="speakers--item--intro--desc--name">{{ SpeakerInner.speaker }}</div>
+                                <p class="speaker--item--desc--sub">{{ SpeakerInner.company }}
+                                    <br>{{ SpeakerInner.department }}{{ SpeakerInner.position }}</p>
+                                <div class="speakers--item--intro--desc--p" v-html="SpeakerInner.profile">
                                 </div>
                             </div>
                         </div>
@@ -156,9 +153,14 @@
     <!-- end #modernWeb2019 -->
 </body>
 <!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+<script type="text/javascript" src="js/modernweb2019.js?0701"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script src="js/easytimer.js"></script>
 
