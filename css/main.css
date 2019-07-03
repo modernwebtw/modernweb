@@ -1640,7 +1640,7 @@ nav {
       font-weight: 500;
       word-break: break-all; }
     .home--speaker--cn .speaker--cn--producer--desc--sub {
-      margin-top: 10px; }
+      margin: 10px 0; }
 .home--speaker--cn .speaker--cn--item {
   padding: 15px;
   text-align: center;
@@ -1848,21 +1848,8 @@ nav {
         /* transform: rotate(-20deg); */
         position: absolute;
         border-radius: 10px; }
-      .home--speaker .speaker--item--desc--name.session:before {
-        content: 'Session';
-        background-color: #aaaaaa;
-        text-align: center;
-        padding: 6px;
-        font-size: 16px;
-        letter-spacing: .5px;
-        width: 100px;
-        left: -30px;
-        top: -20px;
-        /* transform: rotate(-20deg); */
-        position: absolute;
-        border-radius: 10px; }
     .home--speaker .speaker--item--desc--sub {
-      margin-top: 10px; }
+      margin: 10px 0; }
 
 .more-title {
   background-color: #cccccc;

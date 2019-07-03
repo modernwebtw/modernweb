@@ -477,7 +477,7 @@
                                 <h4 class="speaker--cn--item--desc--name">{{ speaker.speaker }}</h4>
                                 <p class="speaker--cn--item--desc--sub">{{ speaker.company }}
                                     <br>{{ speaker.department }}{{ speaker.position }}</p>
-                                <div v-for="session in speaker.session">
+                                <div v-for="session in speaker.session" class="speaker--cn--item--desc--session">
                                     {{ session .title }}
                                 </div>
                             </div>
