@@ -122,3 +122,16 @@
 		}
 	}
 }
+
+.keynote--item--tag {
+            display: block;
+            margin: 10px 0;
+            font-weight: 500;
+            background: $bg-caramel;
+            padding: 6px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+}
