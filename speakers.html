@@ -92,7 +92,7 @@
                         <template v-for="session in SpeakerInner.session">
                             <div class="col-md-8 col-12 speakers--item--head">
                                 <!-- 議程標題 -->
-                                <h3 class=""><span class="badge badge-pill badge-warning" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
+                                <h3 class=""><span class="badge badge-pill keynote--item--tag" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
                             </div>
                             <div class="col-md-8 col-12 speakers--item--content" v-html="session.summary">
                             </div>
