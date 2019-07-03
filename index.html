@@ -448,8 +448,10 @@
                             <div class="col speaker--cn--producer--desc d-flex flex-column">
                                 <h4 class="speaker--cn--producer--desc--title">Web 前端議題 出品人</h4>
                                 <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
-                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}
-                                     {{ speaker.department }}{{ speaker.position }}</p>
+                                <p class="speaker--cn--producer--desc--sub">{{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</p>
+                                <div v-for="session in speaker.session">
+                                    {{ session .title }}
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -460,6 +462,9 @@
                                 <h4 class="speaker--cn--producer--desc--title">Web 架構議題 出品人</h4>
                                 <p class="speaker--cn--producer--desc--name">{{ speaker.speaker }}</p>
                                 <p class="speaker--cn--producer--desc--sub">{{ speaker.company }} {{ speaker.department }}{{ speaker.position }}</p>
+                                <div v-for="session in speaker.session">
+                                    {{ session .title }}
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -472,6 +477,9 @@
                                 <h4 class="speaker--cn--item--desc--name">{{ speaker.speaker }}</h4>
                                 <p class="speaker--cn--item--desc--sub">{{ speaker.company }}
                                     <br>{{ speaker.department }}{{ speaker.position }}</p>
+                                <div v-for="session in speaker.session">
+                                    {{ session .title }}
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -492,6 +500,9 @@
                                 </h4>
                                 <p class="speaker--item--desc--sub">{{ speaker.company }}
                                     <br>{{ speaker.department }}{{ speaker.position }}</p>
+                                <div v-for="session in speaker.session">
+                                    {{ session .title }}
+                                </div>
                             </div>
                         </a>
                     </div>

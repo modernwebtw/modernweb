@@ -91,9 +91,8 @@
                     <div class="row justify-content-center">
                         <template v-for="session in SpeakerInner.session">
                             <div class="col-md-8 col-12 speakers--item--head">
-                                <h3 class="title deco-title" v-if="SpeakerInner.Platinum == 'true'">KEYNOTES</h3>
                                 <!-- 議程標題 -->
-                                <h3 class="">{{ session.title }}</h3>
+                                <h3 class=""><span class="badge badge-pill badge-warning" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
                             </div>
                             <div class="col-md-8 col-12 speakers--item--content" v-html="session.summary">
                             </div>
@@ -108,6 +107,8 @@
                             </div>
                             <div class="col-md-8 col-12 speakers--item--intro--desc">
                                 <div class="speakers--item--intro--desc--name">{{ SpeakerInner.speaker }}</div>
+                                <p class="speaker--item--desc--sub">{{ SpeakerInner.company }}
+                                    <br>{{ SpeakerInner.department }}{{ SpeakerInner.position }}</p>
                                 <div class="speakers--item--intro--desc--p" v-html="SpeakerInner.profile">
                                 </div>
                             </div>
