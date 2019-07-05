@@ -41,7 +41,7 @@
 
 <body class="theme-bg-color">
     <!-- #modernWeb2019 -->
-    <div id="modernWeb2019">
+    <div id="modernweb2018">
         <!-- loading animation -->
         <!-- <div class="loading" id="loading">
         </div> -->
@@ -120,7 +120,7 @@
                                                         </div>
                                                          <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -137,7 +137,7 @@
                                                             </div>
                                                              <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -157,10 +157,10 @@
                                 </template>
                                 <!-- break -->
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'break'">
-                                    <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
-                                        <div class="col-sm-2 bs-agenda__row-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
+                                    <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-skin">
+                                        <div class="col-sm-2 bs-agenda__row-time bg-skin">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-skin" >
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -168,10 +168,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div v-else class="row bg-purple">
-                                        <div class="col-sm-2 bs-agenda__row-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
+                                    <div v-else class="row bg-light-blue">
+                                        <div class="col-sm-2 bs-agenda__row-time bg-light-blue">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-light-blue" >
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -187,17 +187,17 @@
                                         <div class="col-sm-2 "></div>
                                         <div class="col-sm-10">
                                             <div class="row ">
-                                                <div class="col-sm-3  bg-gray">
-                                                    <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-gray">
+                                                    <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-white">
-                                                    <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-white">
+                                                    <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-gray">
-                                                    <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-gray">
+                                                    <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-white">
-                                                    <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-white">
+                                                    <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -214,7 +214,7 @@
                                             <div class="row agenda-row">
                                                 <template v-for="sss in ss.sessionOfSameTime">
                                                     <template v-for="speaker in sss.speaker">
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track bg-gray" v-if="sss.track == 'Track A'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track A'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -222,7 +222,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -234,7 +234,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track " v-if="sss.track == 'Track B'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track " v-if="sss.track == 'Track B'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track b </span>
                                                                 <div class="agenda__t-class-topic">
@@ -242,7 +242,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -254,7 +254,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track bg-gray" v-if="sss.track == 'Track C'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track C'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track c </span>
                                                                 <div class="agenda__t-class-topic">
@@ -262,7 +262,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -274,7 +274,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track" v-if="sss.track == 'Track D'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track" v-if="sss.track == 'Track D'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track d </span>
                                                                 <div class="agenda__t-class-topic">
@@ -282,7 +282,27 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
+                                                    <span>會議簡報</span>
+
+                                                </a></span>
+                                                </span>
+                                                                <div class="agenda__t-keynote-name">
+                                                                    <div><img :src="speaker.avatar" alt="">
+                                                                        <span>{{speaker.speaker}}</span>
+                                                                        <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track E'">
+                                                            <div class="agenda__t-class horizontal-center">
+                                                                <span class="agenda__t-class-track">track e </span>
+                                                                <div class="agenda__t-class-topic">
+                                                                    <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
+                                                                </div>
+                                                                 <span  class="session-download" v-if="!!sss.download_link">
+                                                    <span > <a :href="sss.download_link">
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -339,7 +359,7 @@
                                                             </div>
                                                              <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -357,7 +377,7 @@
                                                             </div>
                                                              <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -377,10 +397,10 @@
                                 </template>
                                 <!-- break -->
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'break'">
-                                    <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-yellow">
-                                        <div class="col-sm-2 bs-agenda__row-time bg-yellow">{{ss.date | time}} - {{ss.endDate | time}}
+                                    <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-skin">
+                                        <div class="col-sm-2 bs-agenda__row-time bg-skin">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-yellow" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-skin" >
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -388,10 +408,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div v-else class="row bg-purple">
-                                        <div class="col-sm-2 bs-agenda__row-time bg-purple">{{ss.date | time}} - {{ss.endDate | time}}
+                                    <div v-else class="row bg-light-blue">
+                                        <div class="col-sm-2 bs-agenda__row-time bg-light-blue">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-purple" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-sm-10 bs-session bg-light-blue" >
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -407,17 +427,20 @@
                                         <div class="col-sm-2 "></div>
                                         <div class="col-sm-10">
                                             <div class="row ">
-                                                <div class="col-sm-3  bg-gray">
-                                                    <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-gray">
+                                                    <div class="agenda__t-track text-center">Track A <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-white">
-                                                    <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-white">
+                                                    <div class="agenda__t-track text-center">Track B <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-gray">
-                                                    <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-gray">
+                                                    <div class="agenda__t-track text-center">Track C <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
-                                                <div class="col-sm-3  bg-white">
-                                                    <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker"></i> </div>
+                                                <div class="col-sm-25  bg-white">
+                                                    <div class="agenda__t-track text-center">Track D <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
+                                                </div>
+                                                <div class="col-sm-25  bg-gray">
+                                                    <div class="agenda__t-track text-center">Track E <i aria-hidden="true " class="fa fa-map-marker-alt"></i> </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -434,7 +457,7 @@
                                             <div class="row agenda-row">
                                                 <template v-for="sss in ss.sessionOfSameTime">
                                                     <template v-for="speaker in sss.speaker">
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track bg-gray" v-if="sss.track == 'Track A'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track A'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track a </span>
                                                                 <div class="agenda__t-class-topic">
@@ -443,7 +466,7 @@
 
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -451,11 +474,11 @@
                                                                 <div class="agenda__t-keynote-name">
                                                                     <div><img :src="speaker.avatar" alt="">
                                                                         <span>{{speaker.speaker}}</span>
-                                                                        <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
+                                                                        <span>/ {{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track " v-if="sss.track == 'Track B'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track " v-if="sss.track == 'Track B'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track b </span>
                                                                 <div class="agenda__t-class-topic">
@@ -463,7 +486,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -475,7 +498,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track bg-gray" v-if="sss.track == 'Track C'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track C'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track c </span>
                                                                 <div class="agenda__t-class-topic">
@@ -483,7 +506,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -495,7 +518,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-3  be-session-track" v-if="sss.track == 'Track D'">
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track" v-if="sss.track == 'Track D'">
                                                             <div class="agenda__t-class horizontal-center">
                                                                 <span class="agenda__t-class-track">track d </span>
                                                                 <div class="agenda__t-class-topic">
@@ -503,7 +526,7 @@
                                                                 </div>
                                                                  <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>        
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
 
                                                 </a></span>
@@ -515,6 +538,26 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div data-toggle="modal" :data-target="'#se' + sss.session_id" class="col-sm-25  be-session-track bg-gray" v-if="sss.track == 'Track E'">
+                                                            <div class="agenda__t-class horizontal-center">
+                                                                <span class="agenda__t-class-track">track e </span>
+                                                                <div class="agenda__t-class-topic">
+                                                                    <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
+                                                                </div>
+                                                                 <span  class="session-download" v-if="!!sss.download_link">
+                                                    <span > <a :href="sss.download_link">
+                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
+                                                    <span>會議簡報</span>
+
+                                                </a></span>
+                                                </span>
+                                                                <div class="agenda__t-keynote-name">
+                                                                    <div><img :src="speaker.avatar" alt="">
+                                                                        <span>{{speaker.speaker}}</span>
+                                                                        <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
                                                     </template>
                                                 </template>
                                             </div>
@@ -688,10 +731,11 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
+<script type="text/javascript" src="js/confapi.js" data-nid="3531"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+<script type="text/javascript" src="js/modernweb2018.js?0701"></script>
 <script type="text/javascript" src="js/modernweb2019.js?0701"></script>
 <script type="text/javascript" src="js/main.js"></script>
 

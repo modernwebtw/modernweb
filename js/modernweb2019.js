@@ -78,7 +78,7 @@ var modernweb2019 = new Vue({
             }
 
             var self = this;
-            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=6270').then(function(speaker) {
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=3531').then(function(speaker) {
                 modernweb2019.Speaker = speaker;
                 for (var i = 0; i < modernweb2019.Speaker.length; i++) {
                     if (modernweb2019.Speaker[i].target_id == id) {
