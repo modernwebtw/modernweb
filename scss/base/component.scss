@@ -215,6 +215,86 @@
 
 
 
+
+//* modal
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: $font-color;
+    margin: 20% auto;
+    min-height: 60vh;
+    h5{color: $font-color;}
+    p{color: $font-color;}
+    .modal-header {
+        border-bottom: none;
+        .close {
+            color: $font-color;
+            font-size: 2.5em;
+            margin-top: -10px;
+        }
+    }
+    .modal-body{
+        text-align: left;
+        .modal-title{ margin: 5px auto 8px auto;}
+    }
+    .tab-content{padding: 10px 5px;
+            blockquote{
+                margin: 10px 0;
+                background: #eee;
+                padding: 8px;
+                font-size: 16px;
+                border-left: none;
+                border: 5px dotted #ddd;
+            }
+            ol, ul { margin-left: 20px;}
+    }
+    .list-inline{
+        &>li{
+            width: 49.5%;
+            text-align: center;
+            text-decoration: none;
+            background: $font-color-dark-blue;
+            display: inline-block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            .tab {
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                padding: 9px 4px 7px;;
+                text-decoration: none;
+                width: 100%;
+                cursor: pointer;
+            }
+            &.active{
+                border: 1px solid  $font-color; 
+                border-bottom: none;
+                background-color: #ffffff;
+
+                .tab{ color:#333; }
+            }
+        }
+    }
+    .list-inline>li .active {
+        border-bottom: 1px solid #fff;
+    }
+}
+@media screen and (max-width:480px ) {
+    .container .modal{
+        left: none!important; right:none !important;
+    }
+}
+// modal
+// modal theme
+.section--org .modal-content, .section--spon .modal-content, .section--buy .modal-content, .section--thx .modal-content{
+    background: #ffffff;
+    .modal-header{ }
+}
+.section--org .img-sponsor:first-of-type{padding: 1%; margin: auto; margin-bottom: 3%; max-width: 250px;}
+
+//* modal end
+
+
 // Button
 .btn--default {
     background: #fff;

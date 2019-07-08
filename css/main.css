@@ -779,6 +779,75 @@ nav {
   background: #a9e4fe; }
 
 /*  TIMELINE end */
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #333333;
+  margin: 20% auto;
+  min-height: 60vh; }
+  .modal-content h5 {
+    color: #333333; }
+  .modal-content p {
+    color: #333333; }
+  .modal-content .modal-header {
+    border-bottom: none; }
+    .modal-content .modal-header .close {
+      color: #333333;
+      font-size: 2.5em;
+      margin-top: -10px; }
+  .modal-content .modal-body {
+    text-align: left; }
+    .modal-content .modal-body .modal-title {
+      margin: 5px auto 8px auto; }
+  .modal-content .tab-content {
+    padding: 10px 5px; }
+    .modal-content .tab-content blockquote {
+      margin: 10px 0;
+      background: #eee;
+      padding: 8px;
+      font-size: 16px;
+      border-left: none;
+      border: 5px dotted #ddd; }
+    .modal-content .tab-content ol, .modal-content .tab-content ul {
+      margin-left: 20px; }
+  .modal-content .list-inline > li {
+    width: 49.5%;
+    text-align: center;
+    text-decoration: none;
+    background: #19195e;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .modal-content .list-inline > li .tab {
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      padding: 9px 4px 7px;
+      text-decoration: none;
+      width: 100%;
+      cursor: pointer; }
+    .modal-content .list-inline > li.active {
+      border: 1px solid #333333;
+      border-bottom: none;
+      background-color: #ffffff; }
+      .modal-content .list-inline > li.active .tab {
+        color: #333; }
+  .modal-content .list-inline > li .active {
+    border-bottom: 1px solid #fff; }
+
+@media screen and (max-width: 480px) {
+  .container .modal {
+    left: none !important;
+    right: none !important; } }
+.section--org .modal-content, .section--spon .modal-content, .section--buy .modal-content, .section--thx .modal-content {
+  background: #ffffff; }
+
+.section--org .img-sponsor:first-of-type {
+  padding: 1%;
+  margin: auto;
+  margin-bottom: 3%;
+  max-width: 250px; }
+
 .btn--default {
   background: #fff;
   border: 2px solid #531d8d;
@@ -2650,6 +2719,13 @@ nav {
   padding: 0 3px;
   border-radius: 4px; }
 
+.speaker-brief__top {
+  margin-bottom: 20px; }
+
+.speaker-box__name {
+  font-size: 120%;
+  margin-bottom: 10px; }
+
 .bs-session-container > .row {
   border-bottom: 1px solid #bababa; }
 
@@ -2731,7 +2807,6 @@ div[data-toggle="modal"] {
 
 .agenda__title {
   font-size: 48px;
-  color: #fff;
   text-align: center;
   margin-bottom: 2%; }
 
