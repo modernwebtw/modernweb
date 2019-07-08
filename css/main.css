@@ -2722,6 +2722,9 @@ nav {
 .speaker-brief__top {
   margin-bottom: 20px; }
 
+.speaker-brief__bottom {
+  align-items: flex-start; }
+
 .speaker-box__name {
   font-size: 120%;
   margin-bottom: 10px; }
