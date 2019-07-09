@@ -211,6 +211,15 @@ var modernweb2019 = new Vue({
                 ]).then(function() {
                     // $.getScript('js/app.js');
                 });
+
+                $('ul.nav-tabs').children('li').on('click', function() {
+                    if ($(this).hasClass('active')) {
+                        return false
+                    } else {
+                        $('li.tabSession').toggleClass('active');
+                        $('li.tabSpeaker').toggleClass('active');
+                    }
+                });
             });
         });
     }

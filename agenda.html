@@ -41,7 +41,7 @@
 
 <body class="theme-bg-color">
     <!-- #modernWeb2019 -->
-    <div id="modernweb2018">
+    <div id="modernweb2019">
         <!-- loading animation -->
         <!-- <div class="loading" id="loading">
         </div> -->
@@ -86,9 +86,8 @@
                 </div>
             </div>
         </section>
-  
         <!-- day 1 -->
-       <section class="">
+        <section class="">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -102,7 +101,7 @@
                                 <div class="col-12 col-sm-2 bs-agenda__row-head">時間</div>
                                 <div class="col-12 col-sm-10 bs-agenda__row-head">議程</div>
                             </div>
-                            <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'18')">
+                            <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'28')">
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'keynote'">
                                     <!-- keynote -->
                                     <div class="row bg-white">
@@ -118,7 +117,7 @@
                                                                 <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span>{{sss.title}}
                                                             </div>
                                                         </div>
-                                                         <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                        <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -135,7 +134,7 @@
                                                         <div class="bs-session-content">
                                                             <div class="agenda__t-keynote-topic"><span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{sss.title}}
                                                             </div>
-                                                             <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                            <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -160,7 +159,7 @@
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-skin">
                                         <div class="col-12 col-sm-2 bs-agenda__row-time bg-skin">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-skin" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-skin">
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -171,7 +170,7 @@
                                     <div v-else class="row bg-light-blue">
                                         <div class="col-12 col-sm-2 bs-agenda__row-time bg-light-blue">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-light-blue" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-light-blue">
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -223,7 +222,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -243,7 +242,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -263,7 +262,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -283,7 +282,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -303,7 +302,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -345,7 +344,7 @@
                                 <div class="col-12 col-sm-2 bs-agenda__row-head">時間</div>
                                 <div class="col-12 col-sm-10 bs-agenda__row-head">議程</div>
                             </div>
-                            <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'19')">
+                            <template v-for="ss in sessionSortedByTime" v-if="findWhichDayOfEvent(ss.date,'29')">
                                 <template v-if="ss['sessionOfSameTime'][0]['session_type'] == 'keynote'">
                                     <!-- keynote -->
                                     <div class="row bg-white">
@@ -360,7 +359,7 @@
                                                             <div class="agenda__t-keynote-topic">
                                                                 <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span>{{sss.title}}
                                                             </div>
-                                                             <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                            <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -378,7 +377,7 @@
                                                         <div class="bs-session-content">
                                                             <div class="agenda__t-keynote-topic"><span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{sss.title}}
                                                             </div>
-                                                             <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                            <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -403,7 +402,7 @@
                                     <div v-if="ss['sessionOfSameTime'][0]['title'] == 'Opening'" class="row bg-skin">
                                         <div class="col-12 col-sm-2 bs-agenda__row-time bg-skin">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-skin" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-skin">
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -414,7 +413,7 @@
                                     <div v-else class="row bg-light-blue">
                                         <div class="col-12 col-sm-2 bs-agenda__row-time bg-light-blue">{{ss.date | time}} - {{ss.endDate | time}}
                                         </div>
-                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-light-blue" >
+                                        <div v-for="sss in ss.sessionOfSameTime" class="col-12 col-sm-10 bs-session bg-light-blue">
                                             <div class=" ">
                                                 <div class="bs-agenda__row-rest">
                                                     <div class="">{{sss.title}}</div>
@@ -466,8 +465,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -487,7 +485,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -507,7 +505,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -527,7 +525,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -547,7 +545,7 @@
                                                                 <div class="agenda__t-class-topic">
                                                                     <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{ sss.title }}
                                                                 </div>
-                                                                 <!-- <span  class="session-download" v-if="!!sss.download_link">
+                                                                <!-- <span  class="session-download" v-if="!!sss.download_link">
                                                     <span > <a :href="sss.download_link">
                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
                                                     <span>會議簡報</span>
@@ -560,7 +558,7 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                        
+                                                        </div>
                                                     </template>
                                                 </template>
                                             </div>
@@ -574,109 +572,54 @@
                 </div>
             </div>
         </section>
-              <!-- section modal -->
+        <!-- section modal -->
         <section>
             <template v-for="ss in sessionSortedByTime">
                 <template v-for="sss in ss.sessionOfSameTime">
-                  
-                        <template v-for="speaker in sss.speaker">
-                            <!-- modal -->
-                            <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-sm-12 col-xs-12 row speaker-brief__top">
-                                                <div class="col-sm-4">
-                                                    <img :src="speaker.avatar" alt="" class="rounded-circle img-fluid">
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <div class="speaker-box__name">
-                                                        {{speaker.speaker}}
-                                                    </div>
-                                                    <div class="speaker-box__title">
-                                                        {{ speaker.company }}
-                                                        <br> {{ speaker.department }}{{ speaker.position }}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                <ul class="list-inline" role="tablist">
-                                                    <li role="presentation" class="active tabSession">
-                                                        <a class="tab" :data-target="'#sessionModalAgenda'+sss.session_id" :aria-controls="'#sessionModalAgenda'+sss.session_id" role="tab" data-toggle="tab">議程介紹</a>
-                                                    </li>
-                                                    <li role="presentation tabSpeaker">
-                                                        <a class="tab" :data-target="'#sessionModalIntro'+sss.session_id" :aria-controls="'#sessionModalIntro'+sss.session_id" role="tab" data-toggle="tab">講師簡介</a>
-                                                    </li>
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane active">
-                                                        <div class="speaker-brief__agenda">
-                                                            <div class="speaker-brief__agenda-content overflow-y">
-                                                                <p><b class="h3">{{ sss.title }}</b></p>
-                                                                <p v-html="sss.summary"></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
-                                                        <div class="speaker-brief__intro overflow-y">
-                                                            <p v-html="speaker.profile"></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end of modal -->
-              
-                    </template>
-                     <!-- modal for session without speaker -->
-                    <tempalte v-if="sss.speaker.length == 0">
+                    <template v-for="speaker in sss.speaker">
                         <!-- modal -->
-                            <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-sm-12 col-xs-12 row speaker-brief__top">
-                                                <div class="col-sm-4">
-                                                    <img src="" alt="" class="rounded-circle img-fluid">
+                        <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-sm-12 col-xs-12 row speaker-brief__top">
+                                            <div class="col-sm-4">
+                                                <img :src="speaker.avatar" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="speaker-box__name">
+                                                    {{speaker.speaker}}
                                                 </div>
-                                                <div class="col-sm-8">
-                                                    <div class="speaker-box__name">
-                                                       
-                                                    </div>
-                                                    <div class="speaker-box__title">
-                                                       
-                                                    </div>
+                                                <div class="speaker-box__title">
+                                                    {{ speaker.company }}
+                                                    <br> {{ speaker.department }}{{ speaker.position }}
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                                <ul class="list-inline" role="tablist">
-                                                    <li role="presentation" class="active tabSession">
-                                                        <a class="tab" :data-target="'#sessionModalAgenda'+sss.session_id" :aria-controls="'#sessionModalAgenda'+sss.session_id" role="tab" data-toggle="tab">議程介紹</a>
-                                                    </li>
-                                                   
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane active">
-                                                        <div class="speaker-brief__agenda">
-                                                            <div class="speaker-brief__agenda-content overflow-y">
-                                                                <p><b class="h3">{{ sss.title }}</b></p>
-                                                                <p v-html="sss.summary"></p>
-                                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                            <ul class="list-inline nav nav-tabs">
+                                                <li class="active tabSession">
+                                                    <a class="tab" :href="'#sessionModalAgenda'+sss.session_id" data-toggle="tab">議程介紹</a>
+                                                </li>
+                                                <li class="tabSpeaker">
+                                                    <a class="tab" :href="'#sessionModalIntro'+sss.session_id" data-toggle="tab">講師簡介</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane in active">
+                                                    <div class="speaker-brief__agenda">
+                                                        <div class="speaker-brief__agenda-content overflow-y">
+                                                            <p><b class="h3">{{ sss.title }}</b></p>
+                                                            <p v-html="sss.summary"></p>
                                                         </div>
                                                     </div>
-                                                    <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
-                                                        <div class="speaker-brief__intro overflow-y">
-                                                            <p></p>
-                                                        </div>
+                                                </div>
+                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
+                                                    <div class="speaker-brief__intro overflow-y">
+                                                        <p v-html="speaker.profile"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -684,7 +627,57 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end of modal -->
+                        </div>
+                        <!-- end of modal -->
+                    </template>
+                    <!-- modal for session without speaker -->
+                    <tempalte v-if="sss.speaker.length === 0">
+                        <!-- modal -->
+                        <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-sm-12 col-xs-12 row speaker-brief__top">
+                                            <div class="col-sm-4">
+                                                <img src="" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="speaker-box__name">
+                                                </div>
+                                                <div class="speaker-box__title">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
+                                            <ul class="list-inline" role="tablist">
+                                                <li role="presentation" class="active tabSession">
+                                                    <a class="tab" :data-target="'#sessionModalAgenda'+sss.session_id" :aria-controls="'#sessionModalAgenda'+sss.session_id" role="tab" data-toggle="tab">議程介紹</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane active">
+                                                    <div class="speaker-brief__agenda">
+                                                        <div class="speaker-brief__agenda-content overflow-y">
+                                                            <p><b class="h3">{{ sss.title }}</b></p>
+                                                            <p v-html="sss.summary"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
+                                                    <div class="speaker-brief__intro overflow-y">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of modal -->
                     </tempalte>
                 </template>
             </template>
@@ -728,13 +721,11 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/confapi.js" data-nid="3531"></script>
+<script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2018.js?0701"></script>
 <script type="text/javascript" src="js/modernweb2019.js?0701"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
 
 </html>
