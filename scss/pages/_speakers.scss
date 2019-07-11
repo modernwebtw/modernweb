@@ -24,7 +24,8 @@
     font-size: 5em;
     border: none;
     color: #bbb;
-    background-color: #fff;
+    background-color: transparent;
+    z-index: 9;
 }
 
 .nextButton {
@@ -34,7 +35,8 @@
     font-size: 5em;
     border: none;
     color: #bbb;
-    background-color: #fff;
+    background-color: transparent;
+    z-index: 9;
 }
 
 .speakers {
