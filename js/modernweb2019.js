@@ -69,6 +69,31 @@ var modernweb2019 = new Vue({
             }
             return rowData;
         },
+        GoPreSpeaker: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            var speakerArray = this.Speaker;
+            console.log(speakerArray);
+            var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
+                return spk.target_id === id;
+            });
+            var preSpeaker = speakerArray.slice(thisSpeakerIndex - 1, thisSpeakerIndex);
+            var preSpeakerId = preSpeaker[0].target_id;
+            console.log(preSpeakerId);
+            window.location.href = 'speakers.html#s' + preSpeakerId;
+            window.location.reload();
+        },
+        GoNextSpeaker: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            var speakerArray = this.Speaker;
+            var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
+                return spk.target_id === id;
+            });
+            var nextSpeaker = speakerArray.slice(thisSpeakerIndex + 1, thisSpeakerIndex + 2);
+            // console.log(nextSpeaker);
+            var nextSpeakerId = nextSpeaker[0].target_id;
+            window.location.href = 'speakers.html#s' + nextSpeakerId;
+            window.location.reload();
+        },
         loadSpeakerInner: function() {
             var id = location.hash.replace(/#s/igm, '');
             if (!id) {
