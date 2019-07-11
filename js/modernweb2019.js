@@ -46,6 +46,10 @@ var modernweb2019 = new Vue({
         sortSessions: function() {
             var session = this.Session;
             return _.orderBy(session, 'session_start')
+        },
+        sortSponsor: function() {
+            var sponsor = this.Sponsor;
+            return _.orderBy(sponsor, [sponsor => sponsor.english_title.toLowerCase()], ['asc']);
         }
     },
     methods: {
