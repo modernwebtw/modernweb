@@ -46,6 +46,25 @@ var modernweb2019 = new Vue({
         sortSessions: function() {
             var session = this.Session;
             return _.orderBy(session, 'session_start')
+        },
+        sortSponsor: function() {
+            var sponsor = this.Sponsor;
+
+            var ss = _.sortBy(sponsor, function(element) {
+                var rankSort = {
+                    "主辦單位": 1,
+                    "共同主辦單位": 2,
+                    "鑽石級": 3,
+                    "白金級": 4,
+                    "黃金級": 5,
+                    "銀級": 6,
+                    "資安共同推廣單位": 7,
+                    "G級": 8,
+                    "F級": 9
+                };
+                return rankSort[element.rank]
+            });
+            return ss;
         }
     },
     methods: {
