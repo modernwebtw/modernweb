@@ -1,3 +1,164 @@
+// from 2018 agenda.css
+.bs-session-track{
+	width:100%;
+}
+.horizontal-center{
+	width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 768px){
+
+.hidden-xs{
+display: none;
+}
+}
+
+ @media(min-width:768px){
+ 	.agenda-row.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.agenda-row.row > [class*='col-'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-direction: column;
+}
+.agenda-row.container:before,
+.agenda-row.container:after,
+.agenda-row.row:before,
+.agenda-row.row:after {
+   content: normal; // IE doesn't support `initial`
+}
+
+ }
+
+
+
+.text-center{
+	text-align: center;
+}
+.speaker-brief__agenda-type{
+	color:$bg-blue;
+	font-size: 18px;
+	border:2px solid $bg-blue;
+	margin:0 5px;
+	padding:  0 3px;
+	border-radius: 4px;
+}
+.speaker-brief__top {
+    margin-bottom: 20px;
+}
+.speaker-brief__bottom {
+    align-items: flex-start;
+}
+.speaker-box__name {
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.bs-session-container > .row{
+	
+	border-bottom:1px solid #bababa;
+}
+
+.bs-session-track{
+	background: white;
+	padding: 12px 16px;
+}
+
+.bs-session-track-content{
+	padding:10px;
+	color:purple;
+	text-align: center;
+}
+
+.bs-session{
+	background: white;
+}
+div[data-toggle="modal"]:hover{
+	background: $bg-skin;
+}
+div[data-toggle="modal"]{
+	cursor: pointer;
+	
+}
+
+.agenda__t-keynote-topic{
+	font-size: 24px;
+}
+
+.bs-session-content{
+	    padding: 12px 16px;
+	    /*margin-bottom: 12px;*/
+	   
+	     color: $bg-blue;
+	text-align: center;
+	
+
+}
+.bg-skin .bs-session-content{
+	    padding: 12px 16px;
+	    margin:0;
+    font-size: 18px;   
+}
+.bs-agenda__row-rest{
+	    padding: 12px 16px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+   
+
+}
+.bg-white{
+	background:#f9f9f9;
+}
+
+
+.bg-gray{
+	background:#efefef;
+}
+
+.bs-agenda__row-time{
+	background: white;
+	    padding: 12px 16px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+.bg-skin{
+	background:$bg-skin;
+}
+.bg-light-blue{
+	    background-color: $font-color-light-blue;
+}
+.bg-light-blue:parent{
+	background-color: $font-color-light-blue !important;
+}
+
+.bs-agenda__row-head{
+	    padding: 12px 16px;
+    font-size: 18px;
+    text-align: center;
+    background-color: $font-color-dark-blue;
+    color: #ffffff;
+}
+
+
+
+// from 2018 modern web setting.css
+.session-download{
+   /* background: #18052D;
+    color:white;
+    padding:5px;*/
+font-size: 1.6em;
+}
+
+
 // content agenda.html
 .agenda {
     margin-top: 5%
@@ -5,7 +166,6 @@
 
 .agenda__title {
     font-size: 48px;
-    color: #fff;
     text-align: center;
     margin-bottom: 2%;
 }
@@ -81,16 +241,16 @@
     font-size: 18px;
     color: #666;
     text-align: center;
-    background-color: $bg-blue;
+    // background-color: $bg-color5;
 }
 
-.agenda__t-rest .yellow {
-    background-color: #feffc0;
+.agenda__t-rest .skin {
+    background-color: $bg-skin;
 }
 
 .section--agenda .purple .agenda__t-head {
-    background-color: $font-color-dark-blue;
-    color: $font-color-dark-blue;
+    // background-color: $bg-color2;
+    // color: $font-color-pu4;
 }
 
 @media (max-width:767px) {
@@ -111,7 +271,7 @@
 .agenda__t-keynote-topic {
     margin-bottom: 12px;
     font-size: 24px;
-    color: $font-color;
+    // color: $font-color-pu2;
 }
 
 @media (max-width:767px) {
@@ -144,7 +304,7 @@
 .agenda__t-track {
     padding: 12px 16px;
     font-size: 20px;
-    color: $font-color;
+    color: $font-color-pink;
     font-weight: 700
 }
 
@@ -177,7 +337,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 1.5;
-    color: $font-color;
+    color: $font-color-pink;
 }
 
 .agenda__t-class-name img {
@@ -208,3 +368,14 @@
 .section--agenda {
     margin-top: 1% !important;
 }
+
+// 2019 new add
+@media (min-width: 576px) {
+	.col-sm-25 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+	}
+}
+
+// 
