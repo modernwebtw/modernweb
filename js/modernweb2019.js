@@ -69,6 +69,31 @@ var modernweb2019 = new Vue({
             }
             return rowData;
         },
+        GoPreSpeaker: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            var speakerArray = this.Speaker;
+            console.log(speakerArray);
+            var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
+                return spk.target_id === id;
+            });
+            var preSpeaker = speakerArray.slice(thisSpeakerIndex - 1, thisSpeakerIndex);
+            var preSpeakerId = preSpeaker[0].target_id;
+            console.log(preSpeakerId);
+            window.location.href = 'speakers.html#s' + preSpeakerId;
+            window.location.reload();
+        },
+        GoNextSpeaker: function() {
+            var id = location.hash.replace(/#s/igm, '');
+            var speakerArray = this.Speaker;
+            var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
+                return spk.target_id === id;
+            });
+            var nextSpeaker = speakerArray.slice(thisSpeakerIndex + 1, thisSpeakerIndex + 2);
+            // console.log(nextSpeaker);
+            var nextSpeakerId = nextSpeaker[0].target_id;
+            window.location.href = 'speakers.html#s' + nextSpeakerId;
+            window.location.reload();
+        },
         loadSpeakerInner: function() {
             var id = location.hash.replace(/#s/igm, '');
             if (!id) {
@@ -82,7 +107,7 @@ var modernweb2019 = new Vue({
             }
 
             var self = this;
-            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=3531').then(function(speaker) {
+            $.getJSON('https://confapi.ithome.com.tw/api/v1.3/spk.jsonp?callback=?&nid=6270').then(function(speaker) {
                 modernweb2019.Speaker = speaker;
                 for (var i = 0; i < modernweb2019.Speaker.length; i++) {
                     if (modernweb2019.Speaker[i].target_id == id) {
