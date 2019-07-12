@@ -87,19 +87,21 @@ var modernweb2019 = new Vue({
         GoPreSpeaker: function() {
             var id = location.hash.replace(/#s/igm, '');
             var speakerArray = this.Speaker;
-            console.log(speakerArray);
+            speakerArray = this.filter(speakerArray, 'role', '司儀', false);
+            // console.log(speakerArray);
             var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
                 return spk.target_id === id;
             });
             var preSpeaker = speakerArray.slice(thisSpeakerIndex - 1, thisSpeakerIndex);
             var preSpeakerId = preSpeaker[0].target_id;
-            console.log(preSpeakerId);
+            // console.log(preSpeakerId);
             window.location.href = 'speakers.html#s' + preSpeakerId;
             window.location.reload();
         },
         GoNextSpeaker: function() {
             var id = location.hash.replace(/#s/igm, '');
             var speakerArray = this.Speaker;
+            speakerArray = this.filter(speakerArray, 'role', '司儀', false);
             var thisSpeakerIndex = speakerArray.findIndex(function(spk) {
                 return spk.target_id === id;
             });
