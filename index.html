@@ -521,11 +521,11 @@
                 </div> -->
             </div>
         </section>
-        <section class="home--exposed" v-if="SponsorFilter.Enterprise.length > 0">
+        <section class="home--exposed">
             <div class="container">
                 <h3 class="title deco-title text-center">ModernWeb in Taiwan</h3>
                 <div class="row">
-                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in SponsorFilter.Enterprise">
+                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in sortSponsor">
                         <a :href="'jobs.html#s' + sponsor.vendor_id" class="exposed--link">
                             <div class="exposed--img">
                                 <img :src="sponsor.logo" alt="" class="img-fluid">

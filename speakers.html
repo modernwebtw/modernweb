@@ -88,6 +88,8 @@
             <h3 class="title deco-title text-center">議程與講師</h3>
             <div class="speakers--item">
                 <div class="container">
+                    <button @click="GoPreSpeaker()" class="preButton">〈</button>
+                    <button @click="GoNextSpeaker()" class="nextButton">〉</button>
                     <div class="row justify-content-center">
                         <template v-for="session in SpeakerInner.session">
                             <div class="col-md-8 col-12 speakers--item--head">
@@ -160,7 +162,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js?0701"></script>
+<script type="text/javascript" src="js/modernweb2019.js?0711"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script src="js/easytimer.js"></script>
 
