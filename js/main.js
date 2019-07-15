@@ -42,44 +42,44 @@ $(document).ready(function() {
 
 
 
-    // scroll menu
-    var $window = $(window);
-    var $menu = $('#mainNav');
-    var checkHasElm = function(arrID) {
-        var $detect = false;
-        for (var i = arrID.length - 1; i >= 0; i--) {
-            if ($(arrID[i]).length > 0) {
-                $detect = $(arrID[i]);
-                break;
-            }
+// scroll menu
+var $window = $(window);
+var $menu = $('#mainNav');
+var checkHasElm = function(arrID) {
+    var $detect = false;
+    for (var i = arrID.length - 1; i >= 0; i--) {
+        if ($(arrID[i]).length > 0) {
+            $detect = $(arrID[i]);
+            break;
         }
-        return $detect;
-    };
-
-    var $menu_target = (function() {
-        return checkHasElm([
-            '#nav'
-        ]);
-    }());
-
-    var timer;
-    $window.scroll(function() {
-        if (timer) {
-            window.clearTimeout(timer);
-        }
-        timer = window.setTimeout(function() {
-            $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
-        }, 200);
-    });
-
-    function goScroll(target) {
-        var target_top = $(target).offset().top;
-        var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
-        var sTop = target_top - header_height;
-
-        $('html, body').stop().animate({
-            scrollTop: sTop
-        }, 1000);
     }
+    return $detect;
+};
 
-    location.hash && goScroll(location.hash);
+var $menu_target = (function() {
+    return checkHasElm([
+        '#nav'
+    ]);
+}());
+
+// var timer;
+// $window.scroll(function() {
+//     if (timer) {
+//         window.clearTimeout(timer);
+//     }
+//     timer = window.setTimeout(function() {
+//         $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
+//     }, 200);
+// });
+
+function goScroll(target) {
+    var target_top = $(target).offset().top;
+    var header_height = ($('html').width() <= 768) ? 0 : $('#menu').height();
+    var sTop = target_top - header_height;
+
+    $('html, body').stop().animate({
+        scrollTop: sTop
+    }, 1000);
+}
+
+location.hash && goScroll(location.hash);
