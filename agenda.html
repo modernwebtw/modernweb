@@ -610,7 +610,7 @@
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane in active">
+                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tabSession tab-pane in active">
                                                     <div class="speaker-brief__agenda">
                                                         <div class="speaker-brief__agenda-content overflow-y">
                                                             <p><b class="h3">{{ sss.title }}</b></p>
@@ -618,7 +618,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
+                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tabSpeaker tab-pane">
                                                     <div class="speaker-brief__intro overflow-y">
                                                         <p v-html="speaker.profile"></p>
                                                     </div>
