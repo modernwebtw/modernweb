@@ -377,54 +377,6 @@
                     </div>
                     <!-- jobs item -->
                 </div>
-                <!-- 企業贊助 -->
-                <h4 class="title text-center" v-if="SponsorFilter.Enterprise.length > 0">企業贊助</h4>
-                <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Enterprise">
-                    <!-- jobs item -->
-                    <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
-                        <div class="col-md-3 text-center col-12 jobs--item--brand">
-                            <a :href="sponsor.official_site" target="_blank">
-                                <img :src="sponsor.logo" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-8 col-11 jobs--item--content">
-                            <!-- title -->
-                            <div class="jobs--item--content--title">
-                                <a :href="sponsor.official_site" target="_blank">
-                                    <h3 class="jobs--item--content--title--main">{{ sponsor.title }}</h3>
-                                    <h5 class="jobs--item--content--title--sub">{{ sponsor.alt_title }}</h5>
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <!-- description -->
-                            <div class="jobs--item--content--desc" v-html="sponsor.description">
-                            </div>
-                            <!-- description -->
-                            <!-- job content -->
-                            <div class="jobs--item--content--list">
-                                <template v-for="job in JobList" v-if="job.sponsor_id === sponsor.vendor_id && job.jobs.length > 0">
-                                    <h5 class="">矚目職缺</h5>
-                                </template>
-                                <ul class="ul">
-                                    <template v-for="job in JobList">
-                                        <template v-if="job.sponsor_id === sponsor.vendor_id">
-                                            <li v-for="jb in job.jobs">
-                                                <a :href="jb.url" target="_blank">{{ jb.title }}</a>
-                                            </li>
-                                        </template>
-                                    </template>
-                                </ul>
-                                <template v-for="job in JobList" v-if="job.jobs.length > 0">
-                                    <template v-if="job.sponsor_id === sponsor.vendor_id">
-                                        <a :href="job.more_link" class="btn btn-block btn-line-gray">更多職缺</a>
-                                    </template>
-                                </template>
-                            </div>
-                            <!-- job content -->
-                        </div>
-                    </div>
-                    <!-- jobs item -->
-                </div>
                 <!-- 共同推廣 -->
                 <h4 class="title text-center" v-if="SponsorFilter.Promo.length > 0">共同推廣</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Promo">
@@ -476,6 +428,54 @@
                 <!-- 特別感謝 -->
                 <h4 class="title text-center" v-if="SponsorFilter.Special.length > 0">特別感謝</h4>
                 <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Special">
+                    <!-- jobs item -->
+                    <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
+                        <div class="col-md-3 text-center col-12 jobs--item--brand">
+                            <a :href="sponsor.official_site" target="_blank">
+                                <img :src="sponsor.logo" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-8 col-11 jobs--item--content">
+                            <!-- title -->
+                            <div class="jobs--item--content--title">
+                                <a :href="sponsor.official_site" target="_blank">
+                                    <h3 class="jobs--item--content--title--main">{{ sponsor.title }}</h3>
+                                    <h5 class="jobs--item--content--title--sub">{{ sponsor.alt_title }}</h5>
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <!-- description -->
+                            <div class="jobs--item--content--desc" v-html="sponsor.description">
+                            </div>
+                            <!-- description -->
+                            <!-- job content -->
+                            <div class="jobs--item--content--list">
+                                <template v-for="job in JobList" v-if="job.sponsor_id === sponsor.vendor_id && job.jobs.length > 0">
+                                    <h5 class="">矚目職缺</h5>
+                                </template>
+                                <ul class="ul">
+                                    <template v-for="job in JobList">
+                                        <template v-if="job.sponsor_id === sponsor.vendor_id">
+                                            <li v-for="jb in job.jobs">
+                                                <a :href="jb.url" target="_blank">{{ jb.title }}</a>
+                                            </li>
+                                        </template>
+                                    </template>
+                                </ul>
+                                <template v-for="job in JobList" v-if="job.jobs.length > 0">
+                                    <template v-if="job.sponsor_id === sponsor.vendor_id">
+                                        <a :href="job.more_link" class="btn btn-block btn-line-gray">更多職缺</a>
+                                    </template>
+                                </template>
+                            </div>
+                            <!-- job content -->
+                        </div>
+                    </div>
+                    <!-- jobs item -->
+                </div>
+                <!-- 企業贊助 -->
+                <h4 class="title text-center" v-if="SponsorFilter.Enterprise.length > 0">企業團購</h4>
+                <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Enterprise">
                     <!-- jobs item -->
                     <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
                         <div class="col-md-3 text-center col-12 jobs--item--brand">
