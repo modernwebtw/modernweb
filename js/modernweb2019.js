@@ -248,7 +248,8 @@ var modernweb2019 = new Vue({
                     var $target = $(target);
                     var target_top = $target.offset().top;
                     var header_height = ($('html').width() <= 768) ? 0 : $('nav').height();
-                    var sTop = target_top - header_height;
+                    var sTop = (target_top - header_height) * 1.1;
+                    // 1.1為定位不準之修正參數
                     $('html, body').stop().animate({
                         scrollTop: sTop
                     }, 500);
