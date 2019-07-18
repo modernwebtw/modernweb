@@ -175,8 +175,9 @@ var modernweb2019 = new Vue({
         $.when(
             confapi.getSessionWithSpeaker(),
             confapi.getSpeakerWithSession(),
+            confapi.getJobWithSponsor(),
             confapi.getSponsor()
-        ).done(function(session, speaker, sponsor) {
+        ).done(function(session, speaker, sponsor, jobs) {
             modernweb2019.Session = session;
             modernweb2019.Speaker = speaker;
             modernweb2019.Sponsor = sponsor;
@@ -248,14 +249,14 @@ var modernweb2019 = new Vue({
                     var $target = $(target);
                     var target_top = $target.offset().top;
                     var header_height = ($('html').width() <= 768) ? 0 : $('nav').height();
-                    var sTop = (target_top - header_height) * 1.1;
-                    // 1.1為定位不準之修正參數
+                    var sTop = (target_top - header_height);
                     $('html, body').stop().animate({
                         scrollTop: sTop
                     }, 500);
                 }
 
-                location.hash && goScroll(location.hash);
+                setTimeout(function() { location.hash && goScroll(location.hash); }, 500);
+
                 $.when([
                     $.getScript('https://connect.facebook.net/zh_TW/all.js'),
                     // $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false')
