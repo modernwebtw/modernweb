@@ -197,7 +197,7 @@ var confapi = confapi || (function() {
             return $.when(this.getJob(), this.getSponsor()).then(function(Job, Sponsor) {
                 var JobData = {};
                 $.each(Job, function(i, v) {
-                    if (!!v.job.length) {
+                    if (!!v.job) {
                         $.each(v.job, function(index, value) {
                             JobData[value.sponsor_id] = JobData[value.sponsor_id] || [];
 
