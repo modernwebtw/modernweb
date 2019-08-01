@@ -28,7 +28,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48349256-7"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
     function gtag() {
         dataLayer.push(arguments);
@@ -42,51 +42,6 @@
 <body class="theme-bg-color">
     <!-- #modernWeb2019 -->
     <div id="modernweb2019">
-        <!-- loading animation -->
-        <!-- <div class="loading" id="loading">
-        </div> -->
-        <!-- end loading animation -->
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger navbar--logo" href="index.html">
-                    <img src="img/logo.svg" class="img-fluid navbar-logo__img">
-                </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto nav-fill w-100 justify-content-end align-items-center">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="tickets.html">報名購票</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="agenda.html">議程表</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">Keynotes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講師</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jobs.html">贊助商與徵才</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="policy.html">行為守則</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
-                            <div class="dropdown-menu text-center">
-                                <a class="dropdown-item" href="https://modernweb.tw/2018/index.html" target="_blank">2018</a>
-                                <a class="dropdown-item" href="https://modernweb.tw/2017/index.html" target="_blank">2017</a>
-                                <a class="dropdown-item" href="https://modernweb.tw/2016/index.html" target="_blank">2016</a>
-                                <a class="dropdown-item" href="https://modernweb.tw/2015/index.html" target="_blank">2015</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- end Navigation -->
-        <section class="content content--kv" id="nav">
-            <div class="content--kv--wrapper">
-                <!-- <img src="img/content-kv.svg" alt="" class="img-fluid"> -->
-                <div class="kv-head">
-                    <h1 class="title deco-title-dk">議程</h1>
-                    <h3 class="sub-title">agenda</h3>
-                </div>
-            </div>
-        </section>
         <!-- day 1 -->
         <section class="">
             <div class="container">
@@ -573,148 +528,6 @@
                 </div>
             </div>
         </section>
-        <!-- section modal -->
-        <section>
-            <template v-for="ss in sessionSortedByTime">
-                <template v-for="sss in ss.sessionOfSameTime">
-                    <template v-for="speaker in sss.speaker">
-                        <!-- modal -->
-                        <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body row">
-                                        <div class="col-sm-12 col-xs-12 row speaker-brief__top">
-                                            <div class="col-sm-4">
-                                                <img :src="speaker.avatar" alt="" class="rounded-circle img-fluid">
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="speaker-box__name">
-                                                    {{speaker.speaker}}
-                                                </div>
-                                                <div class="speaker-box__title">
-                                                    {{ speaker.company }}
-                                                    <br> {{ speaker.department }}{{ speaker.position }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                            <ul class="list-inline nav nav-tabs">
-                                                <li class="active tabSession">
-                                                    <a class="tab" :href="'#sessionModalAgenda'+sss.session_id" data-toggle="tab">議程介紹</a>
-                                                </li>
-                                                <li class="tabSpeaker">
-                                                    <a class="tab" :href="'#sessionModalIntro'+sss.session_id" data-toggle="tab">講師簡介</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tabSession tab-pane in active">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p><b class="h3">{{ sss.title }}</b></p>
-                                                            <p v-html="sss.summary"></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tabSpeaker tab-pane">
-                                                    <div class="speaker-brief__intro overflow-y">
-                                                        <p v-html="speaker.profile"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of modal -->
-                    </template>
-                    <!-- modal for session without speaker -->
-                    <tempalte v-if="sss.speaker.length === 0">
-                        <!-- modal -->
-                        <div class="modal fade speaker-modal" :id="'se' + sss.session_id" tabindex="-1" role="dialog" aria-labelledby="speaker01Label">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body row">
-                                        <div class="col-sm-12 col-xs-12 row speaker-brief__top">
-                                            <div class="col-sm-4">
-                                                <img src="" alt="" class="rounded-circle img-fluid">
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="speaker-box__name">
-                                                </div>
-                                                <div class="speaker-box__title">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-xs-12 speaker-brief__bottom">
-                                            <ul class="list-inline" role="tablist">
-                                                <li role="presentation" class="active tabSession">
-                                                    <a class="tab" :data-target="'#sessionModalAgenda'+sss.session_id" :aria-controls="'#sessionModalAgenda'+sss.session_id" role="tab" data-toggle="tab">議程介紹</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" :id="'sessionModalAgenda'+sss.session_id" class="tab-pane active">
-                                                    <div class="speaker-brief__agenda">
-                                                        <div class="speaker-brief__agenda-content overflow-y">
-                                                            <p><b class="h3">{{ sss.title }}</b></p>
-                                                            <p v-html="sss.summary"></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div role="tabpanel" :id="'sessionModalIntro'+sss.session_id" class="tab-pane">
-                                                    <div class="speaker-brief__intro overflow-y">
-                                                        <p></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of modal -->
-                    </tempalte>
-                </template>
-            </template>
-        </section>
-        <footer class="content footer">
-            <div class="footer--wave"></div>
-            <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--l">
-            <img src="img/footer-shine.svg" class="img-fluid footer--deco--shine--l">
-            <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--r">
-            <img src="img/footer-shine.svg" class="img-fluid footer--deco--shine--r">
-            <img src="img/footer-bg-planet.svg" class="img-fluid footer--deco--planet">
-            <img src="img/footer-alien.svg" class="img-fluid footer--deco--alien">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 footer--logo">
-                        <img src="img/logo.svg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-12 footer--desc">
-                        <ul class="">
-                            <li class="footer--desc--li">會議時間：2019年8月28日(三) - 29日(四)</li>
-                            <li class="footer--desc--li">會議地點：TICC 臺北國際會議中心</li>
-                            <li class="footer--desc--li">客服專線：02-25622880 #3622 開小姐
-                                （ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
-                            <li class="footer--desc--li">客服信箱：<a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="footer--fbshare">
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
     <!-- end #modernWeb2019 -->
 </body>
