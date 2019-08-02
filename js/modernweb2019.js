@@ -237,6 +237,7 @@ var modernweb2019 = new Vue({
             }
 
             modernweb2019.$nextTick(function() {
+
                 $('div[data-toggle="modal"]').click(function(e) {
                     console.log('111');
                     $('.tabSession').removeClass('active');
@@ -274,6 +275,14 @@ var modernweb2019 = new Vue({
                 });
 
             });
+        });
+    },
+    updated() {
+        this.$nextTick(() => {
+            // fix job title
+            $("li").children('a').each(function() {
+                $(this).text($(this).text().replace(/&amp;/igm, '&'));
+            })
         });
     }
 });
