@@ -45,12 +45,16 @@
             &__list {
                 margin-bottom: 0;
                 font-size: 0;
+                display: flex;
+                justify-content: center;
+                @include media("<667px") {display: inline-block;}
                 li {
                     display: inline-block;
-                    width: 12%;
-                    margin: 0 0.5%;
+                    flex-basis: 16%;
                     vertical-align: top;
-                    @include media(">=768px") {
+                    margin: 0 0.5%;
+                    max-width: 16%;
+                    @include media(">=667px") {
                         &.active a {
                             background-color: rgba(255,255,255,.1);
                             color: $font-color;
@@ -70,8 +74,9 @@
                         }
                     }
                     @include media("<768px") {
-                        margin: 8px 0;
-                        width: 33.33%;
+                        margin: 0;
+                        width: 49%;
+                        max-width: 49%;
                         &.active a {
                             background-color:  $font-color-light-blue;
                             h6{color: $font-color;}
@@ -108,15 +113,6 @@
 						font-weight: 400;
 						color: $font-color;
 						margin: 8px 0 5px;
-						@include media("<1200px"){
-							min-height: 88px;
-						}
-						@include media("<768px"){
-							min-height: auto;
-						}
-						@include media("<412px"){
-							min-height: 56px;
-						}
                     }
                     span{ font-size: 14px;display: block; min-height: 24px;
                     	letter-spacing: 1px; color:$font-color;
@@ -251,6 +247,7 @@
         }
         .deco-tshirt{ 
 			max-width: 250px;
+			width: 100%;	
 			height: auto;
 			display: inline-block;
 			margin: 3%;

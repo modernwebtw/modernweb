@@ -3032,13 +3032,19 @@ div[data-toggle="modal"] {
         width: 100%; } }
     .section--event .event-nav__list {
       margin-bottom: 0;
-      font-size: 0; }
+      font-size: 0;
+      display: flex;
+      justify-content: center; }
+      @media (max-width: 666px) {
+        .section--event .event-nav__list {
+          display: inline-block; } }
       .section--event .event-nav__list li {
         display: inline-block;
-        width: 12%;
+        flex-basis: 16%;
+        vertical-align: top;
         margin: 0 0.5%;
-        vertical-align: top; }
-        @media (min-width: 768px) {
+        max-width: 16%; }
+        @media (min-width: 667px) {
           .section--event .event-nav__list li.active a {
             background-color: rgba(255, 255, 255, 0.1);
             color: #333333;
@@ -3057,8 +3063,9 @@ div[data-toggle="modal"] {
               bottom: -12px; } }
         @media (max-width: 767px) {
           .section--event .event-nav__list li {
-            margin: 8px 0;
-            width: 33.33%; }
+            margin: 0;
+            width: 49%;
+            max-width: 49%; }
             .section--event .event-nav__list li.active a {
               background-color: #a9e4fe; }
               .section--event .event-nav__list li.active a h6 {
@@ -3096,15 +3103,6 @@ div[data-toggle="modal"] {
           font-weight: 400;
           color: #333333;
           margin: 8px 0 5px; }
-          @media (max-width: 1199px) {
-            .section--event .event-nav__list a h6 {
-              min-height: 88px; } }
-          @media (max-width: 767px) {
-            .section--event .event-nav__list a h6 {
-              min-height: auto; } }
-          @media (max-width: 411px) {
-            .section--event .event-nav__list a h6 {
-              min-height: 56px; } }
         .section--event .event-nav__list a span {
           font-size: 14px;
           display: block;
@@ -3229,6 +3227,7 @@ div[data-toggle="modal"] {
         margin-top: 20px; } }
   .section--event .deco-tshirt {
     max-width: 250px;
+    width: 100%;
     height: auto;
     display: inline-block;
     margin: 3%; }
