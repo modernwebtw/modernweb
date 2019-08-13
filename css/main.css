@@ -3035,8 +3035,8 @@ div[data-toggle="modal"] {
       font-size: 0; }
       .section--event .event-nav__list li {
         display: inline-block;
-        width: 10.5%;
-        margin: 0 0.2%;
+        width: 12%;
+        margin: 0 0.5%;
         vertical-align: top; }
         @media (min-width: 768px) {
           .section--event .event-nav__list li.active a {
@@ -3161,7 +3161,11 @@ div[data-toggle="modal"] {
       margin-top: 10px;
       margin-bottom: 14px;
       color: #333333;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      min-width: 100%; }
+      @media (min-width: 1301px) {
+        .section--event .event-panel__title {
+          min-width: 1010px; } }
     .section--event .event-panel__subtitle {
       margin-top: 0;
       font-size: 18px;
