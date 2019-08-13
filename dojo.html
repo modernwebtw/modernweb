@@ -61,7 +61,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="tickets.html">報名購票</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="agenda.html">議程表</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">Keynotes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講師</a></li>                        
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講師</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="dojo.html">道場</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jobs.html">贊助商與徵才</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="policy.html">行為守則</a></li>
@@ -79,44 +79,27 @@
             </div>
         </nav>
         <!-- end Navigation -->
-        <!-- 會前、會中banner -->
-        <section class="content content--kv content--kv--s" id="nav">
+        <section class="content content--kv" id="nav">
+            <div class="content--kv--wrapper">
+                <!-- <img src="img/content-kv.svg" alt="" class="img-fluid"> -->
+                <div class="kv-head">
+                    <h1 class="title deco-title-dk">技術傳道場</h1>
+                    <h3 class="sub-title">Code Dojo</h3>
+                </div>
+            </div>
         </section>
-        <section class="content speakers" id="nav">
-            <!-- 會後講師banner -->
-            <!-- <div class="speakers--banner">
-                <img src="img/speaker00-b.jpg" class="img-fluid">
-            </div> -->
-            <h3 class="title deco-title text-center">議程與講師</h3>
-            <div class="speakers--item">
-                <div class="container">
-                    <button @click="GoPreSpeaker()" class="preButton">〈</button>
-                    <button @click="GoNextSpeaker()" class="nextButton">〉</button>
-                    <div class="row justify-content-center">
-                        <template v-for="session in SpeakerInner.session">
-                            <div class="col-md-8 col-12 speakers--item--head">
-                                <!-- 議程標題 -->
-                                <h3 class=""><span class="badge badge-pill keynote--item--tag" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
+        <section class="home--exposed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in sortSponsor">
+                        <a :href="'jobs.html#s' + sponsor.vendor_id" class="exposed--link">
+                            <div class="exposed--img">
+                                <img :src="sponsor.logo" alt="" class="img-fluid">
                             </div>
-                            <div class="col-md-8 col-12 speakers--item--content" v-html="session.summary">
+                            <h4 class="title">{{ sponsor.title }}</h4>
+                            <div class="exposed--desc" v-html="sponsor.description">
                             </div>
-                            <div class="col-md-8 col-12 row speakers--item--download">
-                                <a :href="session.download_link" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link">簡報下載</a>
-                                <a :href="session.download_link_title" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link_title">議程共筆</a>
-                            </div>
-                        </template>
-                        <div class=" col-md-8 col-12 row speakers--item--intro">
-                            <div class="col-md-4 col-12 speakers--item--intro--avatar">
-                                <img :src="SpeakerInner.avatar" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-md-8 col-12 speakers--item--intro--desc">
-                                <div class="speakers--item--intro--desc--name">{{ SpeakerInner.speaker }}</div>
-                                <p class="speaker--item--desc--sub">{{ SpeakerInner.company }}
-                                    <br>{{ SpeakerInner.department }}{{ SpeakerInner.position }}</p>
-                                <div class="speakers--item--intro--desc--p" v-html="SpeakerInner.profile">
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -164,7 +147,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js?0711"></script>
+<script type="text/javascript" src="js/modernweb2019.js?0701"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script src="js/easytimer.js"></script>
 
