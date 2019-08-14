@@ -60,11 +60,12 @@
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li> -->
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="tickets.html">報名購票</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="agenda.html">精彩議程</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">主題演講</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講者陣容</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="dojo.html">道場</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">主題演講</a></li> -->
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">講者陣容</a></li>
+                        
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jobs.html">贊助商與徵才</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="event.html">場邊活動</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="dojo.html">技術傳道場</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="policy.html">行為守則</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
@@ -89,7 +90,7 @@
                 </div>
             </div>
         </section>
-        <section class="home--exposed">
+        <!-- <section class="home--exposed">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-12 exposed--box" v-for="sponsor in SponsorFilter.Promo">
@@ -102,6 +103,66 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="home--exposed">
+            <div class="container">
+                <h6><span class="badge">時間</span>&nbsp;大會全程</h6>
+                <h6><span class="badge">空間</span>&nbsp;大會服務台對面的南休息區</h6>
+                <h6 class="sub-title">
+                    最新的技術、開源的技術，有賴熱血自主的技術社群一起推動（坑），ModernWeb'19 史無前例地號召了 14 個技術推廣社群組織加盟傳道，讓您一次找到歸屬的同儕，領進開發的神奇領域！<br><br>  
+                    學習的最好方式就是實戰，這裡有好多的技術高手隨時登台推坑（Code Stage），歡迎帶著筆電常常回來看看，讓你像課金玩家一樣等級狂飆喔！
+                </h6>
+                
+                <h6><span class="badge">Let's code</span>&nbsp;除了議程演講，也別忘了來看看技術熱血人舉辦的教育推廣活動喔！</h6>          
+                <!-- 共同推廣 -->
+                <div class="title text-center" v-if="SponsorFilter.Promo.length > 0"></div>
+                <div class="row justify-content-center" v-for="sponsor in SponsorFilter.Promo">
+                    <!-- jobs item -->
+                    <div class="jobs--item row" :id="'s' + sponsor.vendor_id">
+                        <div class="col-md-3 text-center col-12 jobs--item--brand">
+                            <a :href="sponsor.official_site" target="_blank">
+                                <img :src="sponsor.logo" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-8 col-11 jobs--item--content">
+                            <!-- title -->
+                            <div class="jobs--item--content--title">
+                                <a :href="sponsor.official_site" target="_blank">
+                                    <h3 class="jobs--item--content--title--main">{{ sponsor.title }}</h3>
+                                    <h5 class="jobs--item--content--title--sub">{{ sponsor.alt_title }}</h5>
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <!-- description -->
+                            <div class="jobs--item--content--desc" v-html="sponsor.description">
+                            </div>
+                            <!-- description -->
+                            <!-- job content -->
+                            <div class="jobs--item--content--list">
+                                <template v-for="job in JobList" v-if="job.sponsor_id === sponsor.vendor_id && job.jobs.length > 0">
+                                    <h5 class="">矚目職缺</h5>
+                                </template>
+                                <ul class="ul">
+                                    <template v-for="job in JobList">
+                                        <template v-if="job.sponsor_id === sponsor.vendor_id">
+                                            <li v-for="jb in job.jobs">
+                                                <a :href="jb.url" target="_blank" class="joblist">{{ jb.title }}</a>
+                                            </li>
+                                        </template>
+                                    </template>
+                                </ul>
+                                <template v-for="job in JobList" v-if="job.jobs.length > 0">
+                                    <template v-if="job.sponsor_id === sponsor.vendor_id">
+                                        <a :href="job.more_link" class="btn btn-block btn-line-gray" v-if="!!job.more_link">更多職缺</a>
+                                    </template>
+                                </template>
+                            </div>
+                            <!-- job content -->
+                        </div>
+                    </div>
+                    <!-- jobs item -->
                 </div>
             </div>
         </section>

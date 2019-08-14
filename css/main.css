@@ -1612,6 +1612,12 @@ nav {
     font-size: 3em;
     color: #333333; }
 
+.home--exposed .badge {
+  background-color: #1c26cc;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #1c26cc;
+  border-radius: 10px; }
 .home--exposed .exposed--link {
   display: block;
   padding: 10px 15px;
@@ -3177,6 +3183,9 @@ div[data-toggle="modal"] {
         color: #333333;
         font-weight: 500;
         letter-spacing: 1px; }
+    .section--event .event-panel__quote {
+      margin-left: 120px;
+      font-style: italic; }
     .section--event .event-panel__info {
       margin-bottom: 20px; }
       .section--event .event-panel__info li + li {
