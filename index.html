@@ -86,12 +86,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto nav-fill w-100 justify-content-end align-items-center">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li> -->
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="tickets.html">報名購票</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="agenda.html">議程表</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">Keynotes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#speakersChina">講師</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="agenda.html">精彩議程</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">主題演講</a></li> -->
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#keynotes">講者陣容</a></li>
+                        
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jobs.html">贊助商與徵才</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="event.html">場邊活動</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="dojo.html">技術傳道場</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="policy.html">行為守則</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
@@ -216,36 +219,7 @@
                 </div>
             </div>
         </section>
-        <section class="home--keynote" id="keynotes">
-            <div class="container">
-                <h3 class="title deco-title">KEYNOTES</h3>
-                <!-- <h4 class="sub-title text-center more-title">更多講者即將揭曉</h4> -->
-                <div class="row">
-                    <div class="col-12" v-for="speaker in SpeakerFilter.featured">
-                        <a :href="'speakers.html#s' + speaker.target_id" class="home--keynote--a">
-                            <div class="keynote--item">
-                                <div class="col-12 col-sm-6 keynote--item--img">
-                                    <img :src="speaker.avatar" alt="" class="img-fluid">
-                                </div>
-                                <div class="col-12 col-sm-6 keynote--item--desc">
-                                    <span class="keynote--item--tag">Keynote</span>
-                                    <template v-for="session in speaker.session">
-                                        <h3 class=""> {{ session.title }}</h3>
-                                        <div v-html="session.summary" class="keynote--item--desc--summary"></div>
-                                    </template>
-                                    <h4 class="keynote--item--desc--name">{{ speaker.speaker }}</h4>
-                                    <p class="keynote--item--desc--sub">{{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</p>
-                                    <div v-html="speaker.profile" class="keynote--item--desc--profile"></div>
-                                    <div class="btn keynote--item--desc--btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <section class="home--reason" id="home--reason">
             <div class="home--reason--bg--star"></div>
             <img src="img/reason-sign-1.svg" alt="" class="home--reason--sign1">
@@ -434,12 +408,43 @@
                 </div>
             </div>
         </section>
+        <section class="home--keynote" id="keynotes">
+            <div class="container">
+                <h3 class="title deco-title">KEYNOTES</h3>
+                <!-- <h4 class="sub-title text-center more-title">更多講者即將揭曉</h4> -->
+                <div class="row">
+                    <div class="col-12" v-for="speaker in SpeakerFilter.featured">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="home--keynote--a">
+                            <div class="keynote--item">
+                                <div class="col-12 col-sm-6 keynote--item--img">
+                                    <img :src="speaker.avatar" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-12 col-sm-6 keynote--item--desc">
+                                    <span class="keynote--item--tag">Keynote</span>
+                                    <template v-for="session in speaker.session">
+                                        <h3 class=""> {{ session.title }}</h3>
+                                        <div v-html="session.summary" class="keynote--item--desc--summary"></div>
+                                    </template>
+                                    <h4 class="keynote--item--desc--name">{{ speaker.speaker }}</h4>
+                                    <p class="keynote--item--desc--sub">{{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</p>
+                                    <div v-html="speaker.profile" class="keynote--item--desc--profile"></div>
+                                    <div class="btn keynote--item--desc--btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="home--speaker--cn" id="speakersChina">
             <div class="container">
                 <h3 class="title deco-title text-center">中國技術團</h3>
                 <div class="col speaker--cn--sub--title text-center">
                     <h4 class="title text-center">大規模實戰商場萃取出的 Web 實戰經驗！</h4>
-                    <h5 class="sub-title text-center">2019 中國技術團，持續邀請中國重量級 Web 公司帶來技術與實戰經驗分享。</h5>
+                    <h5 class="sub-title text-center">2019 中國技術團，持續邀請中國重量級 Web 公司帶來技術與實戰經驗分享。<br>
+                    （近日中國簽證和香港轉機流程皆風險，中國講者未必能成功與會，如有不便還請海涵。）</h5>
                 </div>
                 <div class="row speaker--cn--row justify-content-center mt30">
                     <!-- 出品人 -->
@@ -526,7 +531,7 @@
             <div class="container">
                 <h3 class="title deco-title text-center">ModernWeb in Taiwan</h3>
                 <div class="row">
-                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in sortSponsor">
+                    <div class="col-md-4 col-12 exposed--box" v-for="sponsor in sortSponsor" v-if="sponsor.rank !== '資安共同推廣單位'">
                         <a :href="'jobs.html#s' + sponsor.vendor_id" class="exposed--link">
                             <div class="exposed--img">
                                 <img :src="sponsor.logo" alt="" class="img-fluid">

@@ -39,3 +39,5 @@ function goScroll(target) {
 }
 
 location.hash && goScroll(location.hash);
+
+)
