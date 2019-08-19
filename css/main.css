@@ -3208,16 +3208,6 @@ div[data-toggle="modal"] {
     font-size: 16px;
     text-align: center;
     padding: 6px 0; }
-  .section--event .deco-event1:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -10%;
-    width: 200px;
-    height: 200px;
-    background: url("../img/event1.png") no-repeat;
-    background-size: 100%;
-    opacity: .5; }
   .section--event .deco-event2:after {
     content: '';
     position: absolute;
