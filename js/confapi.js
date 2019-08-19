@@ -47,8 +47,7 @@ var confapi = confapi || (function() {
                         'language',
                         'forum_type'
                     ]);
-                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&');
-                    rowData['title'] = rowData['title'].replace(/&#039;/igm, "'");
+                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&').replace(/&#039;/igm, "'");
                     rowData['session_start'] = rowData['session_start'] + '000';
                     rowData['session_end'] = rowData['session_end'] + '000';
                     var SD = new Date(+rowData['session_start']);
@@ -96,6 +95,7 @@ var confapi = confapi || (function() {
                         'description',
                         'official_site'
                     ]);
+                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&').replace(/&#039;/igm, "'");
                     rowData['logo'] = Domain + rowData['logo'];
                     rowData['hash_path'] = 'sponsor-inner.html#s' + rowData['vendor_id'];
                     // fixed google icon

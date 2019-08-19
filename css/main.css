@@ -3208,16 +3208,6 @@ div[data-toggle="modal"] {
     font-size: 16px;
     text-align: center;
     padding: 6px 0; }
-  .section--event .deco-event1:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -10%;
-    width: 200px;
-    height: 200px;
-    background: url("../img/event1.png") no-repeat;
-    background-size: 100%;
-    opacity: .5; }
   .section--event .deco-event2:after {
     content: '';
     position: absolute;
@@ -3252,5 +3242,27 @@ div[data-toggle="modal"] {
     text-align: center; }
     .section--event .event9-img img {
       max-width: 100%; }
+
+.host-content {
+  background-color: #e4f1f6;
+  margin: 2% 0;
+  border-radius: 10px;
+  justify-content: center; }
+
+.host-img {
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0px; }
+
+.host-img img {
+  border-radius: 7%;
+  width: 70%; }
+
+.host-text {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin: 15px;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=main.css.map */
