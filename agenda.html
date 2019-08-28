@@ -120,13 +120,12 @@
                                                                 <span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span>{{sss.title}}
                                                             </div>
                                                         </div>
-                                                        <!-- <span  class="session-download" v-if="!!sss.download_link">
-                                                    <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
-                                                    <span>會議簡報</span>
-
-                                                </a></span>
-                                                </span> -->
+                                                        <span class="session-download" v-if="!!sss.download_link">
+                                                            <span> <a :href="sss.download_link">
+                                                                    <i class="fa fa-file-pdf" aria-hidden="true"> </i>
+                                                                    <span>會議簡報</span>
+                                                                </a></span>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </template>
@@ -137,13 +136,12 @@
                                                         <div class="bs-session-content">
                                                             <div class="agenda__t-keynote-topic"><span v-if="sss.language == '英文'" class="speaker-brief__agenda-type">EN</span> {{sss.title}}
                                                             </div>
-                                                            <!-- <span  class="session-download" v-if="!!sss.download_link">
-                                                    <span > <a :href="sss.download_link">
-                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>        
-                                                    <span>會議簡報</span>
-
-                                                </a></span>
-                                                </span> -->
+                                                            <span class="session-download" v-if="!!sss.download_link">
+                                                                <span> <a :href="sss.download_link">
+                                                                        <i class="fa fa-file-pdf" aria-hidden="true"> </i>
+                                                                        <span>會議簡報</span>
+                                                                    </a></span>
+                                                            </span>
                                                             <div class="agenda__t-keynote-name">
                                                                 <div><img :src="speaker.avatar" alt="">
                                                                     <span>{{speaker.speaker}}</span>
