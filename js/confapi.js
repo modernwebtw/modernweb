@@ -3,7 +3,7 @@ var confapi = confapi || (function() {
     var Domain = 'https://confapi.ithome.com.tw';
     var currentData = document.currentScript || {};
     currentData = currentData.dataset || {};
-    var NID = currentData.nid || 6270;
+    var NID = currentData.nid || 3531;
     var LOG = currentData.log || false;
     var CACHE = {};
     // private method
@@ -47,7 +47,8 @@ var confapi = confapi || (function() {
                         'language',
                         'forum_type'
                     ]);
-                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&').replace(/&#039;/igm, "'");
+                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&');
+                    rowData['title'] = rowData['title'].replace(/&#039;/igm, "'");
                     rowData['session_start'] = rowData['session_start'] + '000';
                     rowData['session_end'] = rowData['session_end'] + '000';
                     var SD = new Date(+rowData['session_start']);
@@ -95,7 +96,6 @@ var confapi = confapi || (function() {
                         'description',
                         'official_site'
                     ]);
-                    rowData['title'] = rowData['title'].replace(/&amp;/igm, '&').replace(/&#039;/igm, "'");
                     rowData['logo'] = Domain + rowData['logo'];
                     rowData['hash_path'] = 'sponsor-inner.html#s' + rowData['vendor_id'];
                     // fixed google icon
@@ -106,24 +106,6 @@ var confapi = confapi || (function() {
                         return social_link;
                     }).get();
                     // ===
-                    return rowData;
-                });
-            });
-        },
-        getJob: function() {
-            return getJSONP('job-list').then(function(response) {
-                return $.map(response, function(rowData, index) {
-                    rowData = ConvertEmptyArrayToString(rowData, [
-                        'name',
-                        'screen_name',
-                        'conf_id',
-                        'sponsor_id',
-                        'more_link',
-                    ]);
-                    rowData['name'] = rowData['name'].replace(/&amp;/igm, '&');
-                    rowData['name'] = rowData['name'].replace(/&#039;/igm, "'");
-                    rowData['screen_name'] = rowData['screen_name'].replace(/&amp;/igm, '&');
-                    rowData['screen_name'] = rowData['screen_name'].replace(/&#039;/igm, "'");
                     return rowData;
                 });
             });
@@ -157,6 +139,48 @@ var confapi = confapi || (function() {
                     var session_id = Session[i]['session_id'];
                     SessionData[session_id] = Session[i];
                 };
+                // test
+                // (function () {
+                //     var timeSection = {};
+                //     $.map(SessionData, function (session) {
+                //         var leftPadZero = function (str, n) {
+                //             str = ('' + str);
+                //             return Array(n - str.length + 1).join('0') + str;
+                //         }
+                //         var sDate = session.start_Date;
+                //         var track = session.track || 'keynote';
+                //         var sTime = leftPadZero(sDate.getHours(), 2) + ':' + leftPadZero(sDate.getMinutes(), 2);
+                //         timeSection[sTime] = timeSection[sTime] || {
+                //             'keynote': 0,
+                //             'Track A': 0,
+                //             'Track B': 0,
+                //             'Track C': 0,
+                //             'Track D': 0,
+                //             'Track E': 0,
+                //             'Track F': 0,
+                //             'Track G': 0,
+                //             'Track H': 0,
+                //             'Track I': 0
+                //         };
+                //         timeSection[sTime][track] = timeSection[sTime][track] || {};
+                //         timeSection[sTime][track] = session.session_id;
+                //     });
+                //     console.table(timeSection);
+                //     // part 2
+                //     var newTimeSection = {};
+                //     for (time in timeSection) {
+                //         newTimeSection[time] = newTimeSection[time] || [];
+                //         var Section = timeSection[time];
+                //         for (track in Section) {
+                //             var sID = Section[track];
+                //             if (!!sID) {
+                //                 newTimeSection[time].push(sID);
+                //             }
+                //         }
+                //     };
+                //     console.table(newTimeSection);
+                // }())
+                // ====
                 return SessionData;
             });
         },
@@ -193,25 +217,9 @@ var confapi = confapi || (function() {
                 return SpeakerData;
             });
         },
-        getJobWithSponsor: function() {
-            return $.when(this.getJob(), this.getSponsor()).then(function(Job, Sponsor) {
-                var JobData = {};
-                $.each(Job, function(i, v) {
-                    if (!!v.job) {
-                        $.each(v.job, function(index, value) {
-                            JobData[value.sponsor_id] = JobData[value.sponsor_id] || [];
+        // getJobsWithSponsor: function(){
+        //     return $.when(this.getSponsor(),this.)
 
-                            JobData[value.sponsor_id].push(v);
-                        });
-                    }
-                });
-                var SponsorData = $.map(Sponsor, function(rowData) {
-                    var sponsor = JobData[rowData.sponsor_id] || [];
-                    rowData['sponsor'] = sponsor;
-                    return rowData;
-                });
-                return SponsorData;
-            });
-        },
+        // },
     }
 }());

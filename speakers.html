@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Modern Web 2019</title>
+    <title>ModernWeb</title>
     <meta property="og:url" content="https://modernweb.tw" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Modern Web 2019 ─ 技術在我們手上，世界就在我們手上" />
-    <meta property="og:description" content="Modern Web 2019" />
-    <meta property="og:image" content="https://modernweb.tw/img/fbimg.jpg" />
+    <meta property="og:title" content="ModernWeb 2019 Coming Soon" />
+    <meta property="og:description" content="ModernWeb 全臺灣最大的 Web 技術盛會，2019 年即將 5 歲了，每年超過 600 位 Web 人出席的盛會，在 2019 年，將擴大規模，磅礡登場！" />
+    <meta property="og:image" content="https://modernweb.tw/img/fb.jpg" />
     <meta property="og:image:width" content="601" />
     <meta property="og:image:height" content="346" />
-    <link rel="icon" type="image/png" href="img/favicon.ico?01" sizes="16x16">
-    <!-- css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css?03">
+    <link rel="icon" type="image/png" href="img/favicon.ico?00779" sizes="16x16">
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css?4123412342388">
+    <link rel="stylesheet" type="text/css" href="css/setting.css?334523464573483514">
+    <link rel="stylesheet" type="text/css" href="css/rwd.css?31213423423488">
+    <link rel="stylesheet" type="text/css" href="css/kv.css?12165275487467332">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -77,46 +76,76 @@
                                 <a class="dropdown-item" href="https://modernweb.tw/2015/index.html" target="_blank">2015</a>
                             </div>
                         </li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2018/index.html" target="_blank" class="visible-sm-up">回顧 2018</a></li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2017/index.html" target="_blank" class="visible-sm-up">回顧 2017</a></li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2016/index.html" target="_blank" class="visible-sm-up">回顧 2016</a></li>
+                        <li class="visible-sm-down"><a href="https://modernweb.tw/2015/index.html" target="_blank" class="visible-sm-up">回顧 2015</a></li>
                     </ul>
                 </div>
+                <!-- nav end -->
+            </nav>
+        </header>
+        <!-- .section--preview-kv-content的margin-top:-700px .kv-head__bg的margin-bottom:700px -->
+        <section class="section--preview-kv-content">
+            <div class="kv-head">
+                <!-- <h2 class="title kv-head__title">講師 <span>Speakers</span></h2> -->
+                <img :src="'img/speakers/photo_' + SpeakerInner.target_id + '.jpg'" class="img-responsive kv-head__bg">
             </div>
-        </nav>
-        <!-- end Navigation -->
-        <!-- 會前、會中banner -->
-        <section class="content content--kv content--kv--s" id="nav">
-        </section>
-        <section class="content speakers" id="nav">
-            <!-- 會後講師banner -->
-            <!-- <div class="speakers--banner">
-                <img src="img/speaker00-b.jpg" class="img-fluid">
-            </div> -->
-            <h3 class="title deco-title text-center">議程與講師</h3>
-            <div class="speakers--item">
-                <div class="container">
-                    <button @click="GoPreSpeaker()" class="preButton">〈</button>
-                    <button @click="GoNextSpeaker()" class="nextButton">〉</button>
-                    <div class="row justify-content-center">
-                        <template v-for="session in SpeakerInner.session">
-                            <div class="col-md-8 col-12 speakers--item--head">
+                <div class="pre-speaker-item">
+                    <div class="container">
+                        <div class="row pre-speaker-item__row" v-for="session in SpeakerInner.session">
+                            <div class="col-sm-8 col-sm-push-2 col-xs-12 pre-speaker-item__head">
                                 <!-- 議程標題 -->
-                                <h3 class=""><span class="badge badge-pill keynote--item--tag" v-if="session.session_type === 'keynote'">Keynote</span> {{ session.title }}</h3>
+                                <h3 class="">{{ session.title }}</h3>
                             </div>
-                            <div class="col-md-8 col-12 speakers--item--content" v-html="session.summary">
+                            <div class="col-sm-8 col-sm-push-2 col-xs-12 pre-speaker-item__content" v-html="session.summary">
                             </div>
-                            <div class="col-md-8 col-12 row speakers--item--download">
-                                <a :href="session.download_link" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link">簡報下載</a>
-                                <a :href="session.download_link_title" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link_title">議程共筆</a>
+                            <div class="col-sm-8 col-sm-push-2 col-xs-12 kv-head__download">
+                                <a :href="session.download_link" class=""><button class="btn btn-default btn-block kv-head__download__btn">簡報下載</button></a>
+                                <a :href="session.notes" class=""><button class="btn btn-default btn-block kv-head__download__btn">議程共筆</button></a>
                             </div>
-                        </template>
-                        <div class=" col-md-8 col-12 row speakers--item--intro">
-                            <div class="col-md-4 col-12 speakers--item--intro--avatar">
-                                <img :src="SpeakerInner.avatar" alt="" class="img-fluid">
+                            <div class="col-sm-8 col-sm-push-2 col-xs-12 pre-speaker-item__intro">
+                                <div class="col-md-4 col-xs-12 pre-speaker-item__intro__img-cover">
+                                    <img :src="SpeakerInner.avatar" alt="" class="img-responsive">
                             </div>
-                            <div class="col-md-8 col-12 speakers--item--intro--desc">
-                                <div class="speakers--item--intro--desc--name">{{ SpeakerInner.speaker }}</div>
-                                <p class="speaker--item--desc--sub">{{ SpeakerInner.company }}
-                                    <br>{{ SpeakerInner.department }}{{ SpeakerInner.position }}</p>
-                                <div class="speakers--item--intro--desc--p" v-html="SpeakerInner.profile">
+                                    <div class="col-md-8 col-xs-12 pre-speaker-item__intro__desc">
+                                        <div class="pre-speaker-item__intro__desc__name">{{ SpeakerInner.speaker }}</div>
+                                        <div class="pre-speaker-item__intro__desc__p">
+                                            <p v-html="SpeakerInner.profile"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section class="section--footer section--preview-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 footer__contact">
+                        <div class="col-sm-8">
+                            <h5>聯絡 Modern Web 服務小組</h5>
+                            <ul>
+                                <li>客服專線：<a href="tel:02-25622880">02-25622880 #3622 </a> 開小姐（ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
+                                <li>客服信箱： <a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw</a></li>
+                            </ul>
+                            <ul>
+                                <li>場地資訊：華南銀行國際會議中心<a href="https://goo.gl/maps/65VQGkP9En62" target="_blank">台北市信義區松仁路123號</a></li>
+                            </ul>
+                            <p>iThome 版權所有</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <ul class="footer__social">
+                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/home?status=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/cws/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://plus.google.com/share?url=https://modernweb.tw/" title=""><i aria-hidden="true" class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="footer__fbshare hidden-sm hidden-xs">
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -124,51 +153,31 @@
                 </div>
             </div>
         </section>
-        <footer class="content footer">
-            <div class="footer--wave"></div>
-            <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--l">
-            <img src="img/footer-shine.svg" class="img-fluid footer--deco--shine--l">
-            <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--r">
-            <img src="img/footer-shine.svg" class="img-fluid footer--deco--shine--r">
-            <img src="img/footer-bg-planet.svg" class="img-fluid footer--deco--planet">
-            <img src="img/footer-alien.svg" class="img-fluid footer--deco--alien">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 footer--logo">
-                        <img src="img/logo.svg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-12 footer--desc">
-                        <ul class="">
-                            <li class="footer--desc--li">會議時間：2019年8月28日(三) - 29日(四)</li>
-                            <li class="footer--desc--li">會議地點：TICC 臺北國際會議中心</li>
-                            <li class="footer--desc--li">客服專線：02-25622880 #3622 開小姐
-                                （ 週一至週五，上午 10:30 ~ 12:00，下午 1:30 ~ 5:30 ）</li>
-                            <li class="footer--desc--li">客服信箱：<a href="mailto:service@mail.ithome.com.tw">service@mail.ithome.com.tw </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="footer--fbshare">
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com/modernweb.tw/%2F&amp;tabs&amp;width=340&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="124" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
-    <!-- end #modernWeb2019 -->
+    <script type="text/javascript " src="js/vendor/jquery-3.3.1.js"></script>
+    <script type="text/javascript " src="js/vendor/bootstrap-3.3.7.min.js"></script>
+    <script src="https://connect.facebook.net/zh_TW/all.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="js/confapi.js?32165444987 " data-nid="3531"></script>
+    <script src="js/modernweb2018.js?123"></script>
+    <script type="text/javascript">
+    $("body").append("<a href='#top' class='gotop' id='botton-gotop'><i class='fa fa-arrow-circle-up'></i></a>");
+    var topBtn = $('.gotop');
+    topBtn.hide();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    topBtn.click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+    </script>
 </body>
-<!-- JavaScript -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js?0711"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script src="js/easytimer.js"></script>
 
 </html>

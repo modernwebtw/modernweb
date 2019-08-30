@@ -1,13 +1,11 @@
+// @import "vendor/bootstrap/bootstrap";
+
+@import "base/utilities";
 @import "abstracts/mixins";
 @import "abstracts/include-media";
-@import "base/utilities";
 @import "base/animations";
 @import "base/layout";
-@import "base/component";
-@import "pages/home";
-@import "pages/content";
-@import "pages/tickets";
-@import "pages/speakers";
-@import "pages/jobs";
-@import "pages/agenda";
+@import "pages/kv";
+@import "pages/workshop";
 @import "pages/event";
+@import "pages/preview";
