@@ -148,17 +148,6 @@ div[data-toggle="modal"]{
     color: #ffffff;
 }
 
-
-
-// from 2018 modern web setting.css
-.session-download{
-   /* background: #18052D;
-    color:white;
-    padding:5px;*/
-font-size: 1.6em;
-}
-
-
 // content agenda.html
 .agenda {
     margin-top: 5%
@@ -378,4 +367,13 @@ font-size: 1.6em;
 	}
 }
 
-// 
+// 會後按鈕
+.session-download .btn-download {
+    background-color: $bg-blue;
+    color: #ffffff;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px auto;
+    &:hover, &:focus, &:active { background-color: darken($bg-blue,8%);}
+    .fa-file-pdf { font-size: 18px; margin: 3px;}
+}
