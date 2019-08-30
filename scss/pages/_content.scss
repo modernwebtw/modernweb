@@ -1,0 +1,106 @@
+.content{
+    &.content--kv {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        // overflow-x: hidden;
+        background-color: $bg-blue;
+        background-image: url(../img/content-kv.svg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 101%;
+        // min-height: 40vh;
+        @include media("<992px") { 
+            background-size: cover;
+            background-color: #ffffff;
+            // margin-top: 40px;
+        }
+        @include media("<768px") {
+            background-size: 101%;
+            // padding-top: 15%;
+            // background: $bg-blue url(../img/content-kv.svg) no-repeat center bottom;
+            background-color: $bg-blue;
+            border: none;
+        }
+        &:after{
+            content: '';
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            z-index: 99;
+            background: #ffffff;
+        }
+        &--wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        &--logo {
+            position: absolute;
+            top: 40px;
+            width: 45%;
+            left: 27.5%;
+            filter: drop-shadow(0 0 0.75rem $font-color-dark-blue);
+            z-index: 5;
+        }
+
+        &--btn {
+            background-color: $font-color-pink;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            right: 22%;
+            top: 16em;
+            line-height: 5.5em;
+            color: #ffffff;
+            font-size: 20px;
+            display: block;
+            z-index: 10;
+            box-shadow: 5px 5px 2px darken($font-color-pink, 20%);
+
+            &:hover,
+            &:focus {
+                background-color: lighten($font-color-pink, 5%);
+                color: #ffffff;
+                transform: translate(2px, 2px);
+                box-shadow: 1px 1px 1px darken($font-color-pink, 15%)
+            }
+        }
+        .kv-head {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            color: #ffffff;
+            padding: 12% 0 14%;
+            @include media("<1300px") { padding: 15% 0 10%;}
+            @include media("<768px") { padding: 22% 0 10%; min-height: 24vh;}
+            .title {
+                color: #ffffff;
+                text-shadow: 0 0 5px #000;
+            }
+            .sub-title {
+                color: #ffffff;
+                text-shadow: 0 0 5px #000;
+            }
+        }
+    }
+    &.content--kv--s {
+        margin: -1px;
+        background-image: url(../img/content-kv-s.svg);
+        background-color: $bg-blue;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100%;
+        margin-top: -80px;
+        height: 280px;
+        @include media('<992px'){
+            margin-top: 65px;
+            height: 165px;
+            background-position: top;
+            background-size: cover;
+        }
+    }
+}

@@ -1,5 +1,15 @@
-#modernweb2018 .section--preview {
+.section--preview {
     &-kv {
+        margin: 0;
+        position: relative;
+        background-color: #ffffff;
+        background-image: url(../img/content-kv.svg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100%;
+        padding-top: 80px;
+        margin-bottom: -1px;
+        min-height: 55vh;
         @include media("<1200px") {
             min-height: 50vh;
         }
@@ -11,7 +21,7 @@
         &__flight {
             text-align: center;
             position: relative;
-
+            padding: 5%;
             .flight-text {
                 font-size: 60px;
                 color: #ffffff;
@@ -36,45 +46,16 @@
                     }
                 }
             }
-
-            .deco-astronaut {
-                width: 70px;
-                position: relative;
-                right: 15%;
-                float: right;
-                transform: rotate(15deg);
-                -ms-animation: astronaut 10s infinite;
-                -webkit-animation: astronaut 10s infinite;
-                animation: astronaut 10s infinite;
-
-                @include media('<768px') {
-                    animation-play-state: paused;
-                    transform: rotate(5deg);
-                }
-            }
         }
 
     }
 
     &-land {
-        background-color: #37286c;
         padding: 10px 0;
-        margin: 300px 0 0;
         overflow: visible;
-
-        &:before {
-            content: '';
-            background: url(../img/land-top.png) no-repeat;
-            width: 100%;
-            height: 300px;
-            position: absolute;
-            top: -295px;
-            left: 0;
-        }
-
+        background-color: #fff;
+        margin-top: -2px;
         .land-bg {
-            margin-top: -300px;
-
             .land-text-cover {
                 text-align: center;
                 position: relative;
@@ -128,77 +109,57 @@
                 }
             }
 
-            .land-rocket {
-                -ms-transform: rotate(-90deg);
-                -webkit-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-                height: 180px;
-                position: relative;
-                top: -80px;
-                display: inline-block;
-                overflow: visible;
-                width: 100%;
+            // .land-rocket {
+            //     -ms-transform: rotate(-90deg);
+            //     -webkit-transform: rotate(-90deg);
+            //     transform: rotate(-90deg);
+            //     height: 180px;
+            //     position: relative;
+            //     top: -80px;
+            //     display: inline-block;
+            //     overflow: visible;
+            //     width: 100%;
 
-                @include media('<768px') {
-                    top: 0;
-                }
-            }
+            //     @include media('<768px') {
+            //         top: 0;
+            //     }
+            // }
 
-            .land-rocket-cover {
-                text-align: center;
-                display: inline-block;
-                top: -80px;
-                width: 18%;
+            // .land-rocket-cover {
+            //     text-align: center;
+            //     display: inline-block;
+            //     top: -80px;
+            //     width: 18%;
 
-                :after {
-                    content: '';
-                    position: absolute;
-                    width: 220px;
-                    height: 80px;
-                    background: url('../img/rocket-shadow.png') no-repeat;
-                    background-size: 100%;
-                    top: 0;
-                    z-index: 99;
-                    //     -ms-transform: rotate(90deg);
-                    // -webkit-transform: rotate(90deg);
-                    // transform: rotate(90deg);
-                }
-            }
+            //     :after {
+            //         content: '';
+            //         position: absolute;
+            //         width: 220px;
+            //         height: 80px;
+            //         background: url('../img/rocket-shadow.png') no-repeat;
+            //         background-size: 100%;
+            //         top: 0;
+            //         z-index: 99;
+            //         //     -ms-transform: rotate(90deg);
+            //         // -webkit-transform: rotate(90deg);
+            //         // transform: rotate(90deg);
+            //     }
+            // }
         }
     }
 
     &-speaker {
-        background-color: #37286c;
         padding: 10px 0;
-        margin: 0 0 300px 0;
         position: relative;
         float: left;
         width: 100%;
 
-        &:after {
-            content: '';
-            background: url(../img/land-down.png) no-repeat;
-            width: 100%;
-            height: 390px;
-            position: absolute;
-            bottom: -390px;
-            left: 0;
-        }
         .title { 
             margin: 7% auto 2%;
             font-size: 36px;
             text-align: center;
             letter-spacing: 4px;
             position: relative;
-            &:before {
-                content: '';
-                background: url(../img/astronaut-thanks.svg) no-repeat;
-                width: 40px;
-                height: 40px;
-                position: absolute;
-                top: -50px;
-                left: calc(50% - 20px);
-            }
         }
         .preview-speaker-box {
 
@@ -273,7 +234,7 @@
                     padding: 15px 0;
                     font-size: 18px;
                     letter-spacing: 2px;
-                    color: $font-color-pu1;
+                    color: #aaaaaa;
                     border: 0px;
                     margin: 1% 0 1% 2%;
                     border-radius: 0px;
@@ -370,10 +331,6 @@
         margin: 0;
         padding: 1.2% 0 0;
         width: 100%;
-    }
-
-    .star {
-        display: block;
     }
 }
 .preview--bg--content {
