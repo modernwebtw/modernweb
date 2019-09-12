@@ -139,8 +139,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                    <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                <div class="session-download col-12 text-center">
+                                                    <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                            <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                            <span>線上共筆</span>
+                                                        </a></span>
+                                                    <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                             <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                             <span>會議簡報</span>
                                                         </a></span>
@@ -224,8 +228,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -243,8 +251,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -262,8 +274,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -281,8 +297,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -300,8 +320,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -369,8 +393,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                    <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                <div class="session-download col-12 text-center">
+                                                    <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                            <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                            <span>線上共筆</span>
+                                                        </a></span>
+                                                    <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                             <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                             <span>會議簡報</span>
                                                         </a></span>
@@ -454,8 +482,12 @@
                                                                         <span>/ {{ speaker.company }} {{ speaker.department }} {{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -473,8 +505,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -492,8 +528,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -511,8 +551,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
@@ -530,8 +574,12 @@
                                                                         <span>/ {{ speaker.company }}{{ speaker.department }}{{ speaker.position }}</span></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="session-download col-12 text-center" v-if="!!sss.download_link">
-                                                                <span> <a :href="sss.download_link" target="_blank" class="btn btn-download">
+                                                            <div class="session-download col-12 text-center">
+                                                                <span v-if="!!sss.note"> <a :href="sss.note" target="_blank" class="btn btn-download">
+                                                                        <i class="fa fa-edit" aria-hidden="true"> </i>
+                                                                        <span>線上共筆</span>
+                                                                    </a></span>
+                                                                <span v-if="!!sss.download_link"> <a :href="sss.download_link" target="_blank" class="btn btn-download">
                                                                         <i class="fa fa-file-pdf" aria-hidden="true"> </i>
                                                                         <span>會議簡報</span>
                                                                     </a></span>
