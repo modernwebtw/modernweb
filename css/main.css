@@ -2124,18 +2124,22 @@ nav {
 
 .section--preview-kv {
   margin: 0;
+  padding: 0;
   position: relative;
-  background-color: #ffffff;
+  background-color: #1c26cc;
   background-image: url(../img/content-kv.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 100%;
-  padding-top: 80px;
-  margin-bottom: -1px;
-  min-height: 55vh; }
-  @media (max-width: 1199px) {
+  background-size: 101%; }
+  @media (max-width: 991px) {
     .section--preview-kv {
-      min-height: 50vh; } }
+      background-size: cover;
+      background-color: #ffffff; } }
+  @media (max-width: 767px) {
+    .section--preview-kv {
+      background-size: 101%;
+      background-color: #1c26cc;
+      border: none; } }
   .section--preview-kv__mini {
     display: none; }
   .section--preview-kv__flight {
@@ -2157,6 +2161,25 @@ nav {
         position: relative; }
         .section--preview-kv__flight .flight-text-thanks-after {
           margin-left: 20px; }
+  .section--preview-kv .kv-head {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    padding: 2% 0 17%; }
+    @media (max-width: 1299px) {
+      .section--preview-kv .kv-head {
+        padding: 15% 0 10%; } }
+    @media (max-width: 767px) {
+      .section--preview-kv .kv-head {
+        padding: 22% 0 10%;
+        min-height: 24vh; } }
+    .section--preview-kv .kv-head .title {
+      color: #ffffff;
+      text-shadow: 0 0 5px #000; }
+    .section--preview-kv .kv-head .sub-title {
+      color: #ffffff;
+      text-shadow: 0 0 5px #000; }
 .section--preview-land {
   padding: 10px 0;
   overflow: visible;
