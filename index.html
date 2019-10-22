@@ -111,7 +111,7 @@
             <div class="section--preview-kv__flight">
                     <div class="kv-head">
                         <h1 class="flight-text preview-kv-text">
-                            <span class="flight-text-number">2018
+                            <span class="flight-text-number">2019
                                 <span class="flight-text-number-after">
                                     班次</span>
                             </span>
@@ -122,7 +122,7 @@
             </div>
         </section>
 
-        <section class="section--preview-land" id="nav">
+        <section class="section--preview-land">
             <div class="land-bg">
                 <div class="land-text-cover">
                 </div>
@@ -140,9 +140,9 @@
                 <div class="container">
                     <h3 class="title">感謝所有辛苦的領航員</h3>
                     <div class="row">
-                        <div class="col-sm-2 col-xs-6 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419'">
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-2 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419'">
                             <!-- <a :href="'speakers.html#s' + speaker.target_id" class="preview-speaker-box-a"> -->
-                            <div class="preview-speaker-box">
+                            <div class="preview-speaker-box" id="nav">
                                 <div class="preview-speaker-box__head">
                                     <img :src="speaker.avatar" alt="" class="img-circle img-fluid preview-speaker-box__img speaker--china__img  ">
                                 </div>

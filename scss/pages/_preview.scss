@@ -5,7 +5,7 @@
         position: relative;
         // overflow-x: hidden;
         background-color: $bg-blue;
-        background-image: url(../img/content-kv.svg);
+        background-image: url(../img/kv-after.svg);
         background-repeat: no-repeat;
         background-position: center bottom;
         background-size: 101%;
@@ -16,10 +16,10 @@
             // margin-top: 40px;
         }
         @include media("<768px") {
-            background-size: 101%;
+            background-size: 106%;
             // padding-top: 15%;
             // background: $bg-blue url(../img/content-kv.svg) no-repeat center bottom;
-            background-color: $bg-blue;
+            background-color: #1624dd;
             border: none;
         }
 
@@ -30,25 +30,51 @@
         &__flight {
             text-align: center;
             position: relative;
-            padding: 5%;
+            padding: 6% 4% 4%;
             .flight-text {
                 font-size: 60px;
                 color: #ffffff;
                 margin-bottom: 10px;
                 position: relative;
+                z-index: 1;
+                @include media("<768px") {
+                    font-size: 45px;
+                }
 
                 .flight-text-number {
-                    color: #18cec3;
-
+                    color: #1d27cc;
+                    background-color: #dede45;
+                    border-radius: 50%;
+                    padding: 10px;
+                    font-size: 70%;
+                    transform: rotate(-15deg);
+                    display: block;
+                    width: 200px;
+                    position: absolute;
+                    left: calc(50% - 350px);
+                    z-index: -1;
+                    top: -35px;
                     &-after {
                         font-size: 50%;
+                    }
+                    @include media("<768px") {
+                        transform: rotate(0deg);
+                        position: relative;
+                        top: 0;
+                        left: calc(50% - 100px);
+                        background-color: transparent;
+                        color: #ffffff;
+                        padding: 0;
                     }
                 }
 
                 &-thanks {
                     font-size: 38px;
-                    color: #cec0ff;
+                    color: #feffcc;
                     position: relative;
+                    @include media("<768px") {
+                        font-size: 28px;
+                    }
 
                     &-after {
                         margin-left: 20px;
@@ -62,8 +88,8 @@
             width: 100%;
             color: #ffffff;
             padding: 2% 0 17%;
-            @include media("<1300px") { padding: 15% 0 10%;}
-            @include media("<768px") { padding: 22% 0 10%; min-height: 24vh;}
+            @include media("<992px") { padding: 5% 0 20%;}
+            @include media("<768px") { padding: 8% 0 22%; min-height: 24vh;}
             .title {
                 color: #ffffff;
                 text-shadow: 0 0 5px #000;
@@ -81,6 +107,7 @@
         overflow: visible;
         background-color: #fff;
         margin-top: -2px;
+        margin-bottom: 0;
         .land-bg {
             .land-text-cover {
                 text-align: center;
@@ -117,21 +144,28 @@
             }
 
             .land-text-calc {
-                margin-top: 2%;
+                margin-top: 0;
                 margin-bottom: 2%;
 
                 .calc-minitext {
-                    font-size: 20px;
-                    color: #18cec3;
-                    line-height: 2.2em;
+                    font-size: 24px;
+                    color: #353535;
+                    line-height: 2em;
                     text-align: center;
+                    @include media("<768px") {
+                        font-size: 20px;
+                        line-height: 1.8em;
+                    }
                 }
 
                 .calc-num {
                     font-size: 60px;
-                    color: #cec0ff;
+                    color: #6ddefe;
                     display: block;
                     margin: 0;
+                    @include media("<768px") {
+                        font-size: 45px;
+                    }
                 }
             }
 
@@ -179,13 +213,17 @@
         position: relative;
         float: left;
         width: 100%;
-
+        margin-top: 0;
         .title { 
-            margin: 7% auto 2%;
-            font-size: 36px;
+            margin: 4% auto 3%;
+            font-size: 50px;
             text-align: center;
             letter-spacing: 4px;
             position: relative;
+            color: lighten($font-color-pink,25%);
+            @include media("<768px") {
+                    font-size: 36px;
+                }
         }
         .preview-speaker-box {
 
@@ -207,8 +245,15 @@
             &__head {
                 overflow: hidden;
                 border-radius: 50%;
-                border: 3px solid #a692da;
+                border: 3px solid #6ddefe;
+                background-color: #aaaaaa;
+                @include media("<576px") {
+                    max-width: 80%;
+                    margin-left: 10%;
+                }
             }
+
+            &__img { width: 100%;}
 
             &__img:hover ,&__img:active {
                 transform: scale(1.05);
