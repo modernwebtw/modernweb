@@ -65,6 +65,13 @@ var modernweb2019 = new Vue({
                 return rankSort[element.rank]
             });
             return ss;
+        },
+        sortSpeaker: function() {
+            var speaker = this.Speaker;
+            var sortCodeAt = function(a, b) {
+                return a.speaker.localeCompare(b.speaker, 'zh-Hant')
+            }
+            return _.orderBy(speaker, 'speaker').sort(sortCodeAt)
         }
     },
     methods: {

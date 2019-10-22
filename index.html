@@ -41,7 +41,7 @@
 
 <body class="theme-bg-color">
     <!-- #modernWeb2019 -->
-    <div id="modernWeb2019">
+    <div id="modernweb2019">
         <!-- loading animation -->
         <!-- <div class="loading" id="loading">
             <div class="loading__logo">
@@ -108,7 +108,7 @@
         </nav>
         <!-- end Navigation -->
         <section class="section--preview-kv">
-            <div class="section--preview-kv__flight" id="nav">
+            <div class="section--preview-kv__flight">
                     <div class="kv-head">
                         <h1 class="flight-text preview-kv-text">
                             <span class="flight-text-number">2018
@@ -122,7 +122,7 @@
             </div>
         </section>
 
-        <section class="section--preview-land">
+        <section class="section--preview-land" id="nav">
             <div class="land-bg">
                 <div class="land-text-cover">
                 </div>
@@ -137,27 +137,27 @@
             </div>
         </section>
         <section class="section--preview-speaker">
-            <div class="container">
-                <h3 class="title">感謝所有辛苦的領航員</h3>
-                <div class="row">
-                    <div class="col-sm-2 col-xs-6 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419'">
-                        <!-- <a :href="'speakers.html#s' + speaker.target_id" class="preview-speaker-box-a"> -->
-                        <div class="preview-speaker-box">
-                            <div class="preview-speaker-box__head">
-                                <img :src="speaker.avatar" alt="" class="img-circle img-fluid preview-speaker-box__img speaker--china__img  ">
+                <div class="container">
+                    <h3 class="title">感謝所有辛苦的領航員</h3>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-6 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419'">
+                            <!-- <a :href="'speakers.html#s' + speaker.target_id" class="preview-speaker-box-a"> -->
+                            <div class="preview-speaker-box">
+                                <div class="preview-speaker-box__head">
+                                    <img :src="speaker.avatar" alt="" class="img-circle img-fluid preview-speaker-box__img speaker--china__img  ">
+                                </div>
+                                <div class="preview-speaker-box__name">
+                                    <h4>{{ speaker.speaker }}</h4>
+                                </div>
+                                <div class="preview-speaker-box__title">
+                                    {{ speaker.company }} {{ speaker.department }} {{ speaker.position }}
+                                </div>
                             </div>
-                            <div class="preview-speaker-box__name">
-                                <h4>{{ speaker.speaker }}</h4>
-                            </div>
-                            <div class="preview-speaker-box__title">
-                                {{ speaker.company }} {{ speaker.department }} {{ speaker.position }}
-                            </div>
+                            <!-- </a> -->
                         </div>
-                        <!-- </a> -->
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <footer class="content footer">
             <div class="footer--wave"></div>
             <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--l">
@@ -192,17 +192,32 @@
         </footer>
     </div>
     <!-- end #modernWeb2019 -->
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script type="text/javascript" src="js/modernweb2019.js?0718"></script>
+    <script type="text/javascript">
+    $("body").append("<a href='#top' class='gotop' id='botton-gotop' style='bottom: 60px;right: 15px;'><i class='fa fa-arrow-circle-up'></i></a>");
+    var topBtn = $('.gotop');
+    topBtn.hide();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    topBtn.click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+    </script>
 </body>
-<!-- JavaScript -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/confapi.js" data-nid="6270"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
-<script type="text/javascript" src="js/modernweb2019.js?0718"></script>
-<!-- <script type="text/javascript" src="js/main.js?0718"></script> -->
-<!-- <script type="text/javascript" src="js/timeCountdown.js"></script> -->
+
 
 </html>
