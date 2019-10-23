@@ -68,19 +68,26 @@
                     }
                 }
 
-                &-thanks {
-                    font-size: 38px;
-                    color: #feffcc;
-                    position: relative;
-                    @include media("<768px") {
-                        font-size: 28px;
-                    }
-
-                    &-after {
-                        margin-left: 20px;
-                    }
+                
+                
+            }
+            .flight-text-thanks {
+                font-size: 38px;
+                color: #feffcc;
+                position: relative;
+                @include media("<768px") {
+                    font-size: 28px;
                 }
             }
+            .flight-text-after {
+                margin-top: 10px;
+                font-size: 30px;
+                color: #ff86e2;
+                @include media("<768px") {
+                    font-size: 26px;
+                }
+            }
+
         }
         .kv-head {
             text-align: center;
