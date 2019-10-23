@@ -2122,6 +2122,144 @@ nav {
       background-position: top;
       background-size: cover; } }
 
+.preButton {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  font-size: 5em;
+  border: none;
+  color: #bbb;
+  background-color: transparent;
+  z-index: 9; }
+
+.nextButton {
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  font-size: 5em;
+  border: none;
+  color: #bbb;
+  background-color: transparent;
+  z-index: 9; }
+
+.speakers {
+  padding: 0;
+  margin: 0 0 300px 0;
+  position: relative;
+  width: 100%; }
+  .speakers--banner {
+    overflow: hidden;
+    background-color: #0a0d45; }
+    .speakers--banner img {
+      position: relative;
+      margin-top: 80px;
+      display: block; }
+    .speakers--banner:before {
+      content: '';
+      width: 100%;
+      background: #0a0d45 url(../img/content-kv-ban.svg) no-repeat;
+      background-size: cover;
+      height: 3px;
+      position: absolute;
+      top: 80px;
+      z-index: 1; }
+      @media (max-width: 991px) {
+        .speakers--banner:before {
+          top: 77px; } }
+  .speakers--item {
+    padding: 2% 15px 1% 15px;
+    position: relative;
+    width: 100%;
+    margin-bottom: -1%; }
+    .speakers--item--tag {
+      display: block;
+      margin: 10px 0;
+      font-weight: 500;
+      background: #ffaf5a;
+      padding: 6px;
+      border-radius: 10px;
+      width: 100px;
+      text-align: center;
+      font-size: 18px;
+      color: #ffffff; }
+    .speakers--item--head {
+      text-align: left; }
+      .speakers--item--head h3 {
+        margin: 20px 0 10px; }
+    .speakers--item--content {
+      text-align: left;
+      padding: 0 20px 20px;
+      font-size: 18px; }
+    .speakers--item--download {
+      width: 100%; }
+      @media (max-width: 768px) {
+        .speakers--item--download {
+          flex-direction: column; } }
+      .speakers--item--download--btn {
+        padding: 15px 0;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        border: 0px;
+        margin: 1% 0 1% 2%;
+        border-radius: 10px;
+        background-color: #1c26cc;
+        opacity: 0.9;
+        transition: .3s ease; }
+        .speakers--item--download--btn:hover, .speakers--item--download--btn:focus, .speakers--item--download--btn:active, .speakers--item--download--btn:visited {
+          background-color: #3741e4;
+          color: #ffffff;
+          opacity: 1; }
+    .speakers--item--intro {
+      padding: 1.5%;
+      margin: 5% 0 3% 5px;
+      background-color: #eeeeee;
+      border-radius: 20px; }
+      @media (max-width: 768px) {
+        .speakers--item--intro {
+          justify-content: center; } }
+      .speakers--item--intro--avatar {
+        overflow: hidden;
+        max-width: 250px;
+        text-align: center; }
+        .speakers--item--intro--avatar img {
+          border-radius: 50%;
+          display: inline-block;
+          width: 90%;
+          box-shadow: 0px 3px 5px #929292; }
+        .speakers--item--intro--avatar--keynote {
+          position: relative;
+          margin: 0.5em;
+          padding: 10px;
+          background: #1c26cc url(../img/bg-planet--l.svg) no-repeat center 100%;
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+          max-width: 300px;
+          flex-basis: 300px;
+          overflow: hidden; }
+      .speakers--item--intro--desc {
+        padding: 10px; }
+        .speakers--item--intro--desc--name {
+          font-size: 28px; }
+          @media (max-width: 768px) {
+            .speakers--item--intro--desc--name {
+              text-align: center; } }
+        .speakers--item--intro--desc--p {
+          font-size: 18px; }
+
+.keynote--item--tag {
+  display: block;
+  margin: 10px 0;
+  font-weight: 500;
+  background: #ffaf5a;
+  padding: 6px;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff; }
+
 .section--preview-kv {
   margin: 0;
   padding: 0;
