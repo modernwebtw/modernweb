@@ -81,7 +81,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                   <ul class="navbar-nav text-uppercase ml-auto nav-fill w-100 justify-content-end align-items-center">
+                    <ul class="navbar-nav text-uppercase ml-auto nav-fill w-100 justify-content-end align-items-center">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">首頁</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">歷年回顧</a>
@@ -100,20 +100,19 @@
         <!-- end Navigation -->
         <section class="section--preview-kv">
             <div class="section--preview-kv__flight">
-                    <div class="kv-head">
-                        <h1 class="flight-text preview-kv-text">
-                            <span class="flight-text-number">2019
-                                <span class="flight-text-number-after">
-                                    班次</span>
-                            </span>
-                            Web宇宙探索號
-                        </h1>
-                        <h3 class="flight-text-thanks">已順利扺達目的地 <span class="">感謝您的搭乘</span></h3>
-                        <h3 class="flight-text-after">2020 班次準備中，期待與您再相會！</h3>
-                    </div>
+                <div class="kv-head">
+                    <h1 class="flight-text preview-kv-text">
+                        <span class="flight-text-number">2019
+                            <span class="flight-text-number-after">
+                                班次</span>
+                        </span>
+                        Web宇宙探索號
+                    </h1>
+                    <h3 class="flight-text-thanks">已順利扺達目的地 <span class="">感謝您的搭乘</span></h3>
+                    <h3 class="flight-text-after">2020 班次準備中，期待與您再相會！</h3>
+                </div>
             </div>
         </section>
-
         <section class="section--preview-land">
             <div class="land-bg">
                 <div class="land-text-cover">
@@ -129,11 +128,11 @@
             </div>
         </section>
         <section class="section--preview-speaker">
-                <div class="container">
-                    <h4 class="title">感謝每一位登陸在 Modern Web 銀河站的講者，為我們帶來精彩的演出，每一段議程都是您們辛苦準備的心血。</h4>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-2 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419'">
-                            <a :href="'speakers.html#s' + speaker.target_id" class="preview-speaker-box-a">
+            <div class="container">
+                <h4 class="title">感謝每一位登陸在 Modern Web 銀河站的講者，為我們帶來精彩的演出，每一段議程都是您們辛苦準備的心血。</h4>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 ma__t30 preview-speaker-box-cover" v-for="speaker in sortSpeaker" v-if="speaker.avatar !== 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==' && speaker.target_id !== '6278' && speaker.target_id !== '6419' && speaker.target_id !== '6426' && speaker.target_id !== '6282' && speaker.target_id !== '6271'">
+                        <a :href="'speakers.html#s' + speaker.target_id" class="preview-speaker-box-a">
                             <div class="preview-speaker-box" id="nav">
                                 <div class="preview-speaker-box__head">
                                     <img :src="speaker.avatar" alt="" class="img-circle img-fluid preview-speaker-box__img speaker--china__img  ">
@@ -145,11 +144,11 @@
                                     {{ speaker.company }} {{ speaker.department }} {{ speaker.position }}
                                 </div>
                             </div>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         <footer class="content footer">
             <div class="footer--wave"></div>
             <img src="img/footer-bg-star.svg" class="img-fluid footer--deco--star--l">
@@ -184,7 +183,6 @@
         </footer>
     </div>
     <!-- end #modernWeb2019 -->
-
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -211,6 +209,5 @@
     });
     </script>
 </body>
-
 
 </html>
