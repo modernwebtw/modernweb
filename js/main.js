@@ -61,13 +61,3 @@ var $menu_target = (function() {
         '#nav'
     ]);
 }());
-
-var timer;
-$window.scroll(function() {
-    if (timer) {
-        window.clearTimeout(timer);
-    }
-    timer = window.setTimeout(function() {
-        $menu.toggleClass('menu--scroll', $window.scrollTop() >= $menu_target.offset().top);
-    }, 200);
-});

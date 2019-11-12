@@ -150,24 +150,24 @@ nav {
         min-height: 65px;
     }
 }
-.navbar--logo { display: none; transition: all .3s ease;}
 
 // scroll menu
 .menu--scroll{
-    background-color: darken($bg-blue,30%);
+    background-color: $bg-blue;
     // box-shadow: 0px 3px 8px darken($bg-blue,30%);
-    // @include media("<992px"){
-    //     background-color: darken($bg-blue,30%);
-    // }
+    @include media("<768px"){
+        background-color: #1624dd;
+    }
     .navbar--logo { display: inline-block;}
 }
 
 .navbar--logo {
     width: 160px;
-    display: none;
-    @include media("<992px"){
-        display: block;
-    }
+    display: block;
+     transition: all .3s ease;
+    // @include media("<992px"){
+    //     display: block;
+    // }
     &__img {
         width: 100%;
         
