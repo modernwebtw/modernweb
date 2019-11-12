@@ -96,7 +96,7 @@
                             </div>
                             <div class="col-md-8 col-12 row speakers--item--download">
                                 <a :href="session.download_link" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link">簡報下載</a>
-                                <a :href="session.download_link_title" class="col btn btn-default speakers--item--download--btn" v-if="!!session.download_link_title">議程共筆</a>
+                                <a :href="session.notes" class="col btn btn-default speakers--item--download--btn" v-if="!!session.notes">議程共筆</a>
                             </div>
                         </template>
                         <div class=" col-md-8 col-12 row speakers--item--intro">
